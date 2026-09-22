@@ -1,28 +1,3189 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
->
-
-<title>
-Dr. Ahmed Ishtiak Nirob | Academic & Research Portfolio
-</title>
+<title>Dr. Ahmed Ishtiak Nirob | Academic & Research Portfolio</title>
 
 <meta
   name="description"
-  content="Academic and research portfolio of Dr. Ahmed Ishtiak Nirob."
+  content="Academic and research portfolio of Dr. Ahmed Ishtiak Nirob — veterinarian, microbiology researcher and One Health researcher."
 >
 
-<link
-  rel="stylesheet"
-  href="style.css"
->
+<style>
+
+/* =========================================================
+   ROOT / THEME
+========================================================= */
+
+:root{
+
+  --bg:#07111f;
+  --bg-soft:#0b1728;
+  --bg-alt:#0d1c30;
+
+  --surface:rgba(15,29,48,.82);
+  --surface-strong:#10233a;
+  --surface-soft:rgba(19,38,61,.72);
+
+  --text:#edf6ff;
+  --text-soft:#c8d7e8;
+  --muted:#91a7bd;
+
+  --navy:#0a1b2e;
+  --blue:#31a9e6;
+  --blue-2:#56c4f4;
+  --teal:#20c7bd;
+  --purple:#9a78e8;
+  --violet:#b08cff;
+  --green:#45c78b;
+  --orange:#e6a348;
+  --red:#e86a76;
+  --gold:#e2bd59;
+
+  --border:rgba(139,197,235,.15);
+  --border-strong:rgba(73,183,235,.32);
+
+  --glow:rgba(49,169,230,.18);
+  --glow-purple:rgba(154,120,232,.16);
+
+  --shadow:
+    0 22px 70px rgba(0,0,0,.30);
+
+  --shadow-hover:
+    0 28px 85px rgba(0,0,0,.42);
+
+  --radius:24px;
+
+  --max:1200px;
+
+  --transition:
+    .32s cubic-bezier(.2,.8,.2,1);
+}
+
+
+/* =========================================================
+   LIGHT MODE
+========================================================= */
+
+body.light{
+
+  --bg:#eef5fb;
+  --bg-soft:#f6f9fc;
+  --bg-alt:#e8f1f8;
+
+  --surface:rgba(255,255,255,.84);
+  --surface-strong:#ffffff;
+  --surface-soft:rgba(255,255,255,.72);
+
+  --text:#132b43;
+  --text-soft:#38546e;
+  --muted:#687f95;
+
+  --navy:#102d4d;
+
+  --border:rgba(30,82,119,.13);
+  --border-strong:rgba(25,121,168,.30);
+
+  --glow:rgba(25,121,168,.12);
+  --glow-purple:rgba(117,83,165,.10);
+
+  --shadow:
+    0 18px 50px rgba(23,65,95,.10);
+
+  --shadow-hover:
+    0 26px 70px rgba(23,65,95,.18);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+
+  font-family:
+    Inter,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  color:var(--text);
+
+  line-height:1.72;
+
+  overflow-x:hidden;
+
+  background:
+
+    radial-gradient(
+      circle at 5% 0%,
+      rgba(38,154,211,.14),
+      transparent 26%
+    ),
+
+    radial-gradient(
+      circle at 95% 8%,
+      rgba(139,103,220,.13),
+      transparent 28%
+    ),
+
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(24,194,181,.07),
+      transparent 30%
+    ),
+
+    var(--bg);
+
+  transition:
+    background .45s ease,
+    color .35s ease;
+}
+
+body.light{
+
+  background:
+
+    radial-gradient(
+      circle at 5% 0%,
+      rgba(43,155,197,.15),
+      transparent 27%
+    ),
+
+    radial-gradient(
+      circle at 95% 10%,
+      rgba(117,83,165,.11),
+      transparent 28%
+    ),
+
+    linear-gradient(
+      135deg,
+      #eef8fc,
+      #f7f9fc 52%,
+      #f5f0fa
+    );
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+button{
+  font-family:inherit;
+}
+
+.container{
+  width:min(92%,var(--max));
+  margin:auto;
+}
+
+section{
+  padding:105px 0;
+  position:relative;
+}
+
+section::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  pointer-events:none;
+
+  background:
+    linear-gradient(
+      120deg,
+      transparent 0%,
+      rgba(80,180,230,.018) 50%,
+      transparent 100%
+    );
+}
+
+
+/* =========================================================
+   GLOBAL TEXT MICRO-ANIMATION
+========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+button,
+span,
+.eyebrow,
+.role-org,
+.role-date,
+.research-item,
+.score-value,
+.score-label,
+.score-sub,
+.brand{
+
+  transition:
+    color .3s ease,
+    transform .28s cubic-bezier(.2,.8,.2,1),
+    text-shadow .28s ease;
+}
+
+h1:hover,
+h2:hover,
+h3:hover,
+p:hover,
+.role-org:hover,
+.role-date:hover,
+.score-label:hover,
+.score-sub:hover{
+
+  transform:translateY(-2px);
+}
+
+p:hover{
+
+  text-shadow:
+    0 0 18px rgba(80,180,230,.07);
+}
+
+a:hover,
+button:hover,
+.eyebrow:hover{
+
+  transform:translateY(-2px);
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar{
+
+  position:sticky;
+
+  top:0;
+
+  z-index:9999;
+
+  background:
+    rgba(6,17,30,.78);
+
+  backdrop-filter:
+    blur(22px);
+
+  -webkit-backdrop-filter:
+    blur(22px);
+
+  border-bottom:
+    1px solid var(--border);
+
+  box-shadow:
+    0 10px 40px rgba(0,0,0,.15);
+
+  transition:
+    background .4s ease,
+    border-color .4s ease;
+}
+
+body.light .navbar{
+
+  background:
+    rgba(255,255,255,.82);
+}
+
+.nav-inner{
+
+  min-height:76px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:20px;
+}
+
+.brand{
+
+  color:var(--text);
+
+  font-size:17px;
+
+  font-weight:900;
+
+  white-space:nowrap;
+
+  letter-spacing:-.2px;
+}
+
+.brand span{
+
+  color:var(--blue);
+
+  text-shadow:
+    0 0 25px rgba(49,169,230,.22);
+}
+
+.nav-right{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+}
+
+.nav-links{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:3px;
+
+  flex-wrap:wrap;
+}
+
+.nav-link{
+
+  border:0;
+
+  background:transparent;
+
+  color:var(--text-soft);
+
+  padding:9px 11px;
+
+  border-radius:10px;
+
+  font-size:12px;
+
+  font-weight:750;
+
+  cursor:pointer;
+}
+
+.nav-link:hover{
+
+  color:var(--blue-2);
+
+  background:
+    rgba(49,169,230,.09);
+
+  transform:
+    translateY(-3px);
+}
+
+.nav-link.active{
+
+  color:white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #12628c,
+      #197da9
+    );
+
+  box-shadow:
+    0 8px 25px rgba(25,125,169,.25);
+}
+
+
+/* =========================================================
+   THEME TOGGLE
+========================================================= */
+
+.theme-toggle{
+
+  width:48px;
+  height:48px;
+
+  border-radius:15px;
+
+  border:1px solid var(--border-strong);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(49,169,230,.13),
+      rgba(154,120,232,.12)
+    );
+
+  color:var(--text);
+
+  cursor:pointer;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  font-size:19px;
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    background .3s ease;
+}
+
+.theme-toggle:hover{
+
+  transform:
+    translateY(-4px)
+    rotate(5deg);
+
+  box-shadow:
+    0 12px 30px var(--glow);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+  min-height:calc(100vh - 76px);
+
+  display:flex;
+
+  align-items:center;
+
+  padding:
+    90px 0 105px;
+
+  background:
+
+    radial-gradient(
+      circle at 5% 50%,
+      rgba(35,157,216,.13),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at 95% 20%,
+      rgba(144,108,229,.13),
+      transparent 31%
+    ),
+
+    linear-gradient(
+      135deg,
+      rgba(8,23,40,.98),
+      rgba(8,18,32,.96)
+    );
+}
+
+body.light .hero{
+
+  background:
+
+    radial-gradient(
+      circle at 5% 50%,
+      rgba(25,121,168,.14),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at 95% 20%,
+      rgba(117,83,165,.11),
+      transparent 30%
+    ),
+
+    linear-gradient(
+      135deg,
+      #edf8fc,
+      #f7f9fc 52%,
+      #f5f0fa
+    );
+}
+
+.hero-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    350px 1fr;
+
+  align-items:center;
+
+  gap:70px;
+}
+
+.hero-photo-wrap{
+
+  display:flex;
+
+  justify-content:center;
+
+  position:relative;
+}
+
+.hero-photo-wrap::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:330px;
+  height:330px;
+
+  border-radius:50%;
+
+  background:
+
+    radial-gradient(
+      circle,
+      rgba(44,176,229,.20),
+      transparent 65%
+    );
+
+  filter:blur(10px);
+
+  animation:
+    pulseGlow 5s ease-in-out infinite;
+
+  z-index:0;
+}
+
+@keyframes pulseGlow{
+
+  0%,100%{
+    transform:scale(1);
+    opacity:.75;
+  }
+
+  50%{
+    transform:scale(1.12);
+    opacity:1;
+  }
+}
+
+.hero-photo{
+
+  position:relative;
+
+  z-index:1;
+
+  width:300px;
+  height:360px;
+
+  object-fit:cover;
+
+  border-radius:30px;
+
+  border:
+    1px solid rgba(255,255,255,.20);
+
+  box-shadow:
+    0 35px 90px rgba(0,0,0,.45),
+    0 0 45px rgba(35,157,216,.12);
+
+  transition:
+    transform .45s cubic-bezier(.2,.8,.2,1),
+    box-shadow .45s ease;
+}
+
+.hero-photo:hover{
+
+  transform:
+    translateY(-10px)
+    rotate(.6deg)
+    scale(1.015);
+
+  box-shadow:
+    0 45px 105px rgba(0,0,0,.52),
+    0 0 55px rgba(35,157,216,.20);
+}
+
+.hero-content{
+
+  border-left:
+    3px solid var(--blue);
+
+  padding-left:40px;
+}
+
+.hero-kicker{
+
+  color:var(--blue-2);
+
+  font-size:12px;
+
+  font-weight:950;
+
+  letter-spacing:3.5px;
+
+  text-transform:uppercase;
+
+  margin-bottom:18px;
+}
+
+.hero h1{
+
+  color:var(--text);
+
+  font-size:
+    clamp(48px,6vw,78px);
+
+  line-height:1;
+
+  letter-spacing:-3px;
+
+  margin-bottom:22px;
+
+  text-shadow:
+    0 10px 50px rgba(0,0,0,.18);
+}
+
+.hero h1:hover{
+
+  transform:
+    translateX(4px);
+
+  text-shadow:
+    0 0 35px rgba(49,169,230,.18);
+}
+
+.hero-subtitle{
+
+  color:var(--blue-2);
+
+  font-size:18px;
+
+  font-weight:850;
+
+  margin-bottom:29px;
+}
+
+.hero-about{
+
+  max-width:850px;
+
+  color:var(--text-soft);
+
+  font-size:15px;
+}
+
+.hero-about p{
+
+  margin-bottom:17px;
+}
+
+.hero-about strong{
+
+  color:var(--text);
+
+  font-weight:850;
+}
+
+.hero-about p:hover{
+
+  transform:
+    translateX(4px);
+}
+
+.hero-buttons{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:12px;
+
+  margin-top:30px;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:8px;
+
+  min-height:50px;
+
+  padding:12px 21px;
+
+  border-radius:13px;
+
+  font-size:13px;
+
+  font-weight:850;
+
+  border:1px solid transparent;
+
+  cursor:pointer;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    background .25s ease,
+    border-color .25s ease;
+}
+
+.btn:hover{
+
+  transform:
+    translateY(-5px);
+
+  box-shadow:
+    0 16px 35px rgba(0,0,0,.25);
+}
+
+.btn-primary{
+
+  color:white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #1685ba,
+      #19a8a0
+    );
+}
+
+.btn-cv{
+
+  color:white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #7154b8,
+      #9a72df
+    );
+}
+
+.btn-outline{
+
+  color:var(--text);
+
+  background:
+    rgba(255,255,255,.055);
+
+  border:
+    1px solid var(--border-strong);
+}
+
+body.light .btn-outline{
+
+  background:
+    rgba(255,255,255,.75);
+
+  color:var(--navy);
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.section-heading{
+
+  text-align:center;
+
+  margin-bottom:50px;
+}
+
+.eyebrow{
+
+  display:inline-block;
+
+  color:var(--blue-2);
+
+  font-size:11px;
+
+  font-weight:950;
+
+  letter-spacing:3px;
+
+  text-transform:uppercase;
+
+  margin-bottom:10px;
+}
+
+.section-heading h2{
+
+  color:var(--text);
+
+  font-size:
+    clamp(31px,4vw,48px);
+
+  line-height:1.12;
+
+  font-weight:900;
+
+  letter-spacing:-1.5px;
+
+  margin-bottom:13px;
+}
+
+.section-heading p{
+
+  max-width:760px;
+
+  margin:auto;
+
+  color:var(--muted);
+
+  font-size:14px;
+}
+
+.justify{
+
+  text-align:justify;
+
+  text-justify:inter-word;
+}
+
+
+/* =========================================================
+   PROFILE SECTION
+========================================================= */
+
+.profile-section{
+
+  background:
+    linear-gradient(
+      135deg,
+      #09192b,
+      #0b1626
+    );
+}
+
+body.light .profile-section{
+
+  background:
+    linear-gradient(
+      135deg,
+      #f2f8fc,
+      #f7f2fa
+    );
+}
+
+.profile-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:18px;
+}
+
+.profile-card{
+
+  position:relative;
+
+  min-height:165px;
+
+  padding:28px 18px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
+
+  border-radius:22px;
+
+  background:
+
+    linear-gradient(
+      145deg,
+      rgba(20,40,63,.82),
+      rgba(10,27,45,.72)
+    );
+
+  border:
+    1px solid var(--border);
+
+  box-shadow:
+    var(--shadow);
+
+  overflow:hidden;
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition),
+    background .35s ease;
+}
+
+body.light .profile-card{
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.92),
+      rgba(241,248,252,.90)
+    );
+}
+
+.profile-card::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:180px;
+  height:180px;
+
+  top:-105px;
+  right:-90px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(49,169,230,.16),
+      transparent 68%
+    );
+
+  transition:
+    transform .5s ease;
+}
+
+.profile-card:hover{
+
+  transform:
+    translateY(-10px)
+    scale(1.015);
+
+  box-shadow:
+    var(--shadow-hover),
+    0 0 40px rgba(49,169,230,.08);
+
+  border-color:
+    var(--border-strong);
+}
+
+.profile-card:hover::before{
+
+  transform:scale(1.8);
+}
+
+.profile-icon{
+
+  width:48px;
+  height:48px;
+
+  border-radius:14px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  margin-bottom:13px;
+
+  font-size:14px;
+
+  font-weight:950;
+
+  transition:
+    transform .3s ease,
+    border-radius .3s ease;
+}
+
+.profile-card:hover .profile-icon{
+
+  transform:
+    rotate(-7deg)
+    scale(1.14);
+
+  border-radius:18px;
+}
+
+.scholar-icon{
+  background:#16355c;
+  color:#65a4ff;
+}
+
+.rg-icon{
+  background:#103f3c;
+  color:#31d0ae;
+}
+
+.linkedin-icon{
+  background:#12375d;
+  color:#49a8ff;
+}
+
+.orcid-icon{
+  background:#263d16;
+  color:#9bd24a;
+}
+
+body.light .scholar-icon{
+  background:#e8f0ff;
+  color:#3979e8;
+}
+
+body.light .rg-icon{
+  background:#e5faf5;
+  color:#00a98d;
+}
+
+body.light .linkedin-icon{
+  background:#e6f0fc;
+  color:#0866c2;
+}
+
+body.light .orcid-icon{
+  background:#eef8df;
+  color:#679c20;
+}
+
+.profile-card h3{
+
+  color:var(--text);
+
+  font-size:16px;
+
+  font-weight:900;
+}
+
+.profile-card p{
+
+  color:var(--muted);
+
+  font-size:12px;
+
+  margin-top:3px;
+}
+
+
+/* =========================================================
+   RESEARCH
+========================================================= */
+
+.research-section{
+
+  background:
+    linear-gradient(
+      135deg,
+      #08192b,
+      #0c182a
+    );
+}
+
+body.light .research-section{
+
+  background:
+    linear-gradient(
+      135deg,
+      #eaf6fb,
+      #f4effa
+    );
+}
+
+.research-layout{
+
+  display:grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:28px;
+}
+
+.research-box{
+
+  padding:31px;
+
+  border-radius:25px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(18,38,61,.84),
+      rgba(9,26,44,.78)
+    );
+
+  border:
+    1px solid var(--border);
+
+  box-shadow:
+    var(--shadow);
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition);
+}
+
+body.light .research-box{
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.94),
+      rgba(243,249,252,.90)
+    );
+}
+
+.research-box:hover{
+
+  transform:
+    translateY(-8px);
+
+  box-shadow:
+    var(--shadow-hover);
+
+  border-color:
+    var(--border-strong);
+}
+
+.research-box h3{
+
+  color:var(--text);
+
+  font-size:20px;
+
+  margin-bottom:20px;
+}
+
+.research-list{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:10px;
+}
+
+.research-item{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:13px;
+
+  min-height:57px;
+
+  padding:10px 14px;
+
+  border-radius:14px;
+
+  background:
+    rgba(255,255,255,.035);
+
+  border:
+    1px solid rgba(139,197,235,.10);
+
+  color:var(--text-soft);
+
+  font-size:14px;
+
+  font-weight:750;
+
+  transition:
+    transform .28s ease,
+    background .28s ease,
+    border-color .28s ease,
+    box-shadow .28s ease;
+}
+
+body.light .research-item{
+
+  background:
+    linear-gradient(
+      90deg,
+      #f4f9fc,
+      #fbfcfd
+    );
+
+  color:var(--text);
+}
+
+.research-item:hover{
+
+  transform:
+    translateX(8px);
+
+  background:
+    rgba(49,169,230,.08);
+
+  border-color:
+    var(--border-strong);
+
+  box-shadow:
+    0 12px 28px rgba(0,0,0,.18);
+}
+
+.research-number{
+
+  width:32px;
+  height:32px;
+
+  flex:0 0 32px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  border-radius:9px;
+
+  color:white;
+
+  font-size:10px;
+
+  font-weight:950;
+}
+
+
+/* =========================================================
+   ACADEMIC HIGHLIGHTS
+========================================================= */
+
+.highlights-section{
+
+  background:
+    linear-gradient(
+      135deg,
+      #091a2c,
+      #0a1728
+    );
+}
+
+body.light .highlights-section{
+
+  background:
+    linear-gradient(
+      135deg,
+      #f5fafc,
+      #f7f2fa
+    );
+}
+
+.highlight-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(6,1fr);
+
+  gap:16px;
+}
+
+.highlight{
+
+  min-height:190px;
+
+  padding:24px 12px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
+
+  border:
+    1px solid var(--border);
+
+  border-radius:20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(19,38,61,.82),
+      rgba(10,26,44,.72)
+    );
+
+  box-shadow:
+    0 12px 35px rgba(0,0,0,.18);
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition);
+}
+
+body.light .highlight{
+
+  background:
+    rgba(255,255,255,.92);
+}
+
+.highlight:hover{
+
+  transform:
+    translateY(-9px)
+    scale(1.015);
+
+  box-shadow:
+    var(--shadow-hover);
+
+  border-color:
+    var(--border-strong);
+}
+
+.highlight-number{
+
+  width:82px;
+  height:82px;
+
+  border-radius:50%;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  margin-bottom:15px;
+
+  font-size:24px;
+
+  font-weight:950;
+
+  border:
+    6px solid rgba(255,255,255,.04);
+
+  transition:
+    transform .3s ease;
+}
+
+.highlight:hover .highlight-number{
+
+  transform:
+    scale(1.1)
+    rotate(5deg);
+}
+
+.h-blue .highlight-number{
+  background:#103956;
+  color:#55b9ef;
+}
+
+.h-purple .highlight-number{
+  background:#302450;
+  color:#ae8bf2;
+}
+
+.h-orange .highlight-number{
+  background:#4b351d;
+  color:#e9aa54;
+}
+
+.h-green .highlight-number{
+  background:#163e31;
+  color:#4bd295;
+}
+
+.h-red .highlight-number{
+  background:#4a252c;
+  color:#ed727d;
+}
+
+.h-gold .highlight-number{
+  background:#493c1d;
+  color:#e3c15e;
+}
+
+body.light .h-blue .highlight-number{
+  background:#e5f3fa;
+  color:#1979a8;
+}
+
+body.light .h-purple .highlight-number{
+  background:#f0e9f8;
+  color:#7553a5;
+}
+
+body.light .h-orange .highlight-number{
+  background:#fff0d9;
+  color:#d18a19;
+}
+
+body.light .h-green .highlight-number{
+  background:#e5f5ee;
+  color:#3c9876;
+}
+
+body.light .h-red .highlight-number{
+  background:#fbe9eb;
+  color:#c44e55;
+}
+
+body.light .h-gold .highlight-number{
+  background:#fff5d7;
+  color:#b78a20;
+}
+
+.highlight h3{
+
+  color:var(--text);
+
+  font-size:14px;
+
+  line-height:1.4;
+}
+
+
+/* =========================================================
+   SCHOLARLY WORK
+========================================================= */
+
+.work-section{
+
+  background:
+    linear-gradient(
+      135deg,
+      #081a2d,
+      #0d192a
+    );
+}
+
+body.light .work-section{
+
+  background:
+    linear-gradient(
+      135deg,
+      #eaf6fb,
+      #f3eef9
+    );
+}
+
+.work-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:23px;
+}
+
+.work-card{
+
+  display:flex;
+
+  flex-direction:column;
+
+  padding:29px;
+
+  border-radius:23px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(18,39,62,.86),
+      rgba(10,26,44,.76)
+    );
+
+  border:
+    1px solid var(--border);
+
+  box-shadow:
+    var(--shadow);
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition);
+}
+
+body.light .work-card{
+
+  background:
+    rgba(255,255,255,.95);
+}
+
+.work-card:hover{
+
+  transform:
+    translateY(-9px);
+
+  box-shadow:
+    var(--shadow-hover);
+
+  border-color:
+    var(--border-strong);
+}
+
+.work-tag{
+
+  align-self:flex-start;
+
+  display:inline-block;
+
+  padding:6px 11px;
+
+  border-radius:8px;
+
+  font-size:10px;
+
+  font-weight:950;
+
+  margin-bottom:17px;
+}
+
+.tag-book{
+  background:#332650;
+  color:#b594ef;
+}
+
+.tag-published{
+  background:#103c55;
+  color:#58b9e9;
+}
+
+.tag-review{
+  background:#4b351d;
+  color:#e8ad59;
+}
+
+body.light .tag-book{
+  background:#efe7f8;
+  color:#7553a5;
+}
+
+body.light .tag-published{
+  background:#e5f2f8;
+  color:#1979a8;
+}
+
+body.light .tag-review{
+  background:#fff0d8;
+  color:#d18a19;
+}
+
+.work-card h3{
+
+  color:var(--text);
+
+  font-size:17px;
+
+  line-height:1.48;
+
+  margin-bottom:15px;
+}
+
+.work-card p{
+
+  color:var(--muted);
+
+  font-size:13px;
+}
+
+.work-card strong{
+
+  color:var(--text);
+}
+
+.work-footer{
+
+  margin-top:auto;
+
+  padding-top:22px;
+}
+
+.work-link{
+
+  display:inline-block;
+
+  margin-top:8px;
+
+  color:var(--blue-2);
+
+  font-weight:900;
+}
+
+.work-link:hover{
+
+  transform:
+    translateX(6px);
+
+  color:var(--teal);
+}
+
+
+/* =========================================================
+   QUALIFICATION
+========================================================= */
+
+.qualification-section{
+
+  background:
+    linear-gradient(
+      135deg,
+      #091a2d,
+      #0d1829
+    );
+}
+
+body.light .qualification-section{
+
+  background:
+    linear-gradient(
+      135deg,
+      #edf7fb,
+      #f6f0fa
+    );
+}
+
+.qualification{
+
+  max-width:1000px;
+
+  margin:auto;
+
+  padding:36px;
+
+  border-radius:26px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(18,39,62,.86),
+      rgba(9,25,42,.78)
+    );
+
+  border:
+    1px solid var(--border);
+
+  box-shadow:
+    var(--shadow);
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+body.light .qualification{
+
+  background:
+    rgba(255,255,255,.94);
+}
+
+.qualification:hover{
+
+  transform:
+    translateY(-6px);
+
+  box-shadow:
+    var(--shadow-hover);
+}
+
+.qualification-top{
+
+  display:grid;
+
+  grid-template-columns:
+    130px 1fr;
+
+  gap:28px;
+
+  align-items:center;
+}
+
+.sau-logo{
+
+  width:115px;
+  height:115px;
+
+  object-fit:contain;
+
+  margin:auto;
+
+  transition:
+    transform .35s ease;
+}
+
+.qualification:hover .sau-logo{
+
+  transform:
+    scale(1.08)
+    rotate(-3deg);
+}
+
+.degree-label{
+
+  display:inline-block;
+
+  padding:6px 11px;
+
+  border-radius:8px;
+
+  background:
+    rgba(49,169,230,.11);
+
+  color:var(--blue-2);
+
+  font-size:10px;
+
+  font-weight:950;
+
+  letter-spacing:.8px;
+
+  text-transform:uppercase;
+
+  margin-bottom:10px;
+}
+
+.qualification h3{
+
+  color:var(--text);
+
+  font-size:22px;
+
+  line-height:1.4;
+
+  margin-bottom:5px;
+}
+
+.qualification p{
+
+  color:var(--muted);
+
+  font-size:14px;
+}
+
+.cgpa{
+
+  display:inline-block;
+
+  margin-top:12px;
+
+  padding:10px 15px;
+
+  border-radius:11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(49,169,230,.12),
+      rgba(154,120,232,.12)
+    );
+
+  color:var(--text);
+
+  font-size:14px;
+
+  font-weight:900;
+
+  border:
+    1px solid var(--border);
+}
+
+.results-title{
+
+  text-align:center;
+
+  color:var(--text);
+
+  font-size:21px;
+
+  margin:38px 0 18px;
+
+  font-weight:900;
+}
+
+.semester-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:14px;
+}
+
+.semester{
+
+  text-align:center;
+
+  padding:21px 15px;
+
+  border-radius:16px;
+
+  background:
+    rgba(49,169,230,.055);
+
+  border:
+    1px solid var(--border);
+
+  transition:
+    transform .28s ease,
+    box-shadow .28s ease,
+    border-color .28s ease;
+}
+
+.semester:hover{
+
+  transform:
+    translateY(-7px);
+
+  box-shadow:
+    0 15px 32px rgba(0,0,0,.20);
+
+  border-color:
+    var(--border-strong);
+}
+
+.semester span{
+
+  display:block;
+
+  color:var(--muted);
+
+  font-size:12px;
+
+  font-weight:700;
+
+  margin-bottom:5px;
+}
+
+.semester strong{
+
+  color:var(--blue-2);
+
+  font-size:27px;
+
+  font-weight:950;
+}
+
+
+/* =========================================================
+   IELTS
+========================================================= */
+
+.ielts-section{
+
+  background:
+    linear-gradient(
+      135deg,
+      #081a2c,
+      #0d192b
+    );
+}
+
+body.light .ielts-section{
+
+  background:
+    linear-gradient(
+      135deg,
+      #e9f6fb,
+      #f2edf9
+    );
+}
+
+.ielts-box{
+
+  max-width:1000px;
+
+  margin:auto;
+
+  padding:36px;
+
+  border-radius:27px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(18,39,62,.88),
+      rgba(9,25,43,.80)
+    );
+
+  border:
+    1px solid var(--border);
+
+  box-shadow:
+    var(--shadow);
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+body.light .ielts-box{
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.97),
+      rgba(246,249,253,.94)
+    );
+}
+
+.ielts-box:hover{
+
+  transform:
+    translateY(-6px);
+
+  box-shadow:
+    var(--shadow-hover);
+}
+
+.ielts-header{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:25px;
+
+  padding-bottom:25px;
+
+  margin-bottom:25px;
+
+  border-bottom:
+    1px solid var(--border);
+}
+
+.ielts-brand{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:13px;
+}
+
+.ielts-logo{
+
+  width:55px;
+  height:55px;
+
+  border-radius:50%;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #c9232d,
+      #e45158
+    );
+
+  color:white;
+
+  font-size:18px;
+
+  font-weight:950;
+
+  box-shadow:
+    0 9px 25px rgba(201,35,45,.20);
+
+  transition:
+    transform .3s ease;
+}
+
+.ielts-box:hover .ielts-logo{
+
+  transform:
+    rotate(-7deg)
+    scale(1.08);
+}
+
+.ielts-brand h3{
+
+  color:var(--text);
+
+  font-size:20px;
+
+  font-weight:900;
+}
+
+.ielts-brand span{
+
+  display:block;
+
+  color:var(--muted);
+
+  font-size:12px;
+}
+
+.ielts-date{
+
+  color:var(--muted);
+
+  font-size:13px;
+
+  font-weight:700;
+}
+
+.ielts-score-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(5,1fr);
+
+  gap:14px;
+}
+
+.score-card{
+
+  position:relative;
+
+  overflow:hidden;
+
+  min-height:150px;
+
+  padding:22px 12px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
+
+  border-radius:17px;
+
+  background:
+    rgba(255,255,255,.045);
+
+  border:
+    1px solid var(--border);
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    background .3s ease;
+}
+
+body.light .score-card{
+
+  background:#fff;
+}
+
+.score-card::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:0;
+  right:0;
+
+  height:4px;
+}
+
+.score-card:hover{
+
+  transform:
+    translateY(-8px)
+    scale(1.02);
+
+  box-shadow:
+    0 18px 38px rgba(0,0,0,.20);
+}
+
+.score-overall::before{
+  background:#c9232d;
+}
+
+.score-listening::before{
+  background:#287fc0;
+}
+
+.score-reading::before{
+  background:#138b8c;
+}
+
+.score-writing::before{
+  background:#d18a19;
+}
+
+.score-speaking::before{
+  background:#7553a5;
+}
+
+.score-value{
+
+  font-size:34px;
+
+  line-height:1;
+
+  font-weight:950;
+
+  margin-bottom:10px;
+}
+
+.score-overall .score-value{
+  color:#ed5d68;
+}
+
+.score-listening .score-value{
+  color:#4da9e6;
+}
+
+.score-reading .score-value{
+  color:#32c5bc;
+}
+
+.score-writing .score-value{
+  color:#e4a347;
+}
+
+.score-speaking .score-value{
+  color:#a883ed;
+}
+
+.score-label{
+
+  color:var(--text);
+
+  font-size:13px;
+
+  font-weight:900;
+}
+
+.score-sub{
+
+  color:var(--muted);
+
+  font-size:11px;
+}
+
+.ielts-note{
+
+  margin-top:22px;
+
+  text-align:center;
+
+  color:var(--text);
+
+  font-size:13px;
+
+  font-weight:900;
+
+  padding-top:18px;
+
+  border-top:
+    1px solid var(--border);
+}
+
+
+/* =========================================================
+   LEADERSHIP / TEACHING
+========================================================= */
+
+.engagement-section{
+
+  background:
+    linear-gradient(
+      135deg,
+      #091a2d,
+      #0d182a
+    );
+}
+
+body.light .engagement-section{
+
+  background:
+    linear-gradient(
+      135deg,
+      #f5f9fc,
+      #f5eff9
+    );
+}
+
+.role-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:22px;
+}
+
+.role-card{
+
+  position:relative;
+
+  padding:28px;
+
+  border-radius:23px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(18,40,63,.86),
+      rgba(9,25,43,.78)
+    );
+
+  border:
+    1px solid var(--border);
+
+  box-shadow:
+    var(--shadow);
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition),
+    background .3s ease;
+}
+
+body.light .role-card{
+
+  background:
+    rgba(255,255,255,.95);
+}
+
+.role-card:hover{
+
+  transform:
+    translateY(-10px);
+
+  box-shadow:
+    var(--shadow-hover),
+    0 0 35px rgba(49,169,230,.07);
+
+  border-color:
+    var(--border-strong);
+}
+
+.role-logo{
+
+  width:90px;
+  height:90px;
+
+  object-fit:contain;
+
+  margin-bottom:18px;
+
+  transition:
+    transform .35s ease;
+}
+
+.role-card:hover .role-logo{
+
+  transform:
+    scale(1.09)
+    rotate(-2deg);
+}
+
+.role-card h3{
+
+  color:var(--text);
+
+  font-size:17px;
+
+  margin-bottom:5px;
+}
+
+.role-org{
+
+  color:var(--blue-2);
+
+  font-size:13px;
+
+  font-weight:900;
+
+  margin-bottom:11px;
+}
+
+.role-card p{
+
+  color:var(--muted);
+
+  font-size:13px;
+}
+
+.role-date{
+
+  display:inline-block;
+
+  margin-top:12px;
+
+  padding:5px 9px;
+
+  border-radius:7px;
+
+  background:
+    rgba(49,169,230,.08);
+
+  color:var(--text-soft);
+
+  font-size:11px;
+
+  font-weight:850;
+
+  border:
+    1px solid var(--border);
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.gallery-section{
+
+  background:
+    linear-gradient(
+      135deg,
+      #081a2c,
+      #0d192a
+    );
+}
+
+body.light .gallery-section{
+
+  background:
+    linear-gradient(
+      135deg,
+      #eaf6fb,
+      #f3edf9
+    );
+}
+
+.gallery-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:18px;
+}
+
+.gallery-card{
+
+  position:relative;
+
+  height:310px;
+
+  overflow:hidden;
+
+  border-radius:21px;
+
+  background:#101f30;
+
+  box-shadow:
+    var(--shadow);
+
+  transition:
+    transform .32s ease,
+    box-shadow .32s ease;
+}
+
+.gallery-card:hover{
+
+  transform:
+    translateY(-9px);
+
+  box-shadow:
+    var(--shadow-hover);
+}
+
+.gallery-card img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transition:
+    transform .55s ease,
+    filter .55s ease;
+}
+
+.gallery-card:hover img{
+
+  transform:
+    scale(1.08);
+
+  filter:
+    brightness(.78)
+    saturate(1.08);
+}
+
+.gallery-overlay{
+
+  position:absolute;
+
+  left:0;
+  right:0;
+  bottom:0;
+
+  padding:
+    75px 18px 18px;
+
+  color:white;
+
+  background:
+    linear-gradient(
+      transparent,
+      rgba(3,12,22,.94)
+    );
+}
+
+.gallery-overlay h3{
+
+  font-size:16px;
+
+  line-height:1.3;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-section{
+
+  padding:
+    110px 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #061525,
+      #0a2031 52%,
+      #102b35
+    );
+}
+
+body.light .contact-section{
+
+  background:
+    linear-gradient(
+      135deg,
+      #eaf6fb,
+      #f1ecf8
+    );
+}
+
+.contact-box{
+
+  max-width:980px;
+
+  margin:auto;
+
+  padding:
+    58px 45px;
+
+  text-align:center;
+
+  border-radius:30px;
+
+  background:
+
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(49,169,230,.18),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(154,120,232,.18),
+      transparent 30%
+    ),
+
+    linear-gradient(
+      135deg,
+      #102e4a,
+      #12627f 55%,
+      #117f7b
+    );
+
+  color:white;
+
+  border:
+    1px solid rgba(150,220,255,.20);
+
+  box-shadow:
+    0 35px 90px rgba(0,0,0,.40);
+
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+}
+
+body.light .contact-box{
+
+  box-shadow:
+    0 28px 65px rgba(20,60,90,.20);
+}
+
+.contact-box:hover{
+
+  transform:
+    translateY(-7px);
+
+  box-shadow:
+    0 45px 105px rgba(0,0,0,.46);
+}
+
+.contact-box .section-heading{
+
+  margin-bottom:28px;
+}
+
+.contact-box .eyebrow{
+
+  color:#aee8f4;
+}
+
+.contact-box h2{
+
+  color:white;
+
+  font-size:
+    clamp(31px,4vw,45px);
+
+  margin-bottom:12px;
+}
+
+.contact-box > p{
+
+  max-width:700px;
+
+  margin:
+    0 auto 30px;
+
+  color:
+    rgba(255,255,255,.82);
+
+  font-size:14px;
+}
+
+.contact-links{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  justify-content:center;
+
+  gap:11px;
+}
+
+.contact-link{
+
+  padding:11px 18px;
+
+  border-radius:12px;
+
+  background:
+    rgba(255,255,255,.10);
+
+  border:
+    1px solid rgba(255,255,255,.21);
+
+  color:white;
+
+  font-size:12px;
+
+  font-weight:850;
+
+  transition:
+    transform .25s ease,
+    background .25s ease,
+    box-shadow .25s ease;
+}
+
+.contact-link:hover{
+
+  transform:
+    translateY(-5px);
+
+  background:
+    rgba(255,255,255,.19);
+
+  box-shadow:
+    0 12px 28px rgba(0,0,0,.20);
+}
+
+.contact-info{
+
+  margin-top:28px;
+
+  color:
+    rgba(255,255,255,.75);
+
+  font-size:13px;
+
+  line-height:1.9;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+
+  padding:32px 0;
+
+  text-align:center;
+
+  background:#040d17;
+
+  color:
+    rgba(255,255,255,.58);
+
+  font-size:12px;
+
+  border-top:
+    1px solid rgba(255,255,255,.06);
+}
+
+body.light footer{
+
+  background:#0b2035;
+
+  color:
+    rgba(255,255,255,.68);
+}
+
+footer strong{
+
+  color:white;
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+.reveal{
+
+  opacity:0;
+
+  transform:
+    translateY(25px);
+
+  transition:
+    opacity .7s ease,
+    transform .7s cubic-bezier(.2,.8,.2,1);
+}
+
+.reveal.visible{
+
+  opacity:1;
+
+  transform:
+    translateY(0);
+}
+
+
+/* =========================================================
+   SELECTION
+========================================================= */
+
+::selection{
+
+  background:
+    rgba(49,169,230,.35);
+
+  color:white;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar{
+
+  width:9px;
+}
+
+::-webkit-scrollbar-track{
+
+  background:
+    var(--bg);
+}
+
+::-webkit-scrollbar-thumb{
+
+  background:
+    linear-gradient(
+      #187ba8,
+      #7759b9
+    );
+
+  border-radius:20px;
+}
+
+
+/* =========================================================
+   MOBILE NAV
+========================================================= */
+
+.mobile-menu-btn{
+
+  display:none;
+
+  width:45px;
+  height:45px;
+
+  border-radius:13px;
+
+  border:
+    1px solid var(--border-strong);
+
+  background:
+    rgba(49,169,230,.08);
+
+  color:var(--text);
+
+  cursor:pointer;
+
+  font-size:18px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1100px){
+
+  .nav-links{
+
+    display:none;
+  }
+
+  .mobile-menu-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+  }
+
+  .hero-grid{
+
+    grid-template-columns:
+      290px 1fr;
+
+    gap:45px;
+  }
+
+  .profile-grid{
+
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .highlight-grid{
+
+    grid-template-columns:
+      repeat(3,1fr);
+  }
+
+  .gallery-grid{
+
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .role-grid{
+
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+}
+
+
+@media(max-width:900px){
+
+  section{
+
+    padding:78px 0;
+  }
+
+  .hero{
+
+    min-height:auto;
+
+    padding:
+      70px 0 85px;
+  }
+
+  .hero-grid{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+  }
+
+  .hero-photo-wrap{
+
+    order:1;
+  }
+
+  .hero-content{
+
+    order:2;
+
+    border-left:0;
+
+    border-top:
+      3px solid var(--blue);
+
+    padding:
+      28px 0 0;
+  }
+
+  .hero-about{
+
+    margin:auto;
+  }
+
+  .hero-buttons{
+
+    justify-content:center;
+  }
+
+  .research-layout{
+
+    grid-template-columns:1fr;
+  }
+
+  .work-grid{
+
+    grid-template-columns:1fr;
+  }
+
+  .ielts-score-grid{
+
+    grid-template-columns:
+      repeat(3,1fr);
+  }
+}
+
+
+@media(max-width:650px){
+
+  section{
+
+    padding:65px 0;
+  }
+
+  .container{
+
+    width:91%;
+  }
+
+  .nav-inner{
+
+    min-height:68px;
+  }
+
+  .brand{
+
+    font-size:14px;
+  }
+
+  .nav-right{
+
+    gap:6px;
+  }
+
+  .theme-toggle{
+
+    width:43px;
+    height:43px;
+  }
+
+  .mobile-menu-btn{
+
+    width:43px;
+    height:43px;
+  }
+
+  .hero{
+
+    padding:
+      55px 0 70px;
+  }
+
+  .hero-photo{
+
+    width:245px;
+    height:300px;
+  }
+
+  .hero h1{
+
+    font-size:43px;
+
+    letter-spacing:-1.7px;
+  }
+
+  .hero-subtitle{
+
+    font-size:15px;
+  }
+
+  .hero-about{
+
+    text-align:justify;
+
+    font-size:14px;
+  }
+
+  .hero-buttons{
+
+    flex-direction:column;
+  }
+
+  .btn{
+
+    width:100%;
+  }
+
+  .profile-grid{
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap:11px;
+  }
+
+  .profile-card{
+
+    min-height:145px;
+
+    padding:
+      18px 8px;
+  }
+
+  .profile-card h3{
+
+    font-size:13px;
+  }
+
+  .profile-card p{
+
+    font-size:11px;
+  }
+
+  .research-box{
+
+    padding:
+      23px 18px;
+  }
+
+  .research-item{
+
+    font-size:13px;
+  }
+
+  .highlight-grid{
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap:12px;
+  }
+
+  .highlight{
+
+    min-height:170px;
+
+    padding:
+      18px 8px;
+  }
+
+  .highlight-number{
+
+    width:70px;
+    height:70px;
+
+    font-size:20px;
+  }
+
+  .qualification{
+
+    padding:
+      25px 18px;
+  }
+
+  .qualification-top{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+  }
+
+  .qualification h3{
+
+    font-size:19px;
+  }
+
+  .semester-grid{
+
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .ielts-box{
+
+    padding:
+      25px 17px;
+  }
+
+  .ielts-header{
+
+    flex-direction:column;
+
+    text-align:center;
+  }
+
+  .ielts-score-grid{
+
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .score-card{
+
+    min-height:135px;
+  }
+
+  .role-grid{
+
+    grid-template-columns:1fr;
+  }
+
+  .gallery-grid{
+
+    grid-template-columns:1fr;
+  }
+
+  .gallery-card{
+
+    height:290px;
+  }
+
+  .contact-box{
+
+    padding:
+      42px 22px;
+  }
+
+  .contact-links{
+
+    flex-direction:column;
+  }
+
+  .contact-link{
+
+    width:100%;
+  }
+}
+
+
+@media(max-width:390px){
+
+  .profile-grid{
+
+    grid-template-columns:1fr;
+  }
+
+  .highlight-grid{
+
+    grid-template-columns:1fr;
+  }
+
+  .semester-grid{
+
+    grid-template-columns:1fr;
+  }
+
+  .ielts-score-grid{
+
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .hero h1{
+
+    font-size:38px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  *,
+  *::before,
+  *::after{
+
+    animation-duration:.01ms !important;
+
+    animation-iteration-count:1 !important;
+
+    scroll-behavior:auto !important;
+
+    transition-duration:.01ms !important;
+  }
+}
+
+</style>
 
 </head>
 
@@ -30,1225 +3191,1723 @@ Dr. Ahmed Ishtiak Nirob | Academic & Research Portfolio
 <body>
 
 
-<!-- ================= NAVBAR ================= -->
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
 
 <nav class="navbar">
 
-<div class="container nav-inner">
+  <div class="container nav-inner">
 
-<a
-  href="index.html"
-  class="brand"
->
-Dr. <span>Ahmed Ishtiak Nirob</span>
-</a>
+    <div class="brand">
+      Dr. <span>Ahmed Ishtiak Nirob</span>
+    </div>
 
+    <div class="nav-right">
 
-<div class="nav-right">
+      <div class="nav-links">
 
-<div class="nav-links">
+        <button class="nav-link active">
+          Home
+        </button>
 
-<a
-  class="nav-link active"
-  href="index.html"
->
-Home
-</a>
+        <button class="nav-link">
+          Research
+        </button>
 
-<a
-  class="nav-link"
-  href="research.html"
->
-Research
-</a>
+        <button class="nav-link">
+          Publications
+        </button>
 
-<a
-  class="nav-link"
-  href="publications.html"
->
-Publications
-</a>
+        <button class="nav-link">
+          Experience
+        </button>
 
-<a
-  class="nav-link"
-  href="education.html"
->
-Education
-</a>
+        <button class="nav-link">
+          Skills
+        </button>
 
-<a
-  class="nav-link"
-  href="#engagement"
->
-Experience
-</a>
+        <button class="nav-link">
+          Presentations
+        </button>
 
-<a
-  class="nav-link"
-  href="#contact"
->
-Contact
-</a>
+        <button class="nav-link">
+          Awards
+        </button>
 
-</div>
+        <button class="nav-link">
+          Contact
+        </button>
 
+      </div>
 
-<div class="theme-control">
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        aria-label="Toggle light and dark mode"
+        title="Toggle theme"
+      >
+        🌙
+      </button>
 
-<span class="theme-label">
-Dark / Light
-</span>
+      <button
+        class="mobile-menu-btn"
+        id="mobileMenuBtn"
+        aria-label="Open navigation"
+      >
+        ☰
+      </button>
 
-<button
-  class="theme-toggle"
-  id="themeToggle"
->
-🌙
-</button>
+    </div>
 
-</div>
-
-
-<button
-  class="mobile-menu-btn"
-  id="mobileMenuBtn"
->
-☰
-</button>
-
-</div>
-
-</div>
+  </div>
 
 </nav>
 
 
-<!-- ================= HERO ================= -->
+<!-- =========================================================
+     HERO
+========================================================= -->
 
 <section class="hero">
 
-<div class="container hero-grid">
+  <div class="container hero-grid">
+
+    <div class="hero-photo-wrap reveal">
+
+      <img
+        class="hero-photo"
+        src="https://drive.google.com/thumbnail?id=16gCtu2zZKK0pucf-8HS5k5xuVGwcciNa&sz=w1000"
+        alt="Dr. Ahmed Ishtiak Nirob"
+      >
+
+    </div>
 
 
-<div class="hero-photo-wrap reveal">
+    <div class="hero-content reveal">
 
-<img
-  class="hero-photo"
-  src="https://drive.google.com/thumbnail?id=16gCtu2zZKK0pucf-8HS5k5xuVGwcciNa&sz=w1000"
-  alt="Dr. Ahmed Ishtiak Nirob"
->
+      <div class="hero-kicker">
+        Academic &amp; Research Portfolio
+      </div>
 
-</div>
+      <h1>
+        Dr. Ahmed Ishtiak Nirob
+      </h1>
 
-
-<div class="hero-content reveal">
-
-<div class="hero-kicker">
-Academic &amp; Research Portfolio
-</div>
+      <div class="hero-subtitle">
+        Veterinarian | M.S. Student in Microbiology | Researcher
+      </div>
 
 
-<h1>
-Dr. Ahmed Ishtiak Nirob
-</h1>
+      <!-- =====================================================
+           HERO TEXT — PRESERVED
+      ====================================================== -->
+
+      <div class="hero-about">
+
+        <p class="justify">
+          Hello, I’m Dr. Ahmed Ishtiak Nirob, a veterinarian and M.S.
+          student in Microbiology at Sher-e-Bangla Agricultural University,
+          Bangladesh. I completed my B.Sc. in Veterinary Science and Animal
+          Husbandry with a CGPA of <strong>3.54/4.00</strong>. My research
+          interests include <strong>antimicrobial resistance</strong>,
+          <strong>One Health</strong>, <strong>host–microbe interactions</strong>,
+          <strong>microbiology and molecular biology</strong>,
+          <strong>gut health</strong>, <strong>infectious and zoonotic diseases</strong>,
+          <strong>microbial genomics</strong>, <strong>bioinformatics</strong>,
+          and <strong>epidemiology</strong>.
+        </p>
 
 
-<div class="hero-subtitle">
-Veterinarian | M.S. Student in Microbiology | Researcher
-</div>
+        <p class="justify">
+          My research experience spans veterinary, epidemiological, and
+          infectious disease research, including systematic reviews and
+          meta-analyses. I have practical experience in microbiology,
+          molecular biology, epidemiological research, and data analysis
+          using <strong>R and SPSS</strong>. Alongside research, I have
+          been <strong>teaching Biology since 2018</strong> to students
+          from different academic backgrounds.
+        </p>
 
 
-<div class="hero-about">
+        <p class="justify">
+          I am interested in pursuing <strong>interdisciplinary research</strong>
+          in <strong>microbiology</strong>, <strong>antimicrobial resistance</strong>,
+          <strong>infectious diseases</strong>, <strong>animal health</strong>,
+          and <strong>One Health</strong>. I have also achieved an
+          <strong>IELTS Academic score of 7.5/9.0</strong>
+          (Listening 8.0, Reading 7.5, Writing 6.5, Speaking 7.0).
+          My long-term goal is to pursue advanced research training and
+          contribute to meaningful scientific and public-health research.
+        </p>
 
-<p class="justify">
-
-Hello, I’m Dr. Ahmed Ishtiak Nirob, a veterinarian and
-M.S. student in Microbiology at Sher-e-Bangla Agricultural
-University, Bangladesh. I completed my B.Sc. in Veterinary
-Science and Animal Husbandry with a CGPA of
-<strong>3.54/4.00</strong>. My research interests include
-<strong>antimicrobial resistance</strong>,
-<strong>One Health</strong>,
-<strong>host–microbe interactions</strong>,
-<strong>microbiology and molecular biology</strong>,
-<strong>gut health</strong>,
-<strong>infectious and zoonotic diseases</strong>,
-<strong>microbial genomics</strong>,
-<strong>bioinformatics</strong>, and
-<strong>epidemiology</strong>.
-
-</p>
+      </div>
 
 
-<p class="justify">
+      <div class="hero-buttons">
 
-My research experience spans veterinary, epidemiological,
-and infectious disease research, including systematic
-reviews and meta-analyses. I have practical experience in
-microbiology, molecular biology, epidemiological research,
-and data analysis using <strong>R and SPSS</strong>.
-Alongside research, I have been
-<strong>teaching Biology since 2018</strong> to students
-from different academic backgrounds.
+        <a
+          class="btn btn-primary"
+          href="#research"
+        >
+          Explore My Research
+        </a>
 
-</p>
+        <a
+          class="btn btn-cv"
+          href="#contact"
+        >
+          View / Download CV
+        </a>
 
+        <a
+          class="btn btn-outline"
+          href="#contact"
+        >
+          Academic Contact
+        </a>
 
-<p class="justify">
+      </div>
 
-I am interested in pursuing
-<strong>interdisciplinary research</strong> in
-<strong>microbiology</strong>,
-<strong>antimicrobial resistance</strong>,
-<strong>infectious diseases</strong>,
-<strong>animal health</strong>, and
-<strong>One Health</strong>. I have also achieved an
-<strong>IELTS Academic score of 7.5/9.0</strong>
-(Listening 8.0, Reading 7.5, Writing 6.5, Speaking 7.0).
-My long-term goal is to pursue advanced research training
-and contribute to meaningful scientific and public-health
-research.
+    </div>
 
-</p>
-
-</div>
-
-
-<div class="hero-buttons">
-
-<a
-  class="btn btn-primary"
-  href="research.html"
->
-Explore My Research
-</a>
-
-<a
-  class="btn btn-purple"
-  href="publications.html"
->
-View Publications
-</a>
-
-<a
-  class="btn btn-outline"
-  href="#contact"
->
-Academic Contact
-</a>
-
-</div>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- ================= PROFILE ================= -->
+<!-- =========================================================
+     PROFILE LINKS
+========================================================= -->
 
 <section class="profile-section">
 
-<div class="container">
+  <div class="container">
 
-<div class="profile-grid">
+    <div class="profile-grid">
 
+      <a
+        class="profile-card"
+        href="https://scholar.google.com/citations?user=nqe--60AAAAJ&hl=en&authuser=1"
+        target="_blank"
+        rel="noopener"
+      >
 
-<a
-  class="profile-card reveal"
-  href="https://scholar.google.com/citations?user=nqe--60AAAAJ&hl=en&authuser=1"
-  target="_blank"
->
-<div class="profile-icon scholar-icon">
-GS
-</div>
+        <div class="profile-icon scholar-icon">
+          GS
+        </div>
 
-<h3>Google Scholar</h3>
+        <h3>
+          Google Scholar
+        </h3>
 
-<p>
-Research &amp; Publications
-</p>
-</a>
+        <p>
+          Research &amp; Publications
+        </p>
 
-
-<a
-  class="profile-card reveal"
-  href="https://www.researchgate.net/profile/Ahmed-Ishtiak-Nirob"
-  target="_blank"
->
-<div class="profile-icon rg-icon">
-RG
-</div>
-
-<h3>ResearchGate</h3>
-
-<p>
-Research Profile
-</p>
-</a>
+      </a>
 
 
-<a
-  class="profile-card reveal"
-  href="https://www.linkedin.com/in/ahmed-ishtiak-nirob/"
-  target="_blank"
->
-<div class="profile-icon linkedin-icon">
-in
-</div>
+      <a
+        class="profile-card"
+        href="https://www.researchgate.net/profile/Ahmed-Ishtiak-Nirob"
+        target="_blank"
+        rel="noopener"
+      >
 
-<h3>LinkedIn</h3>
+        <div class="profile-icon rg-icon">
+          RG
+        </div>
 
-<p>
-Professional Profile
-</p>
-</a>
+        <h3>
+          ResearchGate
+        </h3>
 
+        <p>
+          Research Profile
+        </p>
 
-<a
-  class="profile-card reveal"
-  href="https://orcid.org/0009-0009-4385-8481"
-  target="_blank"
->
-<div class="profile-icon orcid-icon">
-iD
-</div>
-
-<h3>ORCID</h3>
-
-<p>
-Researcher Identifier
-</p>
-</a>
+      </a>
 
 
-</div>
+      <a
+        class="profile-card"
+        href="https://www.linkedin.com/in/ahmed-ishtiak-nirob/"
+        target="_blank"
+        rel="noopener"
+      >
 
-</div>
+        <div class="profile-icon linkedin-icon">
+          in
+        </div>
+
+        <h3>
+          LinkedIn
+        </h3>
+
+        <p>
+          Professional Profile
+        </p>
+
+      </a>
+
+
+      <a
+        class="profile-card"
+        href="https://orcid.org/0009-0009-4385-8481"
+        target="_blank"
+        rel="noopener"
+      >
+
+        <div class="profile-icon orcid-icon">
+          iD
+        </div>
+
+        <h3>
+          ORCID
+        </h3>
+
+        <p>
+          Researcher Identifier
+        </p>
+
+      </a>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- ================= HIGHLIGHTS ================= -->
+<!-- =========================================================
+     RESEARCH
+========================================================= -->
+
+<section
+  class="research-section"
+  id="research"
+>
+
+  <div class="container">
+
+    <div class="section-heading reveal">
+
+      <div class="eyebrow">
+        Research Profile
+      </div>
+
+      <h2>
+        Research Interests &amp; Focus
+      </h2>
+
+      <p>
+        My research interests connect microbiology, veterinary medicine,
+        infectious disease research and One Health.
+      </p>
+
+    </div>
+
+
+    <div class="research-layout">
+
+
+      <div class="research-box reveal">
+
+        <h3>
+          Research Interests
+        </h3>
+
+        <div class="research-list">
+
+          <div class="research-item">
+
+            <span
+              class="research-number"
+              style="background:#b84c4c;"
+            >
+              01
+            </span>
+
+            Antimicrobial Resistance (AMR)
+
+          </div>
+
+
+          <div class="research-item">
+
+            <span
+              class="research-number"
+              style="background:#3c9876;"
+            >
+              02
+            </span>
+
+            One Health
+
+          </div>
+
+
+          <div class="research-item">
+
+            <span
+              class="research-number"
+              style="background:#24749a;"
+            >
+              03
+            </span>
+
+            Microbiology &amp; Molecular Biology
+
+          </div>
+
+
+          <div class="research-item">
+
+            <span
+              class="research-number"
+              style="background:#76539d;"
+            >
+              04
+            </span>
+
+            Infectious &amp; Zoonotic Diseases
+
+          </div>
+
+
+          <div class="research-item">
+
+            <span
+              class="research-number"
+              style="background:#147d7e;"
+            >
+              05
+            </span>
+
+            Animal Health
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="research-box reveal">
+
+        <h3>
+          Research Focus
+        </h3>
+
+        <div class="research-list">
+
+          <div class="research-item">
+
+            <span
+              class="research-number"
+              style="background:#76539d;"
+            >
+              01
+            </span>
+
+            Host–Microbe Interactions
+
+          </div>
+
+
+          <div class="research-item">
+
+            <span
+              class="research-number"
+              style="background:#c9821b;"
+            >
+              02
+            </span>
+
+            Gut Health &amp; Nutritional Programming
+
+          </div>
+
+
+          <div class="research-item">
+
+            <span
+              class="research-number"
+              style="background:#4f63a5;"
+            >
+              03
+            </span>
+
+            Microbial Genomics &amp; Epidemiology
+
+          </div>
+
+
+          <div class="research-item">
+
+            <span
+              class="research-number"
+              style="background:#147d7e;"
+            >
+              04
+            </span>
+
+            Bioinformatics
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     ACADEMIC HIGHLIGHTS
+========================================================= -->
 
 <section class="highlights-section">
 
-<div class="container">
+  <div class="container">
 
-<div class="text-center reveal">
+    <div class="section-heading reveal">
 
-<div class="eyebrow">
-Academic Snapshot
-</div>
+      <div class="eyebrow">
+        Academic Snapshot
+      </div>
 
-<h2 class="section-title">
-Academic Highlights
-</h2>
+      <h2>
+        Academic Highlights
+      </h2>
 
-<p class="section-subtitle">
-Selected indicators from my academic, research and professional journey.
-</p>
+      <p>
+        Selected indicators from my academic, research and professional journey.
+      </p>
 
-</div>
-
-
-<br><br>
+    </div>
 
 
-<div class="highlight-grid">
+    <div class="highlight-grid">
+
+      <div class="highlight reveal">
+
+        <div class="highlight-number">
+          7
+        </div>
+
+        <h3>
+          Journal Articles
+        </h3>
+
+      </div>
 
 
-<div class="highlight h1 reveal">
+      <div class="highlight reveal">
 
-<div class="highlight-number">
-7
-</div>
+        <div class="highlight-number">
+          1
+        </div>
 
-<h3>
-Journal Articles
-</h3>
+        <h3>
+          Book Chapter
+        </h3>
 
-</div>
-
-
-<div class="highlight h2 reveal">
-
-<div class="highlight-number">
-1
-</div>
-
-<h3>
-Book Chapter
-</h3>
-
-</div>
+      </div>
 
 
-<div class="highlight h3 reveal">
+      <div class="highlight reveal">
 
-<div class="highlight-number">
-3
-</div>
+        <div class="highlight-number">
+          3
+        </div>
 
-<h3>
-Manuscripts Under Review
-</h3>
+        <h3>
+          Manuscripts Under Review
+        </h3>
 
-</div>
-
-
-<div class="highlight h4 reveal">
-
-<div class="highlight-number">
-2
-</div>
-
-<h3>
-Ongoing Research Projects
-</h3>
-
-</div>
+      </div>
 
 
-<div class="highlight h5 reveal">
+      <div class="highlight reveal">
 
-<div class="highlight-number">
-3
-</div>
+        <div class="highlight-number">
+          2
+        </div>
 
-<h3>
-Poster Presentations
-</h3>
+        <h3>
+          Ongoing Research Projects
+        </h3>
 
-</div>
-
-
-<div class="highlight h6 reveal">
-
-<div class="highlight-number">
-7
-</div>
-
-<h3>
-Awards &amp; Honors
-</h3>
-
-</div>
+      </div>
 
 
-</div>
+      <div class="highlight reveal">
+
+        <div class="highlight-number">
+          3
+        </div>
+
+        <h3>
+          Poster Presentations
+        </h3>
+
+      </div>
 
 
-<div class="center-button">
+      <div class="highlight reveal">
 
-<a
-  href="publications.html"
-  class="btn btn-purple"
->
-View Publications →
-</a>
+        <div class="highlight-number">
+          7
+        </div>
 
-</div>
+        <h3>
+          Awards &amp; Honors
+        </h3>
 
-</div>
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- ================= SCHOLARLY WORK ================= -->
+<!-- =========================================================
+     SCHOLARLY WORK
+========================================================= -->
 
 <section class="work-section">
 
-<div class="container">
+  <div class="container">
 
-<div class="text-center reveal">
+    <div class="section-heading reveal">
 
-<div class="eyebrow">
-Scholarly Work
-</div>
+      <div class="eyebrow">
+        Scholarly Work
+      </div>
 
-<h2 class="section-title">
-Selected Scholarly Work
-</h2>
+      <h2>
+        Selected Scholarly Work
+      </h2>
 
-<p class="section-subtitle">
-Selected publications, forthcoming scholarly work and manuscripts representing my research interests.
-</p>
+      <p>
+        Selected publications, forthcoming scholarly work and manuscripts
+        representing my research interests.
+      </p>
 
-</div>
-
-
-<br><br>
+    </div>
 
 
-<div class="work-grid">
+    <div class="work-grid">
 
 
-<article class="work-card reveal">
+      <article class="work-card reveal">
 
-<span class="work-tag tag-book">
-Forthcoming Book Chapter
-</span>
+        <span class="work-tag tag-book">
+          Forthcoming Book Chapter
+        </span>
 
-<h3>
-Bovine Spongiform Encephalopathy (BSE) in Meat:
-Risks, Detection, and Management
-</h3>
+        <h3>
+          Bovine Spongiform Encephalopathy (BSE) in Meat:
+          Risks, Detection, and Management
+        </h3>
 
-<p class="justify">
+        <p class="justify">
 
-<strong>Authors:</strong>
-Md. Jisan Ahmed, Prajwal Bhandari, Ritu Chalise,
-Md. Ismile Hossain Bhuiyan, Md. Imran Hossain,
-Kazi Estieque Alam,
-<strong>Ahmed Ishtiak Nirob</strong>,
-Md. Mominul Islam, Delower Hossain.
+          <strong>Authors:</strong>
+          Md. Jisan Ahmed, Prajwal Bhandari, Ritu Chalise,
+          Md. Ismile Hossain Bhuiyan, Md. Imran Hossain,
+          Kazi Estieque Alam,
+          <strong>Ahmed Ishtiak Nirob</strong>,
+          Md. Mominul Islam, Delower Hossain.
 
-</p>
+        </p>
 
-<div class="work-footer">
+        <div class="work-footer">
 
-<p>
-CRC Press · 2027 · Chapter 12 · Forthcoming
-</p>
+          <p>
+            CRC Press · 2027 · Chapter 12 · Forthcoming
+          </p>
 
-</div>
+        </div>
 
-</article>
-
-
-<article class="work-card reveal">
-
-<span class="work-tag tag-published">
-Published Article
-</span>
-
-<h3>
-Antimicrobial Resistance in Meat and Meat Products
-from Asia: An Urgent One Health Challenge –
-A Systematic Review and Meta-analysis
-</h3>
-
-<p>
-<strong>Author:</strong>
-Ahmed Ishtiak Nirob, et al.
-</p>
-
-<div class="work-footer">
-
-<p>
-Poultry Science · 2025
-</p>
-
-<br>
-
-<a
-  class="work-link"
-  href="https://doi.org/10.1016/j.psj.2025.105811"
-  target="_blank"
->
-View Article →
-</a>
-
-</div>
-
-</article>
+      </article>
 
 
-<article class="work-card reveal">
+      <article class="work-card reveal">
 
-<span class="work-tag tag-review">
-Manuscript Under Review
-</span>
+        <span class="work-tag tag-published">
+          Published Article
+        </span>
 
-<h3>
-Developing a Natural Product-based Bioactive Wound
-Dressing with Antimicrobial and Anti-inflammatory
-Healing Potential from Bombax ceiba Root Extract
-</h3>
+        <h3>
+          Antimicrobial Resistance in Meat and Meat Products
+          from Asia: An Urgent One Health Challenge –
+          A Systematic Review and Meta-analysis
+        </h3>
 
-<p>
-<strong>Author:</strong>
-Ahmed Ishtiak Nirob, et al.
-</p>
+        <p class="justify">
 
-<div class="work-footer">
+          <strong>Author:</strong>
+          Ahmed Ishtiak Nirob, et al.
 
-<p>
-Manuscript under review
-</p>
+        </p>
 
-</div>
+        <div class="work-footer">
 
-</article>
+          <p>
+            Poultry Science · 2025
+          </p>
+
+          <a
+            class="work-link"
+            href="https://doi.org/10.1016/j.psj.2025.105811"
+            target="_blank"
+            rel="noopener"
+          >
+            View Article →
+          </a>
+
+        </div>
+
+      </article>
 
 
-</div>
+      <article class="work-card reveal">
 
+        <span class="work-tag tag-review">
+          Manuscript Under Review
+        </span>
 
-<div class="center-button">
+        <h3>
+          Developing a Natural Product-based Bioactive Wound
+          Dressing with Antimicrobial and Anti-inflammatory
+          Healing Potential from Bombax ceiba Root Extract
+        </h3>
 
-<a
-  href="research.html"
-  class="btn btn-green"
->
-View Research →
-</a>
+        <p class="justify">
 
-</div>
+          <strong>Author:</strong>
+          Ahmed Ishtiak Nirob, et al.
 
-</div>
+        </p>
+
+        <div class="work-footer">
+
+          <p>
+            Manuscript under review
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- ================= EDUCATION ================= -->
+<!-- =========================================================
+     EDUCATION
+========================================================= -->
 
-<section class="education-section">
+<section class="qualification-section">
 
-<div class="container">
+  <div class="container">
 
-<div class="text-center reveal">
+    <div class="section-heading reveal">
 
-<div class="eyebrow">
-Education
-</div>
+      <div class="eyebrow">
+        Education
+      </div>
 
-<h2 class="section-title">
-Academic Qualifications
-</h2>
+      <h2>
+        Academic Qualifications
+      </h2>
 
-<p class="section-subtitle">
-Academic training in veterinary science and animal health.
-</p>
+      <p>
+        Academic training in veterinary science and animal health.
+      </p>
 
-</div>
-
-
-<br><br>
-
-
-<div class="qualification reveal">
-
-<div class="qualification-top">
+    </div>
 
 
-<img
-  class="sau-logo"
-  src="https://drive.google.com/thumbnail?id=19i8eLn4xyK4k0ohKaeFHf65sToSj_7cT&sz=w1000"
-  alt="Sher-e-Bangla Agricultural University"
->
+    <div class="qualification reveal">
+
+      <div class="qualification-top">
+
+        <img
+          class="sau-logo"
+          src="https://drive.google.com/thumbnail?id=19i8eLn4xyK4k0ohKaeFHf65sToSj_7cT&sz=w1000"
+          alt="Sher-e-Bangla Agricultural University logo"
+        >
+
+        <div>
+
+          <span class="degree-label">
+            Undergraduate Degree
+          </span>
+
+          <h3>
+            B.Sc. in Veterinary Science and Animal Husbandry
+          </h3>
+
+          <p>
+            Sher-e-Bangla Agricultural University (SAU), Bangladesh
+          </p>
+
+          <p>
+            2020–2026
+          </p>
+
+          <div class="cgpa">
+            Overall CGPA: 3.54 / 4.00
+          </div>
+
+        </div>
+
+      </div>
 
 
-<div>
-
-<span class="degree-label">
-Undergraduate Degree
-</span>
-
-<h3>
-B.Sc. in Veterinary Science and Animal Husbandry
-</h3>
-
-<p>
-Sher-e-Bangla Agricultural University (SAU), Bangladesh
-</p>
-
-<p>
-2020–2026
-</p>
-
-<div class="cgpa">
-Overall CGPA: 3.54 / 4.00
-</div>
-
-</div>
-
-</div>
+      <h3 class="results-title">
+        Results of the Last 4 Semesters
+      </h3>
 
 
-<h3 class="results-title">
-Results of the Last 4 Semesters
-</h3>
+      <div class="semester-grid">
 
+        <div class="semester">
+          <span>Semester 4-I</span>
+          <strong>3.59</strong>
+        </div>
 
-<div class="semester-grid">
+        <div class="semester">
+          <span>Semester 4-II</span>
+          <strong>3.61</strong>
+        </div>
 
-<div class="semester">
-<span>Semester 4-I</span>
-<strong>3.59</strong>
-</div>
+        <div class="semester">
+          <span>Semester 5-I</span>
+          <strong>3.63</strong>
+        </div>
 
-<div class="semester">
-<span>Semester 4-II</span>
-<strong>3.61</strong>
-</div>
+        <div class="semester">
+          <span>Semester 5-II</span>
+          <strong>4.00</strong>
+        </div>
 
-<div class="semester">
-<span>Semester 5-I</span>
-<strong>3.63</strong>
-</div>
+      </div>
 
-<div class="semester">
-<span>Semester 5-II</span>
-<strong>4.00</strong>
-</div>
+    </div>
 
-</div>
-
-</div>
-
-
-<div class="center-button">
-
-<a
-  href="education.html"
-  class="btn btn-orange"
->
-Education →
-</a>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- ================= IELTS ================= -->
+<!-- =========================================================
+     IELTS
+========================================================= -->
 
 <section class="ielts-section">
 
-<div class="container">
+  <div class="container">
 
-<div class="text-center reveal">
+    <div class="section-heading reveal">
 
-<div class="eyebrow">
-English Proficiency
-</div>
+      <div class="eyebrow">
+        English Proficiency
+      </div>
 
-<h2 class="section-title">
-IELTS Academic
-</h2>
+      <h2>
+        IELTS Academic
+      </h2>
 
-<p class="section-subtitle">
-English language proficiency demonstrated through IELTS Academic.
-</p>
+      <p>
+        English language proficiency demonstrated through IELTS Academic.
+      </p>
 
-</div>
-
-
-<br><br>
+    </div>
 
 
-<div class="ielts-box reveal">
+    <div class="ielts-box reveal">
 
-<div class="ielts-header">
+      <div class="ielts-header">
 
-<div class="ielts-brand">
+        <div class="ielts-brand">
 
-<div class="ielts-logo">
-I
-</div>
+          <div class="ielts-logo">
+            I
+          </div>
 
-<div>
+          <div>
 
-<h3>
-IELTS Academic
-</h3>
+            <h3>
+              IELTS Academic
+            </h3>
 
-<span>
-English Language Proficiency
-</span>
+            <span>
+              English Language Proficiency
+            </span>
 
-</div>
+          </div>
 
-</div>
-
-
-<div class="ielts-date">
-Test Date: 21 August 2026
-</div>
-
-</div>
+        </div>
 
 
-<div class="ielts-score-grid">
+        <div class="ielts-date">
+          Test Date: 21 August 2026
+        </div>
 
-<div class="score-card score-overall">
-<div class="score-value">7.5</div>
-<div class="score-label">Overall</div>
-<div class="score-sub">Band Score</div>
-</div>
-
-<div class="score-card score-listening">
-<div class="score-value">8.0</div>
-<div class="score-label">Listening</div>
-<div class="score-sub">Band Score</div>
-</div>
-
-<div class="score-card score-reading">
-<div class="score-value">7.5</div>
-<div class="score-label">Reading</div>
-<div class="score-sub">Band Score</div>
-</div>
-
-<div class="score-card score-writing">
-<div class="score-value">6.5</div>
-<div class="score-label">Writing</div>
-<div class="score-sub">Band Score</div>
-</div>
-
-<div class="score-card score-speaking">
-<div class="score-value">7.0</div>
-<div class="score-label">Speaking</div>
-<div class="score-sub">Band Score</div>
-</div>
-
-</div>
+      </div>
 
 
-<div class="ielts-note">
-No Band Less Than 6.5
-</div>
+      <div class="ielts-score-grid">
 
-</div>
+        <div class="score-card score-overall">
+          <div class="score-value">7.5</div>
+          <div class="score-label">Overall</div>
+          <div class="score-sub">Band Score</div>
+        </div>
 
-</div>
+        <div class="score-card score-listening">
+          <div class="score-value">8.0</div>
+          <div class="score-label">Listening</div>
+          <div class="score-sub">Band Score</div>
+        </div>
+
+        <div class="score-card score-reading">
+          <div class="score-value">7.5</div>
+          <div class="score-label">Reading</div>
+          <div class="score-sub">Band Score</div>
+        </div>
+
+        <div class="score-card score-writing">
+          <div class="score-value">6.5</div>
+          <div class="score-label">Writing</div>
+          <div class="score-sub">Band Score</div>
+        </div>
+
+        <div class="score-card score-speaking">
+          <div class="score-value">7.0</div>
+          <div class="score-label">Speaking</div>
+          <div class="score-sub">Band Score</div>
+        </div>
+
+      </div>
+
+
+      <div class="ielts-note">
+        No Band Less Than 6.5
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- ================= ENGAGEMENT ================= -->
+<!-- =========================================================
+     TEACHING / LEADERSHIP
+========================================================= -->
 
-<section
-  class="engagement-section"
-  id="engagement"
->
+<section class="engagement-section">
 
-<div class="container">
+  <div class="container">
 
-<div class="text-center reveal">
+    <div class="section-heading reveal">
 
-<div class="eyebrow">
-Academic Engagement
-</div>
+      <div class="eyebrow">
+        Academic Engagement
+      </div>
 
-<h2 class="section-title">
-Teaching, Leadership &amp; Research
-</h2>
+      <h2>
+        Teaching, Leadership &amp; Research
+      </h2>
 
-<p class="section-subtitle">
-Teaching, student leadership, research and community engagement.
-</p>
+      <p>
+        Teaching, student leadership, research and community engagement.
+      </p>
 
-</div>
+    </div>
 
 
-<br><br>
+    <div class="role-grid">
 
 
-<div class="role-grid">
+      <article class="role-card reveal">
 
+        <img
+          class="role-logo"
+          src="https://drive.google.com/thumbnail?id=1_-6CpwgUTuyJOnA9HU7Z5cnW9yow41Zk&sz=w1000"
+          alt="AAC Coaching Center"
+        >
 
-<!-- AAC -->
+        <h3>
+          Biology Teacher
+        </h3>
 
-<article class="role-card reveal">
+        <div class="role-org">
+          AAC Coaching Center
+        </div>
 
-<img
-  class="role-logo"
-  src="https://drive.google.com/thumbnail?id=1_-6CpwgUTuyJOnA9HU7Z5cnW9yow41Zk&sz=w1000"
-  alt="AAC Coaching Center official logo"
->
+        <p class="justify">
+          Teaching Biology to students from various schools.
+        </p>
 
-<h3>
-Biology Teacher
-</h3>
+        <span class="role-date">
+          Dec 2018 – Present
+        </span>
 
-<div class="role-org">
-AAC Coaching Center
-</div>
+      </article>
 
-<p class="justify">
-Teaching Biology to students from various schools.
-</p>
 
-<span class="role-date">
-Dec 2018 – Present
-</span>
+      <article class="role-card reveal">
 
-</article>
+        <img
+          class="role-logo"
+          src="https://drive.google.com/thumbnail?id=1XLMCQmUg_CuAy6xSfLYDpVNBu5ofvXXZ&sz=w1000"
+          alt="ACTG"
+        >
 
+        <h3>
+          Research Assistant
+        </h3>
 
-<!-- ACTG -->
+        <div class="role-org">
+          Association of Coding, Technology and Genomics (ACTG)
+        </div>
 
-<article class="role-card reveal">
+        <p class="justify">
+          Involved in data collection, epidemiological research,
+          literature screening, meta-analysis, manuscript development
+          and scientific activities.
+        </p>
 
-<img
-  class="role-logo"
-  src="https://drive.google.com/thumbnail?id=1XLMCQmUg_CuAy6xSfLYDpVNBu5ofvXXZ&sz=w1000"
-  alt="ACTG official logo"
->
+        <span class="role-date">
+          July 2025 – Present
+        </span>
 
-<h3>
-Research Assistant
-</h3>
+      </article>
 
-<div class="role-org">
-Association of Coding, Technology and Genomics (ACTG)
-</div>
 
-<p class="justify">
-Involved in data collection, epidemiological research,
-literature screening, meta-analysis, manuscript development
-and scientific activities.
-</p>
+      <article class="role-card reveal">
 
-<span class="role-date">
-July 2025 – Present
-</span>
+        <img
+          class="role-logo"
+          src="https://drive.google.com/thumbnail?id=1DRtqlcfGmwR7OvGqe_OYR5o5OxrGLWBW&sz=w1000"
+          alt="Rover Scout"
+        >
 
-</article>
+        <h3>
+          Member
+        </h3>
 
+        <div class="role-org">
+          Rover Scout · Sher-e-Bangla Agricultural University
+        </div>
 
-<!-- ROVER -->
+        <p class="justify">
+          Student volunteer and extracurricular engagement
+          through university Rover Scout activities.
+        </p>
 
-<article class="role-card reveal">
+        <span class="role-date">
+          2020 – Present
+        </span>
 
-<img
-  class="role-logo"
-  src="https://drive.google.com/thumbnail?id=1DRtqlcfGmwR7OvGqe_OYR5o5OxrGLWBW&sz=w1000"
-  alt="Rover Scout official logo"
->
+      </article>
 
-<h3>
-Member
-</h3>
 
-<div class="role-org">
-Rover Scout · Sher-e-Bangla Agricultural University
-</div>
+      <article class="role-card reveal">
 
-<p class="justify">
-Student volunteer and extracurricular engagement through
-university Rover Scout activities.
-</p>
+        <img
+          class="role-logo"
+          src="https://drive.google.com/thumbnail?id=1L7CXyTfMsIFjfL91_hnQWDYzDJCmwKws&sz=w1000"
+          alt="IVSA Bangladesh SAU Dhaka"
+        >
 
-<span class="role-date">
-2020 – Present
-</span>
+        <h3>
+          President
+        </h3>
 
-</article>
+        <div class="role-org">
+          International Veterinary Students’ Association Bangladesh –
+          SAU Dhaka
+        </div>
 
+        <p class="justify">
+          Student leadership, professional development and
+          veterinary academic engagement.
+        </p>
 
-<!-- IVSA — CORRECTED -->
+        <span class="role-date">
+          2025 – Present
+        </span>
 
-<article class="role-card reveal">
+      </article>
 
-<img
-  class="role-logo"
-  src="https://drive.google.com/thumbnail?id=1gzl0m2GK3mV9Qau268rZuz1cbUfdi0tO&sz=w1000"
-  alt="IVSA Bangladesh SAU Dhaka official logo"
->
 
-<h3>
-President
-</h3>
+      <article class="role-card reveal">
 
-<div class="role-org">
-International Veterinary Students’ Association
-Bangladesh – SAU Dhaka
-</div>
+        <img
+          class="role-logo"
+          src="https://drive.google.com/thumbnail?id=1uIQTFjkMqR9wZ-qYXka0MohA_o6d49c5&sz=w1000"
+          alt="SAU Animal Rescue Community"
+        >
 
-<p class="justify">
-Student leadership, professional development and veterinary
-academic engagement.
-</p>
+        <h3>
+          Founder &amp; President
+        </h3>
 
-<span class="role-date">
-2025 – Present
-</span>
+        <div class="role-org">
+          SAU Animal Rescue Community (SAURC)
+        </div>
 
-</article>
+        <p class="justify">
+          Founded and led a student initiative focused on
+          animal rescue and welfare activities.
+        </p>
 
+        <span class="role-date">
+          2024 – Present
+        </span>
 
-<!-- SAURC — CORRECTED -->
+      </article>
 
-<article class="role-card reveal">
 
-<img
-  class="role-logo"
-  src="https://drive.google.com/thumbnail?id=1L7CXyTfMsIFjfL91_hnQWDYzDJCmwKws&sz=w1000"
-  alt="SAU Animal Rescue Community official logo"
->
+      <article class="role-card reveal">
 
-<h3>
-Founder &amp; President
-</h3>
+        <img
+          class="role-logo"
+          src="https://drive.google.com/thumbnail?id=1BtpFyJYoRydbK7vSIi5WcfCZkEGvIQhl&sz=w1000"
+          alt="Sirajganj Veterinary Students Association"
+        >
 
-<div class="role-org">
-SAU Animal Rescue Community (SAURC)
-</div>
+        <h3>
+          Public Relations Secretary
+        </h3>
 
-<p class="justify">
-Founded and led a student initiative focused on animal
-rescue and welfare activities.
-</p>
+        <div class="role-org">
+          Sirajganj Veterinary Students’ Association (SVSA)
+        </div>
 
-<span class="role-date">
-2024 – Present
-</span>
+        <p class="justify">
+          Communication, public relations and student
+          organizational activities.
+        </p>
 
-</article>
+        <span class="role-date">
+          2023 – Present
+        </span>
 
+      </article>
 
-<!-- SVSA -->
+    </div>
 
-<article class="role-card reveal">
-
-<img
-  class="role-logo"
-  src="https://drive.google.com/thumbnail?id=1BtpFyJYoRydbK7vSIi5WcfCZkEGvIQhl&sz=w1000"
-  alt="Sirajganj Veterinary Students Association official logo"
->
-
-<h3>
-Public Relations Secretary
-</h3>
-
-<div class="role-org">
-Sirajganj Veterinary Students’ Association (SVSA)
-</div>
-
-<p class="justify">
-Communication, public relations and student organizational
-activities.
-</p>
-
-<span class="role-date">
-2023 – Present
-</span>
-
-</article>
-
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- ================= GALLERY ================= -->
+<!-- =========================================================
+     GALLERY
+========================================================= -->
 
 <section class="gallery-section">
 
-<div class="container">
+  <div class="container">
 
-<div class="text-center reveal">
+    <div class="section-heading reveal">
 
-<div class="eyebrow">
-Beyond the Research
-</div>
+      <div class="eyebrow">
+        Beyond the Research
+      </div>
 
-<h2 class="section-title">
-Research, Professional &amp; Academic Highlights
-</h2>
+      <h2>
+        Research, Professional &amp; Academic Highlights
+      </h2>
 
-</div>
-
-
-<br><br>
+    </div>
 
 
-<div class="gallery-grid">
+    <div class="gallery-grid">
+
+      <div class="gallery-card reveal">
+
+        <img
+          src="https://drive.google.com/thumbnail?id=1eRydvLRSO54jSZjDGtLgQpayvKM067cL&sz=w1400"
+          alt="Research work"
+        >
+
+        <div class="gallery-overlay">
+
+          <h3>
+            Research Work
+          </h3>
+
+        </div>
+
+      </div>
 
 
-<div class="gallery-card reveal">
+      <div class="gallery-card reveal">
 
-<img
-  src="https://drive.google.com/thumbnail?id=1eRydvLRSO54jSZjDGtLgQpayvKM067cL&sz=w1400"
-  alt="Research work"
->
+        <img
+          src="https://drive.google.com/thumbnail?id=1ls2xwD-ShAuRT4pu6lGZKx8pQQLFfYq2&sz=w1400"
+          alt="Professional activity"
+        >
 
-<div class="gallery-overlay">
-<h3>
-Research Work
-</h3>
-</div>
+        <div class="gallery-overlay">
 
-</div>
+          <h3>
+            Professional Experience
+          </h3>
 
+        </div>
 
-<div class="gallery-card reveal">
-
-<img
-  src="https://drive.google.com/thumbnail?id=1ls2xwD-ShAuRT4pu6lGZKx8pQQLFfYq2&sz=w1400"
-  alt="Professional activity"
->
-
-<div class="gallery-overlay">
-<h3>
-Professional Experience
-</h3>
-</div>
-
-</div>
+      </div>
 
 
-<div class="gallery-card reveal">
+      <div class="gallery-card reveal">
 
-<img
-  src="https://drive.google.com/thumbnail?id=1rQ5D8RzgrZqZEAbJ6rdnGt2ZAJR0WiJN&sz=w1400"
-  alt="Award"
->
+        <img
+          src="https://drive.google.com/thumbnail?id=1rQ5D8RzgrZqZEAbJ6rdnGt2ZAJR0WiJN&sz=w1400"
+          alt="Award winning achievement"
+        >
 
-<div class="gallery-overlay">
-<h3>
-Awards &amp; Achievement
-</h3>
-</div>
+        <div class="gallery-overlay">
 
-</div>
+          <h3>
+            Award &amp; Achievement
+          </h3>
 
+        </div>
 
-<div class="gallery-card reveal">
-
-<img
-  src="https://drive.google.com/thumbnail?id=1NuF5XICg9AftEJstbCH5jJqVzhsuLZyW&sz=w1400"
-  alt="Poster presentation"
->
-
-<div class="gallery-overlay">
-<h3>
-Poster Presentation
-</h3>
-</div>
-
-</div>
+      </div>
 
 
-</div>
+      <div class="gallery-card reveal">
 
-</div>
+        <img
+          src="https://drive.google.com/thumbnail?id=1NuF5XICg9AftEJstbCH5jJqVzhsuLZyW&sz=w1400"
+          alt="Poster presentation"
+        >
+
+        <div class="gallery-overlay">
+
+          <h3>
+            Poster Presentation
+          </h3>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- ================= CONTACT ================= -->
+<!-- =========================================================
+     CONTACT
+========================================================= -->
 
 <section
   class="contact-section"
   id="contact"
 >
 
-<div class="container">
+  <div class="container">
 
-<div class="contact-box reveal">
+    <div class="contact-box reveal">
 
-<div class="eyebrow">
-Get In Touch
-</div>
+      <div class="section-heading">
 
-<h2>
-Academic Contact
-</h2>
+        <div class="eyebrow">
+          Get In Touch
+        </div>
 
-<p>
-I am open to research collaborations, academic discussions,
-and PhD opportunities.
-</p>
+        <h2>
+          Academic Contact
+        </h2>
 
-
-<div class="contact-links">
-
-<a
-  href="mailto:ahmedishtiaknirob@gmail.com"
-  class="contact-link"
->
-Email
-</a>
-
-<a
-  href="https://wa.me/8801706284577"
-  target="_blank"
-  class="contact-link"
->
-WhatsApp
-</a>
-
-<a
-  href="https://scholar.google.com/citations?user=nqe--60AAAAJ&hl=en&authuser=1"
-  target="_blank"
-  class="contact-link"
->
-Google Scholar
-</a>
-
-<a
-  href="https://www.researchgate.net/profile/Ahmed-Ishtiak-Nirob"
-  target="_blank"
-  class="contact-link"
->
-ResearchGate
-</a>
-
-<a
-  href="https://www.linkedin.com/in/ahmed-ishtiak-nirob/"
-  target="_blank"
-  class="contact-link"
->
-LinkedIn
-</a>
-
-<a
-  href="https://orcid.org/0009-0009-4385-8481"
-  target="_blank"
-  class="contact-link"
->
-ORCID
-</a>
-
-</div>
+      </div>
 
 
-<div class="contact-info">
+      <p class="justify">
 
-<strong>
-Dhaka, Bangladesh
-</strong>
+        I am open to research collaborations, academic discussions,
+        and PhD opportunities.
 
-<br>
+      </p>
 
-Academic &amp; Research Portfolio
 
-<br>
+      <div class="contact-links">
 
-ahmedishtiaknirob@gmail.com
+        <a
+          href="mailto:ahmedishtiaknirob@gmail.com"
+          class="contact-link"
+        >
+          Email
+        </a>
 
-</div>
 
-</div>
+        <a
+          href="https://wa.me/8801706284577"
+          target="_blank"
+          rel="noopener"
+          class="contact-link"
+        >
+          WhatsApp
+        </a>
 
-</div>
+
+        <a
+          href="https://scholar.google.com/citations?user=nqe--60AAAAJ&hl=en&authuser=1"
+          target="_blank"
+          rel="noopener"
+          class="contact-link"
+        >
+          Google Scholar
+        </a>
+
+
+        <a
+          href="https://www.researchgate.net/profile/Ahmed-Ishtiak-Nirob"
+          target="_blank"
+          rel="noopener"
+          class="contact-link"
+        >
+          ResearchGate
+        </a>
+
+
+        <a
+          href="https://www.linkedin.com/in/ahmed-ishtiak-nirob/"
+          target="_blank"
+          rel="noopener"
+          class="contact-link"
+        >
+          LinkedIn
+        </a>
+
+
+        <a
+          href="https://orcid.org/0009-0009-4385-8481"
+          target="_blank"
+          rel="noopener"
+          class="contact-link"
+        >
+          ORCID
+        </a>
+
+      </div>
+
+
+      <div class="contact-info">
+
+        <strong>
+          Dhaka, Bangladesh
+        </strong>
+
+        <br>
+
+        Academic &amp; Research Portfolio
+
+        <br>
+
+        ahmedishtiaknirob@gmail.com
+
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
 
 
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
 <footer>
 
-© 2026
-<strong>
-Dr. Ahmed Ishtiak Nirob
-</strong>
-&nbsp; | &nbsp;
-All Rights Reserved
+  <div class="container">
+
+    © 2026
+
+    <strong>
+      Dr. Ahmed Ishtiak Nirob
+    </strong>
+
+    &nbsp; | &nbsp;
+
+    All Rights Reserved
+
+    &nbsp; | &nbsp;
+
+    Contact:
+    ahmedishtiaknirob@gmail.com
+
+    &nbsp; | &nbsp;
+
+    WhatsApp:
+    +8801706284577
+
+  </div>
 
 </footer>
 
 
-<script src="script.js"></script>
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+/* =========================================================
+   THEME SYSTEM
+========================================================= */
+
+const themeToggle =
+  document.getElementById("themeToggle");
+
+const body =
+  document.body;
+
+
+function updateThemeIcon(){
+
+  if(body.classList.contains("light")){
+
+    themeToggle.textContent = "☀️";
+
+    themeToggle.setAttribute(
+      "title",
+      "Switch to dark mode"
+    );
+
+  }else{
+
+    themeToggle.textContent = "🌙";
+
+    themeToggle.setAttribute(
+      "title",
+      "Switch to light mode"
+    );
+
+  }
+
+}
+
+
+/* Load saved theme */
+
+const savedTheme =
+  localStorage.getItem("nirob-theme");
+
+if(savedTheme === "light"){
+
+  body.classList.add("light");
+
+}
+
+updateThemeIcon();
+
+
+/* Toggle theme */
+
+themeToggle.addEventListener(
+  "click",
+  () => {
+
+    body.classList.toggle("light");
+
+    const currentTheme =
+      body.classList.contains("light")
+        ? "light"
+        : "dark";
+
+    localStorage.setItem(
+      "nirob-theme",
+      currentTheme
+    );
+
+    updateThemeIcon();
+
+  }
+);
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const mobileMenuBtn =
+  document.getElementById("mobileMenuBtn");
+
+const navLinks =
+  document.querySelector(".nav-links");
+
+
+mobileMenuBtn.addEventListener(
+  "click",
+  () => {
+
+    const isOpen =
+      navLinks.style.display === "flex";
+
+    if(isOpen){
+
+      navLinks.style.display = "";
+
+    }else{
+
+      navLinks.style.display = "flex";
+
+      navLinks.style.position = "absolute";
+
+      navLinks.style.top = "68px";
+
+      navLinks.style.left = "4%";
+
+      navLinks.style.right = "4%";
+
+      navLinks.style.padding = "14px";
+
+      navLinks.style.flexDirection = "column";
+
+      navLinks.style.alignItems = "stretch";
+
+      navLinks.style.background =
+        getComputedStyle(document.documentElement)
+          .getPropertyValue("--surface-strong");
+
+      navLinks.style.border =
+        "1px solid var(--border)";
+
+      navLinks.style.borderRadius =
+        "18px";
+
+      navLinks.style.boxShadow =
+        "0 25px 60px rgba(0,0,0,.28)";
+
+    }
+
+  }
+);
+
+
+/* =========================================================
+   MOBILE MENU CLOSE AFTER CLICK
+========================================================= */
+
+document
+  .querySelectorAll(".nav-link")
+  .forEach(link => {
+
+    link.addEventListener(
+      "click",
+      () => {
+
+        if(window.innerWidth <= 1100){
+
+          navLinks.style.display = "";
+
+        }
+
+      }
+    );
+
+  });
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const revealElements =
+  document.querySelectorAll(".reveal");
+
+
+const revealObserver =
+  new IntersectionObserver(
+    entries => {
+
+      entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+          entry.target.classList.add(
+            "visible"
+          );
+
+          revealObserver.unobserve(
+            entry.target
+          );
+
+        }
+
+      });
+
+    },
+    {
+      threshold:.12
+    }
+  );
+
+
+revealElements.forEach(
+  element => {
+
+    revealObserver.observe(
+      element
+    );
+
+  }
+);
+
+
+/* =========================================================
+   NAVBAR ACTIVE FEEL
+========================================================= */
+
+document
+  .querySelectorAll(".nav-link")
+  .forEach(button => {
+
+    button.addEventListener(
+      "click",
+      () => {
+
+        document
+          .querySelectorAll(".nav-link")
+          .forEach(item => {
+
+            item.classList.remove(
+              "active"
+            );
+
+          });
+
+        button.classList.add(
+          "active"
+        );
+
+      }
+    );
+
+  });
+
+
+/* =========================================================
+   SMOOTH BUTTON PRESS
+========================================================= */
+
+document
+  .querySelectorAll(
+    ".btn, .contact-link, .profile-card, .research-item, .role-card, .highlight, .work-card, .gallery-card, .score-card, .semester"
+  )
+  .forEach(element => {
+
+    element.addEventListener(
+      "pointerdown",
+      () => {
+
+        element.style.transition =
+          "transform .12s ease";
+
+        element.style.transform =
+          "scale(.98)";
+
+      }
+    );
+
+    element.addEventListener(
+      "pointerup",
+      () => {
+
+        element.style.transform = "";
+
+      }
+    );
+
+    element.addEventListener(
+      "pointerleave",
+      () => {
+
+        element.style.transform = "";
+
+      }
+    );
+
+    element.addEventListener(
+      "pointercancel",
+      () => {
+
+        element.style.transform = "";
+
+      }
+    );
+
+  });
+
+
+/* =========================================================
+   RESIZE FIX FOR MOBILE NAV
+========================================================= */
+
+window.addEventListener(
+  "resize",
+  () => {
+
+    if(window.innerWidth > 1100){
+
+      navLinks.style.display = "";
+
+      navLinks.style.position = "";
+
+      navLinks.style.top = "";
+
+      navLinks.style.left = "";
+
+      navLinks.style.right = "";
+
+      navLinks.style.padding = "";
+
+      navLinks.style.flexDirection = "";
+
+      navLinks.style.alignItems = "";
+
+      navLinks.style.background = "";
+
+      navLinks.style.border = "";
+
+      navLinks.style.borderRadius = "";
+
+      navLinks.style.boxShadow = "";
+
+    }
+
+  }
+);
+
+</script>
+
 
 </body>
 </html>
