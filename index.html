@@ -3481,19 +3481,831 @@ footer strong{
 
 
 <!-- =========================================================
-     RESEARCH
+     RESEARCH PROFILE
 ========================================================= -->
 
+<style>
+
+  /* =========================================================
+     SECTION
+  ========================================================= */
+
+  .rp-section{
+    position:relative;
+    padding:105px 0;
+    overflow:hidden;
+
+    background:
+      linear-gradient(
+        135deg,
+        #081a2c,
+        #0b1d31 52%,
+        #101a31
+      );
+  }
+
+  .rp-section::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+
+    background:
+      radial-gradient(
+        circle at 8% 20%,
+        rgba(49,169,230,.10),
+        transparent 25%
+      ),
+      radial-gradient(
+        circle at 92% 75%,
+        rgba(154,120,232,.10),
+        transparent 28%
+      );
+  }
+
+
+  /* =========================================================
+     HEADING
+  ========================================================= */
+
+  .rp-heading{
+    position:relative;
+    z-index:2;
+
+    text-align:center;
+    margin-bottom:54px;
+  }
+
+  .rp-eyebrow{
+    display:inline-block;
+
+    color:#62cff8;
+
+    font-size:11px;
+    font-weight:950;
+
+    letter-spacing:3px;
+    text-transform:uppercase;
+
+    margin-bottom:10px;
+
+    transition:
+      transform .3s ease,
+      color .3s ease;
+  }
+
+  .rp-heading:hover .rp-eyebrow{
+    transform:translateY(-3px);
+    color:#9be5ff;
+  }
+
+  .rp-heading h2{
+    margin:0 0 13px;
+
+    color:#edf6ff;
+
+    font-size:
+      clamp(32px,4vw,48px);
+
+    line-height:1.12;
+    font-weight:900;
+
+    letter-spacing:-1.5px;
+
+    transition:
+      transform .35s ease,
+      text-shadow .35s ease;
+  }
+
+  .rp-heading h2:hover{
+    transform:translateY(-3px);
+
+    text-shadow:
+      0 0 35px rgba(49,169,230,.22);
+  }
+
+  .rp-heading p{
+    max-width:850px;
+
+    margin:auto;
+
+    color:#91a7bd;
+
+    font-size:14px;
+    line-height:1.75;
+  }
+
+
+  /* =========================================================
+     PANELS
+  ========================================================= */
+
+  .rp-layout{
+    position:relative;
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap:25px;
+  }
+
+  .rp-panel{
+    position:relative;
+
+    padding:30px;
+
+    border-radius:27px;
+
+    background:
+      linear-gradient(
+        145deg,
+        rgba(18,39,62,.95),
+        rgba(8,24,40,.88)
+      );
+
+    border:
+      1px solid rgba(139,197,235,.14);
+
+    box-shadow:
+      0 20px 55px rgba(0,0,0,.24);
+
+    overflow:hidden;
+
+    transition:
+      transform .42s cubic-bezier(.2,.8,.2,1),
+      box-shadow .42s ease,
+      border-color .42s ease;
+  }
+
+  .rp-panel:hover{
+    transform:translateY(-7px);
+
+    border-color:
+      rgba(100,195,235,.30);
+
+    box-shadow:
+      0 30px 70px rgba(0,0,0,.34);
+  }
+
+
+  /* =========================================================
+     PANEL TITLE
+  ========================================================= */
+
+  .rp-panel-title{
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:23px;
+  }
+
+  .rp-panel-icon{
+    width:45px;
+    height:45px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:14px;
+
+    color:#64cef6;
+
+    background:
+      rgba(49,169,230,.10);
+
+    border:
+      1px solid rgba(49,169,230,.20);
+
+    font-size:20px;
+
+    transition:
+      transform .35s ease,
+      box-shadow .35s ease;
+  }
+
+  .rp-panel:hover .rp-panel-icon{
+    transform:
+      rotate(-6deg)
+      scale(1.08);
+
+    box-shadow:
+      0 0 24px rgba(49,169,230,.18);
+  }
+
+  .rp-panel-title h3{
+    margin:0;
+
+    color:#edf6ff;
+
+    font-size:20px;
+    font-weight:900;
+  }
+
+
+  /* =========================================================
+     LIST
+  ========================================================= */
+
+  .rp-list{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:11px;
+  }
+
+
+  /* =========================================================
+     ITEM
+  ========================================================= */
+
+  .rp-item{
+
+    --accent:#4db9ef;
+    --accent-glow:rgba(77,185,239,.20);
+
+    position:relative;
+
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+
+    min-height:68px;
+
+    padding:10px 14px;
+
+    border-radius:16px;
+
+    cursor:pointer;
+
+    color:#d3dfeb;
+
+    background:
+      rgba(255,255,255,.035);
+
+    border:
+      1px solid rgba(139,197,235,.10);
+
+    box-shadow:
+      0 7px 22px rgba(0,0,0,.10);
+
+    overflow:hidden;
+
+    transition:
+      transform .42s cubic-bezier(.2,.8,.2,1),
+      background .42s ease,
+      border-color .42s ease,
+      box-shadow .42s ease,
+      color .3s ease;
+  }
+
+
+  /* =========================================================
+     COLORS
+  ========================================================= */
+
+  .rp-left .rp-item:nth-child(1){
+    --accent:#ef666f;
+    --accent-glow:rgba(239,102,111,.22);
+  }
+
+  .rp-left .rp-item:nth-child(2){
+    --accent:#46c592;
+    --accent-glow:rgba(70,197,146,.22);
+  }
+
+  .rp-left .rp-item:nth-child(3){
+    --accent:#4ca6df;
+    --accent-glow:rgba(76,166,223,.22);
+  }
+
+  .rp-left .rp-item:nth-child(4){
+    --accent:#a47be9;
+    --accent-glow:rgba(164,123,233,.22);
+  }
+
+  .rp-left .rp-item:nth-child(5){
+    --accent:#2fb9bd;
+    --accent-glow:rgba(47,185,189,.22);
+  }
+
+
+  .rp-right .rp-item:nth-child(1){
+    --accent:#a47be9;
+    --accent-glow:rgba(164,123,233,.22);
+  }
+
+  .rp-right .rp-item:nth-child(2){
+    --accent:#e5a146;
+    --accent-glow:rgba(229,161,70,.22);
+  }
+
+  .rp-right .rp-item:nth-child(3){
+    --accent:#5f7fd8;
+    --accent-glow:rgba(95,127,216,.22);
+  }
+
+  .rp-right .rp-item:nth-child(4){
+    --accent:#2bb9aa;
+    --accent-glow:rgba(43,185,170,.22);
+  }
+
+  .rp-right .rp-item:nth-child(5){
+    --accent:#4dace5;
+    --accent-glow:rgba(77,172,229,.22);
+  }
+
+
+  /* =========================================================
+     ITEM ICON
+  ========================================================= */
+
+  .rp-icon{
+
+    width:44px;
+    height:44px;
+
+    flex:0 0 44px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:13px;
+
+    color:var(--accent);
+
+    background:
+      var(--accent-glow);
+
+    border:
+      1px solid
+      rgba(255,255,255,.06);
+
+    box-shadow:
+      0 8px 20px var(--accent-glow);
+
+    transition:
+      transform .42s cubic-bezier(.2,.8,.2,1),
+      background .38s ease,
+      color .38s ease,
+      box-shadow .38s ease;
+  }
+
+  .rp-icon svg{
+
+    width:23px;
+    height:23px;
+
+    fill:none;
+
+    stroke:currentColor;
+
+    stroke-width:2.3;
+
+    stroke-linecap:round;
+
+    stroke-linejoin:round;
+  }
+
+
+  /* =========================================================
+     NUMBER
+  ========================================================= */
+
+  .rp-number{
+
+    width:28px;
+    height:28px;
+
+    flex:0 0 28px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:8px;
+
+    color:var(--accent);
+
+    background:
+      rgba(255,255,255,.035);
+
+    font-size:9px;
+
+    font-weight:950;
+
+    transition:
+      transform .35s ease,
+      color .35s ease;
+  }
+
+
+  /* =========================================================
+     TEXT
+  ========================================================= */
+
+  .rp-text{
+
+    flex:1;
+
+    color:#d0dce7;
+
+    font-size:14px;
+
+    line-height:1.4;
+
+    font-weight:800;
+
+    transition:
+      transform .32s ease,
+      color .32s ease;
+  }
+
+
+  /* =========================================================
+     GLOW EFFECT
+  ========================================================= */
+
+  .rp-item::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:65%;
+    height:100%;
+
+    background:
+      linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.08),
+        transparent
+      );
+
+    transform:
+      skewX(-20deg);
+
+    transition:
+      left .75s ease;
+  }
+
+
+  /* =========================================================
+     HOVER
+  ========================================================= */
+
+  .rp-item:hover{
+
+    transform:
+      translateX(8px)
+      scale(1.025);
+
+    color:#ffffff;
+
+    background:
+      linear-gradient(
+        90deg,
+        var(--accent-glow),
+        rgba(255,255,255,.045)
+      );
+
+    border-color:
+      var(--accent);
+
+    box-shadow:
+      0 16px 35px rgba(0,0,0,.22),
+      0 0 30px var(--accent-glow);
+  }
+
+  .rp-item:hover .rp-icon{
+
+    transform:
+      translateY(-3px)
+      rotate(-7deg)
+      scale(1.13);
+
+    color:#ffffff;
+
+    background:
+      var(--accent);
+
+    box-shadow:
+      0 0 28px var(--accent-glow);
+  }
+
+  .rp-item:hover .rp-number{
+
+    transform:scale(1.14);
+
+    color:#ffffff;
+  }
+
+  .rp-item:hover .rp-text{
+
+    transform:translateX(2px);
+
+    color:#ffffff;
+  }
+
+  .rp-item:hover::after{
+    left:155%;
+  }
+
+
+  /* =========================================================
+     CLICKED / SELECTED
+  ========================================================= */
+
+  .rp-item.selected{
+
+    transform:
+      translateX(10px)
+      scale(1.04);
+
+    background:
+      linear-gradient(
+        90deg,
+        var(--accent-glow),
+        rgba(255,255,255,.055)
+      );
+
+    border-color:
+      var(--accent);
+
+    box-shadow:
+      0 18px 40px rgba(0,0,0,.28),
+      0 0 38px var(--accent-glow),
+      inset 0 0 18px var(--accent-glow);
+  }
+
+  .rp-item.selected .rp-icon{
+
+    transform:
+      scale(1.16)
+      rotate(-7deg);
+
+    color:#ffffff;
+
+    background:
+      var(--accent);
+
+    box-shadow:
+      0 0 34px var(--accent-glow);
+  }
+
+  .rp-item.selected .rp-number{
+
+    transform:scale(1.16);
+
+    color:#ffffff;
+  }
+
+  .rp-item.selected .rp-text{
+
+    color:#ffffff;
+
+    font-weight:900;
+  }
+
+
+  /* =========================================================
+     PROGRAM FLEXIBILITY HIGHLIGHT
+  ========================================================= */
+
+  .rp-flex{
+
+    position:relative;
+
+    z-index:2;
+
+    margin-top:28px;
+
+    padding:27px 32px;
+
+    border-radius:24px;
+
+    text-align:center;
+
+    background:
+
+      radial-gradient(
+        circle at 15% 20%,
+        rgba(49,169,230,.17),
+        transparent 30%
+      ),
+
+      radial-gradient(
+        circle at 85% 80%,
+        rgba(154,120,232,.17),
+        transparent 30%
+      ),
+
+      linear-gradient(
+        135deg,
+        #102c46,
+        #11334c 52%,
+        #173047
+      );
+
+    border:
+      1px solid rgba(117,205,246,.24);
+
+    box-shadow:
+      0 22px 55px rgba(0,0,0,.25);
+
+    cursor:pointer;
+
+    transition:
+      transform .42s cubic-bezier(.2,.8,.2,1),
+      box-shadow .42s ease,
+      border-color .42s ease;
+  }
+
+  .rp-flex:hover{
+
+    transform:
+      translateY(-8px)
+      scale(1.015);
+
+    border-color:
+      rgba(117,205,246,.52);
+
+    box-shadow:
+      0 30px 70px rgba(0,0,0,.35),
+      0 0 45px rgba(49,169,230,.16);
+  }
+
+
+  .rp-flex-title{
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:11px;
+
+    margin-bottom:8px;
+  }
+
+  .rp-flex-icon{
+
+    width:42px;
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:13px;
+
+    color:#8fe1ff;
+
+    background:
+      rgba(100,207,248,.10);
+
+    border:
+      1px solid rgba(100,207,248,.20);
+
+    font-size:18px;
+
+    transition:
+      transform .35s ease,
+      box-shadow .35s ease;
+  }
+
+  .rp-flex:hover .rp-flex-icon{
+
+    transform:
+      rotate(-8deg)
+      scale(1.12);
+
+    box-shadow:
+      0 0 25px rgba(100,207,248,.20);
+  }
+
+
+  .rp-flex h3{
+
+    margin:0;
+
+    color:#ffffff;
+
+    font-size:18px;
+
+    font-weight:950;
+
+    letter-spacing:-.2px;
+  }
+
+
+  .rp-flex p{
+
+    max-width:850px;
+
+    margin:0 auto;
+
+    color:#bcd0df;
+
+    font-size:13px;
+
+    line-height:1.75;
+  }
+
+  .rp-flex strong{
+
+    color:#ffffff;
+
+    font-weight:900;
+  }
+
+
+  /* =========================================================
+     MOBILE
+  ========================================================= */
+
+  @media(max-width:900px){
+
+    .rp-layout{
+
+      grid-template-columns:1fr;
+    }
+
+  }
+
+
+  @media(max-width:600px){
+
+    .rp-section{
+
+      padding:75px 0;
+    }
+
+    .rp-panel{
+
+      padding:20px;
+    }
+
+    .rp-item{
+
+      min-height:63px;
+
+      padding:9px 11px;
+    }
+
+    .rp-icon{
+
+      width:40px;
+      height:40px;
+
+      flex-basis:40px;
+    }
+
+    .rp-text{
+
+      font-size:13px;
+    }
+
+    .rp-flex{
+
+      padding:23px 18px;
+    }
+
+  }
+
+</style>
+
+
 <section
-  class="research-section"
+  class="rp-section"
   id="research"
 >
 
   <div class="container">
 
-    <div class="section-heading reveal">
 
-      <div class="eyebrow">
+    <!-- =====================================================
+         HEADING
+    ====================================================== -->
+
+    <div class="rp-heading">
+
+      <div class="rp-eyebrow">
         Research Profile
       </div>
 
@@ -3503,89 +4315,231 @@ footer strong{
 
       <p>
         My research interests connect microbiology, veterinary medicine,
-        infectious disease research and One Health.
+        infectious disease research, epidemiology, data science and One Health.
       </p>
 
     </div>
 
 
-    <div class="research-layout">
+    <!-- =====================================================
+         PANELS
+    ====================================================== -->
+
+    <div class="rp-layout">
 
 
-      <div class="research-box reveal">
+      <!-- =================================================
+           RESEARCH INTERESTS
+      ================================================== -->
 
-        <h3>
-          Research Interests
-        </h3>
+      <div class="rp-panel rp-left">
 
-        <div class="research-list">
+        <div class="rp-panel-title">
 
-          <div class="research-item">
+          <div class="rp-panel-icon">
 
-            <span
-              class="research-number"
-              style="background:#b84c4c;"
-            >
+            <svg viewBox="0 0 24 24">
+
+              <path d="M12 3v18"/>
+
+              <path d="M4 7h16"/>
+
+              <path d="M6 7l-2 5a4 4 0 0 0 8 0L10 7"/>
+
+              <path d="M14 7l-2 5a4 4 0 0 0 8 0l-2-5"/>
+
+            </svg>
+
+          </div>
+
+          <h3>
+            Research Interests
+          </h3>
+
+        </div>
+
+
+        <div class="rp-list">
+
+
+          <!-- 01 AMR -->
+
+          <div
+            class="rp-item"
+            onclick="selectResearchItem(this)"
+          >
+
+            <div class="rp-icon">
+
+              <svg viewBox="0 0 24 24">
+
+                <path d="M8 3h8"/>
+
+                <path d="M9 3v4l-4 9a3 3 0 0 0 3 5h8a3 3 0 0 0 3-5l-4-9V3"/>
+
+                <path d="M7 15h10"/>
+
+              </svg>
+
+            </div>
+
+            <div class="rp-number">
               01
-            </span>
+            </div>
 
-            Antimicrobial Resistance (AMR)
+            <div class="rp-text">
+              Antimicrobial Resistance (AMR)
+            </div>
 
           </div>
 
 
-          <div class="research-item">
+          <!-- 02 ONE HEALTH -->
 
-            <span
-              class="research-number"
-              style="background:#3c9876;"
-            >
+          <div
+            class="rp-item"
+            onclick="selectResearchItem(this)"
+          >
+
+            <div class="rp-icon">
+
+              <svg viewBox="0 0 24 24">
+
+                <circle cx="12" cy="12" r="8.5"/>
+
+                <path d="M3.5 12h17"/>
+
+                <path d="M12 3.5a13 13 0 0 1 0 17"/>
+
+                <path d="M12 3.5a13 13 0 0 0 0 17"/>
+
+              </svg>
+
+            </div>
+
+            <div class="rp-number">
               02
-            </span>
+            </div>
 
-            One Health
+            <div class="rp-text">
+              One Health
+            </div>
 
           </div>
 
 
-          <div class="research-item">
+          <!-- 03 MICROBIOLOGY -->
 
-            <span
-              class="research-number"
-              style="background:#24749a;"
-            >
+          <div
+            class="rp-item"
+            onclick="selectResearchItem(this)"
+          >
+
+            <div class="rp-icon">
+
+              <svg viewBox="0 0 24 24">
+
+                <path d="M7 3c5 4 5 14 10 18"/>
+
+                <path d="M17 3c-5 4-5 14-10 18"/>
+
+                <path d="M8 6h8"/>
+
+                <path d="M7 10h10"/>
+
+                <path d="M6 14h12"/>
+
+                <path d="M5 18h8"/>
+
+              </svg>
+
+            </div>
+
+            <div class="rp-number">
               03
-            </span>
+            </div>
 
-            Microbiology &amp; Molecular Biology
+            <div class="rp-text">
+              Microbiology &amp; Molecular Biology
+            </div>
 
           </div>
 
 
-          <div class="research-item">
+          <!-- 04 VECTOR BORNE -->
 
-            <span
-              class="research-number"
-              style="background:#76539d;"
-            >
+          <div
+            class="rp-item"
+            onclick="selectResearchItem(this)"
+          >
+
+            <div class="rp-icon">
+
+              <svg viewBox="0 0 24 24">
+
+                <circle cx="12" cy="12" r="4"/>
+
+                <path d="M12 2v4"/>
+
+                <path d="M12 18v4"/>
+
+                <path d="M2 12h4"/>
+
+                <path d="M18 12h4"/>
+
+                <path d="M4.9 4.9l2.8 2.8"/>
+
+                <path d="M16.3 16.3l2.8 2.8"/>
+
+                <path d="M19.1 4.9l-2.8 2.8"/>
+
+                <path d="M7.7 16.3l-2.8 2.8"/>
+
+              </svg>
+
+            </div>
+
+            <div class="rp-number">
               04
-            </span>
+            </div>
 
-            Infectious &amp; Zoonotic Diseases
+            <div class="rp-text">
+              Infectious &amp; Vector-Borne Diseases
+            </div>
 
           </div>
 
 
-          <div class="research-item">
+          <!-- 05 ANIMAL HEALTH -->
 
-            <span
-              class="research-number"
-              style="background:#147d7e;"
-            >
+          <div
+            class="rp-item"
+            onclick="selectResearchItem(this)"
+          >
+
+            <div class="rp-icon">
+
+              <svg viewBox="0 0 24 24">
+
+                <path d="M7.5 12.5c-2.5 0-4.5 2-4.5 4.5S5 21 7.5 21c1.3 0 2.4-.5 3.2-1.4h2.6c.8.9 1.9 1.4 3.2 1.4 2.5 0 4.5-2 4.5-4.5s-2-4.5-4.5-4.5c-.8 0-1.5.2-2.2.6L12 9l-2.3 3.1c-.7-.4-1.4-.6-2.2-.6z"/>
+
+                <circle cx="7" cy="8" r="2"/>
+
+                <circle cx="12" cy="6" r="2"/>
+
+                <circle cx="17" cy="8" r="2"/>
+
+              </svg>
+
+            </div>
+
+            <div class="rp-number">
               05
-            </span>
+            </div>
 
-            Animal Health
+            <div class="rp-text">
+              Animal Health
+            </div>
 
           </div>
 
@@ -3594,78 +4548,318 @@ footer strong{
       </div>
 
 
-      <div class="research-box reveal">
+
+      <!-- =================================================
+           RESEARCH FOCUS
+      ================================================== -->
+
+      <div class="rp-panel rp-right">
+
+        <div class="rp-panel-title">
+
+          <div class="rp-panel-icon">
+
+            <svg viewBox="0 0 24 24">
+
+              <circle cx="12" cy="12" r="8"/>
+
+              <circle cx="12" cy="12" r="3"/>
+
+              <path d="M12 4V2"/>
+
+              <path d="M12 22v-2"/>
+
+              <path d="M4 12H2"/>
+
+              <path d="M22 12h-2"/>
+
+            </svg>
+
+          </div>
+
+          <h3>
+            Research Focus
+          </h3>
+
+        </div>
+
+
+        <div class="rp-list">
+
+
+          <!-- 01 HOST MICROBE -->
+
+          <div
+            class="rp-item"
+            onclick="selectResearchItem(this)"
+          >
+
+            <div class="rp-icon">
+
+              <svg viewBox="0 0 24 24">
+
+                <circle cx="8" cy="12" r="4"/>
+
+                <circle cx="16" cy="12" r="4"/>
+
+                <path d="M10 12h4"/>
+
+                <path d="M5 8l-1-2"/>
+
+                <path d="M19 8l1-2"/>
+
+                <path d="M5 16l-1 2"/>
+
+                <path d="M19 16l1 2"/>
+
+              </svg>
+
+            </div>
+
+            <div class="rp-number">
+              01
+            </div>
+
+            <div class="rp-text">
+              Host–Microbe Interactions
+            </div>
+
+          </div>
+
+
+          <!-- 02 VETERINARY PUBLIC HEALTH -->
+
+          <div
+            class="rp-item"
+            onclick="selectResearchItem(this)"
+          >
+
+            <div class="rp-icon">
+
+              <svg viewBox="0 0 24 24">
+
+                <circle cx="12" cy="12" r="8"/>
+
+                <path d="M12 4v16"/>
+
+                <path d="M4 12h16"/>
+
+                <path d="M8 8l8 8"/>
+
+                <path d="M16 8l-8 8"/>
+
+              </svg>
+
+            </div>
+
+            <div class="rp-number">
+              02
+            </div>
+
+            <div class="rp-text">
+              Veterinary Public Health
+            </div>
+
+          </div>
+
+
+          <!-- 03 DATA DRIVEN EPIDEMIOLOGY -->
+
+          <div
+            class="rp-item"
+            onclick="selectResearchItem(this)"
+          >
+
+            <div class="rp-icon">
+
+              <svg viewBox="0 0 24 24">
+
+                <path d="M4 19V5"/>
+
+                <path d="M4 19h17"/>
+
+                <path d="M7 15l4-4 3 2 5-7"/>
+
+                <circle cx="7" cy="15" r="1"/>
+
+                <circle cx="11" cy="11" r="1"/>
+
+                <circle cx="14" cy="13" r="1"/>
+
+                <circle cx="19" cy="6" r="1"/>
+
+              </svg>
+
+            </div>
+
+            <div class="rp-number">
+              03
+            </div>
+
+            <div class="rp-text">
+              Data-Driven Epidemiology &amp; Machine Learning
+            </div>
+
+          </div>
+
+
+          <!-- 04 GUT HEALTH -->
+
+          <div
+            class="rp-item"
+            onclick="selectResearchItem(this)"
+          >
+
+            <div class="rp-icon">
+
+              <svg viewBox="0 0 24 24">
+
+                <path d="M7 4c3-1 5 1 5 4s-2 4 0 7c2 3 4 4 5 5"/>
+
+                <path d="M12 8c1-2 3-3 5-2 2 1 2 4 1 6-1 2-2 4-1 7"/>
+
+                <path d="M7 4c-2 1-3 3-3 5 0 3 2 4 2 7 0 2 1 4 3 5"/>
+
+              </svg>
+
+            </div>
+
+            <div class="rp-number">
+              04
+            </div>
+
+            <div class="rp-text">
+              Gut Health &amp; Nutritional Programming
+            </div>
+
+          </div>
+
+
+          <!-- 05 GENOMICS -->
+
+          <div
+            class="rp-item"
+            onclick="selectResearchItem(this)"
+          >
+
+            <div class="rp-icon">
+
+              <svg viewBox="0 0 24 24">
+
+                <path d="M6 3c5 3 7 6 7 9s-2 6-7 9"/>
+
+                <path d="M18 3c-5 3-7 6-7 9s2 6 7 9"/>
+
+                <path d="M8 6h8"/>
+
+                <path d="M7 10h10"/>
+
+                <path d="M7 14h10"/>
+
+                <path d="M8 18h8"/>
+
+              </svg>
+
+            </div>
+
+            <div class="rp-number">
+              05
+            </div>
+
+            <div class="rp-text">
+              Microbial Genomics &amp; Bioinformatics
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         INTERDISCIPLINARY HIGHLIGHT
+    ====================================================== -->
+
+    <div
+      class="rp-flex"
+      onclick="this.classList.toggle('selected')"
+    >
+
+      <div class="rp-flex-title">
+
+        <div class="rp-flex-icon">
+
+          <svg
+            viewBox="0 0 24 24"
+            width="23"
+            height="23"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+
+            <circle cx="12" cy="12" r="3"/>
+
+            <circle cx="12" cy="4" r="2"/>
+
+            <circle cx="5" cy="16" r="2"/>
+
+            <circle cx="19" cy="16" r="2"/>
+
+            <path d="M12 7v2"/>
+
+            <path d="M9.5 13.5l-3 1.5"/>
+
+            <path d="M14.5 13.5l3 1.5"/>
+
+          </svg>
+
+        </div>
 
         <h3>
-          Research Focus
+          Interdisciplinary &amp; Program-Flexible
         </h3>
 
-        <div class="research-list">
-
-          <div class="research-item">
-
-            <span
-              class="research-number"
-              style="background:#76539d;"
-            >
-              01
-            </span>
-
-            Host–Microbe Interactions
-
-          </div>
-
-
-          <div class="research-item">
-
-            <span
-              class="research-number"
-              style="background:#c9821b;"
-            >
-              02
-            </span>
-
-            Gut Health &amp; Nutritional Programming
-
-          </div>
-
-
-          <div class="research-item">
-
-            <span
-              class="research-number"
-              style="background:#4f63a5;"
-            >
-              03
-            </span>
-
-            Microbial Genomics &amp; Epidemiology
-
-          </div>
-
-
-          <div class="research-item">
-
-            <span
-              class="research-number"
-              style="background:#147d7e;"
-            >
-              04
-            </span>
-
-            Bioinformatics
-
-          </div>
-
-        </div>
-
       </div>
+
+
+      <p>
+        My interdisciplinary training allows me to contribute across
+        <strong>microbiology, infectious diseases, epidemiology,
+        veterinary public health, One Health, genomics and data-driven
+        research</strong>, adapting to diverse graduate research environments.
+      </p>
 
     </div>
 
   </div>
 
 </section>
+
+
+<script>
+
+  function selectResearchItem(item){
+
+    const items =
+      document.querySelectorAll(".rp-item");
+
+    items.forEach(function(element){
+
+      element.classList.remove("selected");
+
+    });
+
+    item.classList.add("selected");
+
+  }
+
+</script>
 
 
 <!-- =========================================================
