@@ -1,3 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Dr. Ahmed Ishtiak Nirob — Research Interests, Projects, Activities and Scholarly Outputs">
+<meta name="author" content="Dr. Ahmed Ishtiak Nirob">
+<title>Dr. Ahmed Ishtiak Nirob | Research Portfolio</title>
+<style>
+/* GitHub standalone base layer */
+:root{color-scheme:dark;}
+html{scroll-behavior:smooth;}
+*{box-sizing:border-box;}
+body{margin:0;background:#061421;color:#edf6ff;font-family:Inter,Segoe UI,Arial,sans-serif;}
+button,input,textarea,select{font:inherit;}
+button{font-family:inherit;}
+.container{width:min(1180px,calc(100% - 36px));margin:0 auto;}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease;}
+.reveal.revealed{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
+
+/* Mouse-follow glow for GitHub standalone version */
+.research-profile-card,.research-project-card,.research-output-card,.research-flex-card,.status-summary-card{--mx:50%;--my:50%;}
+.research-profile-card::after,.research-project-card::after,.research-output-card::after,.research-flex-card::after,.status-summary-card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;background:radial-gradient(260px circle at var(--mx) var(--my),rgba(255,255,255,.10),transparent 62%);transition:opacity .25s ease;z-index:0;}
+.research-profile-card:hover::after,.research-project-card:hover::after,.research-output-card:hover::after,.research-flex-card:hover::after,.status-summary-card:hover::after{opacity:1;}
+.research-profile-card>*,.research-project-card>*,.research-output-card>*,.research-flex-card>*,.status-summary-card>*{position:relative;z-index:1;}
+</style>
+</head>
+<body>
 <!-- =========================================================
      COMPLETE RESEARCH PAGE
 ========================================================= -->
@@ -3845,3 +3874,25 @@ document.addEventListener(
 );
 
 </script>
+<script>
+(function(){
+  const items=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('revealed');io.unobserve(e.target);}});
+    },{threshold:.08});
+    items.forEach(x=>io.observe(x));
+  }else{items.forEach(x=>x.classList.add('revealed'));}
+
+  const glow=document.querySelectorAll('.research-profile-card,.research-project-card,.research-output-card,.research-flex-card,.status-summary-card');
+  glow.forEach(el=>{
+    el.addEventListener('pointermove',e=>{
+      const r=el.getBoundingClientRect();
+      el.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');
+      el.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%');
+    });
+  });
+})();
+</script>
+</body>
+</html>
