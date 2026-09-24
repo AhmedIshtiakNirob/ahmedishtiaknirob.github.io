@@ -4501,16 +4501,823 @@ footer strong{
 
 
 <!-- =========================================================
-     SCHOLARLY WORK
+     SELECTED SCHOLARLY WORK
 ========================================================= -->
 
-<section class="work-section">
+<style>
+
+  /* =========================================================
+     SECTION
+  ========================================================= */
+
+  .sw-section{
+    position:relative;
+    padding:105px 0;
+    overflow:hidden;
+
+    background:
+      linear-gradient(
+        135deg,
+        #081a2d,
+        #0b1d31 52%,
+        #10192e
+      );
+  }
+
+  .sw-section::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+      radial-gradient(
+        circle at 8% 25%,
+        rgba(49,169,230,.09),
+        transparent 26%
+      ),
+      radial-gradient(
+        circle at 92% 75%,
+        rgba(154,120,232,.09),
+        transparent 28%
+      );
+  }
+
+
+  /* =========================================================
+     HEADING
+  ========================================================= */
+
+  .sw-heading{
+    position:relative;
+    z-index:2;
+
+    text-align:center;
+
+    margin-bottom:55px;
+  }
+
+  .sw-eyebrow{
+    display:inline-block;
+
+    color:#60cdf8;
+
+    font-size:11px;
+    font-weight:950;
+
+    letter-spacing:3px;
+    text-transform:uppercase;
+
+    margin-bottom:10px;
+  }
+
+  .sw-heading h2{
+
+    margin:0 0 13px;
+
+    color:#edf6ff;
+
+    font-size:
+      clamp(31px,4vw,48px);
+
+    line-height:1.12;
+
+    font-weight:900;
+
+    letter-spacing:-1.5px;
+
+    transition:
+      transform .35s ease,
+      text-shadow .35s ease;
+  }
+
+  .sw-heading h2:hover{
+
+    transform:translateY(-3px);
+
+    text-shadow:
+      0 0 35px rgba(49,169,230,.20);
+  }
+
+  .sw-heading p{
+
+    max-width:850px;
+
+    margin:auto;
+
+    color:#91a7bd;
+
+    font-size:14px;
+
+    line-height:1.75;
+  }
+
+
+  /* =========================================================
+     GRID
+  ========================================================= */
+
+  .sw-grid{
+
+    position:relative;
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:
+      repeat(3,1fr);
+
+    gap:22px;
+
+    align-items:stretch;
+  }
+
+
+  /* =========================================================
+     CARD
+  ========================================================= */
+
+  .sw-card{
+
+    --accent:#49bdf2;
+    --glow:rgba(73,189,242,.20);
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    min-height:500px;
+
+    padding:28px;
+
+    border-radius:26px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    background:
+      linear-gradient(
+        145deg,
+        rgba(18,39,62,.96),
+        rgba(8,24,40,.91)
+      );
+
+    border:
+      1px solid rgba(255,255,255,.09);
+
+    box-shadow:
+      0 18px 45px rgba(0,0,0,.22);
+
+    opacity:0;
+
+    transform:
+      translateY(35px)
+      scale(.96);
+
+    animation:
+      swCardIn .75s cubic-bezier(.2,.8,.2,1) forwards;
+
+    transition:
+      transform .45s cubic-bezier(.2,.8,.2,1),
+      box-shadow .45s ease,
+      border-color .45s ease,
+      background .45s ease;
+  }
+
+
+  /* =========================================================
+     INDIVIDUAL CARD COLORS
+  ========================================================= */
+
+  .sw-card:nth-child(1){
+
+    --accent:#b48cff;
+    --glow:rgba(180,140,255,.21);
+
+    animation-delay:.05s;
+  }
+
+  .sw-card:nth-child(2){
+
+    --accent:#49bdf2;
+    --glow:rgba(73,189,242,.21);
+
+    animation-delay:.15s;
+  }
+
+  .sw-card:nth-child(3){
+
+    --accent:#e7a951;
+    --glow:rgba(231,169,81,.21);
+
+    animation-delay:.25s;
+  }
+
+
+  /* =========================================================
+     TOP ACCENT LINE
+  ========================================================= */
+
+  .sw-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+    right:0;
+
+    height:4px;
+
+    background:
+      linear-gradient(
+        90deg,
+        transparent,
+        var(--accent),
+        transparent
+      );
+
+    opacity:.9;
+  }
+
+
+  /* =========================================================
+     ICON
+  ========================================================= */
+
+  .sw-status-icon{
+
+    width:60px;
+    height:60px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:18px;
+
+    margin-bottom:17px;
+
+    color:var(--accent);
+
+    background:
+      radial-gradient(
+        circle at 30% 25%,
+        var(--glow),
+        rgba(255,255,255,.025)
+      );
+
+    border:
+      1px solid var(--glow);
+
+    box-shadow:
+      0 10px 28px var(--glow);
+
+    transition:
+      transform .42s cubic-bezier(.2,.8,.2,1),
+      color .35s ease,
+      background .35s ease,
+      box-shadow .35s ease;
+  }
+
+  .sw-status-icon svg{
+
+    width:31px;
+    height:31px;
+
+    transition:
+      transform .4s ease;
+  }
+
+
+  /* =========================================================
+     STATUS TAG
+  ========================================================= */
+
+  .sw-tag{
+
+    align-self:flex-start;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    padding:7px 12px;
+
+    margin-bottom:19px;
+
+    border-radius:9px;
+
+    color:var(--accent);
+
+    background:
+      var(--glow);
+
+    border:
+      1px solid
+      rgba(255,255,255,.06);
+
+    font-size:10px;
+
+    font-weight:950;
+
+    letter-spacing:.2px;
+  }
+
+
+  /* =========================================================
+     TITLE
+  ========================================================= */
+
+  .sw-title{
+
+    margin:0 0 19px;
+
+    color:#edf6ff;
+
+    font-size:18px;
+
+    line-height:1.5;
+
+    font-weight:900;
+
+    letter-spacing:-.2px;
+
+    transition:
+      transform .35s ease,
+      color .35s ease;
+  }
+
+
+  /* =========================================================
+     AUTHORS
+  ========================================================= */
+
+  .sw-authors{
+
+    margin:0;
+
+    color:#aebfd0;
+
+    font-size:13.5px;
+
+    line-height:1.85;
+
+    letter-spacing:.05px;
+  }
+
+  .sw-authors strong{
+
+    color:#ffffff;
+
+    font-weight:900;
+  }
+
+
+  /* =========================================================
+     YOUR NAME
+  ========================================================= */
+
+  .my-name{
+
+    display:inline;
+
+    padding:3px 7px;
+
+    margin:0 2px;
+
+    border-radius:7px;
+
+    color:#ffffff !important;
+
+    background:
+      linear-gradient(
+        135deg,
+        var(--accent),
+        rgba(255,255,255,.15)
+      );
+
+    box-shadow:
+      0 0 15px var(--glow);
+
+    font-weight:950 !important;
+
+    transition:
+      transform .25s ease,
+      box-shadow .25s ease;
+  }
+
+
+  /* =========================================================
+     AUTHOR POSITION
+  ========================================================= */
+
+  .author-position{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    margin-top:14px;
+
+    padding:7px 11px;
+
+    border-radius:9px;
+
+    color:var(--accent);
+
+    background:
+      rgba(255,255,255,.035);
+
+    border:
+      1px solid
+      rgba(255,255,255,.08);
+
+    font-size:10.5px;
+
+    font-weight:900;
+  }
+
+
+  /* =========================================================
+     PUBLICATION / SUBMISSION INFORMATION
+  ========================================================= */
+
+  .sw-info{
+
+    margin-top:18px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+  }
+
+
+  .sw-info-row{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:9px;
+
+    padding:9px 11px;
+
+    border-radius:10px;
+
+    background:
+      rgba(255,255,255,.035);
+
+    border:
+      1px solid
+      rgba(255,255,255,.07);
+  }
+
+
+  .sw-info-label{
+
+    min-width:82px;
+
+    color:var(--accent);
+
+    font-size:10px;
+
+    font-weight:950;
+
+    text-transform:uppercase;
+
+    letter-spacing:.5px;
+  }
+
+
+  .sw-info-value{
+
+    color:#c5d3df;
+
+    font-size:11.5px;
+
+    line-height:1.55;
+
+    font-weight:700;
+  }
+
+
+  /* =========================================================
+     FOOTER
+  ========================================================= */
+
+  .sw-footer{
+
+    margin-top:auto;
+
+    padding-top:22px;
+
+    border-top:
+      1px solid
+      rgba(255,255,255,.08);
+  }
+
+
+  .sw-footer p{
+
+    margin:0 0 11px;
+
+    color:#91a7bd;
+
+    font-size:12px;
+
+    line-height:1.65;
+  }
+
+
+  /* =========================================================
+     DOI / ARTICLE LINK
+  ========================================================= */
+
+  .sw-link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    color:var(--accent);
+
+    font-size:13px;
+
+    font-weight:950;
+
+    transition:
+      transform .3s ease,
+      color .3s ease;
+  }
+
+  .sw-link:hover{
+
+    transform:
+      translateX(6px);
+
+    color:#ffffff;
+  }
+
+
+  /* =========================================================
+     HOVER
+  ========================================================= */
+
+  .sw-card:hover{
+
+    transform:
+      translateY(-13px)
+      scale(1.035);
+
+    border-color:
+      var(--accent);
+
+    box-shadow:
+      0 30px 70px rgba(0,0,0,.40),
+      0 0 40px var(--glow);
+
+    background:
+      linear-gradient(
+        145deg,
+        var(--glow),
+        rgba(8,24,40,.96)
+      );
+  }
+
+
+  .sw-card:hover .sw-status-icon{
+
+    transform:
+      translateY(-5px)
+      rotate(-7deg)
+      scale(1.11);
+
+    color:#ffffff;
+
+    background:
+      linear-gradient(
+        135deg,
+        var(--accent),
+        rgba(255,255,255,.17)
+      );
+
+    box-shadow:
+      0 0 30px var(--accent),
+      0 15px 40px var(--glow);
+  }
+
+
+  .sw-card:hover .sw-status-icon svg{
+
+    transform:
+      scale(1.08);
+  }
+
+
+  .sw-card:hover .sw-title{
+
+    transform:
+      translateY(-2px);
+
+    color:#ffffff;
+
+    text-shadow:
+      0 0 18px var(--glow);
+  }
+
+
+  .sw-card:hover .my-name{
+
+    box-shadow:
+      0 0 22px var(--accent),
+      0 0 40px var(--glow);
+
+    transform:
+      scale(1.04);
+  }
+
+
+  /* =========================================================
+     SELECTED / CLICKED CARD
+  ========================================================= */
+
+  .sw-card.selected{
+
+    transform:
+      translateY(-17px)
+      scale(1.055);
+
+    border-color:
+      var(--accent);
+
+    box-shadow:
+      0 35px 90px rgba(0,0,0,.47),
+      0 0 52px var(--glow),
+      inset 0 0 35px var(--glow);
+  }
+
+
+  .sw-card.selected .sw-status-icon{
+
+    transform:
+      scale(1.16)
+      rotate(-7deg);
+
+    color:#ffffff;
+
+    background:
+      linear-gradient(
+        135deg,
+        var(--accent),
+        rgba(255,255,255,.18)
+      );
+
+    box-shadow:
+      0 0 38px var(--accent),
+      0 15px 45px var(--glow);
+  }
+
+
+  .sw-card.selected .sw-title{
+
+    color:#ffffff;
+
+    text-shadow:
+      0 0 24px var(--glow);
+  }
+
+
+  /* =========================================================
+     SHINE ANIMATION
+  ========================================================= */
+
+  .sw-shine{
+
+    position:absolute;
+
+    top:-55%;
+    left:-140%;
+
+    width:65%;
+    height:220%;
+
+    transform:
+      rotate(20deg);
+
+    background:
+      linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.10),
+        transparent
+      );
+
+    pointer-events:none;
+
+    transition:
+      left .8s ease;
+  }
+
+
+  .sw-card:hover .sw-shine{
+
+    left:155%;
+  }
+
+
+  /* =========================================================
+     ENTRY ANIMATION
+  ========================================================= */
+
+  @keyframes swCardIn{
+
+    0%{
+
+      opacity:0;
+
+      transform:
+        translateY(40px)
+        scale(.94);
+    }
+
+    100%{
+
+      opacity:1;
+
+      transform:
+        translateY(0)
+        scale(1);
+    }
+
+  }
+
+
+  /* =========================================================
+     RESPONSIVE
+  ========================================================= */
+
+  @media(max-width:1050px){
+
+    .sw-grid{
+
+      grid-template-columns:
+        1fr 1fr;
+    }
+
+  }
+
+
+  @media(max-width:700px){
+
+    .sw-section{
+
+      padding:75px 0;
+    }
+
+    .sw-grid{
+
+      grid-template-columns:1fr;
+
+      gap:18px;
+    }
+
+    .sw-card{
+
+      min-height:auto;
+    }
+
+  }
+
+</style>
+
+
+<section class="sw-section">
 
   <div class="container">
 
-    <div class="section-heading reveal">
+    <!-- =================================================
+         HEADING
+    ================================================== -->
 
-      <div class="eyebrow">
+    <div class="sw-heading">
+
+      <div class="sw-eyebrow">
         Scholarly Work
       </div>
 
@@ -4520,115 +5327,438 @@ footer strong{
 
       <p>
         Selected publications, forthcoming scholarly work and manuscripts
-        representing my research interests.
+        representing my research interests and scholarly contributions.
       </p>
 
     </div>
 
 
-    <div class="work-grid">
+    <!-- =================================================
+         CARDS
+    ================================================== -->
+
+    <div class="sw-grid">
 
 
-      <article class="work-card reveal">
+      <!-- =================================================
+           1. FORTHCOMING BOOK CHAPTER
+      ================================================== -->
 
-        <span class="work-tag tag-book">
-          Forthcoming Book Chapter
+      <article
+        class="sw-card"
+        onclick="selectScholarlyCard(this)"
+      >
+
+        <div class="sw-status-icon">
+
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+
+            <path
+              d="M13 11h31c4 0 7 3 7 7v35H20c-4 0-7-3-7-7V11z"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="4"
+            />
+
+            <path
+              d="M20 53V18c0-4 3-7 7-7"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="4"
+            />
+
+            <path
+              d="M28 25h15M28 33h15M28 41h11"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+
+          </svg>
+
+        </div>
+
+
+        <span class="sw-tag">
+          📖 Forthcoming Book Chapter
         </span>
 
-        <h3>
+
+        <h3 class="sw-title">
+
           Bovine Spongiform Encephalopathy (BSE) in Meat:
           Risks, Detection, and Management
+
         </h3>
 
-        <p class="justify">
+
+        <p class="sw-authors">
 
           <strong>Authors:</strong>
+
           Md. Jisan Ahmed, Prajwal Bhandari, Ritu Chalise,
           Md. Ismile Hossain Bhuiyan, Md. Imran Hossain,
           Kazi Estieque Alam,
-          <strong>Ahmed Ishtiak Nirob</strong>,
+
+          <strong class="my-name">
+            Ahmed Ishtiak Nirob
+          </strong>,
+
           Md. Mominul Islam, Delower Hossain.
 
         </p>
 
-        <div class="work-footer">
 
-          <p>
-            CRC Press · 2027 · Chapter 12 · Forthcoming
-          </p>
+        <div class="author-position">
+          👤 7th author · 9 authors
+        </div>
+
+
+        <div class="sw-info">
+
+          <div class="sw-info-row">
+
+            <div class="sw-info-label">
+              Status
+            </div>
+
+            <div class="sw-info-value">
+              Forthcoming · 2027
+            </div>
+
+          </div>
+
+
+          <div class="sw-info-row">
+
+            <div class="sw-info-label">
+              Publisher
+            </div>
+
+            <div class="sw-info-value">
+              CRC Press
+            </div>
+
+          </div>
+
+
+          <div class="sw-info-row">
+
+            <div class="sw-info-label">
+              Book
+            </div>
+
+            <div class="sw-info-value">
+              Advances in Sustainable Meat Technology · Chapter 12
+            </div>
+
+          </div>
 
         </div>
 
-      </article>
 
-
-      <article class="work-card reveal">
-
-        <span class="work-tag tag-published">
-          Published Article
-        </span>
-
-        <h3>
-          Antimicrobial Resistance in Meat and Meat Products
-          from Asia: An Urgent One Health Challenge –
-          A Systematic Review and Meta-analysis
-        </h3>
-
-        <p class="justify">
-
-          <strong>Author:</strong>
-          Ahmed Ishtiak Nirob, et al.
-
-        </p>
-
-        <div class="work-footer">
+        <div class="sw-footer">
 
           <p>
-            Poultry Science · 2025
+            DOI: 10.1201/9781003689560-14
           </p>
 
           <a
-            class="work-link"
-            href="https://doi.org/10.1016/j.psj.2025.105811"
+            class="sw-link"
+            href="https://doi.org/10.1201/9781003689560-14"
             target="_blank"
             rel="noopener"
+            onclick="event.stopPropagation()"
           >
-            View Article →
+            View Chapter DOI →
           </a>
 
         </div>
 
+
+        <div class="sw-shine"></div>
+
       </article>
 
 
-      <article class="work-card reveal">
 
-        <span class="work-tag tag-review">
-          Manuscript Under Review
+      <!-- =================================================
+           2. PUBLISHED ARTICLE
+      ================================================== -->
+
+      <article
+        class="sw-card"
+        onclick="selectScholarlyCard(this)"
+      >
+
+        <div class="sw-status-icon">
+
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+
+            <rect
+              x="12"
+              y="8"
+              width="40"
+              height="48"
+              rx="4"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="4"
+            />
+
+            <path
+              d="M21 20h22M21 29h22M21 38h15M21 47h8"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+
+          </svg>
+
+        </div>
+
+
+        <span class="sw-tag">
+          ✓ Published Article
         </span>
 
-        <h3>
-          Developing a Natural Product-based Bioactive Wound
-          Dressing with Antimicrobial and Anti-inflammatory
-          Healing Potential from Bombax ceiba Root Extract
+
+        <h3 class="sw-title">
+
+          Antimicrobial Resistance in Meat and Meat Products
+          from Asia: An Urgent One Health Challenge –
+          A Systematic Review and Meta-analysis
+
         </h3>
 
-        <p class="justify">
 
-          <strong>Author:</strong>
-          Ahmed Ishtiak Nirob, et al.
+        <p class="sw-authors">
+
+          <strong>Authors:</strong>
+
+          Md. Jisan Ahmed, Md. Imran Hossain,
+          Md. Ismile Hossain Bhuiyan, Md. Arifur Rahman,
+          Israt Jahan Kaderi,
+
+          <strong class="my-name">
+            Ahmed Ishtiak Nirob
+          </strong>,
+
+          Md. Afiqul Islam Rahi, Mustakim Mamun,
+          Kazi Estieque Alam, Md. Jayed Chowdhury,
+          Prajwal Bhandari, Ritu Chalise,
+          Md. Jahangir Alam, Md. Tazul Islam Chowdhury,
+          Mahabbat Ali, Delower Hossain.
 
         </p>
 
-        <div class="work-footer">
+
+        <div class="author-position">
+          👤 6th author · 16 authors
+        </div>
+
+
+        <div class="sw-info">
+
+          <div class="sw-info-row">
+
+            <div class="sw-info-label">
+              Status
+            </div>
+
+            <div class="sw-info-value">
+              Published · 2025
+            </div>
+
+          </div>
+
+
+          <div class="sw-info-row">
+
+            <div class="sw-info-label">
+              Journal
+            </div>
+
+            <div class="sw-info-value">
+              Poultry Science
+            </div>
+
+          </div>
+
+
+          <div class="sw-info-row">
+
+            <div class="sw-info-label">
+              Type
+            </div>
+
+            <div class="sw-info-value">
+              Systematic Review &amp; Meta-analysis
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="sw-footer">
 
           <p>
-            Manuscript under review
+            DOI: 10.1016/j.psj.2025.105811
+          </p>
+
+          <a
+            class="sw-link"
+            href="https://doi.org/10.1016/j.psj.2025.105811"
+            target="_blank"
+            rel="noopener"
+            onclick="event.stopPropagation()"
+          >
+            View Published Article →
+          </a>
+
+        </div>
+
+
+        <div class="sw-shine"></div>
+
+      </article>
+
+
+
+      <!-- =================================================
+           3. MANUSCRIPT UNDER REVIEW
+      ================================================== -->
+
+      <article
+        class="sw-card"
+        onclick="selectScholarlyCard(this)"
+      >
+
+        <div class="sw-status-icon">
+
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+
+            <circle
+              cx="32"
+              cy="32"
+              r="23"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="4"
+            />
+
+            <path
+              d="M32 18v14l10 7"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+
+          </svg>
+
+        </div>
+
+
+        <span class="sw-tag">
+          ⏳ Manuscript Under Review
+        </span>
+
+
+        <h3 class="sw-title">
+
+          Developing a Natural Product-based Bioactive Wound
+          Dressing with Antimicrobial and Anti-inflammatory
+          Healing Potential from Bombax ceiba Root Extract
+
+        </h3>
+
+
+        <p class="sw-authors">
+
+          <strong>Authors:</strong>
+
+          Md. Pranto Miah, Subrato Biswas,
+          Md. Hasibur Rahaman, Rupa Akter,
+
+          <strong class="my-name">
+            Ahmed Ishtiak Nirob
+          </strong>,
+
+          Md. Abdul Masum, Humayra Akhter Himu.
+
+        </p>
+
+
+        <div class="author-position">
+          👤 5th author · 7 authors
+        </div>
+
+
+        <div class="sw-info">
+
+          <div class="sw-info-row">
+
+            <div class="sw-info-label">
+              Status
+            </div>
+
+            <div class="sw-info-value">
+              Under Review
+            </div>
+
+          </div>
+
+
+          <div class="sw-info-row">
+
+            <div class="sw-info-label">
+              Submitted To
+            </div>
+
+            <div class="sw-info-value">
+              Journal of the Royal Society Interface
+            </div>
+
+          </div>
+
+
+          <div class="sw-info-row">
+
+            <div class="sw-info-label">
+              Submitted
+            </div>
+
+            <div class="sw-info-value">
+              25 July 2026
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="sw-footer">
+
+          <p>
+            Manuscript ID: rsif-2026-0839
+          </p>
+
+          <p>
+            Article Type: Research
           </p>
 
         </div>
 
+
+        <div class="sw-shine"></div>
+
       </article>
+
 
     </div>
 
@@ -4636,6 +5766,25 @@ footer strong{
 
 </section>
 
+
+<script>
+
+  function selectScholarlyCard(card){
+
+    const cards =
+      document.querySelectorAll(".sw-card");
+
+    cards.forEach(function(item){
+
+      item.classList.remove("selected");
+
+    });
+
+    card.classList.add("selected");
+
+  }
+
+</script>
 
 <!-- =========================================================
      EDUCATION
