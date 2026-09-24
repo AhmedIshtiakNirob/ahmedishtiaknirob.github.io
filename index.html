@@ -7552,7 +7552,616 @@ body.light .rp-text{
 </section>
 
 
-https://drive.google.com/file/d/1c5hWObzGwvsdLXTcBwvxM5fndB-tmmxI/view?usp=sharing
+<!-- =========================================================
+     INTERACTIVE HIGHLIGHT GALLERY
+========================================================= -->
+
+<section class="gallery-section">
+
+  <div class="container">
+
+
+    <!-- =====================================================
+         HEADING
+    ====================================================== -->
+
+    <div class="section-heading reveal">
+
+      <div class="eyebrow">
+        Beyond the Research
+      </div>
+
+      <h2>
+        Research, Professional &amp; Academic Highlights
+      </h2>
+
+    </div>
+
+
+    <!-- =====================================================
+         GALLERY CARDS
+    ====================================================== -->
+
+    <div class="gallery-grid">
+
+
+      <!-- =====================================================
+           01 RESEARCH WORK
+      ====================================================== -->
+
+      <div
+        class="gallery-card reveal"
+        data-gallery="research"
+        onclick="openGalleryModal('research')"
+        role="button"
+        tabindex="0"
+        onkeydown="handleGalleryKey(event,'research')"
+      >
+
+        <img
+          src="https://drive.google.com/thumbnail?id=1eRydvLRSO54jSZjDGtLgQpayvKM067cL&sz=w1400"
+          alt="Research Work"
+        >
+
+        <div class="gallery-click">
+          ↗
+        </div>
+
+        <div class="gallery-overlay">
+
+          <h3>
+            Research Work
+          </h3>
+
+          <p>
+            Research &amp; Scientific Activities
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- =====================================================
+           02 VETERINARY MEDICAL OFFICER
+      ====================================================== -->
+
+      <div
+        class="gallery-card reveal"
+        data-gallery="vmo"
+        onclick="openGalleryModal('vmo')"
+        role="button"
+        tabindex="0"
+        onkeydown="handleGalleryKey(event,'vmo')"
+      >
+
+        <img
+          src="https://drive.google.com/thumbnail?id=1c5hWObzGwvsdLXTcBwvxM5fndB-tmmxI&sz=w1400"
+          alt="Veterinary Medical Officer"
+        >
+
+        <div class="gallery-click">
+          ↗
+        </div>
+
+        <div class="gallery-overlay">
+
+          <h3>
+            Veterinary Medical Officer
+          </h3>
+
+          <p>
+            Dhaka North City Corporation (DNCC)
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- =====================================================
+           03 AWARD & ACHIEVEMENT
+      ====================================================== -->
+
+      <div
+        class="gallery-card reveal"
+        data-gallery="award"
+        onclick="openGalleryModal('award')"
+        role="button"
+        tabindex="0"
+        onkeydown="handleGalleryKey(event,'award')"
+      >
+
+        <img
+          src="https://drive.google.com/thumbnail?id=1rQ5D8RzgrZqZEAbJ6rdnGt2ZAJR0WiJN&sz=w1400"
+          alt="Award and Achievement"
+        >
+
+        <div class="gallery-click">
+          ↗
+        </div>
+
+        <div class="gallery-overlay">
+
+          <h3>
+            Award &amp; Achievement
+          </h3>
+
+          <p>
+            Recognition &amp; Milestones
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- =====================================================
+           04 POSTER PRESENTATION
+      ====================================================== -->
+
+      <div
+        class="gallery-card reveal"
+        data-gallery="poster"
+        onclick="openGalleryModal('poster')"
+        role="button"
+        tabindex="0"
+        onkeydown="handleGalleryKey(event,'poster')"
+      >
+
+        <img
+          src="https://drive.google.com/thumbnail?id=1NuF5XICg9AftEJstbCH5jJqVzhsuLZyW&sz=w1400"
+          alt="Poster Presentation"
+        >
+
+        <div class="gallery-click">
+          ↗
+        </div>
+
+        <div class="gallery-overlay">
+
+          <h3>
+            Poster Presentation
+          </h3>
+
+          <p>
+            Conference &amp; Academic Communication
+          </p>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     GALLERY MODAL
+========================================================= -->
+
+<div
+  class="gallery-modal"
+  id="galleryModal"
+  onclick="closeGalleryModal(event)"
+>
+
+  <div
+    class="gallery-modal-box"
+    id="galleryModalBox"
+    onclick="event.stopPropagation()"
+  >
+
+
+    <!-- =====================================================
+         CLOSE
+    ====================================================== -->
+
+    <button
+      class="gallery-modal-close"
+      type="button"
+      onclick="closeGalleryModal(event)"
+      aria-label="Close gallery"
+    >
+      ✕
+    </button>
+
+
+    <!-- =====================================================
+         LARGE IMAGE
+    ====================================================== -->
+
+    <div class="gallery-modal-image">
+
+      <img
+        id="galleryModalImage"
+        src=""
+        alt=""
+      >
+
+    </div>
+
+
+    <!-- =====================================================
+         INFORMATION
+    ====================================================== -->
+
+    <div class="gallery-modal-content">
+
+      <div
+        class="gallery-modal-kicker"
+        id="galleryModalKicker"
+      >
+        Highlight
+      </div>
+
+
+      <h3 id="galleryModalTitle">
+        Highlight
+      </h3>
+
+
+      <p id="galleryModalDescription">
+        Academic and professional highlight.
+      </p>
+
+
+      <div
+        class="gallery-modal-org"
+        id="galleryModalOrg"
+      >
+      </div>
+
+
+      <div
+        class="gallery-modal-meta"
+        id="galleryModalMeta"
+      >
+      </div>
+
+    </div>
+
+
+  </div>
+
+</div>
+
+
+<!-- =========================================================
+     GALLERY JAVASCRIPT
+========================================================= -->
+
+<script>
+
+const galleryData = {
+
+
+  /* =========================================================
+     01 RESEARCH
+  ========================================================= */
+
+  research: {
+
+    color:"#31a9e6",
+
+    glow:"rgba(49,169,230,.28)",
+
+    kicker:
+      "Research",
+
+    title:
+      "Research Work",
+
+    description:
+      "Research activities spanning veterinary medicine, microbiology, infectious diseases, One Health and data-driven research.",
+
+    org:
+      "Research & Scientific Activities",
+
+    meta:
+      "A visual highlight from my research journey and scientific work.",
+
+    image:
+      "https://drive.google.com/thumbnail?id=1eRydvLRSO54jSZjDGtLgQpayvKM067cL&sz=w1400"
+
+  },
+
+
+  /* =========================================================
+     02 VETERINARY MEDICAL OFFICER
+  ========================================================= */
+
+  vmo: {
+
+    color:"#20c7bd",
+
+    glow:"rgba(32,199,189,.30)",
+
+    kicker:
+      "Professional Experience",
+
+    title:
+      "Veterinary Medical Officer",
+
+    description:
+      "Appointed Veterinary Medical Officer at Tejgaon Colony Bazar Cattle Market under Dhaka North City Corporation (DNCC), providing veterinary healthcare and on-site professional services.",
+
+    org:
+      "Dhaka North City Corporation (DNCC)",
+
+    meta:
+      "Tejgaon Colony Bazar Cattle Market · Veterinary Service & Professional Duty",
+
+    image:
+      "https://drive.google.com/thumbnail?id=1c5hWObzGwvsdLXTcBwvxM5fndB-tmmxI&sz=w1400"
+
+  },
+
+
+  /* =========================================================
+     03 AWARD
+  ========================================================= */
+
+  award: {
+
+    color:"#e6b54a",
+
+    glow:"rgba(230,181,74,.30)",
+
+    kicker:
+      "Recognition",
+
+    title:
+      "Award & Achievement",
+
+    description:
+      "A milestone representing academic recognition, achievement and continued engagement in veterinary and One Health activities.",
+
+    org:
+      "Academic & Professional Recognition",
+
+    meta:
+      "A visual highlight from my achievement journey.",
+
+    image:
+      "https://drive.google.com/thumbnail?id=1rQ5D8RzgrZqZEAbJ6rdnGt2ZAJR0WiJN&sz=w1400"
+
+  },
+
+
+  /* =========================================================
+     04 POSTER
+  ========================================================= */
+
+  poster: {
+
+    color:"#9a78e8",
+
+    glow:"rgba(154,120,232,.30)",
+
+    kicker:
+      "Academic Presentation",
+
+    title:
+      "Poster Presentation",
+
+    description:
+      "Scientific poster presentation reflecting research communication, conference participation and academic engagement.",
+
+    org:
+      "Conference & Academic Communication",
+
+    meta:
+      "A visual highlight from my academic presentation activities.",
+
+    image:
+      "https://drive.google.com/thumbnail?id=1NuF5XICg9AftEJstbCH5jJqVzhsuLZyW&sz=w1400"
+
+  }
+
+};
+
+
+/* =========================================================
+   OPEN MODAL
+========================================================= */
+
+function openGalleryModal(type){
+
+  const data =
+    galleryData[type];
+
+  if(!data) return;
+
+
+  const modal =
+    document.getElementById(
+      "galleryModal"
+    );
+
+  const box =
+    document.getElementById(
+      "galleryModalBox"
+    );
+
+  const image =
+    document.getElementById(
+      "galleryModalImage"
+    );
+
+  const kicker =
+    document.getElementById(
+      "galleryModalKicker"
+    );
+
+  const title =
+    document.getElementById(
+      "galleryModalTitle"
+    );
+
+  const description =
+    document.getElementById(
+      "galleryModalDescription"
+    );
+
+  const org =
+    document.getElementById(
+      "galleryModalOrg"
+    );
+
+  const meta =
+    document.getElementById(
+      "galleryModalMeta"
+    );
+
+
+  image.src =
+    data.image;
+
+  image.alt =
+    data.title;
+
+
+  kicker.textContent =
+    data.kicker;
+
+  title.textContent =
+    data.title;
+
+  description.textContent =
+    data.description;
+
+  org.textContent =
+    data.org;
+
+  meta.textContent =
+    data.meta;
+
+
+  /* =======================================================
+     APPLY INDIVIDUAL COLOR
+  ======================================================== */
+
+  box.style.setProperty(
+    "--modal-accent",
+    data.color
+  );
+
+  box.style.setProperty(
+    "--modal-glow",
+    data.glow
+  );
+
+
+  /* =======================================================
+     SHOW
+  ======================================================== */
+
+  modal.classList.add(
+    "active"
+  );
+
+  document.body.style.overflow =
+    "hidden";
+
+}
+
+
+/* =========================================================
+   CLOSE MODAL
+========================================================= */
+
+function closeGalleryModal(event){
+
+  if(
+    event &&
+    event.target &&
+    event.target.closest(
+      ".gallery-modal-box"
+    )
+  ){
+
+    return;
+
+  }
+
+
+  const modal =
+    document.getElementById(
+      "galleryModal"
+    );
+
+  modal.classList.remove(
+    "active"
+  );
+
+  document.body.style.overflow =
+    "";
+
+}
+
+
+/* =========================================================
+   KEYBOARD SUPPORT FOR CARDS
+========================================================= */
+
+function handleGalleryKey(
+  event,
+  type
+){
+
+  if(
+    event.key === "Enter" ||
+    event.key === " "
+  ){
+
+    event.preventDefault();
+
+    openGalleryModal(type);
+
+  }
+
+}
+
+
+/* =========================================================
+   ESC TO CLOSE
+========================================================= */
+
+document.addEventListener(
+  "keydown",
+  function(event){
+
+    if(
+      event.key === "Escape"
+    ){
+
+      const modal =
+        document.getElementById(
+          "galleryModal"
+        );
+
+      if(
+        modal &&
+        modal.classList.contains(
+          "active"
+        )
+      ){
+
+        closeGalleryModal();
+
+      }
+
+    }
+
+  }
+);
+
+</script>
 
 
 <!-- =========================================================
