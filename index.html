@@ -2367,16 +2367,21 @@ body.light .role-card{
 
 
 /* =========================================================
-   GALLERY
+   GALLERY — RESEARCH / PROFESSIONAL / ACHIEVEMENT / POSTER
 ========================================================= */
 
 .gallery-section{
 
+  position:relative;
+
+  overflow:hidden;
+
   background:
     linear-gradient(
       135deg,
-      #081a2c,
-      #0d192a
+      #071521,
+      #0b1d30 52%,
+      #10182b
     );
 }
 
@@ -2385,12 +2390,36 @@ body.light .gallery-section{
   background:
     linear-gradient(
       135deg,
-      #eaf6fb,
-      #f3edf9
+      #edf7fb,
+      #f7f9fc 52%,
+      #f5eff9
     );
 }
 
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.gallery-section .section-heading{
+
+  position:relative;
+
+  z-index:2;
+
+  margin-bottom:45px;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
 .gallery-grid{
+
+  position:relative;
+
+  z-index:2;
 
   display:grid;
 
@@ -2400,34 +2429,87 @@ body.light .gallery-section{
   gap:18px;
 }
 
+
+/* =========================================================
+   BASE CARD
+========================================================= */
+
 .gallery-card{
+
+  --gallery-accent:#31a9e6;
+  --gallery-glow:rgba(49,169,230,.28);
 
   position:relative;
 
-  height:310px;
+  height:315px;
 
   overflow:hidden;
 
-  border-radius:21px;
+  border-radius:22px;
 
-  background:#101f30;
+  background:#0c1d2f;
+
+  border:
+    1px solid
+    rgba(139,197,235,.14);
 
   box-shadow:
-    var(--shadow);
+    0 18px 45px rgba(0,0,0,.22);
+
+  cursor:pointer;
+
+  isolation:isolate;
 
   transition:
-    transform .32s ease,
-    box-shadow .32s ease;
+    transform .42s cubic-bezier(.2,.8,.2,1),
+    box-shadow .42s ease,
+    border-color .42s ease;
 }
 
-.gallery-card:hover{
 
-  transform:
-    translateY(-9px);
+/* =========================================================
+   INDIVIDUAL COLORS
+========================================================= */
 
-  box-shadow:
-    var(--shadow-hover);
+/* 01 — Research */
+
+.gallery-card:nth-child(1){
+
+  --gallery-accent:#31a9e6;
+  --gallery-glow:rgba(49,169,230,.30);
 }
+
+
+/* 02 — Veterinary Medical Officer */
+
+.gallery-card:nth-child(2){
+
+  --gallery-accent:#20c7bd;
+  --gallery-glow:rgba(32,199,189,.32);
+}
+
+
+/* 03 — Award */
+
+.gallery-card:nth-child(3){
+
+  --gallery-accent:#e6b54a;
+  --gallery-glow:rgba(230,181,74,.34);
+}
+
+
+/* 04 — Poster */
+
+.gallery-card:nth-child(4){
+
+  --gallery-accent:#9a78e8;
+  --gallery-glow:rgba(154,120,232,.32);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
 
 .gallery-card img{
 
@@ -2437,8 +2519,100 @@ body.light .gallery-section{
   object-fit:cover;
 
   transition:
-    transform .55s ease,
+    transform .65s cubic-bezier(.2,.8,.2,1),
     filter .55s ease;
+}
+
+
+/* =========================================================
+   COLOR GLOW LAYER
+========================================================= */
+
+.gallery-card::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  z-index:1;
+
+  pointer-events:none;
+
+  background:
+    linear-gradient(
+      135deg,
+      transparent 30%,
+      var(--gallery-glow),
+      transparent 78%
+    );
+
+  opacity:.12;
+
+  transition:
+    opacity .4s ease;
+}
+
+
+/* =========================================================
+   ACCENT BORDER
+========================================================= */
+
+.gallery-card::after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  z-index:3;
+
+  border-radius:22px;
+
+  border:
+    1px solid
+    transparent;
+
+  pointer-events:none;
+
+  transition:
+    border-color .4s ease,
+    box-shadow .4s ease;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.gallery-card:hover{
+
+  transform:
+    translateY(-10px)
+    scale(1.018);
+
+  border-color:
+    var(--gallery-accent);
+
+  box-shadow:
+    0 30px 70px rgba(0,0,0,.34),
+    0 0 35px var(--gallery-glow);
+}
+
+.gallery-card:hover::before{
+
+  opacity:.48;
+}
+
+.gallery-card:hover::after{
+
+  border-color:
+    var(--gallery-accent);
+
+  box-shadow:
+    inset 0 0 25px var(--gallery-glow);
 }
 
 .gallery-card:hover img{
@@ -2447,9 +2621,57 @@ body.light .gallery-section{
     scale(1.08);
 
   filter:
+    brightness(.72)
+    saturate(1.12);
+}
+
+
+/* =========================================================
+   SELECTED / CLICKED
+========================================================= */
+
+.gallery-card.selected{
+
+  transform:
+    translateY(-7px)
+    scale(1.015);
+
+  border-color:
+    var(--gallery-accent);
+
+  box-shadow:
+    0 26px 65px rgba(0,0,0,.30),
+    0 0 38px var(--gallery-glow);
+}
+
+.gallery-card.selected::before{
+
+  opacity:.38;
+}
+
+.gallery-card.selected::after{
+
+  border-color:
+    var(--gallery-accent);
+
+  box-shadow:
+    inset 0 0 28px var(--gallery-glow);
+}
+
+.gallery-card.selected img{
+
+  transform:
+    scale(1.055);
+
+  filter:
     brightness(.78)
     saturate(1.08);
 }
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
 
 .gallery-overlay{
 
@@ -2459,25 +2681,86 @@ body.light .gallery-section{
   right:0;
   bottom:0;
 
-  padding:
-    75px 18px 18px;
+  z-index:2;
 
-  color:white;
+  padding:
+    100px 20px 20px;
 
   background:
     linear-gradient(
       transparent,
-      rgba(3,12,22,.94)
+      rgba(2,9,18,.94)
     );
+
+  pointer-events:none;
 }
+
+
+/* =========================================================
+   TITLE
+========================================================= */
 
 .gallery-overlay h3{
 
-  font-size:16px;
+  margin:0;
 
-  line-height:1.3;
+  color:white;
+
+  font-size:17px;
+
+  line-height:1.35;
+
+  font-weight:900;
+
+  letter-spacing:-.2px;
+
+  text-shadow:
+    0 3px 14px rgba(0,0,0,.38);
+
+  transition:
+    transform .32s ease,
+    color .32s ease;
 }
 
+.gallery-card:hover .gallery-overlay h3,
+.gallery-card.selected .gallery-overlay h3{
+
+  transform:
+    translateX(4px);
+
+  color:
+    var(--gallery-accent);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1000px){
+
+  .gallery-grid{
+
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+}
+
+
+@media(max-width:600px){
+
+  .gallery-grid{
+
+    grid-template-columns:1fr;
+  }
+
+  .gallery-card{
+
+    height:290px;
+  }
+
+}
 
 /* =========================================================
    CONTACT
@@ -7553,7 +7836,7 @@ body.light .rp-text{
 
 
 <!-- =========================================================
-     INTERACTIVE HIGHLIGHT GALLERY
+     GALLERY
 ========================================================= -->
 
 <section class="gallery-section">
@@ -7579,23 +7862,19 @@ body.light .rp-text{
 
 
     <!-- =====================================================
-         GALLERY CARDS
+         GALLERY GRID
     ====================================================== -->
 
     <div class="gallery-grid">
 
 
-      <!-- =====================================================
+      <!-- ===================================================
            01 RESEARCH WORK
-      ====================================================== -->
+      ==================================================== -->
 
       <div
         class="gallery-card reveal"
-        data-gallery="research"
-        onclick="openGalleryModal('research')"
-        role="button"
-        tabindex="0"
-        onkeydown="handleGalleryKey(event,'research')"
+        onclick="selectGalleryCard(this)"
       >
 
         <img
@@ -7603,36 +7882,24 @@ body.light .rp-text{
           alt="Research Work"
         >
 
-        <div class="gallery-click">
-          ↗
-        </div>
-
         <div class="gallery-overlay">
 
           <h3>
             Research Work
           </h3>
 
-          <p>
-            Research &amp; Scientific Activities
-          </p>
-
         </div>
 
       </div>
 
 
-      <!-- =====================================================
+      <!-- ===================================================
            02 VETERINARY MEDICAL OFFICER
-      ====================================================== -->
+      ==================================================== -->
 
       <div
         class="gallery-card reveal"
-        data-gallery="vmo"
-        onclick="openGalleryModal('vmo')"
-        role="button"
-        tabindex="0"
-        onkeydown="handleGalleryKey(event,'vmo')"
+        onclick="selectGalleryCard(this)"
       >
 
         <img
@@ -7640,36 +7907,24 @@ body.light .rp-text{
           alt="Veterinary Medical Officer"
         >
 
-        <div class="gallery-click">
-          ↗
-        </div>
-
         <div class="gallery-overlay">
 
           <h3>
             Veterinary Medical Officer
           </h3>
 
-          <p>
-            Dhaka North City Corporation (DNCC)
-          </p>
-
         </div>
 
       </div>
 
 
-      <!-- =====================================================
+      <!-- ===================================================
            03 AWARD & ACHIEVEMENT
-      ====================================================== -->
+      ==================================================== -->
 
       <div
         class="gallery-card reveal"
-        data-gallery="award"
-        onclick="openGalleryModal('award')"
-        role="button"
-        tabindex="0"
-        onkeydown="handleGalleryKey(event,'award')"
+        onclick="selectGalleryCard(this)"
       >
 
         <img
@@ -7677,36 +7932,24 @@ body.light .rp-text{
           alt="Award and Achievement"
         >
 
-        <div class="gallery-click">
-          ↗
-        </div>
-
         <div class="gallery-overlay">
 
           <h3>
             Award &amp; Achievement
           </h3>
 
-          <p>
-            Recognition &amp; Milestones
-          </p>
-
         </div>
 
       </div>
 
 
-      <!-- =====================================================
+      <!-- ===================================================
            04 POSTER PRESENTATION
-      ====================================================== -->
+      ==================================================== -->
 
       <div
         class="gallery-card reveal"
-        data-gallery="poster"
-        onclick="openGalleryModal('poster')"
-        role="button"
-        tabindex="0"
-        onkeydown="handleGalleryKey(event,'poster')"
+        onclick="selectGalleryCard(this)"
       >
 
         <img
@@ -7714,19 +7957,11 @@ body.light .rp-text{
           alt="Poster Presentation"
         >
 
-        <div class="gallery-click">
-          ↗
-        </div>
-
         <div class="gallery-overlay">
 
           <h3>
             Poster Presentation
           </h3>
-
-          <p>
-            Conference &amp; Academic Communication
-          </p>
 
         </div>
 
@@ -7741,429 +7976,37 @@ body.light .rp-text{
 
 
 <!-- =========================================================
-     GALLERY MODAL
-========================================================= -->
-
-<div
-  class="gallery-modal"
-  id="galleryModal"
-  onclick="closeGalleryModal(event)"
->
-
-  <div
-    class="gallery-modal-box"
-    id="galleryModalBox"
-    onclick="event.stopPropagation()"
-  >
-
-
-    <!-- =====================================================
-         CLOSE
-    ====================================================== -->
-
-    <button
-      class="gallery-modal-close"
-      type="button"
-      onclick="closeGalleryModal(event)"
-      aria-label="Close gallery"
-    >
-      ✕
-    </button>
-
-
-    <!-- =====================================================
-         LARGE IMAGE
-    ====================================================== -->
-
-    <div class="gallery-modal-image">
-
-      <img
-        id="galleryModalImage"
-        src=""
-        alt=""
-      >
-
-    </div>
-
-
-    <!-- =====================================================
-         INFORMATION
-    ====================================================== -->
-
-    <div class="gallery-modal-content">
-
-      <div
-        class="gallery-modal-kicker"
-        id="galleryModalKicker"
-      >
-        Highlight
-      </div>
-
-
-      <h3 id="galleryModalTitle">
-        Highlight
-      </h3>
-
-
-      <p id="galleryModalDescription">
-        Academic and professional highlight.
-      </p>
-
-
-      <div
-        class="gallery-modal-org"
-        id="galleryModalOrg"
-      >
-      </div>
-
-
-      <div
-        class="gallery-modal-meta"
-        id="galleryModalMeta"
-      >
-      </div>
-
-    </div>
-
-
-  </div>
-
-</div>
-
-
-<!-- =========================================================
-     GALLERY JAVASCRIPT
+     GALLERY CLICK INTERACTION
 ========================================================= -->
 
 <script>
 
-const galleryData = {
+function selectGalleryCard(card){
 
-
-  /* =========================================================
-     01 RESEARCH
-  ========================================================= */
-
-  research: {
-
-    color:"#31a9e6",
-
-    glow:"rgba(49,169,230,.28)",
-
-    kicker:
-      "Research",
-
-    title:
-      "Research Work",
-
-    description:
-      "Research activities spanning veterinary medicine, microbiology, infectious diseases, One Health and data-driven research.",
-
-    org:
-      "Research & Scientific Activities",
-
-    meta:
-      "A visual highlight from my research journey and scientific work.",
-
-    image:
-      "https://drive.google.com/thumbnail?id=1eRydvLRSO54jSZjDGtLgQpayvKM067cL&sz=w1400"
-
-  },
-
-
-  /* =========================================================
-     02 VETERINARY MEDICAL OFFICER
-  ========================================================= */
-
-  vmo: {
-
-    color:"#20c7bd",
-
-    glow:"rgba(32,199,189,.30)",
-
-    kicker:
-      "Professional Experience",
-
-    title:
-      "Veterinary Medical Officer",
-
-    description:
-      "Appointed Veterinary Medical Officer at Tejgaon Colony Bazar Cattle Market under Dhaka North City Corporation (DNCC), providing veterinary healthcare and on-site professional services.",
-
-    org:
-      "Dhaka North City Corporation (DNCC)",
-
-    meta:
-      "Tejgaon Colony Bazar Cattle Market · Veterinary Service & Professional Duty",
-
-    image:
-      "https://drive.google.com/thumbnail?id=1c5hWObzGwvsdLXTcBwvxM5fndB-tmmxI&sz=w1400"
-
-  },
-
-
-  /* =========================================================
-     03 AWARD
-  ========================================================= */
-
-  award: {
-
-    color:"#e6b54a",
-
-    glow:"rgba(230,181,74,.30)",
-
-    kicker:
-      "Recognition",
-
-    title:
-      "Award & Achievement",
-
-    description:
-      "A milestone representing academic recognition, achievement and continued engagement in veterinary and One Health activities.",
-
-    org:
-      "Academic & Professional Recognition",
-
-    meta:
-      "A visual highlight from my achievement journey.",
-
-    image:
-      "https://drive.google.com/thumbnail?id=1rQ5D8RzgrZqZEAbJ6rdnGt2ZAJR0WiJN&sz=w1400"
-
-  },
-
-
-  /* =========================================================
-     04 POSTER
-  ========================================================= */
-
-  poster: {
-
-    color:"#9a78e8",
-
-    glow:"rgba(154,120,232,.30)",
-
-    kicker:
-      "Academic Presentation",
-
-    title:
-      "Poster Presentation",
-
-    description:
-      "Scientific poster presentation reflecting research communication, conference participation and academic engagement.",
-
-    org:
-      "Conference & Academic Communication",
-
-    meta:
-      "A visual highlight from my academic presentation activities.",
-
-    image:
-      "https://drive.google.com/thumbnail?id=1NuF5XICg9AftEJstbCH5jJqVzhsuLZyW&sz=w1400"
-
-  }
-
-};
-
-
-/* =========================================================
-   OPEN MODAL
-========================================================= */
-
-function openGalleryModal(type){
-
-  const data =
-    galleryData[type];
-
-  if(!data) return;
-
-
-  const modal =
-    document.getElementById(
-      "galleryModal"
-    );
-
-  const box =
-    document.getElementById(
-      "galleryModalBox"
-    );
-
-  const image =
-    document.getElementById(
-      "galleryModalImage"
-    );
-
-  const kicker =
-    document.getElementById(
-      "galleryModalKicker"
-    );
-
-  const title =
-    document.getElementById(
-      "galleryModalTitle"
-    );
-
-  const description =
-    document.getElementById(
-      "galleryModalDescription"
-    );
-
-  const org =
-    document.getElementById(
-      "galleryModalOrg"
-    );
-
-  const meta =
-    document.getElementById(
-      "galleryModalMeta"
+  const cards =
+    document.querySelectorAll(
+      ".gallery-card"
     );
 
 
-  image.src =
-    data.image;
+  cards.forEach(
+    function(item){
 
-  image.alt =
-    data.title;
-
-
-  kicker.textContent =
-    data.kicker;
-
-  title.textContent =
-    data.title;
-
-  description.textContent =
-    data.description;
-
-  org.textContent =
-    data.org;
-
-  meta.textContent =
-    data.meta;
-
-
-  /* =======================================================
-     APPLY INDIVIDUAL COLOR
-  ======================================================== */
-
-  box.style.setProperty(
-    "--modal-accent",
-    data.color
-  );
-
-  box.style.setProperty(
-    "--modal-glow",
-    data.glow
-  );
-
-
-  /* =======================================================
-     SHOW
-  ======================================================== */
-
-  modal.classList.add(
-    "active"
-  );
-
-  document.body.style.overflow =
-    "hidden";
-
-}
-
-
-/* =========================================================
-   CLOSE MODAL
-========================================================= */
-
-function closeGalleryModal(event){
-
-  if(
-    event &&
-    event.target &&
-    event.target.closest(
-      ".gallery-modal-box"
-    )
-  ){
-
-    return;
-
-  }
-
-
-  const modal =
-    document.getElementById(
-      "galleryModal"
-    );
-
-  modal.classList.remove(
-    "active"
-  );
-
-  document.body.style.overflow =
-    "";
-
-}
-
-
-/* =========================================================
-   KEYBOARD SUPPORT FOR CARDS
-========================================================= */
-
-function handleGalleryKey(
-  event,
-  type
-){
-
-  if(
-    event.key === "Enter" ||
-    event.key === " "
-  ){
-
-    event.preventDefault();
-
-    openGalleryModal(type);
-
-  }
-
-}
-
-
-/* =========================================================
-   ESC TO CLOSE
-========================================================= */
-
-document.addEventListener(
-  "keydown",
-  function(event){
-
-    if(
-      event.key === "Escape"
-    ){
-
-      const modal =
-        document.getElementById(
-          "galleryModal"
-        );
-
-      if(
-        modal &&
-        modal.classList.contains(
-          "active"
-        )
-      ){
-
-        closeGalleryModal();
-
-      }
+      item.classList.remove(
+        "selected"
+      );
 
     }
+  );
 
-  }
-);
+
+  card.classList.add(
+    "selected"
+  );
+
+}
 
 </script>
-
-
 <!-- =========================================================
      CONTACT
 ========================================================= -->
