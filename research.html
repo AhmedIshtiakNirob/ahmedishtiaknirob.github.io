@@ -1,51 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Dr. Ahmed Ishtiak Nirob — Research Interests, Projects, Activities and Scholarly Outputs">
-<meta name="author" content="Dr. Ahmed Ishtiak Nirob">
-<title>Dr. Ahmed Ishtiak Nirob | Research Portfolio</title>
-<style>
-/* GitHub standalone base layer */
-:root{color-scheme:dark;}
-html{scroll-behavior:smooth;}
-*{box-sizing:border-box;}
-body{margin:0;background:#061421;color:#edf6ff;font-family:Inter,Segoe UI,Arial,sans-serif;}
-button,input,textarea,select{font:inherit;}
-button{font-family:inherit;}
-.container{width:min(1180px,calc(100% - 36px));margin:0 auto;}
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease;}
-.reveal.revealed{opacity:1;transform:none;}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
-
-/* Mouse-follow glow for GitHub standalone version */
-.research-profile-card,.research-project-card,.research-output-card,.research-flex-card,.status-summary-card{--mx:50%;--my:50%;}
-.research-profile-card::after,.research-project-card::after,.research-output-card::after,.research-flex-card::after,.status-summary-card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;background:radial-gradient(260px circle at var(--mx) var(--my),rgba(255,255,255,.10),transparent 62%);transition:opacity .25s ease;z-index:0;}
-.research-profile-card:hover::after,.research-project-card:hover::after,.research-output-card:hover::after,.research-flex-card:hover::after,.status-summary-card:hover::after{opacity:1;}
-.research-profile-card>*,.research-project-card>*,.research-output-card>*,.research-flex-card>*,.status-summary-card>*{position:relative;z-index:1;}
-</style>
-</head>
-<body>
 <!-- =========================================================
-     COMPLETE RESEARCH PAGE
+     DR. AHMED ISHTIAK NIROB — COMPLETE PREMIUM RESEARCH PAGE
+     ---------------------------------------------------------
+     Paste this COMPLETE BLOCK in place of your current
+     Research page section.
+
+     EASY EDIT GUIDE
+     1. Project details:
+        Search: "01 · RED SEAWEED", "02 · NIPAH", etc.
+     2. Project status:
+        data-status="ongoing"
+        data-status="completed"
+        data-status="funding"
+     3. Lab details:
+        Search: "LAB 01 · HISTOLOGY"
+     4. Colors:
+        Search: "PROJECT / LAB COLORS"
+     5. Animation:
+        Search: "PREMIUM CARD ANIMATION"
+
+     FEATURES
+     ✓ 5 Ongoing
+     ✓ 3 Completed
+     ✓ 1 Funding Pending
+     ✓ 3 Manuscripts Under Review
+     ✓ All / Ongoing / Completed filter
+     ✓ All is default
+     ✓ Funding Pending appears in All
+     ✓ Premium glow + shine + zoom
+     ✓ Mouse-follow light
+     ✓ Subtle 3D tilt
+     ✓ Smooth accordion
+     ✓ Scroll reveal
+     ✓ Light mode support
+     ✓ Mobile responsive
 ========================================================= -->
 
-<section
-  class="research-page"
-  id="research"
->
 
-  <div class="container">
+<section class="rp-page" id="research">
+
+  <div class="rp-container">
 
 
     <!-- =====================================================
-         RESEARCH HEADER
+         01 · RESEARCH HERO
+         EASY EDIT: title and paragraph only
     ====================================================== -->
 
-    <div class="research-page-header reveal">
+    <header class="rp-hero rp-reveal">
 
-      <div class="research-page-eyebrow">
+      <div class="rp-eyebrow">
         Research Portfolio
       </div>
 
@@ -59,317 +62,148 @@ button{font-family:inherit;}
         genomics and data-driven research.
       </p>
 
-    </div>
+    </header>
 
 
     <!-- =====================================================
-         RESEARCH INTERESTS & FOCUS
+         02 · RESEARCH INTERESTS + RESEARCH FOCUS
     ====================================================== -->
 
-    <div class="research-profile-grid">
+    <section class="rp-profile-grid">
 
 
-      <!-- ===================================================
-           RESEARCH INTERESTS
-      ==================================================== -->
+      <!-- RESEARCH INTERESTS -->
+      <article
+        class="rp-profile-card rp-theme-blue rp-card-glow rp-tilt rp-reveal"
+      >
 
-      <div class="research-profile-card interests-panel reveal">
+        <div class="rp-profile-header">
 
-        <div class="research-profile-header">
-
-          <div class="research-profile-icon">
-
-            <svg
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-
+          <div class="rp-profile-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M12 3v18"/>
-
               <path d="M4 7h16"/>
-
-              <path d="
-                M6 7
-                l-2 5
-                a4 4 0 0 0 8 0
-                L10 7
-              "/>
-
-              <path d="
-                M14 7
-                l-2 5
-                a4 4 0 0 0 8 0
-                l-2-5
-              "/>
-
+              <path d="M6 7l-2 5a4 4 0 0 0 8 0L10 7"/>
+              <path d="M14 7l-2 5a4 4 0 0 0 8 0l-2-5"/>
             </svg>
-
           </div>
 
           <div>
-
-            <span>
-              01 · CORE AREAS
-            </span>
-
-            <h3>
-              Research Interests
-            </h3>
-
+            <span>01 · CORE AREAS</span>
+            <h3>Research Interests</h3>
           </div>
 
         </div>
 
 
-        <div class="research-profile-list">
+        <div class="rp-profile-list">
 
-
-          <div class="research-profile-item amr-item">
-
-            <div class="profile-item-number">
-              01
-            </div>
-
-            <div class="profile-item-text">
-              Antimicrobial Resistance (AMR)
-            </div>
-
+          <div class="rp-profile-item rp-color-red">
+            <span class="rp-item-number">01</span>
+            <span>Antimicrobial Resistance (AMR)</span>
           </div>
 
-
-          <div class="research-profile-item onehealth-item">
-
-            <div class="profile-item-number">
-              02
-            </div>
-
-            <div class="profile-item-text">
-              One Health
-            </div>
-
+          <div class="rp-profile-item rp-color-teal">
+            <span class="rp-item-number">02</span>
+            <span>One Health</span>
           </div>
 
-
-          <div class="research-profile-item micro-item">
-
-            <div class="profile-item-number">
-              03
-            </div>
-
-            <div class="profile-item-text">
-              Microbiology &amp; Molecular Biology
-            </div>
-
+          <div class="rp-profile-item rp-color-blue">
+            <span class="rp-item-number">03</span>
+            <span>Microbiology &amp; Molecular Biology</span>
           </div>
 
-
-          <div class="research-profile-item infection-item">
-
-            <div class="profile-item-number">
-              04
-            </div>
-
-            <div class="profile-item-text">
-              Infectious &amp; Vector-Borne Diseases
-            </div>
-
+          <div class="rp-profile-item rp-color-purple">
+            <span class="rp-item-number">04</span>
+            <span>Infectious &amp; Vector-Borne Diseases</span>
           </div>
 
-
-          <div class="research-profile-item animal-item">
-
-            <div class="profile-item-number">
-              05
-            </div>
-
-            <div class="profile-item-text">
-              Animal Health
-            </div>
-
+          <div class="rp-profile-item rp-color-green">
+            <span class="rp-item-number">05</span>
+            <span>Animal Health</span>
           </div>
-
 
         </div>
 
-      </div>
+      </article>
 
 
-      <!-- ===================================================
-           RESEARCH FOCUS
-      ==================================================== -->
+      <!-- RESEARCH FOCUS -->
+      <article
+        class="rp-profile-card rp-theme-purple rp-card-glow rp-tilt rp-reveal"
+      >
 
-      <div class="research-profile-card focus-panel reveal">
+        <div class="rp-profile-header">
 
-        <div class="research-profile-header">
-
-          <div class="research-profile-icon purple-profile-icon">
-
-            <svg
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-
-              <circle
-                cx="12"
-                cy="12"
-                r="8.5"
-              />
-
+          <div class="rp-profile-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="8.5"/>
               <path d="M3.5 12h17"/>
-
-              <path d="
-                M12 3.5
-                a13 13 0 0 1 0 17
-              "/>
-
-              <path d="
-                M12 3.5
-                a13 13 0 0 0 0 17
-              "/>
-
+              <path d="M12 3.5a13 13 0 0 1 0 17"/>
+              <path d="M12 3.5a13 13 0 0 0 0 17"/>
             </svg>
-
           </div>
 
           <div>
-
-            <span>
-              02 · SPECIFIC DIRECTIONS
-            </span>
-
-            <h3>
-              Research Focus
-            </h3>
-
+            <span>02 · SPECIFIC DIRECTIONS</span>
+            <h3>Research Focus</h3>
           </div>
 
         </div>
 
 
-        <div class="research-profile-list">
+        <div class="rp-profile-list">
 
-
-          <div class="research-profile-item host-item">
-
-            <div class="profile-item-number">
-              01
-            </div>
-
-            <div class="profile-item-text">
-              Host–Microbe Interactions
-            </div>
-
+          <div class="rp-profile-item rp-color-purple">
+            <span class="rp-item-number">01</span>
+            <span>Host–Microbe Interactions</span>
           </div>
 
-
-          <div class="research-profile-item gut-item">
-
-            <div class="profile-item-number">
-              02
-            </div>
-
-            <div class="profile-item-text">
-              Veterinary Public Health
-            </div>
-
+          <div class="rp-profile-item rp-color-gold">
+            <span class="rp-item-number">02</span>
+            <span>Veterinary Public Health</span>
           </div>
 
-
-          <div class="research-profile-item epi-item">
-
-            <div class="profile-item-number">
-              03
-            </div>
-
-            <div class="profile-item-text">
-              Data-Driven Epidemiology &amp; Machine Learning
-            </div>
-
+          <div class="rp-profile-item rp-color-blue">
+            <span class="rp-item-number">03</span>
+            <span>Data-Driven Epidemiology &amp; Machine Learning</span>
           </div>
 
-
-          <div class="research-profile-item nutrition-item">
-
-            <div class="profile-item-number">
-              04
-            </div>
-
-            <div class="profile-item-text">
-              Gut Health &amp; Nutritional Programming
-            </div>
-
+          <div class="rp-profile-item rp-color-teal">
+            <span class="rp-item-number">04</span>
+            <span>Gut Health &amp; Nutritional Programming</span>
           </div>
 
-
-          <div class="research-profile-item genome-item">
-
-            <div class="profile-item-number">
-              05
-            </div>
-
-            <div class="profile-item-text">
-              Microbial Genomics &amp; Bioinformatics
-            </div>
-
+          <div class="rp-profile-item rp-color-violet">
+            <span class="rp-item-number">05</span>
+            <span>Microbial Genomics &amp; Bioinformatics</span>
           </div>
-
 
         </div>
 
-      </div>
+      </article>
 
-    </div>
+    </section>
 
 
     <!-- =====================================================
-         INTERDISCIPLINARY STATEMENT
+         03 · INTERDISCIPLINARY STATEMENT
     ====================================================== -->
 
-    <div class="research-flex-card reveal">
+    <div class="rp-flex-card rp-card-glow rp-reveal">
 
-      <div class="research-flex-icon">
-
-        <svg
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
-
-          <circle
-            cx="12"
-            cy="5"
-            r="2.3"
-          />
-
-          <circle
-            cx="5"
-            cy="18"
-            r="2.3"
-          />
-
-          <circle
-            cx="19"
-            cy="18"
-            r="2.3"
-          />
-
-          <path
-            d="M10.5 6.5L6.5 16"
-          />
-
-          <path
-            d="M13.5 6.5L17.5 16"
-          />
-
-          <path
-            d="M7.5 18h9"
-          />
-
+      <div class="rp-flex-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="5" r="2.3"/>
+          <circle cx="5" cy="18" r="2.3"/>
+          <circle cx="19" cy="18" r="2.3"/>
+          <path d="M10.5 6.5L6.5 16"/>
+          <path d="M13.5 6.5L17.5 16"/>
+          <path d="M7.5 18h9"/>
         </svg>
-
       </div>
 
       <div>
-
         <h3>
           Interdisciplinary &amp; Program-Flexible
         </h3>
@@ -379,1351 +213,1416 @@ button{font-family:inherit;}
           microbiology, infectious diseases, epidemiology, veterinary
           public health, One Health, genomics and data-driven research.
         </p>
-
       </div>
 
     </div>
 
 
     <!-- =====================================================
-         STATUS SUMMARY
+         04 · PROJECT STATUS SUMMARY
     ====================================================== -->
 
-    <div class="research-status-heading reveal">
+    <section
+      class="rp-status-section"
+      aria-labelledby="rp-status-title"
+    >
 
-      <div class="research-section-kicker">
-        Research Activity
-      </div>
+      <div class="rp-section-heading rp-reveal">
 
-      <h2>
-        Projects &amp; Current Status
-      </h2>
+        <div class="rp-section-kicker">
+          Research Activity
+        </div>
 
-      <p>
-        Selected research projects organized by their present stage.
-      </p>
+        <h2 id="rp-status-title">
+          Projects &amp; Current Status
+        </h2>
 
-    </div>
-
-
-    <div class="research-status-summary">
-
-
-      <div class="status-summary-card ongoing-summary reveal">
-
-        <strong>
-          4
-        </strong>
-
-        <span>
-          Ongoing
-        </span>
+        <p>
+          Selected research projects organized by their present stage.
+        </p>
 
       </div>
 
 
-      <div class="status-summary-card completed-summary reveal">
+      <!-- STATUS CARDS -->
 
-        <strong>
-          2
-        </strong>
-
-        <span>
-          Completed
-        </span>
-
-      </div>
+      <div class="rp-status-grid">
 
 
-      <div class="status-summary-card funding-summary reveal">
-
-        <strong>
-          1
-        </strong>
-
-        <span>
-          Funding Pending
-        </span>
-
-      </div>
-
-
-      <div class="status-summary-card review-summary reveal">
-
-        <strong>
-          1
-        </strong>
-
-        <span>
-          Under Review
-        </span>
-
-      </div>
-
-
-    </div>
-
-
-    <!-- =====================================================
-         PROJECT ACCORDION
-    ====================================================== -->
-
-    <div class="research-project-list">
-
-
-      <!-- ===================================================
-           01 · RED SEAWEED
-      ==================================================== -->
-
-      <article
-        class="
-          research-project-card
-          project-teal
-          reveal
-        "
-      >
-
-        <button
-          class="research-project-header"
-          type="button"
-          onclick="toggleResearchPageProject(this)"
+        <!-- 5 ONGOING -->
+        <article
+          class="rp-status-card rp-status-teal rp-card-glow rp-tilt rp-reveal"
         >
 
-          <div class="research-project-main">
+          <div class="rp-status-icon">
 
-            <div class="research-project-title-row">
-
-              <span class="project-index">
-                01
-              </span>
-
-              <h3>
-
-                Evaluation of Red Seaweed
-                <em>(Gracilariopsis lemaneiformis)</em>
-                on Growth Performance and Haematological
-                Parameters of Broiler Chicken
-
-              </h3>
-
-            </div>
-
-
-            <div class="research-project-meta">
-
-              <span class="project-status ongoing">
-                Ongoing
-              </span>
-
-              <span class="meta-separator">
-                ·
-              </span>
-
-              <span>
-                Project Investigator: Dr. Md. Mahabbat Ali
-              </span>
-
-            </div>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M10 2h4"/>
+              <path d="M12 2v6"/>
+              <path d="M7.5 7.5h9L18 20H6L7.5 7.5Z"/>
+              <path d="M8.7 12h6.6"/>
+            </svg>
 
           </div>
 
+          <strong>5</strong>
+          <span>Ongoing</span>
 
-          <span class="project-arrow">
-            ⌄
+        </article>
+
+
+        <!-- 3 COMPLETED -->
+        <article
+          class="rp-status-card rp-status-green rp-card-glow rp-tilt rp-reveal"
+        >
+
+          <div class="rp-status-icon">
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+
+          </div>
+
+          <strong>3</strong>
+          <span>Completed</span>
+
+        </article>
+
+
+        <!-- 1 FUNDING PENDING -->
+        <article
+          class="rp-status-card rp-status-gold rp-card-glow rp-tilt rp-reveal"
+        >
+
+          <div class="rp-status-icon">
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="8.5"/>
+              <path d="M12 7.5v5l3.5 2"/>
+            </svg>
+
+          </div>
+
+          <strong>1</strong>
+          <span>Funding Pending</span>
+
+        </article>
+
+
+        <!-- 3 UNDER REVIEW -->
+        <article
+          class="rp-status-card rp-status-purple rp-card-glow rp-tilt rp-reveal"
+        >
+
+          <div class="rp-status-icon">
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 3.5h8l3 3V20.5H7z"/>
+              <path d="M15 3.5v4h4"/>
+              <path d="M9.5 12h6"/>
+              <path d="M9.5 15.5h6"/>
+            </svg>
+
+          </div>
+
+          <strong>3</strong>
+          <span>Manuscripts Under Review</span>
+
+        </article>
+
+      </div>
+
+
+      <!-- ===================================================
+           05 · PROJECT FILTERS
+           ALL = DEFAULT
+           FUNDING-PENDING PROJECT IS INCLUDED IN ALL.
+      ==================================================== -->
+
+      <div class="rp-filter-wrap rp-reveal">
+
+        <div
+          class="rp-filter-bar"
+          role="tablist"
+          aria-label="Research project filter"
+        >
+
+          <button
+            class="rp-filter-btn is-active"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            data-filter="all"
+          >
+            <span>All</span>
+            <small>9</small>
+          </button>
+
+
+          <button
+            class="rp-filter-btn"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-filter="ongoing"
+          >
+            <span>Ongoing</span>
+            <small>5</small>
+          </button>
+
+
+          <button
+            class="rp-filter-btn"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-filter="completed"
+          >
+            <span>Completed</span>
+            <small>3</small>
+          </button>
+
+        </div>
+
+
+        <div class="rp-filter-note">
+
+          <span class="rp-live-dot"></span>
+
+          <span>
+            1 funding-pending project is included in
+            <strong>All</strong>.
           </span>
 
-        </button>
+        </div>
+
+      </div>
 
 
-        <div class="research-project-content">
+      <!-- ===================================================
+           06 · PROJECT LIST
+           data-status = ongoing / completed / funding
+      ==================================================== -->
 
-          <div class="project-content-inner">
+      <div
+        class="rp-project-list"
+        id="rpProjectList"
+      >
 
 
-            <div class="project-description-column">
+        <!-- =================================================
+             01 · RED SEAWEED — ONGOING
+        ================================================== -->
 
-              <div class="project-detail-label">
-                PROJECT OVERVIEW
+        <article
+          class="rp-project-card rp-project-teal rp-card-glow rp-tilt" rp-reveal"
+          data-status="ongoing"
+        >
+
+          <button
+            class="rp-project-trigger"
+            type="button"
+            aria-expanded="false"
+          >
+
+            <span class="rp-project-main">
+
+              <span class="rp-project-title-row">
+
+                <span class="rp-project-index">
+                  01
+                </span>
+
+                <span class="rp-project-title">
+                  Evaluation of Red Seaweed
+                  <em>(Gracilariopsis lemaneiformis)</em>
+                  on Growth Performance and Haematological
+                  Parameters of Broiler Chicken
+                </span>
+
+              </span>
+
+
+              <span class="rp-project-meta">
+
+                <span class="rp-status-pill rp-pill-ongoing">
+                  Ongoing
+                </span>
+
+                <span>
+                  Project Investigator: Dr. Md. Mahabbat Ali
+                </span>
+
+              </span>
+
+            </span>
+
+
+            <span class="rp-project-arrow">
+              <svg viewBox="0 0 24 24">
+                <path d="m7 9 5 5 5-5"/>
+              </svg>
+            </span>
+
+          </button>
+
+
+          <div class="rp-project-content">
+
+            <div class="rp-project-inner">
+
+              <div>
+
+                <div class="rp-detail-label">
+                  PROJECT OVERVIEW
+                </div>
+
+                <p>
+                  Ongoing research evaluating the effects of red seaweed
+                  supplementation on broiler growth performance and
+                  haematological parameters, with additional assessment
+                  of selected meat quality characteristics.
+                </p>
+
+
+                <div class="rp-pill-row">
+                  <span>Growth Performance</span>
+                  <span>Haematology</span>
+                  <span>Meat Quality</span>
+                </div>
+
               </div>
 
-              <p>
-                Ongoing research evaluating the effects of red seaweed
-                supplementation on broiler growth performance and
-                haematological parameters, with additional assessment
-                of selected meat quality characteristics.
-              </p>
 
-            </div>
+              <div class="rp-info-box">
 
-
-            <div class="project-info-column">
-
-              <div class="project-info-box">
-
-                <div class="project-info-row">
-
-                  <span>
-                    Status
-                  </span>
-
-                  <strong>
-                    Ongoing Research
-                  </strong>
-
+                <div class="rp-info-row">
+                  <span>Status</span>
+                  <strong>Ongoing Research</strong>
                 </div>
 
-
-                <div class="project-info-row">
-
-                  <span>
-                    Investigator
-                  </span>
-
-                  <strong>
-                    Dr. Md. Mahabbat Ali
-                  </strong>
-
+                <div class="rp-info-row">
+                  <span>Investigator</span>
+                  <strong>Dr. Md. Mahabbat Ali</strong>
                 </div>
 
-
-                <div class="project-info-row">
-
-                  <span>
-                    Focus
-                  </span>
-
+                <div class="rp-info-row">
+                  <span>Focus</span>
                   <strong>
                     Growth · Haematology · Meat Quality
                   </strong>
-
                 </div>
 
               </div>
 
             </div>
 
-
           </div>
 
-        </div>
-
-      </article>
+        </article>
 
 
-      <!-- ===================================================
-           02 · NIPAH — ACTG
-      ==================================================== -->
+        <!-- =================================================
+             02 · NIPAH — ONGOING
+        ================================================== -->
 
-      <article
-        class="
-          research-project-card
-          project-red
-          reveal
-        "
-      >
-
-        <button
-          class="research-project-header"
-          type="button"
-          onclick="toggleResearchPageProject(this)"
+        <article
+          class="rp-project-card rp-project-red rp-card-glow rp-tilt" rp-reveal"
+          data-status="ongoing"
         >
 
-          <div class="research-project-main">
+          <button
+            class="rp-project-trigger"
+            type="button"
+            aria-expanded="false"
+          >
 
-            <div class="research-project-title-row">
+            <span class="rp-project-main">
 
-              <span class="project-index">
-                02
+              <span class="rp-project-title-row">
+
+                <span class="rp-project-index">
+                  02
+                </span>
+
+                <span class="rp-project-title">
+                  Hazard Perception and Preventive Decision-Making
+                  Related to Zoonotic Transmission of Nipah Virus
+                  Among High-Risk Communities in Bangladesh
+                </span>
+
               </span>
 
-              <h3>
 
-                Hazard Perception and Preventive Decision-Making
-                Related to Zoonotic Transmission of Nipah Virus
-                Among High-Risk Communities in Bangladesh
+              <span class="rp-project-meta">
 
-              </h3>
+                <span class="rp-status-pill rp-pill-ongoing">
+                  Ongoing
+                </span>
 
-            </div>
+                <span>
+                  ACTG · Research Assistant
+                </span>
 
-
-            <div class="research-project-meta">
-
-              <span class="project-status ongoing">
-                Ongoing
               </span>
 
-              <span class="meta-separator">
-                ·
-              </span>
+            </span>
 
-              <span>
-                ACTG · Research Assistant
-              </span>
+
+            <span class="rp-project-arrow">
+              <svg viewBox="0 0 24 24">
+                <path d="m7 9 5 5 5-5"/>
+              </svg>
+            </span>
+
+          </button>
+
+
+          <div class="rp-project-content">
+
+            <div class="rp-project-inner">
+
+              <div>
+
+                <div class="rp-detail-label">
+                  CURRENT WORK
+                </div>
+
+                <p>
+                  Collaborative ACTG research on hazard perception and
+                  preventive decision-making related to zoonotic
+                  transmission of Nipah virus among high-risk
+                  communities in Bangladesh.
+                </p>
+
+
+                <div class="rp-pill-row">
+                  <span>Data Collection</span>
+                  <span>Result Analysis</span>
+                  <span>Manuscript Writing</span>
+                </div>
+
+              </div>
+
+
+              <div class="rp-info-box">
+
+                <div class="rp-info-row">
+                  <span>Organization</span>
+                  <strong>
+                    Association of Coding, Technology and Genomics (ACTG)
+                  </strong>
+                </div>
+
+                <div class="rp-info-row">
+                  <span>Role</span>
+                  <strong>Research Assistant</strong>
+                </div>
+
+                <div class="rp-info-row">
+                  <span>Status</span>
+                  <strong>Ongoing</strong>
+                </div>
+
+              </div>
 
             </div>
 
           </div>
 
-
-          <span class="project-arrow">
-            ⌄
-          </span>
-
-        </button>
+        </article>
 
 
-        <div class="research-project-content">
+        <!-- =================================================
+             03 · JE — ONGOING
+             Replace title/details here when you want the
+             formal project title.
+        ================================================== -->
 
-          <div class="project-content-inner">
-
-
-            <div class="project-description-column">
-
-              <div class="project-detail-label">
-                CURRENT WORK
-              </div>
-
-              <p>
-                Collaborative ACTG research on hazard perception and
-                preventive decision-making related to zoonotic
-                transmission of Nipah virus among high-risk
-                communities in Bangladesh.
-              </p>
-
-
-              <div class="work-pill-row">
-
-                <span>
-                  Data Collection
-                </span>
-
-                <span>
-                  Result Analysis
-                </span>
-
-                <span>
-                  Manuscript Writing
-                </span>
-
-              </div>
-
-            </div>
-
-
-            <div class="project-info-column">
-
-              <div class="project-info-box">
-
-                <div class="project-info-row">
-
-                  <span>
-                    Organization
-                  </span>
-
-                  <strong>
-                    Association of Coding, Technology
-                    and Genomics (ACTG)
-                  </strong>
-
-                </div>
-
-
-                <div class="project-info-row">
-
-                  <span>
-                    Role
-                  </span>
-
-                  <strong>
-                    Research Assistant
-                  </strong>
-
-                </div>
-
-
-                <div class="project-info-row">
-
-                  <span>
-                    Status
-                  </span>
-
-                  <strong>
-                    Ongoing
-                  </strong>
-
-                </div>
-
-              </div>
-
-            </div>
-
-
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- ===================================================
-           03 · BLUETONGUE — ACTG
-      ==================================================== -->
-
-      <article
-        class="
-          research-project-card
-          project-purple
-          reveal
-        "
-      >
-
-        <button
-          class="research-project-header"
-          type="button"
-          onclick="toggleResearchPageProject(this)"
+        <article
+          class="rp-project-card rp-project-cyan rp-card-glow rp-tilt" rp-reveal"
+          data-status="ongoing"
         >
 
-          <div class="research-project-main">
+          <button
+            class="rp-project-trigger"
+            type="button"
+            aria-expanded="false"
+          >
 
-            <div class="research-project-title-row">
+            <span class="rp-project-main">
 
-              <span class="project-index">
-                03
+              <span class="rp-project-title-row">
+
+                <span class="rp-project-index">
+                  03
+                </span>
+
+                <span class="rp-project-title">
+                  Japanese Encephalitis (JE) Research Project
+                </span>
+
               </span>
 
-              <h3>
 
-                Emergence, Re-emergence, and Threat of
-                Bluetongue Disease in Europe:
-                A 20-Year Retrospective Analysis (2006–2025)
+              <span class="rp-project-meta">
 
-              </h3>
+                <span class="rp-status-pill rp-pill-ongoing">
+                  Ongoing
+                </span>
 
-            </div>
+                <span>
+                  Research Project
+                </span>
 
-
-            <div class="research-project-meta">
-
-              <span class="project-status ongoing">
-                Ongoing
               </span>
 
-              <span class="meta-separator">
-                ·
-              </span>
-
-              <span>
-                ACTG · Research Project
-              </span>
-
-            </div>
-
-          </div>
+            </span>
 
 
-          <span class="project-arrow">
-            ⌄
-          </span>
+            <span class="rp-project-arrow">
+              <svg viewBox="0 0 24 24">
+                <path d="m7 9 5 5 5-5"/>
+              </svg>
+            </span>
 
-        </button>
-
-
-        <div class="research-project-content">
-
-          <div class="project-content-inner">
+          </button>
 
 
-            <div class="project-description-column">
+          <div class="rp-project-content">
 
-              <div class="project-detail-label">
-                RESEARCH PROJECT
+            <div class="rp-project-inner">
+
+              <div>
+
+                <div class="rp-detail-label">
+                  CURRENT WORK
+                </div>
+
+                <p>
+                  Ongoing research activity focused on
+                  Japanese Encephalitis (JE).
+                </p>
+
+
+                <div class="rp-pill-row">
+                  <span>Japanese Encephalitis</span>
+                  <span>Research Activity</span>
+                </div>
+
               </div>
 
-              <p>
-                Retrospective epidemiological analysis focused on
-                the emergence, re-emergence and threat of Bluetongue
-                disease in Europe over the 2006–2025 period.
-              </p>
 
-            </div>
+              <div class="rp-info-box">
 
-
-            <div class="project-info-column">
-
-              <div class="project-info-box">
-
-                <div class="project-info-row">
-
-                  <span>
-                    Organization
-                  </span>
-
+                <div class="rp-info-row">
+                  <span>Project</span>
                   <strong>
-                    Association of Coding, Technology
-                    and Genomics (ACTG)
+                    Japanese Encephalitis (JE)
                   </strong>
-
                 </div>
 
-
-                <div class="project-info-row">
-
-                  <span>
-                    Period
-                  </span>
-
-                  <strong>
-                    2006–2025
-                  </strong>
-
-                </div>
-
-
-                <div class="project-info-row">
-
-                  <span>
-                    Status
-                  </span>
-
-                  <strong>
-                    Ongoing
-                  </strong>
-
+                <div class="rp-info-row">
+                  <span>Status</span>
+                  <strong>Ongoing</strong>
                 </div>
 
               </div>
 
             </div>
 
-
           </div>
 
-        </div>
-
-      </article>
+        </article>
 
 
-      <!-- ===================================================
-           04 · PPR — ACTG
-      ==================================================== -->
+        <!-- =================================================
+             04 · BLUETONGUE — ONGOING
+        ================================================== -->
 
-      <article
-        class="
-          research-project-card
-          project-blue
-          reveal
-        "
-      >
-
-        <button
-          class="research-project-header"
-          type="button"
-          onclick="toggleResearchPageProject(this)"
+        <article
+          class="rp-project-card rp-project-purple rp-card-glow rp-tilt" rp-reveal"
+          data-status="ongoing"
         >
 
-          <div class="research-project-main">
+          <button
+            class="rp-project-trigger"
+            type="button"
+            aria-expanded="false"
+          >
 
-            <div class="research-project-title-row">
+            <span class="rp-project-main">
 
-              <span class="project-index">
-                04
+              <span class="rp-project-title-row">
+
+                <span class="rp-project-index">
+                  04
+                </span>
+
+                <span class="rp-project-title">
+                  Emergence, Re-emergence, and Threat of Bluetongue
+                  Disease in Europe: A 20-Year Retrospective
+                  Analysis (2006–2025)
+                </span>
+
               </span>
 
-              <h3>
 
-                Spatial Epidemiology of PPR Outbreaks in Europe:
-                Proximity Patterns, Case Concentrations,
-                Spatio-Temporal Clusters, and Interpolated
-                Case Distribution
+              <span class="rp-project-meta">
 
-              </h3>
+                <span class="rp-status-pill rp-pill-ongoing">
+                  Ongoing
+                </span>
 
-            </div>
+                <span>
+                  ACTG · Research Project
+                </span>
 
-
-            <div class="research-project-meta">
-
-              <span class="project-status ongoing">
-                Ongoing
               </span>
 
-              <span class="meta-separator">
-                ·
-              </span>
+            </span>
 
-              <span>
-                ACTG · Research Project
-              </span>
+
+            <span class="rp-project-arrow">
+              <svg viewBox="0 0 24 24">
+                <path d="m7 9 5 5 5-5"/>
+              </svg>
+            </span>
+
+          </button>
+
+
+          <div class="rp-project-content">
+
+            <div class="rp-project-inner">
+
+              <div>
+
+                <div class="rp-detail-label">
+                  RESEARCH PROJECT
+                </div>
+
+                <p>
+                  Retrospective epidemiological analysis focused on
+                  the emergence, re-emergence and threat of Bluetongue
+                  disease in Europe over the 2006–2025 period.
+                </p>
+
+
+                <div class="rp-pill-row">
+                  <span>Retrospective Analysis</span>
+                  <span>Europe</span>
+                  <span>Epidemiology</span>
+                </div>
+
+              </div>
+
+
+              <div class="rp-info-box">
+
+                <div class="rp-info-row">
+                  <span>Organization</span>
+                  <strong>
+                    Association of Coding, Technology and Genomics (ACTG)
+                  </strong>
+                </div>
+
+                <div class="rp-info-row">
+                  <span>Period</span>
+                  <strong>2006–2025</strong>
+                </div>
+
+                <div class="rp-info-row">
+                  <span>Status</span>
+                  <strong>Ongoing</strong>
+                </div>
+
+              </div>
 
             </div>
 
           </div>
 
-
-          <span class="project-arrow">
-            ⌄
-          </span>
-
-        </button>
+        </article>
 
 
-        <div class="research-project-content">
+        <!-- =================================================
+             05 · PPR — ONGOING
+        ================================================== -->
 
-          <div class="project-content-inner">
-
-
-            <div class="project-description-column">
-
-              <div class="project-detail-label">
-                CURRENT PROGRESS
-              </div>
-
-              <p>
-                Spatial epidemiology project examining the distribution
-                and concentration of PPR outbreaks across Europe.
-              </p>
-
-
-              <div class="work-pill-row">
-
-                <span class="completed-pill">
-                  Data Collection Completed
-                </span>
-
-                <span>
-                  Analysis Ongoing
-                </span>
-
-                <span>
-                  Manuscript Writing Ongoing
-                </span>
-
-              </div>
-
-            </div>
-
-
-            <div class="project-info-column">
-
-              <div class="project-info-box">
-
-                <div class="project-info-row">
-
-                  <span>
-                    Organization
-                  </span>
-
-                  <strong>
-                    Association of Coding, Technology
-                    and Genomics (ACTG)
-                  </strong>
-
-                </div>
-
-
-                <div class="project-info-row">
-
-                  <span>
-                    Data Collection
-                  </span>
-
-                  <strong>
-                    Completed
-                  </strong>
-
-                </div>
-
-
-                <div class="project-info-row">
-
-                  <span>
-                    Analysis
-                  </span>
-
-                  <strong>
-                    Ongoing
-                  </strong>
-
-                </div>
-
-              </div>
-
-            </div>
-
-
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- ===================================================
-           05 · NST — FUNDING PENDING
-      ==================================================== -->
-
-      <article
-        class="
-          research-project-card
-          project-gold
-          reveal
-        "
-      >
-
-        <button
-          class="research-project-header"
-          type="button"
-          onclick="toggleResearchPageProject(this)"
+        <article
+          class="rp-project-card rp-project-blue rp-card-glow rp-tilt" rp-reveal"
+          data-status="ongoing"
         >
 
-          <div class="research-project-main">
+          <button
+            class="rp-project-trigger"
+            type="button"
+            aria-expanded="false"
+          >
 
-            <div class="research-project-title-row">
+            <span class="rp-project-main">
 
-              <span class="project-index">
-                05
+              <span class="rp-project-title-row">
+
+                <span class="rp-project-index">
+                  05
+                </span>
+
+                <span class="rp-project-title">
+                  Spatial Epidemiology of PPR Outbreaks in Europe:
+                  Proximity Patterns, Case Concentrations,
+                  Spatio-Temporal Clusters, and Interpolated
+                  Case Distribution
+                </span>
+
               </span>
 
-              <h3>
 
-                Effects of Early-Life Heat Stress on
-                Growth Performance, Gut Health,
-                Fecal Bacterial Load, and Antimicrobial
-                Susceptibility Profiles of Fecal
-                <em>Escherichia coli</em> Isolates in Broiler Chickens
+              <span class="rp-project-meta">
 
-              </h3>
+                <span class="rp-status-pill rp-pill-ongoing">
+                  Ongoing
+                </span>
 
-            </div>
+                <span>
+                  ACTG · Research Project
+                </span>
 
-
-            <div class="research-project-meta">
-
-              <span class="project-status funding">
-                Funding Pending
               </span>
 
-              <span class="meta-separator">
-                ·
-              </span>
+            </span>
 
-              <span>
-                NST Fellowship · 2026–2027
-              </span>
+
+            <span class="rp-project-arrow">
+              <svg viewBox="0 0 24 24">
+                <path d="m7 9 5 5 5-5"/>
+              </svg>
+            </span>
+
+          </button>
+
+
+          <div class="rp-project-content">
+
+            <div class="rp-project-inner">
+
+              <div>
+
+                <div class="rp-detail-label">
+                  CURRENT PROGRESS
+                </div>
+
+                <p>
+                  Spatial epidemiology project examining the distribution
+                  and concentration of PPR outbreaks across Europe.
+                </p>
+
+
+                <div class="rp-pill-row">
+                  <span class="rp-pill-done">
+                    Data Collection Completed
+                  </span>
+
+                  <span>
+                    Analysis Ongoing
+                  </span>
+
+                  <span>
+                    Manuscript Writing Ongoing
+                  </span>
+                </div>
+
+              </div>
+
+
+              <div class="rp-info-box">
+
+                <div class="rp-info-row">
+                  <span>Organization</span>
+                  <strong>
+                    Association of Coding, Technology and Genomics (ACTG)
+                  </strong>
+                </div>
+
+                <div class="rp-info-row">
+                  <span>Data Collection</span>
+                  <strong>Completed</strong>
+                </div>
+
+                <div class="rp-info-row">
+                  <span>Analysis</span>
+                  <strong>Ongoing</strong>
+                </div>
+
+              </div>
 
             </div>
 
           </div>
 
-
-          <span class="project-arrow">
-            ⌄
-          </span>
-
-        </button>
+        </article>
 
 
-        <div class="research-project-content">
+        <!-- =================================================
+             06 · NST — FUNDING PENDING
+        ================================================== -->
 
-          <div class="project-content-inner">
+        <article
+          class="rp-project-card rp-project-gold rp-card-glow rp-tilt" rp-reveal"
+          data-status="funding"
+        >
+
+          <button
+            class="rp-project-trigger"
+            type="button"
+            aria-expanded="false"
+          >
+
+            <span class="rp-project-main">
+
+              <span class="rp-project-title-row">
+
+                <span class="rp-project-index">
+                  06
+                </span>
+
+                <span class="rp-project-title">
+                  Effects of Early-Life Heat Stress on Growth Performance,
+                  Gut Health, Fecal Bacterial Load, and Antimicrobial
+                  Susceptibility Profiles of Fecal
+                  <em>Escherichia coli</em> Isolates in Broiler Chickens
+                </span>
+
+              </span>
 
 
-            <div class="project-description-column">
+              <span class="rp-project-meta">
 
-              <div class="project-detail-label">
-                CURRENT STATUS
-              </div>
-
-              <p>
-                Research proposal submitted under the NST Fellowship.
-                Experimental work is awaiting funding before the
-                laboratory phase begins.
-              </p>
-
-
-              <div class="work-pill-row">
+                <span class="rp-status-pill rp-pill-funding">
+                  Funding Pending
+                </span>
 
                 <span>
-                  Proposal Submitted
+                  NST Fellowship · 2026–2027
                 </span>
 
-                <span class="funding-pill">
-                  Awaiting Funding
-                </span>
+              </span>
 
-              </div>
-
-            </div>
+            </span>
 
 
-            <div class="project-info-column">
+            <span class="rp-project-arrow">
+              <svg viewBox="0 0 24 24">
+                <path d="m7 9 5 5 5-5"/>
+              </svg>
+            </span>
 
-              <div class="project-info-box">
+          </button>
 
-                <div class="project-info-row">
 
-                  <span>
-                    Fellowship
-                  </span>
+          <div class="rp-project-content">
 
-                  <strong>
-                    NST Fellowship · 2026–2027
-                  </strong>
+            <div class="rp-project-inner">
 
+              <div>
+
+                <div class="rp-detail-label">
+                  CURRENT STATUS
                 </div>
 
-
-                <div class="project-info-row">
-
-                  <span>
-                    Supervisor
-                  </span>
-
-                  <strong>
-                    Dr. Mahfuzul Islam
-                  </strong>
-
-                </div>
+                <p>
+                  Research proposal submitted under the NST Fellowship.
+                  Experimental work is awaiting funding before the
+                  laboratory phase begins.
+                </p>
 
 
-                <div class="project-info-row">
+                <div class="rp-pill-row">
+                  <span>Proposal Submitted</span>
 
-                  <span>
-                    Current Stage
-                  </span>
-
-                  <strong>
+                  <span class="rp-pill-funding">
                     Awaiting Funding
-                  </strong>
+                  </span>
+                </div>
 
+              </div>
+
+
+              <div class="rp-info-box">
+
+                <div class="rp-info-row">
+                  <span>Fellowship</span>
+                  <strong>NST Fellowship · 2026–2027</strong>
+                </div>
+
+                <div class="rp-info-row">
+                  <span>Supervisor</span>
+                  <strong>Dr. Mahfuzul Islam</strong>
+                </div>
+
+                <div class="rp-info-row">
+                  <span>Current Stage</span>
+                  <strong>Awaiting Funding</strong>
                 </div>
 
               </div>
 
             </div>
 
-
           </div>
 
-        </div>
-
-      </article>
+        </article>
 
 
-      <!-- ===================================================
-           06 · ULLAPARA KAP — COMPLETED
-      ==================================================== -->
+        <!-- =================================================
+             07 · UNDERGRADUATE THESIS — COMPLETED
+        ================================================== -->
 
-      <article
-        class="
-          research-project-card
-          project-orange
-          reveal
-        "
-      >
-
-        <button
-          class="research-project-header"
-          type="button"
-          onclick="toggleResearchPageProject(this)"
+        <article
+          class="rp-project-card rp-project-orange rp-card-glow rp-tilt" rp-reveal"
+          data-status="completed"
         >
 
-          <div class="research-project-main">
+          <button
+            class="rp-project-trigger"
+            type="button"
+            aria-expanded="false"
+          >
 
-            <div class="research-project-title-row">
+            <span class="rp-project-main">
 
-              <span class="project-index">
-                06
+              <span class="rp-project-title-row">
+
+                <span class="rp-project-index">
+                  07
+                </span>
+
+                <span class="rp-project-title">
+                  Anthelmintic Use, Parasite Control Practices,
+                  and Knowledge on Anthelmintic Resistance Among
+                  Livestock Owners in Ullapara, Sirajganj
+                </span>
+
               </span>
 
-              <h3>
 
-                Anthelmintic Use, Parasite Control Practices,
-                and Knowledge on Anthelmintic Resistance
-                Among Livestock Owners in Ullapara, Sirajganj
+              <span class="rp-project-meta">
 
-              </h3>
+                <span class="rp-status-pill rp-pill-completed">
+                  Completed
+                </span>
 
-            </div>
+                <span>
+                  Undergraduate Thesis · Field-based KAP Study
+                </span>
 
-
-            <div class="research-project-meta">
-
-              <span class="project-status completed">
-                Completed
               </span>
 
-              <span class="meta-separator">
-                ·
-              </span>
+            </span>
 
-              <span>
-                Undergraduate Thesis · Field-based KAP Study
-              </span>
+
+            <span class="rp-project-arrow">
+              <svg viewBox="0 0 24 24">
+                <path d="m7 9 5 5 5-5"/>
+              </svg>
+            </span>
+
+          </button>
+
+
+          <div class="rp-project-content">
+
+            <div class="rp-project-inner">
+
+              <div>
+
+                <div class="rp-detail-label">
+                  STUDY OVERVIEW
+                </div>
+
+                <p>
+                  A field-based cross-sectional KAP study assessing
+                  anthelmintic use patterns, parasite-control practices,
+                  livestock management and awareness of anthelmintic
+                  resistance among livestock owners.
+                </p>
+
+
+                <div class="rp-pill-row">
+                  <span>Cross-sectional Study</span>
+                  <span>KAP Assessment</span>
+                  <span>Kobo Toolbox</span>
+                  <span>Field Data Collection</span>
+                  <span>R Analysis</span>
+                </div>
+
+              </div>
+
+
+              <div class="rp-info-box">
+
+                <div class="rp-info-row">
+                  <span>Study Period</span>
+                  <strong>25 Aug – 25 Sep 2025</strong>
+                </div>
+
+                <div class="rp-info-row">
+                  <span>Study Area</span>
+                  <strong>Ullapara, Sirajganj</strong>
+                </div>
+
+                <div class="rp-info-row">
+                  <span>Study Population</span>
+                  <strong>102 livestock owners</strong>
+                </div>
+
+              </div>
 
             </div>
 
           </div>
 
-
-          <span class="project-arrow">
-            ⌄
-          </span>
-
-        </button>
+        </article>
 
 
-        <div class="research-project-content">
+        <!-- =================================================
+             08 · WOUND DRESSING — COMPLETED + UNDER REVIEW
+        ================================================== -->
 
-          <div class="project-content-inner">
-
-
-            <div class="project-description-column">
-
-              <div class="project-detail-label">
-                STUDY OVERVIEW
-              </div>
-
-              <p>
-                A field-based cross-sectional KAP study assessing
-                anthelmintic use patterns, parasite-control practices,
-                livestock management and awareness of anthelmintic
-                resistance among livestock owners.
-              </p>
-
-
-              <div class="work-pill-row">
-
-                <span>
-                  Cross-sectional Study
-                </span>
-
-                <span>
-                  KAP Assessment
-                </span>
-
-                <span>
-                  Kobo Toolbox
-                </span>
-
-                <span>
-                  Field Data Collection
-                </span>
-
-                <span>
-                  R Analysis
-                </span>
-
-              </div>
-
-            </div>
-
-
-            <div class="project-info-column">
-
-              <div class="project-info-box">
-
-                <div class="project-info-row">
-
-                  <span>
-                    Study Period
-                  </span>
-
-                  <strong>
-                    25 Aug – 25 Sep 2025
-                  </strong>
-
-                </div>
-
-
-                <div class="project-info-row">
-
-                  <span>
-                    Study Area
-                  </span>
-
-                  <strong>
-                    Ullapara, Sirajganj
-                  </strong>
-
-                </div>
-
-
-                <div class="project-info-row">
-
-                  <span>
-                    Study Population
-                  </span>
-
-                  <strong>
-                    102 livestock owners
-                  </strong>
-
-                </div>
-
-              </div>
-
-            </div>
-
-
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- ===================================================
-           07 · WOUND DRESSING — COMPLETED / UNDER REVIEW
-      ==================================================== -->
-
-      <article
-        class="
-          research-project-card
-          project-violet
-          reveal
-        "
-      >
-
-        <button
-          class="research-project-header"
-          type="button"
-          onclick="toggleResearchPageProject(this)"
+        <article
+          class="rp-project-card rp-project-violet rp-card-glow rp-tilt" rp-reveal"
+          data-status="completed"
         >
 
-          <div class="research-project-main">
+          <button
+            class="rp-project-trigger"
+            type="button"
+            aria-expanded="false"
+          >
 
-            <div class="research-project-title-row">
+            <span class="rp-project-main">
 
-              <span class="project-index">
-                07
+              <span class="rp-project-title-row">
+
+                <span class="rp-project-index">
+                  08
+                </span>
+
+                <span class="rp-project-title">
+                  Developing a Natural Product-based Bioactive
+                  Wound Dressing with Antimicrobial and
+                  Anti-inflammatory Healing Potential from
+                  <em>Bombax ceiba</em> Root Extract
+                </span>
+
               </span>
 
-              <h3>
 
-                Developing a Natural Product-based Bioactive
-                Wound Dressing with Antimicrobial and
-                Anti-inflammatory Healing Potential from
-                <em>Bombax ceiba</em> Root Extract
+              <span class="rp-project-meta">
 
-              </h3>
+                <span class="rp-status-pill rp-pill-completed">
+                  Research Completed
+                </span>
 
-            </div>
+                <span class="rp-status-pill rp-pill-review">
+                  Manuscript Under Review
+                </span>
 
-
-            <div class="research-project-meta">
-
-              <span class="project-status completed">
-                Research Completed
               </span>
 
-              <span class="meta-separator">
-                ·
-              </span>
+            </span>
 
-              <span class="output-status">
-                Manuscript Under Review
-              </span>
+
+            <span class="rp-project-arrow">
+              <svg viewBox="0 0 24 24">
+                <path d="m7 9 5 5 5-5"/>
+              </svg>
+            </span>
+
+          </button>
+
+
+          <div class="rp-project-content">
+
+            <div class="rp-project-inner">
+
+              <div>
+
+                <div class="rp-detail-label">
+                  RESEARCH ACTIVITY
+                </div>
+
+                <p>
+                  Laboratory research involving experimental wound-healing
+                  work, tissue-based evaluation and histopathological
+                  techniques using a natural product-based wound dressing.
+                </p>
+
+
+                <div class="rp-pill-row">
+                  <span>Laboratory Animal Handling</span>
+                  <span>Wound Creation</span>
+                  <span>Tissue Harvesting</span>
+                  <span>H&amp;E Staining</span>
+                  <span>PAS Staining</span>
+                </div>
+
+              </div>
+
+
+              <div class="rp-info-box">
+
+                <div class="rp-info-row">
+                  <span>Research Period</span>
+                  <strong>Aug 2023 – Feb 2025</strong>
+                </div>
+
+                <div class="rp-info-row">
+                  <span>Laboratory</span>
+                  <strong>Histology / Histopathology Laboratory</strong>
+                </div>
+
+                <div class="rp-info-row">
+                  <span>Manuscript</span>
+                  <strong>Under Review</strong>
+                </div>
+
+              </div>
 
             </div>
 
           </div>
 
-
-          <span class="project-arrow">
-            ⌄
-          </span>
-
-        </button>
+        </article>
 
 
-        <div class="research-project-content">
+        <!-- =================================================
+             09 · NEWCASTLE DISEASE — COMPLETED + UNDER REVIEW
+        ================================================== -->
 
-          <div class="project-content-inner">
+        <article
+          class="rp-project-card rp-project-green rp-card-glow rp-tilt" rp-reveal"
+          data-status="completed"
+        >
+
+          <button
+            class="rp-project-trigger"
+            type="button"
+            aria-expanded="false"
+          >
+
+            <span class="rp-project-main">
+
+              <span class="rp-project-title-row">
+
+                <span class="rp-project-index">
+                  09
+                </span>
+
+                <span class="rp-project-title">
+                  Elucidation of Efficacy of Available Newcastle Disease
+                  Vaccines Through Unique Cloacal Route
+                </span>
+
+              </span>
 
 
-            <div class="project-description-column">
+              <span class="rp-project-meta">
 
-              <div class="project-detail-label">
-                RESEARCH ACTIVITY
+                <span class="rp-status-pill rp-pill-completed">
+                  Completed
+                </span>
+
+                <span class="rp-status-pill rp-pill-review">
+                  Manuscript Under Review
+                </span>
+
+              </span>
+
+            </span>
+
+
+            <span class="rp-project-arrow">
+              <svg viewBox="0 0 24 24">
+                <path d="m7 9 5 5 5-5"/>
+              </svg>
+            </span>
+
+          </button>
+
+
+          <div class="rp-project-content">
+
+            <div class="rp-project-inner">
+
+              <div>
+
+                <div class="rp-detail-label">
+                  RESEARCH PROJECT
+                </div>
+
+                <p>
+                  Completed research evaluating the efficacy of available
+                  Newcastle disease vaccines through a unique cloacal
+                  vaccination route.
+                </p>
+
+
+                <div class="rp-pill-row">
+                  <span>Newcastle Disease</span>
+                  <span>Vaccination</span>
+                  <span>Experimental Study</span>
+                </div>
+
               </div>
 
-              <p>
-                Laboratory research involving experimental wound-healing
-                work, tissue-based evaluation and histopathological
-                techniques using a natural product-based wound dressing.
-              </p>
 
+              <div class="rp-info-box">
 
-              <div class="work-pill-row">
-
-                <span>
-                  Laboratory Animal Handling
-                </span>
-
-                <span>
-                  Wound Creation
-                </span>
-
-                <span>
-                  Tissue Harvesting
-                </span>
-
-                <span>
-                  H&amp;E Staining
-                </span>
-
-                <span>
-                  PAS Staining
-                </span>
-
-              </div>
-
-            </div>
-
-
-            <div class="project-info-column">
-
-              <div class="project-info-box">
-
-                <div class="project-info-row">
-
-                  <span>
-                    Research Period
-                  </span>
-
-                  <strong>
-                    Aug 2023 – Feb 2025
-                  </strong>
-
+                <div class="rp-info-row">
+                  <span>Project Status</span>
+                  <strong>Research Completed</strong>
                 </div>
 
-
-                <div class="project-info-row">
-
-                  <span>
-                    Laboratory
-                  </span>
-
-                  <strong>
-                    Histopathology Laboratory
-                  </strong>
-
-                </div>
-
-
-                <div class="project-info-row">
-
-                  <span>
-                    Manuscript
-                  </span>
-
-                  <strong>
-                    Under Review
-                  </strong>
-
-                </div>
-
-
-                <div class="project-info-row">
-
-                  <span>
-                    Submitted To
-                  </span>
-
-                  <strong>
-                    Journal of the Royal Society Interface
-                  </strong>
-
+                <div class="rp-info-row">
+                  <span>Publication Status</span>
+                  <strong>Manuscript Under Review</strong>
                 </div>
 
               </div>
 
             </div>
-
 
           </div>
 
-        </div>
-
-      </article>
+        </article>
 
 
-    </div>
-
-
-    <!-- =====================================================
-         RESEARCH OUTPUTS
-    ====================================================== -->
-
-    <div class="research-output-heading reveal">
-
-      <div class="research-section-kicker">
-        Research Outputs
       </div>
 
-      <h2>
-        Selected Scholarly Outputs
-      </h2>
-
-      <p>
-        Publications and manuscripts arising from my research activities.
-      </p>
-
-    </div>
-
-
-    <div class="research-output-grid">
-
-
-      <!-- ===================================================
-           PUBLISHED
-      ==================================================== -->
-
-      <article
-        class="
-          research-output-card
-          output-blue
-          reveal
-        "
-      >
-
-        <div class="output-status">
-          Published
-        </div>
-
-        <h3>
-
-          Antimicrobial Resistance in Meat and Meat Products
-          from Asia: An Urgent One Health Challenge –
-          A Systematic Review and Meta-analysis
-
-        </h3>
-
-        <div class="output-meta">
-
-          <span>
-            Poultry Science · 2025
-          </span>
-
-          <span>
-            DOI: 10.1016/j.psj.2025.105811
-          </span>
-
-        </div>
-
-
-        <a
-          href="https://doi.org/10.1016/j.psj.2025.105811"
-          target="_blank"
-          rel="noopener"
-          class="output-link"
-        >
-          View Published Article →
-        </a>
-
-      </article>
-
-
-      <!-- ===================================================
-           UNDER REVIEW
-      ==================================================== -->
-
-      <article
-        class="
-          research-output-card
-          output-purple
-          reveal
-        "
-      >
-
-        <div class="output-status">
-          Under Review
-        </div>
-
-        <h3>
-
-          Developing a Natural Product-based Bioactive
-          Wound Dressing with Antimicrobial and
-          Anti-inflammatory Healing Potential from
-          <em>Bombax ceiba</em> Root Extract
-
-        </h3>
-
-        <div class="output-meta">
-
-          <span>
-            Journal of the Royal Society Interface
-          </span>
-
-          <span>
-            Submitted · 25 July 2026
-          </span>
-
-        </div>
-
-
-        <div class="output-reference">
-          Manuscript ID: rsif-2026-0839
-        </div>
-
-      </article>
-
-
-      <!-- ===================================================
-           FORTHCOMING
-      ==================================================== -->
-
-      <article
-        class="
-          research-output-card
-          output-gold
-          reveal
-        "
-      >
-
-        <div class="output-status">
-          Forthcoming
-        </div>
-
-        <h3>
-
-          Bovine Spongiform Encephalopathy (BSE) in Meat:
-          Risks, Detection, and Management
-
-        </h3>
-
-        <div class="output-meta">
-
-          <span>
-            CRC Press · 2027
-          </span>
-
-          <span>
-            Chapter 12
-          </span>
-
-        </div>
-
-
-        <div class="output-reference">
-          Forthcoming Book Chapter
-        </div>
-
-      </article>
-
-
-    </div>
+    </section>
 
 
     <!-- =====================================================
-         RESEARCH PAGE FOOTNOTE
+         07 · LABS I HAVE WORKED IN
     ====================================================== -->
 
-    <div class="research-page-footer reveal">
+    <section
+      class="rp-labs-section"
+      aria-labelledby="rp-labs-title"
+    >
 
-      <span class="research-page-footer-line"></span>
+      <div class="rp-section-heading rp-reveal">
+
+        <div class="rp-section-kicker">
+          Research Environment
+        </div>
+
+        <h2 id="rp-labs-title">
+          Labs I Have Worked In
+        </h2>
+
+        <p>
+          Selected laboratory and research environments contributing
+          to my practical and research experience.
+        </p>
+
+      </div>
+
+
+      <div class="rp-lab-grid">
+
+
+        <!-- =================================================
+             LAB 01 · HISTOLOGY
+        ================================================== -->
+
+        <article
+          class="rp-lab-card rp-lab-rose rp-card-glow rp-tilt rp-reveal"
+        >
+
+          <div class="rp-lab-icon">
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14 4.5 19.5 10"/>
+              <path d="m12 6 6 6"/>
+              <path d="M8.5 15.5 4 20"/>
+              <path d="M7 19h7"/>
+              <path d="M5.5 14.5 10 10"/>
+            </svg>
+
+          </div>
+
+
+          <div class="rp-lab-kicker">
+            01 · HISTOLOGY
+          </div>
+
+          <h3>
+            Histology Laboratory
+          </h3>
+
+
+          <div class="rp-lab-line">
+
+            <span>
+              Research Association
+            </span>
+
+            <strong>
+              Dr. Md. Abdul Masum
+            </strong>
+
+          </div>
+
+
+          <div class="rp-lab-period">
+
+            <span>July 2023</span>
+            <span>→</span>
+            <span>Feb 2025</span>
+
+          </div>
+
+
+          <div class="rp-lab-status">
+            Completed
+          </div>
+
+        </article>
+
+
+        <!-- =================================================
+             LAB 02 · ACTG DRY LAB
+        ================================================== -->
+
+        <article
+          class="rp-lab-card rp-lab-cyan rp-card-glow rp-tilt rp-reveal"
+        >
+
+          <div class="rp-lab-icon">
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="7" cy="7" r="2"/>
+              <circle cx="17" cy="7" r="2"/>
+              <circle cx="12" cy="17" r="2"/>
+              <path d="M8.8 8.2 11 15"/>
+              <path d="M15.2 8.2 13 15"/>
+            </svg>
+
+          </div>
+
+
+          <div class="rp-lab-kicker">
+            02 · ACTG · DRY LAB
+          </div>
+
+          <h3>
+            ACTG · Dry Lab
+          </h3>
+
+
+          <div class="rp-lab-line">
+
+            <span>
+              Research Association
+            </span>
+
+            <strong>
+              Dr. Delowar Hossain &amp; Dr. Jisan Ahmed
+            </strong>
+
+          </div>
+
+
+          <div class="rp-lab-period">
+
+            <span>June 2025</span>
+            <span>→</span>
+            <span>Present</span>
+
+          </div>
+
+
+          <div class="rp-lab-status">
+            Active
+          </div>
+
+        </article>
+
+
+        <!-- =================================================
+             LAB 03 · MICROBIOLOGY
+        ================================================== -->
+
+        <article
+          class="rp-lab-card rp-lab-violet rp-card-glow rp-tilt rp-reveal"
+        >
+
+          <div class="rp-lab-icon">
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 3v6.5L5.5 16a4 4 0 0 0 3.5 5.5h6A4 4 0 0 0 18.5 16L15 9.5V3"/>
+              <path d="M7.5 13h9"/>
+              <path d="M8.5 17h7"/>
+              <path d="M9 3h6"/>
+            </svg>
+
+          </div>
+
+
+          <div class="rp-lab-kicker">
+            03 · MICROBIOLOGY LAB
+          </div>
+
+          <h3>
+            Microbiology Laboratory
+          </h3>
+
+
+          <div class="rp-lab-line">
+
+            <span>
+              Research Association
+            </span>
+
+            <strong>
+              Dr. Mahfuzul Islam
+            </strong>
+
+          </div>
+
+
+          <div class="rp-lab-period">
+
+            <span>July 2026</span>
+            <span>→</span>
+            <span>Present</span>
+
+          </div>
+
+
+          <div class="rp-lab-status">
+            Active · MS
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         08 · FOOTER
+    ====================================================== -->
+
+    <footer class="rp-footer rp-reveal">
+
+      <span></span>
 
       <p>
         Research interests evolve through laboratory work,
@@ -1731,695 +1630,709 @@ button{font-family:inherit;}
         scientific communication.
       </p>
 
-      <span class="research-page-footer-line"></span>
+      <span></span>
 
-    </div>
+    </footer>
 
 
   </div>
-
 </section>
 
 
 <!-- =========================================================
-     COMPLETE RESEARCH PAGE CSS
+     PREMIUM RESEARCH PAGE CSS
+     All selectors use "rp-" prefix.
 ========================================================= -->
 
 <style>
 
 /* =========================================================
-   PAGE
+   01 · CORE
 ========================================================= */
 
-.research-page{
+.rp-page{
+  --rp-bg-1:#071421;
+  --rp-bg-2:#0a1929;
+  --rp-bg-3:#10192b;
+
+  --rp-text:#edf6ff;
+  --rp-muted:#91a7bd;
+
+  --rp-blue:#4da8ff;
+  --rp-cyan:#48c7ff;
+  --rp-teal:#20d4ba;
+  --rp-green:#45d38b;
+  --rp-red:#e86a76;
+  --rp-purple:#9a78e8;
+  --rp-violet:#b08cff;
+  --rp-gold:#ffbf4d;
+  --rp-orange:#e6a348;
+  --rp-rose:#ef7994;
 
   position:relative;
-
+  isolation:isolate;
   overflow:hidden;
 
-  padding:
-    105px 0;
+  padding:105px 0 90px;
+
+  color:var(--rp-text);
 
   background:
-
     radial-gradient(
-      circle at 6% 8%,
-      rgba(49,169,230,.10),
+      circle at 4% 7%,
+      rgba(72,199,255,.10),
+      transparent 23%
+    ),
+    radial-gradient(
+      circle at 96% 32%,
+      rgba(169,120,255,.10),
       transparent 25%
     ),
-
-    radial-gradient(
-      circle at 95% 35%,
-      rgba(154,120,232,.09),
-      transparent 28%
-    ),
-
     radial-gradient(
       circle at 50% 100%,
-      rgba(32,199,189,.06),
-      transparent 30%
+      rgba(32,212,186,.07),
+      transparent 29%
     ),
-
     linear-gradient(
       135deg,
-      #071421,
-      #0a1929 55%,
-      #10192b
+      var(--rp-bg-1),
+      var(--rp-bg-2) 55%,
+      var(--rp-bg-3)
     );
 }
 
-body.light .research-page{
 
-  background:
+/* ambient floating light */
 
-    radial-gradient(
-      circle at 6% 8%,
-      rgba(43,155,197,.10),
-      transparent 25%
-    ),
+.rp-page::before,
+.rp-page::after{
+  content:"";
 
-    radial-gradient(
-      circle at 95% 35%,
-      rgba(117,83,165,.08),
-      transparent 28%
-    ),
+  position:absolute;
+  z-index:-1;
 
-    linear-gradient(
-      135deg,
-      #eef8fc,
-      #f7f9fc 55%,
-      #f5eff9
-    );
+  width:320px;
+  height:320px;
+
+  border-radius:50%;
+
+  pointer-events:none;
+
+  filter:blur(75px);
+
+  opacity:.13;
+}
+
+.rp-page::before{
+  top:6%;
+  left:-150px;
+  background:rgba(72,199,255,.38);
+
+  animation:
+    rpAmbientOne 13s ease-in-out infinite alternate;
+}
+
+.rp-page::after{
+  top:48%;
+  right:-160px;
+  background:rgba(169,120,255,.34);
+
+  animation:
+    rpAmbientTwo 15s ease-in-out infinite alternate;
+}
+
+@keyframes rpAmbientOne{
+  from{
+    transform:translate3d(0,0,0) scale(1);
+  }
+
+  to{
+    transform:translate3d(105px,55px,0) scale(1.2);
+  }
+}
+
+@keyframes rpAmbientTwo{
+  from{
+    transform:translate3d(0,0,0) scale(1);
+  }
+
+  to{
+    transform:translate3d(-95px,65px,0) scale(1.16);
+  }
 }
 
 
 /* =========================================================
-   HEADER
+   02 · CONTAINER
 ========================================================= */
 
-.research-page-header{
+.rp-container{
+  width:min(1180px,calc(100% - 36px));
+  margin:0 auto;
+  position:relative;
+}
 
+
+/* =========================================================
+   03 · HERO
+========================================================= */
+
+.rp-hero{
   max-width:900px;
-
-  margin:
-    0 auto 45px;
+  margin:0 auto 49px;
 
   text-align:center;
 }
 
-.research-page-eyebrow{
+.rp-eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
 
-  display:inline-block;
-
-  margin-bottom:11px;
+  margin-bottom:13px;
 
   color:#56c4f4;
 
   font-size:10px;
-
   font-weight:950;
-
-  letter-spacing:3.2px;
+  letter-spacing:3.4px;
 
   text-transform:uppercase;
 }
 
-body.light .research-page-eyebrow{
+.rp-eyebrow::before,
+.rp-eyebrow::after{
+  content:"";
 
-  color:#1979a8;
+  width:25px;
+  height:1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(86,196,244,.62)
+    );
 }
 
-.research-page-header h2{
+.rp-eyebrow::after{
+  background:
+    linear-gradient(
+      90deg,
+      rgba(86,196,244,.62),
+      transparent
+    );
+}
 
-  margin:0 0 13px;
+.rp-hero h2{
+  margin:0;
 
-  color:#edf6ff;
-
-  font-size:
-    clamp(34px,4.5vw,52px);
-
-  line-height:1.1;
+  font-size:clamp(35px,4.5vw,54px);
+  line-height:1.06;
 
   font-weight:950;
-
   letter-spacing:-2px;
+
+  background:
+    linear-gradient(
+      115deg,
+      #f6fcff 7%,
+      #d9f4ff 48%,
+      #c0a2ff 94%
+    );
+
+  -webkit-background-clip:text;
+  background-clip:text;
+
+  color:transparent;
 }
 
-body.light .research-page-header h2{
-
-  color:#132b43;
-}
-
-.research-page-header p{
-
+.rp-hero p{
   max-width:760px;
+  margin:18px auto 0;
 
-  margin:auto;
-
-  color:#91a7bd;
+  color:var(--rp-muted);
 
   font-size:14px;
-
   line-height:1.85;
 }
 
-body.light .research-page-header p{
 
-  color:#687f95;
+/* =========================================================
+   04 · SHARED PREMIUM CARD SYSTEM
+   This is the main animation system.
+========================================================= */
+
+.rp-card-glow{
+  --rp-accent:var(--rp-blue);
+  --rp-soft:rgba(77,168,255,.10);
+  --rp-glow:rgba(77,168,255,.30);
+
+  --mx:50%;
+  --my:50%;
+  --tilt-x:0deg;
+  --tilt-y:0deg;
+}
+
+
+/* mouse-follow light */
+
+.rp-card-glow::after{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  border-radius:inherit;
+
+  pointer-events:none;
+
+  background:
+    radial-gradient(
+      270px circle at var(--mx) var(--my),
+      rgba(255,255,255,.11),
+      transparent 64%
+    );
+
+  opacity:0;
+
+  transition:opacity .28s ease;
+
+  z-index:0;
+}
+
+.rp-card-glow:hover::after{
+  opacity:1;
 }
 
 
 /* =========================================================
-   INTEREST / FOCUS GRID
+   05 · PROFILE CARDS
 ========================================================= */
 
-.research-profile-grid{
-
+.rp-profile-grid{
   display:grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
+  grid-template-columns:1fr 1fr;
   gap:22px;
-
   margin-bottom:22px;
 }
 
-.research-profile-card{
-
+.rp-profile-card{
   position:relative;
+  overflow:hidden;
 
   padding:27px;
 
-  overflow:hidden;
-
   border-radius:24px;
 
-  background:
-
-    linear-gradient(
-      145deg,
-      rgba(18,39,62,.88),
-      rgba(9,25,42,.76)
-    );
-
-  border:
-    1px solid
-    rgba(139,197,235,.14);
-
-  box-shadow:
-    0 18px 50px rgba(0,0,0,.22);
-
-  transition:
-    transform .4s ease,
-    box-shadow .4s ease,
-    border-color .4s ease;
-}
-
-body.light .research-profile-card{
+  border:1px solid rgba(139,197,235,.13);
 
   background:
-
     linear-gradient(
       145deg,
-      rgba(255,255,255,.96),
-      rgba(244,249,252,.92)
+      rgba(18,39,62,.89),
+      rgba(9,25,42,.75)
     );
 
-  border-color:
-    rgba(30,82,119,.12);
-
   box-shadow:
-    0 18px 50px rgba(23,65,95,.09);
-}
-
-.research-profile-card:hover{
+    0 20px 55px rgba(0,0,0,.22),
+    inset 0 1px 0 rgba(255,255,255,.025);
 
   transform:
-    translateY(-7px);
+    perspective(1050px)
+    rotateX(var(--tilt-y))
+    rotateY(var(--tilt-x))
+    translateY(0)
+    scale(1);
+
+  transition:
+    transform .58s cubic-bezier(.16,1,.3,1),
+    border-color .38s ease,
+    box-shadow .58s ease,
+    background .4s ease;
+}
+
+.rp-profile-card.rp-theme-blue{
+  --rp-accent:var(--rp-blue);
+  --rp-soft:rgba(77,168,255,.10);
+  --rp-glow:rgba(77,168,255,.28);
+}
+
+.rp-profile-card.rp-theme-purple{
+  --rp-accent:var(--rp-purple);
+  --rp-soft:rgba(154,120,232,.10);
+  --rp-glow:rgba(154,120,232,.28);
+}
+
+.rp-profile-card::before,
+.rp-status-card::before,
+.rp-project-card::before,
+.rp-lab-card::before,
+.rp-flex-card::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  border-radius:inherit;
+
+  pointer-events:none;
+
+  padding:1px;
+
+  background:
+    radial-gradient(
+      245px circle at var(--mx) var(--my),
+      var(--rp-accent),
+      transparent 66%
+    );
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+
+  opacity:0;
+
+  transition:opacity .38s ease;
+
+  z-index:0;
+}
+
+.rp-profile-card:hover,
+.rp-status-card:hover,
+.rp-lab-card:hover{
+  transform:
+    perspective(1050px)
+    rotateX(var(--tilt-y))
+    rotateY(var(--tilt-x))
+    translateY(-9px)
+    scale(1.018);
+
+  border-color:var(--rp-accent);
 
   box-shadow:
-    0 28px 65px rgba(0,0,0,.28);
+    0 28px 72px rgba(0,0,0,.28),
+    0 0 34px var(--rp-glow),
+    inset 0 0 24px var(--rp-soft);
 }
 
-.interests-panel:hover{
-
-  border-color:
-    rgba(49,169,230,.40);
-}
-
-.focus-panel:hover{
-
-  border-color:
-    rgba(154,120,232,.42);
+.rp-profile-card:hover::before,
+.rp-status-card:hover::before,
+.rp-project-card:hover::before,
+.rp-lab-card:hover::before,
+.rp-flex-card:hover::before{
+  opacity:1;
 }
 
 
-/* =========================================================
-   PROFILE HEADER
-========================================================= */
+/* profile header */
 
-.research-profile-header{
+.rp-profile-header{
+  position:relative;
+  z-index:2;
 
   display:flex;
-
   align-items:center;
-
   gap:14px;
 
   margin-bottom:23px;
 }
 
-.research-profile-icon{
+.rp-profile-icon{
+  width:49px;
+  height:49px;
 
-  width:48px;
-  height:48px;
-
-  flex:0 0 48px;
+  flex:0 0 49px;
 
   display:flex;
-
   align-items:center;
-
   justify-content:center;
 
-  border-radius:14px;
+  border-radius:15px;
 
-  color:#31a9e6;
+  color:var(--rp-accent);
 
-  background:
-    rgba(49,169,230,.10);
+  background:var(--rp-soft);
 
-  border:
-    1px solid
-    rgba(49,169,230,.20);
+  border:1px solid
+    color-mix(
+      in srgb,
+      var(--rp-accent) 34%,
+      transparent
+    );
 
   transition:
-    transform .35s ease,
-    box-shadow .35s ease;
+    transform .48s cubic-bezier(.16,1,.3,1),
+    box-shadow .4s ease;
 }
 
-.purple-profile-icon{
+.rp-profile-card:hover .rp-profile-icon{
+  transform:
+    rotate(-6deg)
+    scale(1.10);
 
-  color:#9a78e8;
-
-  background:
-    rgba(154,120,232,.10);
-
-  border-color:
-    rgba(154,120,232,.22);
+  box-shadow:
+    0 0 25px var(--rp-glow);
 }
 
-.research-profile-icon svg{
-
+.rp-profile-icon svg{
   width:24px;
   height:24px;
 
   fill:none;
 
   stroke:currentColor;
-
   stroke-width:1.8;
 
   stroke-linecap:round;
-
   stroke-linejoin:round;
 }
 
-.research-profile-card:hover
-.research-profile-icon{
-
-  transform:
-    rotate(-7deg)
-    scale(1.10);
-
-  box-shadow:
-    0 0 25px
-    rgba(49,169,230,.17);
-}
-
-.focus-panel:hover
-.research-profile-icon{
-
-  box-shadow:
-    0 0 25px
-    rgba(154,120,232,.18);
-}
-
-.research-profile-header span{
-
+.rp-profile-header > div:last-child > span{
   display:block;
 
   margin-bottom:4px;
 
-  color:#6f9bb4;
+  color:#7297b0;
 
   font-size:8px;
-
   font-weight:950;
-
-  letter-spacing:1.6px;
+  letter-spacing:1.7px;
 }
 
-.focus-panel
-.research-profile-header span{
-
-  color:#9f88ca;
-}
-
-.research-profile-header h3{
-
+.rp-profile-header h3{
   margin:0;
 
   color:#edf6ff;
 
   font-size:20px;
-
   font-weight:950;
 }
 
-body.light .research-profile-header h3{
 
-  color:#18364d;
-}
+/* profile items */
 
-
-/* =========================================================
-   PROFILE ITEMS
-========================================================= */
-
-.research-profile-list{
+.rp-profile-list{
+  position:relative;
+  z-index:2;
 
   display:flex;
-
   flex-direction:column;
-
   gap:9px;
 }
 
-.research-profile-item{
+.rp-profile-item{
+  --rp-item-color:var(--rp-blue);
 
   position:relative;
 
   display:flex;
-
   align-items:center;
 
   gap:12px;
 
   min-height:50px;
 
-  padding:
-    8px 13px;
+  padding:8px 13px;
 
   border-radius:13px;
 
-  background:
-    rgba(255,255,255,.035);
+  color:#c9d7e4;
+
+  font-size:12px;
+  font-weight:800;
+  line-height:1.45;
+
+  background:rgba(255,255,255,.035);
 
   border:
     1px solid
-    rgba(139,197,235,.09);
+    rgba(139,197,235,.08);
 
   transition:
-    transform .3s ease,
-    border-color .3s ease,
-    box-shadow .3s ease,
-    background .3s ease;
+    transform .34s cubic-bezier(.16,1,.3,1),
+    border-color .34s ease,
+    background .34s ease,
+    box-shadow .34s ease;
 }
 
-body.light .research-profile-item{
-
-  background:
-    rgba(255,255,255,.78);
-
-  border-color:
-    rgba(30,82,119,.10);
-}
-
-.research-profile-item::before{
-
+.rp-profile-item::before{
   content:"";
+
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
 
   width:3px;
 
-  position:absolute;
+  border-radius:13px 0 0 13px;
 
-  left:0;
-
-  top:0;
-
-  bottom:0;
-
-  border-radius:
-    13px 0 0 13px;
-}
-
-.research-profile-item:hover{
-
-  transform:
-    translateX(7px);
+  background:var(--rp-item-color);
 
   box-shadow:
-    0 10px 24px rgba(0,0,0,.15);
+    0 0 12px
+    color-mix(
+      in srgb,
+      var(--rp-item-color) 55%,
+      transparent
+    );
 }
 
-.profile-item-number{
+.rp-profile-item:hover{
+  transform:translateX(6px);
 
+  border-color:
+    color-mix(
+      in srgb,
+      var(--rp-item-color) 45%,
+      transparent
+    );
+
+  background:
+    color-mix(
+      in srgb,
+      var(--rp-item-color) 7%,
+      rgba(255,255,255,.03)
+    );
+
+  box-shadow:
+    0 10px 26px rgba(0,0,0,.16);
+}
+
+.rp-item-number{
   width:32px;
   height:32px;
 
   flex:0 0 32px;
 
   display:flex;
-
   align-items:center;
-
   justify-content:center;
 
   border-radius:9px;
 
+  color:var(--rp-item-color);
+
+  background:
+    color-mix(
+      in srgb,
+      var(--rp-item-color) 8%,
+      transparent
+    );
+
+  border:
+    1px solid
+    color-mix(
+      in srgb,
+      var(--rp-item-color) 30%,
+      transparent
+    );
+
   font-size:9px;
-
   font-weight:950;
-
-  border:1px solid;
 }
 
-.profile-item-text{
-
-  flex:1;
-
-  color:#c9d7e4;
-
-  font-size:12px;
-
-  font-weight:800;
-
-  line-height:1.45;
-}
-
-body.light .profile-item-text{
-
-  color:#29445c;
-}
+.rp-color-red{--rp-item-color:var(--rp-red);}
+.rp-color-teal{--rp-item-color:var(--rp-teal);}
+.rp-color-blue{--rp-item-color:var(--rp-blue);}
+.rp-color-purple{--rp-item-color:var(--rp-purple);}
+.rp-color-green{--rp-item-color:var(--rp-green);}
+.rp-color-gold{--rp-item-color:var(--rp-gold);}
+.rp-color-violet{--rp-item-color:var(--rp-violet);}
 
 
 /* =========================================================
-   INDIVIDUAL PROFILE COLORS
+   06 · INTERDISCIPLINARY CARD
 ========================================================= */
 
-.amr-item::before{
-  background:#e86a76;
-}
+.rp-flex-card{
+  --rp-accent:var(--rp-cyan);
+  --rp-soft:rgba(72,199,255,.09);
+  --rp-glow:rgba(72,199,255,.22);
 
-.amr-item .profile-item-number{
-  color:#e86a76;
-  background:rgba(232,106,118,.09);
-  border-color:rgba(232,106,118,.20);
-}
-
-.onehealth-item::before{
-  background:#20c7bd;
-}
-
-.onehealth-item .profile-item-number{
-  color:#20c7bd;
-  background:rgba(32,199,189,.09);
-  border-color:rgba(32,199,189,.20);
-}
-
-.micro-item::before{
-  background:#31a9e6;
-}
-
-.micro-item .profile-item-number{
-  color:#31a9e6;
-  background:rgba(49,169,230,.09);
-  border-color:rgba(49,169,230,.20);
-}
-
-.infection-item::before{
-  background:#9a78e8;
-}
-
-.infection-item .profile-item-number{
-  color:#9a78e8;
-  background:rgba(154,120,232,.09);
-  border-color:rgba(154,120,232,.20);
-}
-
-.animal-item::before{
-  background:#45c78b;
-}
-
-.animal-item .profile-item-number{
-  color:#45c78b;
-  background:rgba(69,199,139,.09);
-  border-color:rgba(69,199,139,.20);
-}
-
-.host-item::before{
-  background:#9a78e8;
-}
-
-.host-item .profile-item-number{
-  color:#9a78e8;
-  background:rgba(154,120,232,.09);
-  border-color:rgba(154,120,232,.20);
-}
-
-.gut-item::before{
-  background:#e6b54a;
-}
-
-.gut-item .profile-item-number{
-  color:#e6b54a;
-  background:rgba(230,181,74,.09);
-  border-color:rgba(230,181,74,.20);
-}
-
-.epi-item::before{
-  background:#31a9e6;
-}
-
-.epi-item .profile-item-number{
-  color:#31a9e6;
-  background:rgba(49,169,230,.09);
-  border-color:rgba(49,169,230,.20);
-}
-
-.nutrition-item::before{
-  background:#20c7bd;
-}
-
-.nutrition-item .profile-item-number{
-  color:#20c7bd;
-  background:rgba(32,199,189,.09);
-  border-color:rgba(32,199,189,.20);
-}
-
-.genome-item::before{
-  background:#b08cff;
-}
-
-.genome-item .profile-item-number{
-  color:#b08cff;
-  background:rgba(176,140,255,.09);
-  border-color:rgba(176,140,255,.20);
-}
-
-
-/* =========================================================
-   FLEXIBLE CARD
-========================================================= */
-
-.research-flex-card{
+  position:relative;
 
   display:flex;
-
   align-items:center;
-
   justify-content:center;
-
   gap:15px;
 
-  padding:
-    22px 25px;
+  margin-bottom:84px;
 
-  margin-bottom:85px;
+  padding:23px 27px;
 
   border-radius:22px;
 
-  background:
-
-    linear-gradient(
-      135deg,
-      #10334d,
-      #123e55 52%,
-      #1c3658
-    );
-
   border:
     1px solid
-    rgba(99,200,240,.22);
-
-  box-shadow:
-    0 20px 55px rgba(0,0,0,.24);
-
-  text-align:center;
-}
-
-body.light .research-flex-card{
+    rgba(99,200,240,.18);
 
   background:
-
     linear-gradient(
       135deg,
-      #eaf6fb,
-      #f5f9fc 55%,
-      #f2edf9
+      rgba(16,51,77,.93),
+      rgba(18,62,85,.82) 52%,
+      rgba(28,54,88,.88)
     );
 
-  border-color:
-    rgba(30,82,119,.12);
-
   box-shadow:
-    0 18px 48px rgba(23,65,95,.10);
+    0 20px 55px rgba(0,0,0,.23);
+
+  overflow:hidden;
 }
 
-.research-flex-icon{
+.rp-flex-card:hover{
+  border-color:var(--rp-accent);
 
-  width:44px;
-  height:44px;
+  box-shadow:
+    0 25px 62px rgba(0,0,0,.27),
+    0 0 28px var(--rp-glow);
+}
 
-  flex:0 0 44px;
+.rp-flex-icon{
+  width:46px;
+  height:46px;
+
+  flex:0 0 46px;
 
   display:flex;
-
   align-items:center;
-
   justify-content:center;
 
-  border-radius:13px;
+  border-radius:14px;
 
-  color:#64cff8;
+  color:var(--rp-cyan);
 
-  background:
-    rgba(100,207,248,.09);
+  background:rgba(100,207,248,.08);
 
   border:
     1px solid
-    rgba(100,207,248,.20);
+    rgba(100,207,248,.19);
+
+  transition:
+    transform .48s cubic-bezier(.16,1,.3,1),
+    box-shadow .38s ease;
 }
 
-.research-flex-icon svg{
+.rp-flex-card:hover .rp-flex-icon{
+  transform:
+    rotate(-5deg)
+    scale(1.09);
 
+  box-shadow:
+    0 0 24px
+    rgba(100,207,248,.19);
+}
+
+.rp-flex-icon svg{
   width:23px;
   height:23px;
 
   fill:none;
-
   stroke:currentColor;
 
   stroke-width:1.7;
@@ -2427,56 +2340,39 @@ body.light .research-flex-card{
   stroke-linecap:round;
 }
 
-.research-flex-card h3{
-
+.rp-flex-card h3{
   margin:0 0 5px;
 
-  color:#ffffff;
+  color:#fff;
 
   font-size:17px;
-
   font-weight:950;
 }
 
-body.light .research-flex-card h3{
-
-  color:#173b55;
-}
-
-.research-flex-card p{
-
+.rp-flex-card p{
   margin:0;
 
   color:#bdd2e2;
 
   font-size:11.5px;
-
   line-height:1.7;
-}
-
-body.light .research-flex-card p{
-
-  color:#5a7185;
 }
 
 
 /* =========================================================
-   SECTION HEADING
+   07 · SECTION HEADINGS
 ========================================================= */
 
-.research-status-heading,
-.research-output-heading{
-
+.rp-section-heading{
   max-width:850px;
 
   margin:
-    0 auto 28px;
+    0 auto 29px;
 
   text-align:center;
 }
 
-.research-section-kicker{
-
+.rp-section-kicker{
   display:inline-block;
 
   margin-bottom:9px;
@@ -2484,317 +2380,550 @@ body.light .research-flex-card p{
   color:#56c4f4;
 
   font-size:9px;
-
   font-weight:950;
-
-  letter-spacing:2.4px;
+  letter-spacing:2.5px;
 
   text-transform:uppercase;
 }
 
-.research-status-heading h2,
-.research-output-heading h2{
-
+.rp-section-heading h2{
   margin:0 0 9px;
 
   color:#edf6ff;
 
-  font-size:
-    clamp(29px,3.5vw,42px);
+  font-size:clamp(29px,3.5vw,42px);
+
+  line-height:1.1;
 
   font-weight:950;
-
   letter-spacing:-1px;
 }
 
-body.light .research-status-heading h2,
-body.light .research-output-heading h2{
-
-  color:#132b43;
-}
-
-.research-status-heading p,
-.research-output-heading p{
-
+.rp-section-heading p{
   margin:0;
 
-  color:#91a7bd;
+  color:var(--rp-muted);
 
   font-size:12.5px;
-
   line-height:1.8;
-}
-
-body.light .research-status-heading p,
-body.light .research-output-heading p{
-
-  color:#687f95;
 }
 
 
 /* =========================================================
-   STATUS SUMMARY
+   08 · STATUS SUMMARY
 ========================================================= */
 
-.research-status-summary{
-
+.rp-status-grid{
   display:grid;
 
   grid-template-columns:
     repeat(4,1fr);
 
-  gap:12px;
-
-  margin-bottom:25px;
-}
-
-.status-summary-card{
-
-  padding:
-    16px 12px;
-
-  text-align:center;
-
-  border-radius:16px;
-
-  background:
-    rgba(255,255,255,.035);
-
-  border:
-    1px solid
-    rgba(139,197,235,.10);
-
-  transition:
-    transform .3s ease,
-    box-shadow .3s ease;
-}
-
-body.light .status-summary-card{
-
-  background:
-    rgba(255,255,255,.76);
-
-  border-color:
-    rgba(30,82,119,.10);
-}
-
-.status-summary-card:hover{
-
-  transform:
-    translateY(-5px);
-
-  box-shadow:
-    0 15px 30px rgba(0,0,0,.14);
-}
-
-.status-summary-card strong{
-
-  display:block;
-
-  margin-bottom:3px;
-
-  font-size:25px;
-
-  line-height:1;
-
-  font-weight:950;
-}
-
-.status-summary-card span{
-
-  color:#8097aa;
-
-  font-size:9px;
-
-  font-weight:900;
-
-  letter-spacing:1px;
-
-  text-transform:uppercase;
-}
-
-.ongoing-summary strong{
-  color:#20c7bd;
-}
-
-.completed-summary strong{
-  color:#45c78b;
-}
-
-.funding-summary strong{
-  color:#e6b54a;
-}
-
-.review-summary strong{
-  color:#9a78e8;
-}
-
-
-/* =========================================================
-   PROJECT LIST
-========================================================= */
-
-.research-project-list{
-
-  display:flex;
-
-  flex-direction:column;
-
   gap:13px;
 
-  margin-bottom:82px;
+  margin-bottom:23px;
 }
 
-
-/* =========================================================
-   PROJECT CARD
-========================================================= */
-
-.research-project-card{
-
-  --project-accent:#31a9e6;
-  --project-glow:rgba(49,169,230,.22);
-
+.rp-status-card{
   position:relative;
 
   overflow:hidden;
 
-  border-radius:18px;
+  min-height:185px;
 
-  background:
-    rgba(11,25,42,.78);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  padding:23px 16px;
+
+  text-align:center;
+
+  border-radius:20px;
 
   border:
     1px solid
-    rgba(139,197,235,.13);
-
-  box-shadow:
-    0 12px 35px rgba(0,0,0,.18);
-
-  transition:
-    transform .35s cubic-bezier(.2,.8,.2,1),
-    box-shadow .35s ease,
-    border-color .35s ease;
-}
-
-body.light .research-project-card{
+    rgba(139,197,235,.09);
 
   background:
-    rgba(255,255,255,.90);
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.048),
+      rgba(255,255,255,.012)
+    );
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,.18),
+    inset 0 1px 0 rgba(255,255,255,.025);
+
+  transform:
+    perspective(1050px)
+    rotateX(var(--tilt-y))
+    rotateY(var(--tilt-x))
+    translateY(0)
+    scale(1);
+
+  transition:
+    transform .58s cubic-bezier(.16,1,.3,1),
+    border-color .38s ease,
+    box-shadow .58s ease;
+}
+
+.rp-status-teal{
+  --rp-accent:var(--rp-teal);
+  --rp-soft:rgba(32,212,186,.10);
+  --rp-glow:rgba(32,212,186,.31);
+}
+
+.rp-status-green{
+  --rp-accent:var(--rp-green);
+  --rp-soft:rgba(69,211,139,.10);
+  --rp-glow:rgba(69,211,139,.29);
+}
+
+.rp-status-gold{
+  --rp-accent:var(--rp-gold);
+  --rp-soft:rgba(255,191,77,.10);
+  --rp-glow:rgba(255,191,77,.31);
+}
+
+.rp-status-purple{
+  --rp-accent:var(--rp-purple);
+  --rp-soft:rgba(154,120,232,.10);
+  --rp-glow:rgba(154,120,232,.30);
+}
+
+.rp-status-icon{
+  position:relative;
+  z-index:2;
+
+  width:55px;
+  height:55px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  margin-bottom:18px;
+
+  border-radius:17px;
+
+  color:var(--rp-accent);
+
+  background:var(--rp-soft);
+
+  border:
+    1px solid
+    color-mix(
+      in srgb,
+      var(--rp-accent) 34%,
+      transparent
+    );
+
+  transition:
+    transform .52s cubic-bezier(.16,1,.3,1),
+    box-shadow .4s ease;
+}
+
+.rp-status-card:hover .rp-status-icon{
+  transform:
+    translateY(-4px)
+    scale(1.10)
+    rotate(3deg);
+
+  box-shadow:
+    0 0 24px var(--rp-glow);
+}
+
+.rp-status-icon svg{
+  width:24px;
+  height:24px;
+
+  fill:none;
+
+  stroke:currentColor;
+  stroke-width:1.8;
+
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+.rp-status-card strong{
+  position:relative;
+  z-index:2;
+
+  margin:0 0 8px;
+
+  color:var(--rp-accent);
+
+  font-size:47px;
+  line-height:1;
+
+  font-weight:950;
+  letter-spacing:-2px;
+
+  transition:
+    transform .48s cubic-bezier(.16,1,.3,1),
+    text-shadow .45s ease;
+}
+
+.rp-status-card:hover strong{
+  transform:scale(1.11);
+
+  text-shadow:
+    0 0 12px var(--rp-glow),
+    0 0 28px var(--rp-glow);
+}
+
+.rp-status-card > span{
+  position:relative;
+  z-index:2;
+
+  max-width:175px;
+
+  color:#edf5ff;
+
+  font-size:10px;
+  line-height:1.45;
+
+  font-weight:900;
+  letter-spacing:.75px;
+
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   09 · FILTER BAR
+========================================================= */
+
+.rp-filter-wrap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+
+  margin-bottom:17px;
+
+  padding:9px;
+
+  border-radius:18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.04),
+      rgba(255,255,255,.012)
+    );
+
+  border:
+    1px solid
+    rgba(139,197,235,.09);
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.12);
+}
+
+.rp-filter-bar{
+  display:flex;
+  align-items:center;
+
+  gap:7px;
+}
+
+.rp-filter-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+
+  padding:10px 14px;
+
+  color:#94aabc;
+
+  background:transparent;
+
+  border:
+    1px solid
+    transparent;
+
+  border-radius:13px;
+
+  font-size:10px;
+  font-weight:950;
+  letter-spacing:.65px;
+
+  text-transform:uppercase;
+
+  cursor:pointer;
+
+  transition:
+    color .3s ease,
+    background .3s ease,
+    border-color .3s ease,
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.rp-filter-btn:hover{
+  color:#fff;
+  transform:translateY(-2px);
+}
+
+.rp-filter-btn small{
+  min-width:20px;
+  height:20px;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  color:#7890a5;
+
+  background:rgba(255,255,255,.045);
+
+  font-size:8px;
+}
+
+.rp-filter-btn.is-active{
+  color:#fff;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(72,199,255,.14),
+      rgba(154,120,232,.10)
+    );
 
   border-color:
-    rgba(30,82,119,.11);
+    rgba(93,205,255,.24);
 
   box-shadow:
-    0 12px 30px rgba(23,65,95,.08);
+    0 8px 24px rgba(0,0,0,.13),
+    0 0 20px rgba(72,199,255,.10);
 }
 
-
-/* =========================================================
-   PROJECT COLORS
-========================================================= */
-
-.project-teal{
-
-  --project-accent:#20c7bd;
-  --project-glow:rgba(32,199,189,.26);
-}
-
-.project-red{
-
-  --project-accent:#e86a76;
-  --project-glow:rgba(232,106,118,.25);
-}
-
-.project-purple{
-
-  --project-accent:#9a78e8;
-  --project-glow:rgba(154,120,232,.26);
-}
-
-.project-blue{
-
-  --project-accent:#31a9e6;
-  --project-glow:rgba(49,169,230,.25);
-}
-
-.project-gold{
-
-  --project-accent:#e6b54a;
-  --project-glow:rgba(230,181,74,.27);
-}
-
-.project-orange{
-
-  --project-accent:#e6a348;
-  --project-glow:rgba(230,163,72,.25);
-}
-
-.project-violet{
-
-  --project-accent:#b08cff;
-  --project-glow:rgba(176,140,255,.26);
-}
-
-
-/* =========================================================
-   ACCENT EDGE
-========================================================= */
-
-.research-project-card::before{
-
-  content:"";
-
-  position:absolute;
-
-  top:0;
-  left:0;
-  bottom:0;
-
-  width:4px;
+.rp-filter-btn.is-active small{
+  color:#e1f8ff;
 
   background:
-    var(--project-accent);
-
-  opacity:.82;
-
-  transition:
-    width .3s ease,
-    opacity .3s ease;
+    rgba(72,199,255,.13);
 }
 
-.research-project-card:hover::before,
-.research-project-card.open::before{
+.rp-filter-note{
+  display:flex;
+  align-items:center;
+  gap:7px;
 
-  width:6px;
+  padding-right:6px;
 
+  color:#7e95a9;
+
+  font-size:9.5px;
+  line-height:1.4;
+}
+
+.rp-filter-note strong{
+  color:#c4d4e0;
+}
+
+.rp-live-dot{
+  width:7px;
+  height:7px;
+
+  flex:0 0 7px;
+
+  border-radius:50%;
+
+  background:var(--rp-gold);
+
+  box-shadow:
+    0 0 0 0
+    rgba(255,191,77,.42);
+
+  animation:
+    rpPulse 1.9s infinite;
+}
+
+@keyframes rpPulse{
+  0%{
+    box-shadow:
+      0 0 0 0
+      rgba(255,191,77,.42);
+  }
+
+  65%{
+    box-shadow:
+      0 0 0 8px
+      rgba(255,191,77,0);
+  }
+
+  100%{
+    box-shadow:
+      0 0 0 0
+      rgba(255,191,77,0);
+  }
+}
+
+
+/* =========================================================
+   10 · PROJECT CARDS
+========================================================= */
+
+.rp-project-list{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+
+  margin-bottom:82px;
+}
+
+.rp-project-card{
+  position:relative;
+  overflow:hidden;
+
+  --rp-accent:var(--rp-blue);
+  --rp-glow:rgba(77,168,255,.23);
+
+  border-radius:18px;
+
+  border:
+    1px solid
+    rgba(139,197,235,.11);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(11,25,42,.84),
+      rgba(8,21,37,.72)
+    );
+
+  box-shadow:
+    0 12px 34px rgba(0,0,0,.17);
+
+  transition:
+    transform .42s cubic-bezier(.16,1,.3,1),
+    border-color .34s ease,
+    box-shadow .42s ease,
+    opacity .35s ease;
+}
+
+.rp-project-card::before{
+  width:4px;
+  height:auto;
+
+  top:0;
+  bottom:0;
+  left:0;
+
+  right:auto;
+
+  padding:0;
+
+  border-radius:0;
+
+  background:
+    var(--rp-accent);
+
+  box-shadow:
+    0 0 14px
+    var(--rp-glow);
+
+  -webkit-mask:none;
+  mask:none;
+
+  opacity:.85;
+
+  transition:
+    width .32s ease,
+    opacity .32s ease;
+}
+
+.rp-project-card:hover{
+  transform:translateY(-3px);
+
+  border-color:
+    var(--rp-accent);
+
+  box-shadow:
+    0 20px 48px rgba(0,0,0,.23),
+    0 0 26px var(--rp-glow);
+}
+
+.rp-project-card:hover::before{
+  width:5px;
   opacity:1;
 }
 
 
+/* PROJECT COLORS */
+
+.rp-project-teal{
+  --rp-accent:var(--rp-teal);
+  --rp-glow:rgba(32,212,186,.24);
+}
+
+.rp-project-red{
+  --rp-accent:var(--rp-red);
+  --rp-glow:rgba(232,106,118,.24);
+}
+
+.rp-project-cyan{
+  --rp-accent:var(--rp-cyan);
+  --rp-glow:rgba(72,199,255,.23);
+}
+
+.rp-project-purple{
+  --rp-accent:var(--rp-purple);
+  --rp-glow:rgba(154,120,232,.25);
+}
+
+.rp-project-blue{
+  --rp-accent:var(--rp-blue);
+  --rp-glow:rgba(77,168,255,.24);
+}
+
+.rp-project-gold{
+  --rp-accent:var(--rp-gold);
+  --rp-glow:rgba(255,191,77,.25);
+}
+
+.rp-project-orange{
+  --rp-accent:var(--rp-orange);
+  --rp-glow:rgba(230,163,72,.24);
+}
+
+.rp-project-violet{
+  --rp-accent:var(--rp-violet);
+  --rp-glow:rgba(176,140,255,.25);
+}
+
+.rp-project-green{
+  --rp-accent:var(--rp-green);
+  --rp-glow:rgba(69,211,139,.25);
+}
+
+
 /* =========================================================
-   PROJECT HEADER BUTTON
+   11 · PROJECT HEADER
 ========================================================= */
 
-.research-project-header{
-
+.rp-project-trigger{
   width:100%;
 
-  display:grid;
-
-  grid-template-columns:
-    1fr auto;
-
+  display:flex;
   align-items:center;
+  justify-content:space-between;
 
-  gap:20px;
+  gap:18px;
 
-  padding:
-    19px 20px 19px 24px;
-
-  background:transparent;
+  padding:19px 18px 19px 20px;
 
   border:0;
+
+  background:transparent;
 
   color:inherit;
 
@@ -2803,497 +2932,300 @@ body.light .research-project-card{
   cursor:pointer;
 }
 
-.research-project-main{
+.rp-project-trigger:focus-visible{
+  outline:
+    2px solid
+    var(--rp-accent);
 
+  outline-offset:-2px;
+
+  border-radius:17px;
+}
+
+.rp-project-main{
   min-width:0;
+  display:block;
 }
 
-.research-project-title-row{
-
+.rp-project-title-row{
   display:flex;
-
   align-items:flex-start;
-
-  gap:12px;
+  gap:11px;
 }
 
-.project-index{
-
+.rp-project-index{
   width:29px;
   height:29px;
 
   flex:0 0 29px;
 
-  margin-top:1px;
-
   display:flex;
-
   align-items:center;
-
   justify-content:center;
 
-  border-radius:8px;
+  margin-top:1px;
+
+  border-radius:9px;
+
+  color:var(--rp-accent);
 
   background:
-    var(--project-glow);
-
-  color:
-    var(--project-accent);
+    color-mix(
+      in srgb,
+      var(--rp-accent) 8%,
+      transparent
+    );
 
   border:
     1px solid
-    var(--project-accent);
+    color-mix(
+      in srgb,
+      var(--rp-accent) 30%,
+      transparent
+    );
 
   font-size:8px;
-
   font-weight:950;
 }
 
-.research-project-title-row h3{
-
-  margin:0;
-
+.rp-project-title{
   color:#edf6ff;
 
-  font-size:16px;
-
-  line-height:1.45;
+  font-size:13.5px;
+  line-height:1.52;
 
   font-weight:900;
-
-  letter-spacing:-.15px;
-
-  transition:
-    color .3s ease;
 }
 
-body.light .research-project-title-row h3{
-
-  color:#17364c;
+.rp-project-title em{
+  font-weight:750;
 }
 
-.research-project-card:hover
-.research-project-title-row h3{
-
-  color:
-    var(--project-accent);
-}
-
-.research-project-title-row h3 em{
-
-  font-weight:700;
-}
-
-.research-project-meta{
-
+.rp-project-meta{
   display:flex;
-
+  flex-wrap:wrap;
   align-items:center;
 
-  flex-wrap:wrap;
+  gap:7px;
 
-  gap:8px;
+  margin:
+    9px 0 0 40px;
 
-  margin-top:8px;
+  color:#8098aa;
 
-  margin-left:41px;
-
-  color:#8197a9;
-
-  font-size:10.5px;
-
+  font-size:9px;
   line-height:1.5;
 }
 
-body.light .research-project-meta{
-
-  color:#718598;
-}
-
-.meta-separator{
-
-  opacity:.45;
-}
-
-
-/* =========================================================
-   STATUS PILL
-========================================================= */
-
-.project-status,
-.output-status{
-
+.rp-status-pill{
   display:inline-flex;
-
   align-items:center;
 
-  gap:5px;
+  padding:4px 8px;
 
-  padding:
-    4px 9px;
-
-  border-radius:20px;
+  border-radius:15px;
 
   font-size:8px;
-
   font-weight:950;
-
-  letter-spacing:.45px;
+  letter-spacing:.6px;
 
   text-transform:uppercase;
 }
 
-.project-status::before{
-
+.rp-status-pill::before{
   content:"";
 
   width:5px;
   height:5px;
+
+  margin-right:5px;
 
   border-radius:50%;
 
   background:currentColor;
 
   box-shadow:
-    0 0 8px currentColor;
+    0 0 9px currentColor;
 }
 
-.project-status.ongoing{
+.rp-pill-ongoing{
+  color:var(--rp-teal);
 
-  color:#20c7bd;
+  background:rgba(32,212,186,.09);
 
-  background:
-    rgba(32,199,189,.10);
+  border:
+    1px solid
+    rgba(32,212,186,.20);
 }
 
-.project-status.completed{
+.rp-pill-funding{
+  color:var(--rp-gold);
 
-  color:#45c78b;
+  background:rgba(255,191,77,.09);
 
-  background:
-    rgba(69,199,139,.10);
+  border:
+    1px solid
+    rgba(255,191,77,.20);
 }
 
-.project-status.funding{
+.rp-pill-completed{
+  color:var(--rp-green);
 
-  color:#e6b54a;
+  background:rgba(69,211,139,.09);
 
-  background:
-    rgba(230,181,74,.10);
+  border:
+    1px solid
+    rgba(69,211,139,.20);
 }
 
-.output-status{
+.rp-pill-review{
+  color:var(--rp-purple);
 
-  color:#9a78e8;
+  background:rgba(154,120,232,.09);
 
-  background:
-    rgba(154,120,232,.10);
+  border:
+    1px solid
+    rgba(154,120,232,.20);
 }
 
-.output-status::before{
+.rp-project-arrow{
+  width:34px;
+  height:34px;
 
-  content:"";
-
-  width:5px;
-  height:5px;
-
-  border-radius:50%;
-
-  background:currentColor;
-
-  box-shadow:
-    0 0 8px currentColor;
-}
-
-.output-status{
-
-  color:#9a78e8;
-}
-
-
-/* =========================================================
-   SECONDARY OUTPUT STATUS
-========================================================= */
-
-.output-status{
-
-  padding:
-    4px 8px;
-
-  border-radius:18px;
-}
-
-.research-project-meta .output-status{
-
-  color:#b08cff;
-
-  background:
-    rgba(176,140,255,.10);
-
-  font-size:8px;
-
-  font-weight:950;
-
-  letter-spacing:.4px;
-
-  text-transform:uppercase;
-}
-
-
-/* =========================================================
-   ARROW
-========================================================= */
-
-.project-arrow{
-
-  width:36px;
-  height:36px;
-
-  flex:0 0 36px;
+  flex:0 0 34px;
 
   display:flex;
-
   align-items:center;
-
   justify-content:center;
 
   border-radius:11px;
 
-  color:#8da3b5;
+  color:#9db1c2;
 
-  background:
-    rgba(255,255,255,.035);
+  background:rgba(255,255,255,.028);
 
   border:
     1px solid
-    rgba(139,197,235,.10);
-
-  font-size:17px;
+    rgba(139,197,235,.08);
 
   transition:
-    transform .35s ease,
-    color .35s ease,
-    background .35s ease,
-    box-shadow .35s ease;
+    transform .46s cubic-bezier(.16,1,.3,1),
+    color .28s ease,
+    border-color .28s ease,
+    box-shadow .28s ease;
 }
 
-body.light .project-arrow{
+.rp-project-arrow svg{
+  width:17px;
+  height:17px;
 
-  color:#718598;
+  fill:none;
 
-  background:
-    rgba(30,82,119,.04);
+  stroke:currentColor;
+  stroke-width:1.9;
 
-  border-color:
-    rgba(30,82,119,.10);
+  stroke-linecap:round;
+  stroke-linejoin:round;
 }
 
-.research-project-card:hover
-.project-arrow{
-
-  color:
-    var(--project-accent);
+.rp-project-card:hover .rp-project-arrow{
+  color:var(--rp-accent);
 
   border-color:
-    var(--project-accent);
+    color-mix(
+      in srgb,
+      var(--rp-accent) 32%,
+      transparent
+    );
 
   box-shadow:
-    0 0 18px
-    var(--project-glow);
+    0 0 18px var(--rp-glow);
 }
 
-.research-project-card.open
-.project-arrow{
-
-  transform:
-    rotate(180deg);
-
-  color:
-    var(--project-accent);
-
-  border-color:
-    var(--project-accent);
+.rp-project-card.is-open .rp-project-arrow{
+  transform:rotate(180deg);
+  color:var(--rp-accent);
 }
 
 
 /* =========================================================
-   PROJECT CONTENT
+   12 · PROJECT ACCORDION
 ========================================================= */
 
-.research-project-content{
-
+.rp-project-content{
   display:grid;
 
-  grid-template-rows:
-    0fr;
-
-  border-top:
-    1px solid
-    transparent;
+  grid-template-rows:0fr;
 
   transition:
-    grid-template-rows .46s
-    cubic-bezier(.2,.8,.2,1),
-    border-color .35s ease;
+    grid-template-rows
+    .55s cubic-bezier(.16,1,.3,1);
 }
 
-.research-project-card.open
-.research-project-content{
-
-  grid-template-rows:
-    1fr;
-
-  border-top-color:
-    rgba(139,197,235,.09);
-}
-
-.project-content-inner{
-
+.rp-project-inner{
   min-height:0;
-
   overflow:hidden;
 
   display:grid;
 
   grid-template-columns:
-    1.15fr .85fr;
+    1.55fr .95fr;
 
-  gap:22px;
+  gap:24px;
 
   padding:
-    0 24px;
+    0 20px;
+
+  opacity:0;
+
+  transform:
+    translateY(-6px);
 
   transition:
-    padding .46s ease;
+    padding .45s ease,
+    opacity .35s ease,
+    transform .45s ease;
 }
 
-.research-project-card.open
-.project-content-inner{
+.rp-project-card.is-open
+.rp-project-content{
+  grid-template-rows:1fr;
+}
 
+.rp-project-card.is-open
+.rp-project-inner{
   padding:
-    20px 24px 23px;
+    0 20px 21px;
+
+  opacity:1;
+
+  transform:
+    translateY(0);
 }
 
+.rp-detail-label{
+  margin-bottom:9px;
 
-/* =========================================================
-   DETAILS
-========================================================= */
-
-.project-detail-label{
-
-  margin-bottom:7px;
-
-  color:
-    var(--project-accent);
+  color:#6f8ca2;
 
   font-size:8px;
-
   font-weight:950;
-
-  letter-spacing:1.5px;
+  letter-spacing:1.7px;
 
   text-transform:uppercase;
 }
 
-.project-description-column p{
-
+.rp-project-inner p{
   margin:0;
 
   color:#a8bac9;
 
   font-size:11.5px;
-
   line-height:1.85;
 }
 
-body.light .project-description-column p{
-
-  color:#526b82;
-}
-
-.project-info-box{
-
-  padding:
-    14px 15px;
-
-  border-radius:14px;
-
-  background:
-    rgba(255,255,255,.025);
-
-  border:
-    1px solid
-    rgba(139,197,235,.09);
-}
-
-body.light .project-info-box{
-
-  background:
-    rgba(30,82,119,.03);
-
-  border-color:
-    rgba(30,82,119,.08);
-}
-
-.project-info-row{
-
+.rp-pill-row{
   display:flex;
-
-  flex-direction:column;
-
-  gap:3px;
-
-  padding:
-    7px 0;
-
-  border-bottom:
-    1px solid
-    rgba(139,197,235,.07);
-}
-
-.project-info-row:last-child{
-
-  border-bottom:0;
-}
-
-.project-info-row span{
-
-  color:#738ba0;
-
-  font-size:8px;
-
-  font-weight:900;
-
-  letter-spacing:1px;
-
-  text-transform:uppercase;
-}
-
-.project-info-row strong{
-
-  color:#dce7f0;
-
-  font-size:10.5px;
-
-  font-weight:800;
-
-  line-height:1.5;
-}
-
-body.light .project-info-row strong{
-
-  color:#24445d;
-}
-
-
-/* =========================================================
-   WORK PILLS
-========================================================= */
-
-.work-pill-row{
-
-  display:flex;
-
   flex-wrap:wrap;
 
   gap:7px;
@@ -3301,74 +3233,150 @@ body.light .project-info-row strong{
   margin-top:15px;
 }
 
-.work-pill-row span{
-
+.rp-pill-row > span{
   display:inline-flex;
-
   align-items:center;
 
-  padding:
-    5px 9px;
+  padding:5px 9px;
 
   border-radius:18px;
 
+  color:
+    color-mix(
+      in srgb,
+      var(--rp-accent) 94%,
+      white
+    );
+
   background:
-    var(--project-glow);
+    color-mix(
+      in srgb,
+      var(--rp-accent) 9%,
+      transparent
+    );
 
   border:
     1px solid
-    rgba(139,197,235,.13);
-
-  color:
-    var(--project-accent);
+    color-mix(
+      in srgb,
+      var(--rp-accent) 18%,
+      transparent
+    );
 
   font-size:8px;
-
   font-weight:900;
 }
 
-.completed-pill{
-
-  color:#45c78b !important;
-
-  background:
-    rgba(69,199,139,.10) !important;
+.rp-pill-done{
+  color:var(--rp-green) !important;
+  background:rgba(69,211,139,.09) !important;
+  border-color:rgba(69,211,139,.18) !important;
 }
 
-.funding-pill{
+.rp-info-box{
+  padding:14px 15px;
 
-  color:#e6b54a !important;
+  border-radius:14px;
 
-  background:
-    rgba(230,181,74,.10) !important;
+  background:rgba(255,255,255,.023);
+
+  border:
+    1px solid
+    rgba(139,197,235,.08);
+}
+
+.rp-info-row{
+  display:flex;
+  flex-direction:column;
+
+  gap:3px;
+
+  padding:7px 0;
+
+  border-bottom:
+    1px solid
+    rgba(139,197,235,.065);
+}
+
+.rp-info-row:last-child{
+  border-bottom:0;
+}
+
+.rp-info-row span{
+  color:#728a9e;
+
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:1px;
+
+  text-transform:uppercase;
+}
+
+.rp-info-row strong{
+  color:#dce7f0;
+
+  font-size:10.5px;
+  font-weight:800;
+  line-height:1.5;
 }
 
 
 /* =========================================================
-   PROJECT HOVER
+   13 · FILTERED PROJECTS
 ========================================================= */
 
-.research-project-card:hover{
+.rp-project-card.is-filtered-out{
+  max-height:0 !important;
+
+  margin-top:0 !important;
+  margin-bottom:0 !important;
+
+  opacity:0 !important;
 
   transform:
-    translateY(-3px);
+    scale(.965) !important;
 
-  border-color:
-    var(--project-accent);
+  pointer-events:none !important;
 
-  box-shadow:
-    0 20px 48px rgba(0,0,0,.24),
-    0 0 28px
-    var(--project-glow);
+  border-width:0 !important;
+}
+
+.rp-project-card.rp-filter-enter{
+  animation:
+    rpFilterEnter
+    .55s
+    cubic-bezier(.16,1,.3,1)
+    both;
+}
+
+@keyframes rpFilterEnter{
+  from{
+    opacity:0;
+
+    transform:
+      translateY(16px)
+      scale(.98);
+  }
+
+  to{
+    opacity:1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
 }
 
 
 /* =========================================================
-   OUTPUTS
+   14 · LABS
 ========================================================= */
 
-.research-output-grid{
+.rp-labs-section{
+  position:relative;
+}
 
+.rp-lab-grid{
   display:grid;
 
   grid-template-columns:
@@ -3376,234 +3384,272 @@ body.light .project-info-row strong{
 
   gap:18px;
 
-  margin-bottom:72px;
+  margin-bottom:75px;
 }
 
-.research-output-card{
-
+.rp-lab-card{
   position:relative;
+  overflow:hidden;
 
-  padding:
-    24px;
+  min-height:285px;
 
-  border-radius:21px;
+  padding:25px;
+
+  border-radius:22px;
+
+  border:
+    1px solid
+    rgba(139,197,235,.10);
 
   background:
-
     linear-gradient(
       145deg,
       rgba(17,35,57,.86),
-      rgba(9,24,41,.76)
+      rgba(9,24,41,.73)
     );
 
-  border:
-    1px solid
-    rgba(139,197,235,.12);
-
   box-shadow:
-    0 15px 40px rgba(0,0,0,.18);
-
-  overflow:hidden;
-
-  transition:
-    transform .36s ease,
-    box-shadow .36s ease,
-    border-color .36s ease;
-}
-
-body.light .research-output-card{
-
-  background:
-    rgba(255,255,255,.94);
-
-  border-color:
-    rgba(30,82,119,.11);
-
-  box-shadow:
-    0 14px 38px rgba(23,65,95,.08);
-}
-
-.research-output-card:hover{
+    0 16px 42px rgba(0,0,0,.18),
+    inset 0 1px 0 rgba(255,255,255,.024);
 
   transform:
-    translateY(-8px);
+    perspective(1050px)
+    rotateX(var(--tilt-y))
+    rotateY(var(--tilt-x))
+    translateY(0)
+    scale(1);
 
-  border-color:
-    var(--output-accent);
-
-  box-shadow:
-    0 25px 55px rgba(0,0,0,.24),
-    0 0 28px
-    var(--output-glow);
+  transition:
+    transform .58s cubic-bezier(.16,1,.3,1),
+    border-color .38s ease,
+    box-shadow .55s ease;
 }
 
-.output-blue{
 
-  --output-accent:#31a9e6;
-  --output-glow:rgba(49,169,230,.23);
+/* LAB COLORS */
+
+.rp-lab-rose{
+  --rp-accent:var(--rp-rose);
+  --rp-soft:rgba(239,121,148,.10);
+  --rp-glow:rgba(239,121,148,.29);
 }
 
-.output-purple{
-
-  --output-accent:#9a78e8;
-  --output-glow:rgba(154,120,232,.24);
+.rp-lab-cyan{
+  --rp-accent:var(--rp-cyan);
+  --rp-soft:rgba(72,199,255,.10);
+  --rp-glow:rgba(72,199,255,.29);
 }
 
-.output-gold{
-
-  --output-accent:#e6b54a;
-  --output-glow:rgba(230,181,74,.24);
+.rp-lab-violet{
+  --rp-accent:var(--rp-violet);
+  --rp-soft:rgba(176,140,255,.10);
+  --rp-glow:rgba(176,140,255,.29);
 }
 
-.research-output-card::before{
+.rp-lab-icon{
+  position:relative;
+  z-index:2;
 
-  content:"";
+  width:58px;
+  height:58px;
 
-  position:absolute;
-
-  left:0;
-  top:0;
-  bottom:0;
-
-  width:4px;
-
-  background:
-    var(--output-accent);
-
-  opacity:.85;
-}
-
-.output-status{
-
-  display:inline-flex;
-
+  display:flex;
   align-items:center;
+  justify-content:center;
 
-  margin-bottom:15px;
+  margin-bottom:19px;
 
-  padding:
-    5px 10px;
+  border-radius:17px;
 
-  border-radius:18px;
+  color:var(--rp-accent);
 
-  color:
-    var(--output-accent);
-
-  background:
-    var(--output-glow);
+  background:var(--rp-soft);
 
   border:
     1px solid
-    var(--output-accent);
+    color-mix(
+      in srgb,
+      var(--rp-accent) 34%,
+      transparent
+    );
+
+  transition:
+    transform .50s cubic-bezier(.16,1,.3,1),
+    box-shadow .42s ease;
+}
+
+.rp-lab-card:hover .rp-lab-icon{
+  transform:
+    scale(1.10)
+    rotate(-4deg);
+
+  box-shadow:
+    0 0 25px var(--rp-glow);
+}
+
+.rp-lab-icon svg{
+  width:26px;
+  height:26px;
+
+  fill:none;
+
+  stroke:currentColor;
+  stroke-width:1.7;
+
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+.rp-lab-kicker{
+  position:relative;
+  z-index:2;
+
+  color:
+    color-mix(
+      in srgb,
+      var(--rp-accent) 86%,
+      white
+    );
 
   font-size:8px;
-
   font-weight:950;
-
-  letter-spacing:.7px;
+  letter-spacing:1.8px;
 
   text-transform:uppercase;
 }
 
-.research-output-card h3{
+.rp-lab-card h3{
+  position:relative;
+  z-index:2;
 
-  margin:0 0 14px;
+  margin:7px 0 18px;
 
   color:#edf6ff;
 
-  font-size:14px;
+  font-size:19px;
+  line-height:1.2;
 
-  line-height:1.52;
-
-  font-weight:900;
+  font-weight:950;
 }
 
-body.light .research-output-card h3{
+.rp-lab-line{
+  position:relative;
+  z-index:2;
 
-  color:#193a50;
-}
-
-.research-output-card h3 em{
-
-  font-weight:700;
-}
-
-.output-meta{
-
-  display:flex;
-
-  flex-direction:column;
-
-  gap:6px;
-
-  color:#8399aa;
-
-  font-size:9.5px;
-
-  line-height:1.6;
-}
-
-body.light .output-meta{
-
-  color:#6c8194;
-}
-
-.output-reference{
-
-  margin-top:15px;
-
-  padding-top:13px;
+  padding:11px 0;
 
   border-top:
     1px solid
-    rgba(139,197,235,.08);
+    rgba(139,197,235,.07);
 
-  color:#8299ac;
-
-  font-size:9px;
-
-  line-height:1.6;
+  border-bottom:
+    1px solid
+    rgba(139,197,235,.07);
 }
 
-body.light .output-reference{
+.rp-lab-line span{
+  display:block;
 
-  color:#71869a;
+  margin-bottom:4px;
+
+  color:#71899d;
+
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:1px;
+
+  text-transform:uppercase;
 }
 
-.output-link{
+.rp-lab-line strong{
+  display:block;
 
-  display:inline-block;
+  color:#dce8f1;
 
-  margin-top:15px;
+  font-size:11px;
+  font-weight:850;
 
-  color:
-    var(--output-accent);
+  line-height:1.55;
+}
+
+.rp-lab-period{
+  position:relative;
+  z-index:2;
+
+  display:flex;
+  align-items:center;
+
+  gap:8px;
+
+  margin-top:14px;
+
+  color:#a3b7c8;
 
   font-size:10px;
-
-  font-weight:950;
-
-  transition:
-    transform .28s ease;
+  font-weight:800;
 }
 
-.output-link:hover{
+.rp-lab-period span:nth-child(2){
+  color:var(--rp-accent);
+  font-size:12px;
+}
 
-  transform:
-    translateX(5px);
+.rp-lab-status{
+  position:relative;
+  z-index:2;
+
+  display:inline-flex;
+  align-items:center;
+
+  gap:6px;
+
+  margin-top:16px;
+
+  padding:5px 9px;
+
+  border-radius:15px;
+
+  color:var(--rp-accent);
+
+  background:var(--rp-soft);
+
+  border:
+    1px solid
+    color-mix(
+      in srgb,
+      var(--rp-accent) 26%,
+      transparent
+    );
+
+  font-size:8px;
+  font-weight:950;
+  letter-spacing:.8px;
+
+  text-transform:uppercase;
+}
+
+.rp-lab-status::before{
+  content:"";
+
+  width:5px;
+  height:5px;
+
+  border-radius:50%;
+
+  background:currentColor;
+
+  box-shadow:
+    0 0 10px currentColor;
 }
 
 
 /* =========================================================
-   FOOTER
+   15 · FOOTER
 ========================================================= */
 
-.research-page-footer{
-
+.rp-footer{
   display:flex;
-
   align-items:center;
-
   justify-content:center;
 
   gap:15px;
@@ -3611,59 +3657,254 @@ body.light .output-reference{
   text-align:center;
 }
 
-.research-page-footer p{
-
-  max-width:700px;
-
-  margin:0;
-
-  color:#70879a;
-
-  font-size:10.5px;
-
-  line-height:1.7;
-}
-
-body.light .research-page-footer p{
-
-  color:#71869a;
-}
-
-.research-page-footer-line{
-
-  width:55px;
-
+.rp-footer > span{
+  width:58px;
   height:1px;
 
   background:
     linear-gradient(
       90deg,
       transparent,
-      rgba(49,169,230,.35)
+      rgba(72,199,255,.34)
     );
+}
+
+.rp-footer > span:last-child{
+  background:
+    linear-gradient(
+      90deg,
+      rgba(72,199,255,.34),
+      transparent
+    );
+}
+
+.rp-footer p{
+  max-width:720px;
+
+  margin:0;
+
+  color:#70879a;
+
+  font-size:10.5px;
+  line-height:1.7;
 }
 
 
 /* =========================================================
-   MOBILE
+   16 · REVEAL ANIMATION
 ========================================================= */
 
-@media(max-width:900px){
+.rp-reveal{
+  opacity:0;
 
-  .research-profile-grid{
+  transform:
+    translateY(21px);
 
+  transition:
+    opacity .72s ease,
+    transform .72s cubic-bezier(.16,1,.3,1);
+}
+
+.rp-reveal.rp-visible{
+  opacity:1;
+
+  transform:
+    translateY(0);
+}
+
+
+/* =========================================================
+   17 · LIGHT MODE
+========================================================= */
+
+body.light .rp-page{
+  color:#17324a;
+
+  background:
+    radial-gradient(
+      circle at 4% 7%,
+      rgba(49,169,230,.08),
+      transparent 23%
+    ),
+    radial-gradient(
+      circle at 96% 32%,
+      rgba(154,120,232,.07),
+      transparent 25%
+    ),
+    linear-gradient(
+      135deg,
+      #eef8fc,
+      #f8fafc 55%,
+      #f4eff9
+    );
+}
+
+body.light .rp-hero h2{
+  background:
+    linear-gradient(
+      115deg,
+      #14344d 8%,
+      #216d91 50%,
+      #704fa2 94%
+    );
+
+  -webkit-background-clip:text;
+  background-clip:text;
+
+  color:transparent;
+}
+
+body.light .rp-profile-card,
+body.light .rp-status-card,
+body.light .rp-project-card,
+body.light .rp-lab-card{
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.96),
+      rgba(246,250,253,.91)
+    );
+
+  border-color:
+    rgba(30,82,119,.10);
+
+  box-shadow:
+    0 16px 42px
+    rgba(23,65,95,.08);
+}
+
+body.light .rp-profile-header h3,
+body.light .rp-section-heading h2,
+body.light .rp-project-title,
+body.light .rp-lab-card h3{
+  color:#17344c;
+}
+
+body.light .rp-profile-item{
+  background:
+    rgba(255,255,255,.75);
+
+  border-color:
+    rgba(30,82,119,.08);
+
+  color:#29455d;
+}
+
+body.light .rp-status-card > span{
+  color:#21415a;
+}
+
+body.light .rp-project-inner p{
+  color:#587087;
+}
+
+body.light .rp-info-box{
+  background:
+    rgba(30,82,119,.025);
+
+  border-color:
+    rgba(30,82,119,.08);
+}
+
+body.light .rp-info-row{
+  border-color:
+    rgba(30,82,119,.07);
+}
+
+body.light .rp-info-row strong{
+  color:#24445d;
+}
+
+body.light .rp-flex-card{
+  background:
+    linear-gradient(
+      135deg,
+      #e9f6fb,
+      #f4f9fc 55%,
+      #f1ebf8
+    );
+
+  border-color:
+    rgba(30,82,119,.11);
+}
+
+body.light .rp-flex-card h3{
+  color:#173b55;
+}
+
+body.light .rp-flex-card p{
+  color:#587087;
+}
+
+body.light .rp-filter-wrap{
+  background:
+    rgba(255,255,255,.72);
+
+  border-color:
+    rgba(30,82,119,.09);
+}
+
+body.light .rp-filter-btn{
+  color:#688095;
+}
+
+body.light .rp-filter-btn.is-active{
+  color:#173b55;
+}
+
+body.light .rp-filter-note{
+  color:#678095;
+}
+
+body.light .rp-filter-note strong{
+  color:#36566e;
+}
+
+body.light .rp-footer p{
+  color:#71869a;
+}
+
+
+/* =========================================================
+   18 · RESPONSIVE
+========================================================= */
+
+@media(max-width:1000px){
+
+  .rp-status-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .rp-lab-grid{
     grid-template-columns:1fr;
   }
 
-  .research-output-grid{
-
-    grid-template-columns:
-      1fr 1fr;
+  .rp-lab-card{
+    min-height:255px;
   }
 
-  .project-content-inner{
+}
 
+
+@media(max-width:850px){
+
+  .rp-profile-grid{
     grid-template-columns:1fr;
+  }
+
+  .rp-project-inner{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .rp-filter-wrap{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .rp-filter-note{
+    padding:
+      0 5px 4px;
   }
 
 }
@@ -3671,121 +3912,176 @@ body.light .research-page-footer p{
 
 @media(max-width:650px){
 
-  .research-page{
-
-    padding:
-      78px 0;
+  .rp-page{
+    padding:78px 0 70px;
   }
 
-  .research-profile-card{
+  .rp-container{
+    width:
+      min(
+        100% - 26px,
+        1180px
+      );
+  }
 
+  .rp-hero{
+    margin-bottom:36px;
+  }
+
+  .rp-hero h2{
+    font-size:31px;
+    letter-spacing:-1.2px;
+  }
+
+  .rp-hero p{
+    font-size:13px;
+  }
+
+  .rp-profile-card{
     padding:21px;
   }
 
-  .research-status-summary{
+  .rp-flex-card{
+    flex-direction:column;
 
-    grid-template-columns:
-      repeat(2,1fr);
+    text-align:center;
+
+    padding:22px 18px;
+
+    margin-bottom:66px;
   }
 
-  .research-output-grid{
-
-    grid-template-columns:1fr;
-  }
-
-  .research-project-header{
-
-    padding:
-      17px 14px 17px 18px;
-  }
-
-  .research-project-title-row{
-
+  .rp-status-grid{
     gap:9px;
   }
 
-  .project-index{
+  .rp-status-card{
+    min-height:165px;
 
+    padding:19px 10px;
+  }
+
+  .rp-status-icon{
+    width:49px;
+    height:49px;
+
+    margin-bottom:14px;
+  }
+
+  .rp-status-card strong{
+    font-size:38px;
+  }
+
+  .rp-status-card > span{
+    font-size:8px;
+  }
+
+  .rp-filter-bar{
+    width:100%;
+  }
+
+  .rp-filter-btn{
+    flex:1;
+
+    justify-content:center;
+
+    padding:10px 9px;
+
+    font-size:9px;
+  }
+
+  .rp-project-trigger{
+    gap:11px;
+
+    padding:
+      16px 13px 16px 15px;
+  }
+
+  .rp-project-title-row{
+    gap:8px;
+  }
+
+  .rp-project-index{
     width:26px;
     height:26px;
 
     flex-basis:26px;
   }
 
-  .research-project-title-row h3{
-
-    font-size:13.5px;
+  .rp-project-title{
+    font-size:12.5px;
   }
 
-  .research-project-meta{
+  .rp-project-meta{
+    margin-left:34px;
 
-    margin-left:35px;
-
-    font-size:9px;
+    font-size:8.5px;
   }
 
-  .project-arrow{
+  .rp-project-arrow{
+    width:31px;
+    height:31px;
 
-    width:32px;
-    height:32px;
-
-    flex-basis:32px;
+    flex-basis:31px;
   }
 
-  .project-content-inner{
-
+  .rp-project-card.is-open
+  .rp-project-inner{
     padding:
-      0 18px;
+      0 15px 18px;
   }
 
-  .research-project-card.open
-  .project-content-inner{
-
-    padding:
-      17px 18px 20px;
+  .rp-lab-card{
+    padding:22px;
   }
 
-  .research-flex-card{
-
-    flex-direction:column;
-
-    padding:
-      22px 18px;
-  }
-
-  .research-page-footer-line{
-
+  .rp-footer > span{
     display:none;
   }
 
 }
 
 
-/* =========================================================
-   VERY SMALL SCREENS
-========================================================= */
-
 @media(max-width:430px){
 
-  .research-page-header h2{
-
-    font-size:31px;
+  .rp-status-grid{
+    grid-template-columns:1fr 1fr;
   }
 
-  .research-status-summary{
-
-    gap:8px;
+  .rp-status-card{
+    min-height:150px;
   }
 
-  .status-summary-card{
-
-    padding:
-      13px 8px;
+  .rp-filter-btn small{
+    display:none;
   }
 
-  .status-summary-card strong{
+  .rp-project-meta{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:5px;
+  }
 
-    font-size:22px;
+}
+
+
+/* =========================================================
+   19 · REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  .rp-page *,
+  .rp-page::before,
+  .rp-page::after{
+    animation:none !important;
+    transition:none !important;
+  }
+
+  .rp-reveal{
+    opacity:1 !important;
+
+    transform:none !important;
   }
 
 }
@@ -3793,106 +4089,849 @@ body.light .research-page-footer p{
 </style>
 
 
-<!-- =========================================================
-     RESEARCH PAGE JAVASCRIPT
-========================================================= -->
-
-<script>
-
-function toggleResearchPageProject(button){
-
-  const card =
-    button.closest(
-      ".research-project-card"
-    );
 
 
-  const allCards =
-    document.querySelectorAll(
-      ".research-project-card"
-    );
+<style id="rp-unified-premium-animation">
+/* =========================================================
+   FINAL OVERRIDE · ONE PREMIUM HOVER LANGUAGE EVERYWHERE
+
+   Applies the same visual language to:
+   • Research Interest cards
+   • Research Focus cards
+   • Interdisciplinary card
+   • Status cards
+   • Project cards
+   • Lab cards
+
+   Accent-bearing elements receive the same:
+   lift + zoom + glow + soft neon shadow.
+========================================================= */
 
 
-  allCards.forEach(
-    function(item){
+/* ---------- UNIVERSAL CARD MOTION ---------- */
 
-      if(item !== card){
-
-        item.classList.remove(
-          "open"
-        );
-
-      }
-
-    }
-  );
+.rp-profile-card,
+.rp-status-card,
+.rp-project-card,
+.rp-lab-card,
+.rp-flex-card{
+  will-change:transform, box-shadow, border-color;
+}
 
 
-  card.classList.toggle(
-    "open"
-  );
+/* ---------- PROFILE CARDS ---------- */
 
+.rp-profile-card:hover{
+  transform:
+    perspective(1050px)
+    rotateX(var(--tilt-y))
+    rotateY(var(--tilt-x))
+    translateY(-10px)
+    scale(1.025);
+}
+
+
+/* ---------- STATUS CARDS ---------- */
+
+.rp-status-card:hover{
+  transform:
+    perspective(1050px)
+    rotateX(var(--tilt-y))
+    rotateY(var(--tilt-x))
+    translateY(-12px)
+    scale(1.035);
+}
+
+
+/* ---------- PROJECT CARDS ---------- */
+
+.rp-project-card:hover{
+  transform:
+    perspective(1050px)
+    rotateX(var(--tilt-y))
+    rotateY(var(--tilt-x))
+    translateY(-9px)
+    scale(1.018);
+
+  border-color:var(--rp-accent);
+
+  box-shadow:
+    0 25px 62px rgba(0,0,0,.27),
+    0 0 30px var(--rp-glow),
+    inset 0 0 20px
+      color-mix(
+        in srgb,
+        var(--rp-accent) 7%,
+        transparent
+      );
+}
+
+
+/* ---------- LAB CARDS ---------- */
+
+.rp-lab-card:hover{
+  transform:
+    perspective(1050px)
+    rotateX(var(--tilt-y))
+    rotateY(var(--tilt-x))
+    translateY(-10px)
+    scale(1.025);
+}
+
+
+/* ---------- INTERDISCIPLINARY CARD ---------- */
+
+.rp-flex-card:hover{
+  transform:translateY(-8px) scale(1.012);
+
+  box-shadow:
+    0 25px 62px rgba(0,0,0,.27),
+    0 0 30px var(--rp-glow);
 }
 
 
 /* =========================================================
-   KEYBOARD ACCESS
+   EXACT "NUMBER" FEEL — APPLY IT TO ALL SMALL ACCENT
+   ELEMENTS, NOT ONLY THE BIG STATUS NUMBERS.
 ========================================================= */
 
-document.addEventListener(
-  "keydown",
-  function(event){
 
-    if(
-      event.key !== "Enter" &&
-      event.key !== " "
-    ){
+/* Main status number */
+.rp-status-card strong{
+  will-change:transform,text-shadow;
+}
 
-      return;
+.rp-status-card:hover strong{
+  transform:scale(1.13);
 
-    }
+  text-shadow:
+    0 0 12px var(--rp-glow),
+    0 0 28px var(--rp-glow),
+    0 0 46px
+      color-mix(
+        in srgb,
+        var(--rp-accent) 28%,
+        transparent
+      );
+}
 
 
-    const active =
-      document.activeElement;
+/* Research-interest numbers */
+.rp-item-number{
+  will-change:transform,box-shadow;
+}
+
+.rp-profile-item:hover .rp-item-number{
+  transform:
+    translateY(-2px)
+    scale(1.10);
+
+  box-shadow:
+    0 0 12px
+      color-mix(
+        in srgb,
+        var(--rp-item-color) 26%,
+        transparent
+      ),
+    inset 0 0 12px
+      color-mix(
+        in srgb,
+        var(--rp-item-color) 10%,
+        transparent
+      );
+}
 
 
-    if(
-      active &&
-      active.classList.contains(
-        "research-project-header"
-      )
-    ){
+/* Project numbers */
+.rp-project-index{
+  will-change:transform,box-shadow;
+}
 
-      event.preventDefault();
+.rp-project-card:hover .rp-project-index{
+  transform:
+    translateY(-2px)
+    scale(1.10);
 
-      active.click();
+  box-shadow:
+    0 0 14px var(--rp-glow),
+    inset 0 0 11px
+      color-mix(
+        in srgb,
+        var(--rp-accent) 11%,
+        transparent
+      );
 
-    }
+  text-shadow:
+    0 0 8px var(--rp-glow);
+}
 
+
+/* Lab icon = same visual treatment as the number block */
+.rp-lab-icon{
+  will-change:transform,box-shadow;
+}
+
+.rp-lab-card:hover .rp-lab-icon{
+  transform:
+    translateY(-4px)
+    scale(1.11)
+    rotate(-3deg);
+
+  box-shadow:
+    0 0 13px var(--rp-glow),
+    0 0 28px var(--rp-glow),
+    inset 0 0 16px var(--rp-soft);
+}
+
+
+/* Status icon = same family too */
+.rp-status-icon{
+  will-change:transform,box-shadow;
+}
+
+.rp-status-card:hover .rp-status-icon{
+  transform:
+    translateY(-5px)
+    scale(1.12)
+    rotate(3deg);
+
+  box-shadow:
+    0 0 13px var(--rp-glow),
+    0 0 28px var(--rp-glow),
+    inset 0 0 16px var(--rp-soft);
+}
+
+
+/* Profile icon */
+.rp-profile-icon{
+  will-change:transform,box-shadow;
+}
+
+.rp-profile-card:hover .rp-profile-icon{
+  transform:
+    translateY(-4px)
+    scale(1.11)
+    rotate(-4deg);
+
+  box-shadow:
+    0 0 13px var(--rp-glow),
+    0 0 28px var(--rp-glow),
+    inset 0 0 16px var(--rp-soft);
+}
+
+
+/* Interdisciplinary icon */
+.rp-flex-icon{
+  will-change:transform,box-shadow;
+}
+
+.rp-flex-card:hover .rp-flex-icon{
+  transform:
+    translateY(-4px)
+    scale(1.10)
+    rotate(-4deg);
+
+  box-shadow:
+    0 0 13px var(--rp-glow),
+    0 0 27px var(--rp-glow),
+    inset 0 0 15px var(--rp-soft);
+}
+
+
+/* =========================================================
+   PROJECT CONTENT / TITLE MICRO-ZOOM
+========================================================= */
+
+.rp-project-card .rp-project-title{
+  transition:
+    transform .42s cubic-bezier(.16,1,.3,1),
+    color .32s ease,
+    text-shadow .40s ease;
+}
+
+.rp-project-card:hover .rp-project-title{
+  transform:translateX(2px);
+
+  text-shadow:
+    0 0 12px
+      color-mix(
+        in srgb,
+        var(--rp-accent) 20%,
+        transparent
+      );
+}
+
+
+/* Lab title gets the same subtle response */
+.rp-lab-card h3{
+  transition:
+    transform .42s cubic-bezier(.16,1,.3,1),
+    text-shadow .40s ease;
+}
+
+.rp-lab-card:hover h3{
+  transform:translateY(-1px);
+
+  text-shadow:
+    0 0 12px
+      color-mix(
+        in srgb,
+        var(--rp-accent) 22%,
+        transparent
+      );
+}
+
+
+/* =========================================================
+   SMOOTH BORDER AURA
+========================================================= */
+
+.rp-profile-card:hover,
+.rp-status-card:hover,
+.rp-project-card:hover,
+.rp-lab-card:hover,
+.rp-flex-card:hover{
+  transition:
+    transform .58s cubic-bezier(.16,1,.3,1),
+    border-color .38s ease,
+    box-shadow .58s ease,
+    background .38s ease;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  .rp-profile-card:hover,
+  .rp-status-card:hover,
+  .rp-project-card:hover,
+  .rp-lab-card:hover,
+  .rp-flex-card:hover{
+    transform:none !important;
   }
-);
 
-</script>
+}
+</style>
+
+
+<!-- =========================================================
+     PREMIUM RESEARCH PAGE JAVASCRIPT
+========================================================= -->
+
 <script>
 (function(){
-  const items=document.querySelectorAll('.reveal');
-  if('IntersectionObserver' in window){
-    const io=new IntersectionObserver(entries=>{
-      entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('revealed');io.unobserve(e.target);}});
-    },{threshold:.08});
-    items.forEach(x=>io.observe(x));
-  }else{items.forEach(x=>x.classList.add('revealed'));}
 
-  const glow=document.querySelectorAll('.research-profile-card,.research-project-card,.research-output-card,.research-flex-card,.status-summary-card');
-  glow.forEach(el=>{
-    el.addEventListener('pointermove',e=>{
-      const r=el.getBoundingClientRect();
-      el.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');
-      el.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%');
+  const root =
+    document.getElementById("research");
+
+  if(!root) return;
+
+
+  /* =======================================================
+     01 · SCROLL REVEAL
+  ======================================================= */
+
+  const revealItems =
+    root.querySelectorAll(".rp-reveal");
+
+  if("IntersectionObserver" in window){
+
+    const revealObserver =
+      new IntersectionObserver(
+
+        function(entries, observer){
+
+          entries.forEach(function(entry){
+
+            if(entry.isIntersecting){
+
+              entry.target.classList.add(
+                "rp-visible"
+              );
+
+              observer.unobserve(
+                entry.target
+              );
+
+            }
+
+          });
+
+        },
+
+        {
+          threshold:0.08
+        }
+
+      );
+
+
+    revealItems.forEach(function(item){
+
+      revealObserver.observe(item);
+
     });
+
+  }else{
+
+    revealItems.forEach(function(item){
+
+      item.classList.add(
+        "rp-visible"
+      );
+
+    });
+
+  }
+
+
+  /* =======================================================
+     02 · MOUSE FOLLOW LIGHT
+  ======================================================= */
+
+  const glowCards =
+    root.querySelectorAll(".rp-card-glow");
+
+
+  glowCards.forEach(function(card){
+
+    card.addEventListener(
+      "pointermove",
+      function(event){
+
+        const rect =
+          card.getBoundingClientRect();
+
+
+        const x =
+          (
+            (event.clientX - rect.left)
+            / rect.width
+          ) * 100;
+
+
+        const y =
+          (
+            (event.clientY - rect.top)
+            / rect.height
+          ) * 100;
+
+
+        card.style.setProperty(
+          "--mx",
+          x + "%"
+        );
+
+
+        card.style.setProperty(
+          "--my",
+          y + "%"
+        );
+
+      }
+    );
+
   });
+
+
+  /* =======================================================
+     03 · SUBTLE 3D TILT
+  ======================================================= */
+
+  const tiltCards =
+    root.querySelectorAll(".rp-tilt, .rp-project-card");
+
+
+  tiltCards.forEach(function(card){
+
+    card.addEventListener(
+      "pointermove",
+      function(event){
+
+        const rect =
+          card.getBoundingClientRect();
+
+
+        const px =
+          (
+            event.clientX - rect.left
+          ) / rect.width;
+
+
+        const py =
+          (
+            event.clientY - rect.top
+          ) / rect.height;
+
+
+        const rotateY =
+          (px - 0.5) * 4.5;
+
+
+        const rotateX =
+          (0.5 - py) * 4.5;
+
+
+        card.style.setProperty(
+          "--tilt-x",
+          rotateY.toFixed(2) + "deg"
+        );
+
+
+        card.style.setProperty(
+          "--tilt-y",
+          rotateX.toFixed(2) + "deg"
+        );
+
+      }
+    );
+
+
+    card.addEventListener(
+      "pointerleave",
+      function(){
+
+        card.style.setProperty(
+          "--tilt-x",
+          "0deg"
+        );
+
+        card.style.setProperty(
+          "--tilt-y",
+          "0deg"
+        );
+
+      }
+    );
+
+  });
+
+
+  /* =======================================================
+     04 · PROJECT ACCORDION
+     One open card at a time
+  ======================================================= */
+
+  const projectCards =
+    Array.from(
+      root.querySelectorAll(
+        ".rp-project-card"
+      )
+    );
+
+
+  projectCards.forEach(function(card){
+
+    const trigger =
+      card.querySelector(
+        ".rp-project-trigger"
+      );
+
+
+    if(!trigger) return;
+
+
+    trigger.addEventListener(
+      "click",
+      function(){
+
+        const wasOpen =
+          card.classList.contains(
+            "is-open"
+          );
+
+
+        projectCards.forEach(
+          function(item){
+
+            if(item !== card){
+
+              item.classList.remove(
+                "is-open"
+              );
+
+
+              const otherTrigger =
+                item.querySelector(
+                  ".rp-project-trigger"
+                );
+
+
+              if(otherTrigger){
+
+                otherTrigger.setAttribute(
+                  "aria-expanded",
+                  "false"
+                );
+
+              }
+
+            }
+
+          }
+        );
+
+
+        if(wasOpen){
+
+          card.classList.remove(
+            "is-open"
+          );
+
+
+          trigger.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        }else{
+
+          card.classList.add(
+            "is-open"
+          );
+
+
+          trigger.setAttribute(
+            "aria-expanded",
+            "true"
+          );
+
+        }
+
+      }
+    );
+
+  });
+
+
+  /* =======================================================
+     05 · FILTER SYSTEM
+     ALL = DEFAULT
+
+     funding = only visible in ALL
+  ======================================================= */
+
+  const filterButtons =
+    Array.from(
+      root.querySelectorAll(
+        ".rp-filter-btn"
+      )
+    );
+
+
+  function applyFilter(filter){
+
+    filterButtons.forEach(
+      function(button){
+
+        const active =
+          button.dataset.filter === filter;
+
+
+        button.classList.toggle(
+          "is-active",
+          active
+        );
+
+
+        button.setAttribute(
+          "aria-selected",
+          active
+            ? "true"
+            : "false"
+        );
+
+      }
+    );
+
+
+    projectCards.forEach(
+      function(card,index){
+
+        const status =
+          card.dataset.status;
+
+
+        const match =
+          filter === "all"
+          || status === filter;
+
+
+        if(!match){
+
+          card.classList.remove(
+            "is-open"
+          );
+
+          card.classList.add(
+            "is-filtered-out"
+          );
+
+
+          const trigger =
+            card.querySelector(
+              ".rp-project-trigger"
+            );
+
+
+          if(trigger){
+
+            trigger.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+          }
+
+        }else{
+
+          card.classList.remove(
+            "is-filtered-out"
+          );
+
+
+          card.style.setProperty(
+            "--filter-delay",
+            (index * 45) + "ms"
+          );
+
+
+          card.classList.remove(
+            "rp-filter-enter"
+          );
+
+
+          void card.offsetWidth;
+
+
+          card.classList.add(
+            "rp-filter-enter"
+          );
+
+        }
+
+      }
+    );
+
+  }
+
+
+  filterButtons.forEach(
+    function(button){
+
+      button.addEventListener(
+        "click",
+        function(){
+
+          applyFilter(
+            button.dataset.filter
+          );
+
+        }
+      );
+
+
+      /* Keyboard navigation */
+
+      button.addEventListener(
+        "keydown",
+        function(event){
+
+          const currentIndex =
+            filterButtons.indexOf(
+              button
+            );
+
+
+          if(
+            event.key === "ArrowRight"
+            ||
+            event.key === "ArrowDown"
+          ){
+
+            event.preventDefault();
+
+
+            const next =
+              filterButtons[
+                (
+                  currentIndex + 1
+                ) %
+                filterButtons.length
+              ];
+
+
+            next.focus();
+
+          }
+
+
+          if(
+            event.key === "ArrowLeft"
+            ||
+            event.key === "ArrowUp"
+          ){
+
+            event.preventDefault();
+
+
+            const previous =
+              filterButtons[
+                (
+                  currentIndex - 1
+                  +
+                  filterButtons.length
+                ) %
+                filterButtons.length
+              ];
+
+
+            previous.focus();
+
+          }
+
+        }
+      );
+
+    }
+  );
+
+
+  /* =======================================================
+     06 · DEFAULT VIEW = ALL
+  ======================================================= */
+
+  applyFilter("all");
+
+
+  /* =======================================================
+     07 · REMOVE FILTER ENTRY CLASS AFTER ANIMATION
+  ======================================================= */
+
+  projectCards.forEach(
+    function(card){
+
+      card.addEventListener(
+        "animationend",
+        function(){
+
+          card.classList.remove(
+            "rp-filter-enter"
+          );
+
+        }
+      );
+
+    }
+  );
+
+
 })();
 </script>
-</body>
-</html>
+
+<!-- =========================================================
+     END: COMPLETE PREMIUM RESEARCH PAGE
+========================================================= -->
