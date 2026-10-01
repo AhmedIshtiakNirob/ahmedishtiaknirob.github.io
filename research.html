@@ -1,3 +1,12 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#06131f">
+  <title>Dr. Ahmed Ishtiak Nirob — Research</title>
+</head>
+<body>
 <!-- =========================================================
      DR. AHMED ISHTIAK NIROB — COMPLETE PREMIUM RESEARCH PAGE
      ---------------------------------------------------------
@@ -35,6 +44,30 @@
      ✓ Mobile responsive
 ========================================================= -->
 
+
+<script>
+/* =========================================================
+   MOBILE VIEWPORT SAFETY
+   Ensures the research section uses the real device width
+   even when this block is pasted into a page lacking the
+   standard viewport meta tag.
+========================================================= */
+(function(){
+  try{
+    var meta = document.querySelector('meta[name="viewport"]');
+    var content = 'width=device-width, initial-scale=1, viewport-fit=cover';
+
+    if(!meta){
+      meta = document.createElement('meta');
+      meta.name = 'viewport';
+      meta.content = content;
+      (document.head || document.documentElement).appendChild(meta);
+    }else if(!/width\s*=\s*device-width/i.test(meta.content || '')){
+      meta.content = content;
+    }
+  }catch(e){}
+})();
+</script>
 
 <section class="rp-page" id="research">
 
@@ -7126,6 +7159,203 @@ body.light .rp-footer p{
 }
 </style>
 
+<style id="rp-mobile-gallery-final">
+/* =========================================================
+   FINAL RESPONSIVE IMAGE / GALLERY CORRECTION
+   - removes stretched dark gaps
+   - keeps every image inside its own card
+   - preserves the premium card styling
+   - desktop remains multi-column
+   - phones collapse cleanly
+========================================================= */
+
+#research .rp-project-media-grid,
+#research .rp-gallery-grid{
+  align-items:start;
+}
+
+#research .rp-media-card,
+#research .rp-media-feature,
+#research .rp-gallery-item{
+  height:auto !important;
+  min-height:0 !important;
+  align-self:start !important;
+}
+
+#research .rp-media-frame{
+  height:auto !important;
+  min-height:0 !important;
+}
+
+#research .rp-media-frame img{
+  display:block;
+  width:100%;
+  height:220px !important;
+  min-height:0 !important;
+  aspect-ratio:4 / 3;
+  object-fit:cover;
+}
+
+#research .rp-media-feature .rp-media-frame img{
+  height:310px !important;
+  aspect-ratio:16 / 9;
+  object-fit:cover;
+}
+
+#research .rp-gallery-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.18fr) repeat(2,minmax(0,1fr));
+  grid-auto-rows:auto;
+  gap:18px;
+}
+
+#research .rp-gallery-feature{
+  grid-column:1 !important;
+  grid-row:span 2 !important;
+}
+
+#research .rp-gallery-image{
+  height:auto !important;
+  min-height:0 !important;
+  aspect-ratio:4 / 3;
+}
+
+#research .rp-gallery-feature .rp-gallery-image{
+  height:auto !important;
+  min-height:0 !important;
+  aspect-ratio:4 / 5;
+}
+
+#research .rp-gallery-image img,
+#research .rp-gallery-feature .rp-gallery-image img{
+  display:block;
+  width:100%;
+  height:100% !important;
+  min-height:0 !important;
+  aspect-ratio:auto;
+  object-fit:cover;
+}
+
+#research .rp-gallery-caption{
+  left:14px;
+  right:14px;
+  bottom:14px;
+}
+
+@media (max-width: 900px){
+  #research .rp-gallery-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  #research .rp-gallery-feature{
+    grid-column:1 / -1 !important;
+    grid-row:auto !important;
+  }
+
+  #research .rp-gallery-feature .rp-gallery-image{
+    aspect-ratio:16 / 10;
+  }
+}
+
+@media (max-width: 760px){
+  #research .rp-container{
+    width:calc(100% - 24px) !important;
+    max-width:100% !important;
+  }
+
+  #research .rp-project-media-grid{
+    grid-template-columns:1fr !important;
+    gap:14px;
+  }
+
+  #research .rp-media-feature{
+    grid-column:auto !important;
+  }
+
+  #research .rp-media-frame img,
+  #research .rp-media-feature .rp-media-frame img{
+    width:100%;
+    height:auto !important;
+    min-height:0 !important;
+    aspect-ratio:16 / 10;
+    object-fit:cover;
+  }
+
+  #research .rp-gallery-grid{
+    grid-template-columns:1fr !important;
+    gap:14px;
+  }
+
+  #research .rp-gallery-feature{
+    grid-column:auto !important;
+    grid-row:auto !important;
+  }
+
+  #research .rp-gallery-image,
+  #research .rp-gallery-feature .rp-gallery-image{
+    height:auto !important;
+    min-height:0 !important;
+    aspect-ratio:16 / 10;
+  }
+
+  #research .rp-gallery-image img,
+  #research .rp-gallery-feature .rp-gallery-image img{
+    height:100% !important;
+    min-height:0 !important;
+    object-fit:cover;
+  }
+
+  #research .rp-gallery-caption{
+    left:9px;
+    right:9px;
+    bottom:9px;
+    padding:9px 10px;
+  }
+
+  #research .rp-gallery-caption small{
+    font-size:7px;
+    letter-spacing:1.4px;
+  }
+
+  #research .rp-gallery-caption strong{
+    font-size:12px;
+    line-height:1.32;
+  }
+}
+
+@media (max-width: 480px){
+  #research .rp-container{
+    width:calc(100% - 18px) !important;
+    margin-inline:auto !important;
+  }
+
+  #research .rp-status-grid{
+    gap:8px;
+  }
+
+  #research .rp-project-trigger{
+    min-height:60px;
+  }
+
+  #research .rp-gallery-grid{
+    gap:12px;
+  }
+
+  #research .rp-gallery-image,
+  #research .rp-gallery-feature .rp-gallery-image{
+    aspect-ratio:4 / 3;
+  }
+
+  #research .rp-gallery-caption{
+    left:8px;
+    right:8px;
+    bottom:8px;
+    padding:8px 9px;
+    border-radius:11px;
+  }
+}
+</style>
+
 <!-- =========================================================
      PREMIUM RESEARCH PAGE JAVASCRIPT
 ========================================================= -->
@@ -7738,3 +7968,5 @@ body.light .rp-footer p{
 <!-- =========================================================
      END: COMPLETE PREMIUM RESEARCH PAGE
 ========================================================= -->
+</body>
+</html>
