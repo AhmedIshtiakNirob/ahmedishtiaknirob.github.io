@@ -7058,6 +7058,25 @@ body.light .rp-footer p{
      Keeps the original desktop design and content intact.
 ========================================================= -->
 <style id="rp-mobile-compatibility-final">
+/* Full-bleed page: remove browser default white body gutter. */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  min-width: 0;
+  background: #06131f !important;
+  overflow-x: hidden;
+}
+#research {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 !important;
+  background: #06131f;
+}
+@supports (width: 100dvw) {
+  html, body { width: 100dvw; }
+}
 /* Prevent page-level horizontal scrolling on narrow screens. */
 #research, #research * { box-sizing: border-box; }
 #research { width: 100%; max-width: 100%; min-width: 0; overflow-x: clip; }
