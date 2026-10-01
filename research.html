@@ -2073,11 +2073,6 @@
 
       <span></span>
 
-      <p>
-        Research interests evolve through laboratory work,
-        collaborative studies, field investigations and
-        scientific communication.
-      </p>
 
       <span></span>
 
@@ -6824,6 +6819,206 @@ body.light .rp-footer p{
 
 </style>
 
+
+<style id="rp-final-responsive-v2">
+/* =========================================================
+   FINAL RESPONSIVE SYSTEM
+   Designed for this exact Research block.
+   Desktop remains unchanged; narrow screens become fluid.
+========================================================= */
+.rp-page,
+.rp-page *{box-sizing:border-box;}
+
+.rp-page{
+  position:relative;
+  width:100%;
+  max-width:none;
+  min-width:0;
+  overflow-x:hidden;
+  overflow-y:visible;
+  background:#071827;
+}
+
+.rp-container{
+  width:min(1180px, calc(100% - 40px));
+  max-width:1180px;
+  min-width:0;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.rp-page img{display:block;max-width:100%;}
+.rp-page a,.rp-page button{max-width:100%;}
+.rp-page h1,.rp-page h2,.rp-page h3,.rp-page h4,.rp-page p,
+.rp-page span,.rp-page strong,.rp-page em{
+  min-width:0;
+  max-width:100%;
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
+
+.rp-profile-grid,
+.rp-methods-grid,
+.rp-status-grid,
+.rp-project-inner,
+.rp-project-media-grid,
+.rp-project-photo-grid,
+.rp-gallery-grid,
+.rp-nst-inner{
+  min-width:0;
+  width:100%;
+}
+
+.rp-project-card,
+.rp-profile-card,
+.rp-method-card,
+.rp-status-card,
+.rp-flex-card,
+.rp-filter-wrap,
+.rp-filter-bar,
+.rp-project-trigger,
+.rp-project-content,
+.rp-info-box,
+.rp-info-row{
+  min-width:0;
+  max-width:100%;
+}
+
+/* Never allow a child to create a page-wide horizontal scrollbar. */
+.rp-project-trigger,
+.rp-project-main,
+.rp-project-title-row,
+.rp-project-meta,
+.rp-project-content,
+.rp-project-inner,
+.rp-profile-header,
+.rp-profile-list,
+.rp-method-tags,
+.rp-pill-row,
+.rp-filter-wrap{
+  overflow-wrap:anywhere;
+}
+
+@media (max-width: 900px){
+  .rp-profile-grid,
+  .rp-project-inner,
+  .rp-nst-inner{grid-template-columns:minmax(0,1fr) !important;}
+}
+
+@media (max-width: 760px){
+  /* Break out of any wider desktop parent while staying aligned to the viewport. */
+  .rp-page{
+    width:100vw;
+    max-width:100vw;
+    margin-left:calc(50% - 50vw);
+    margin-right:calc(50% - 50vw);
+    padding-left:0;
+    padding-right:0;
+    overflow-x:hidden;
+  }
+
+  .rp-container{
+    width:calc(100% - 24px);
+    max-width:none;
+    margin-left:12px;
+    margin-right:12px;
+  }
+
+  .rp-profile-grid,
+  .rp-methods-grid,
+  .rp-project-inner,
+  .rp-nst-inner,
+  .rp-project-media-grid,
+  .rp-project-photo-grid,
+  .rp-gallery-grid{
+    grid-template-columns:minmax(0,1fr) !important;
+  }
+
+  .rp-status-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+
+  .rp-profile-card,
+  .rp-method-card,
+  .rp-status-card,
+  .rp-project-card,
+  .rp-flex-card{width:100%;}
+
+  .rp-project-trigger{
+    width:100%;
+    display:flex;
+    align-items:flex-start;
+  }
+
+  .rp-project-main{flex:1 1 auto;width:0;}
+  .rp-project-title-row{width:100%;}
+  .rp-project-title{flex:1 1 auto;width:0;}
+  .rp-project-meta{width:100%;}
+  .rp-project-arrow{flex:0 0 auto;}
+
+  .rp-info-row{grid-template-columns:minmax(0,1fr) !important;}
+  .rp-info-row strong{text-align:left !important;}
+
+  .rp-media-feature,
+  .rp-gallery-feature,
+  .rp-project-photo-grid .rp-inline-photo:first-child{grid-column:auto !important;}
+
+  .rp-media-frame,
+  .rp-media-frame img,
+  .rp-inline-photo,
+  .rp-inline-photo img,
+  .rp-gallery-image,
+  .rp-gallery-image img{
+    width:100%;
+    max-width:100%;
+  }
+
+  .rp-media-frame img,
+  .rp-inline-photo img,
+  .rp-gallery-image img{
+    height:auto !important;
+    min-height:0 !important;
+    aspect-ratio:16 / 10;
+    object-fit:cover;
+  }
+
+  .rp-gallery-image{height:auto !important;}
+
+  .rp-filter-wrap{width:100%;}
+  .rp-filter-bar{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+  .rp-filter-btn{min-width:0;width:100%;white-space:normal;}
+
+  .rp-flex-card{flex-wrap:wrap;}
+}
+
+@media (max-width: 480px){
+  .rp-container{width:calc(100% - 16px);margin-left:8px;margin-right:8px;}
+  .rp-status-grid{gap:8px;}
+  .rp-filter-bar{gap:5px;}
+  .rp-project-trigger{padding-left:10px;padding-right:10px;}
+  .rp-project-title{font-size:clamp(11px,3.1vw,13px);line-height:1.45;}
+  .rp-project-meta{margin-left:0;}
+  .rp-project-inner{padding-left:10px !important;padding-right:10px !important;}
+  .rp-project-photo-strip{padding-left:10px;padding-right:10px;}
+  .rp-gallery-caption{left:8px;right:8px;bottom:8px;}
+}
+
+@media (max-width: 360px){
+  .rp-status-grid{grid-template-columns:1fr !important;}
+  .rp-filter-bar{grid-template-columns:1fr !important;}
+}
+
+/* Touch devices: avoid desktop hover transforms causing clipping. */
+@media (hover:none), (pointer:coarse){
+  .rp-profile-card:hover,
+  .rp-status-card:hover,
+  .rp-project-card:hover,
+  .rp-lab-card:hover,
+  .rp-flex-card:hover{transform:none !important;}
+}
+</style>
 
 <!-- =========================================================
      PREMIUM RESEARCH PAGE JAVASCRIPT
