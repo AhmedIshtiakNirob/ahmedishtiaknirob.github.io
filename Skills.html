@@ -1,1 +1,589 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills | Dr. Ahmed Ishtiak Nirob</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+  --bg:#071321;
+  --surface:#0d2033;
+  --surface2:#102940;
+  --text:#edf6ff;
+  --muted:#b1c4d8;
+  --line:rgba(139,190,230,.16);
+  --cyan:#4bdcff;
+  --blue:#5b9dff;
+  --purple:#bd8cff;
+  --green:#49e4bd;
+  --gold:#ffc766;
+  --pink:#ff82bd;
+  --shadow:0 20px 55px rgba(0,0,0,.22);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:"DM Sans",sans-serif;line-height:1.65;
+  overflow-x:hidden;
+}
+body:before{
+  content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
+  background:
+  radial-gradient(ellipse at 12% 12%,rgba(28,139,205,.18),transparent 38%),
+  radial-gradient(ellipse at 88% 35%,rgba(130,65,210,.13),transparent 38%),
+  radial-gradient(ellipse at 50% 90%,rgba(0,190,170,.09),transparent 42%);
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.container{width:min(1160px,92%);margin:auto}
+
+/* NAVIGATION */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(5,17,30,.88);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  min-height:68px;display:flex;align-items:center;
+  justify-content:space-between;gap:20px;
+}
+.brand{font-family:Manrope,sans-serif;font-weight:800;font-size:17px}
+.brand span{color:var(--cyan)}
+.nav-links{display:flex;align-items:center;gap:24px;font-size:13px;font-weight:600}
+.nav-links a{color:#c5d6e8;transition:.25s}
+.nav-links a:hover,.nav-links .active{color:var(--cyan)}
+.theme-btn{
+  border:1px solid var(--line);background:var(--surface);
+  color:var(--text);border-radius:12px;padding:10px 13px;cursor:pointer;
+}
+
+/* HERO */
+.hero{padding:86px 0 60px;text-align:center;position:relative}
+.eyebrow{
+  color:var(--cyan);font-size:11px;font-weight:800;
+  letter-spacing:4px;text-transform:uppercase;
+}
+.hero h1{
+  font:800 clamp(42px,7vw,76px)/1.08 Manrope,sans-serif;
+  margin:14px 0 16px;letter-spacing:-3px;
+  background:linear-gradient(100deg,#f5f9ff,#70ddff 48%,#c49bff);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero p{max-width:720px;margin:0 auto;color:var(--muted);font-size:16px}
+.hero-line{
+  width:90px;height:4px;border-radius:8px;margin:28px auto 0;
+  background:linear-gradient(90deg,var(--cyan),var(--purple));
+  box-shadow:0 0 25px rgba(75,220,255,.35);
+}
+
+/* SECTION */
+.section{padding:48px 0 26px;scroll-margin-top:80px}
+.section-head{margin-bottom:26px}
+.kicker{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;font-weight:800;color:var(--accent)}
+.section-title{font:800 clamp(25px,4vw,36px)/1.2 Manrope,sans-serif;margin:7px 0 8px}
+.section-desc{color:var(--muted);font-size:15px;max-width:760px;margin:0}
+
+/* CARDS */
+.skill-card{
+  --accent:var(--cyan);
+  position:relative;overflow:hidden;
+  background:linear-gradient(145deg,rgba(17,43,66,.94),rgba(9,27,44,.97));
+  border:1px solid var(--line);border-radius:22px;
+  box-shadow:var(--shadow);
+  transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .35s,box-shadow .35s;
+}
+.skill-card:before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(450px circle at var(--mx,50%) var(--my,0%),color-mix(in srgb,var(--accent) 15%,transparent),transparent 62%);
+  opacity:0;transition:opacity .3s;
+}
+.skill-card:hover{
+  transform:translateY(-6px);
+  border-color:color-mix(in srgb,var(--accent) 65%,white 5%);
+  box-shadow:0 18px 50px color-mix(in srgb,var(--accent) 12%,transparent);
+}
+.skill-card:hover:before{opacity:1}
+.card-top{display:flex;align-items:center;gap:15px;padding:24px 25px 12px}
+.icon-box{
+  flex:0 0 52px;height:52px;border-radius:16px;
+  display:grid;place-items:center;font-size:21px;
+  color:var(--accent);background:color-mix(in srgb,var(--accent) 13%,transparent);
+  border:1px solid color-mix(in srgb,var(--accent) 32%,transparent);
+  box-shadow:0 0 25px color-mix(in srgb,var(--accent) 10%,transparent);
+}
+.card-title{font:800 20px Manrope,sans-serif;margin:0}
+.card-number{font-size:11px;color:var(--accent);letter-spacing:1.5px;font-weight:800}
+.card-body{padding:8px 25px 25px}
+.skill-list{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}
+.skill{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:8px 12px;border-radius:10px;
+  border:1px solid rgba(165,202,231,.16);
+  background:rgba(255,255,255,.035);
+  color:#e2eef9;font-size:13px;font-weight:600;
+  transition:.25s;
+}
+.skill:before{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent)}
+.skill:hover{background:color-mix(in srgb,var(--accent) 12%,transparent);border-color:var(--accent);transform:translateY(-2px)}
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+
+/* FEATURE IMAGE */
+.feature{
+  display:grid;grid-template-columns:1fr 1fr;gap:22px;
+  align-items:stretch;margin-top:22px;
+}
+.photo{
+  position:relative;overflow:hidden;min-height:270px;
+  border-radius:18px;border:1px solid var(--line);background:#0b1b2a;
+}
+.photo img{width:100%;height:100%;min-height:270px;object-fit:cover;display:block;transition:transform .7s}
+.photo:hover img{transform:scale(1.045)}
+.photo-label{
+  position:absolute;bottom:0;left:0;right:0;padding:35px 16px 13px;
+  background:linear-gradient(transparent,rgba(2,10,19,.88));
+  font-size:13px;font-weight:700;color:white;
+}
+.photo-label i{color:var(--cyan);margin-right:7px}
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:15px}
+.photo-grid .photo{min-height:145px}
+.photo-grid img{min-height:145px}
+.note{
+  margin-top:15px;padding:14px 16px;border-left:3px solid var(--gold);
+  border-radius:0 12px 12px 0;background:rgba(255,199,102,.07);
+  color:#f2dfbb;font-size:13px;
+}
+
+/* STATUS */
+.status{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:800;
+  padding:6px 10px;border-radius:30px;text-transform:uppercase;letter-spacing:.5px}
+.hands{background:rgba(73,228,189,.12);color:#70f2cc;border:1px solid rgba(73,228,189,.3)}
+.observed{background:rgba(255,199,102,.1);color:#ffd27d;border:1px solid rgba(255,199,102,.28)}
+.developing{background:rgba(189,140,255,.12);color:#d2b1ff;border:1px solid rgba(189,140,255,.3)}
+.subhead{font:700 16px Manrope,sans-serif;margin:23px 0 8px;color:#f0f7ff}
+.mini-card{padding:19px;border:1px solid var(--line);border-radius:16px;background:rgba(12,33,51,.8)}
+.mini-card h3{font:700 15px Manrope;margin:0 0 8px}
+.mini-card p{font-size:13px;color:var(--muted);margin:0}
+
+/* VIDEO */
+.video-card{padding:22px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#10283e,#0b1d30);transition:.3s}
+.video-card:hover{transform:translateY(-5px);border-color:var(--accent)}
+.video-icon{font-size:24px;color:var(--accent);margin-bottom:13px}
+.video-card h3{font:700 16px Manrope;margin:0 0 8px}
+.video-card p{color:var(--muted);font-size:13px;margin:0 0 17px}
+.video-link{display:inline-flex;align-items:center;gap:8px;color:var(--accent);font-weight:800;font-size:13px}
+.video-link:hover{gap:12px}
+.footer{padding:45px 0 30px;text-align:center;color:#9bb0c4;font-size:12px}
+.footer a{color:var(--cyan)}
+
+/* LIGHT MODE */
+body.light{
+  --bg:#f3f7fc;--surface:#fff;--surface2:#eaf2fa;
+  --text:#102238;--muted:#4d6379;--line:rgba(33,76,112,.16);
+  --shadow:0 15px 40px rgba(26,64,100,.09);
+}
+body.light .nav{background:rgba(246,250,255,.9)}
+body.light .nav-links a{color:#314b63}
+body.light .skill-card,body.light .video-card,body.light .mini-card{
+  background:linear-gradient(145deg,#fff,#edf5fc);
+}
+body.light .skill{color:#18334b;background:rgba(16,55,90,.035)}
+body.light .subhead{color:#17334e}
+body.light .note{color:#735019}
+body.light .hero p{color:#4d6379}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:800px){
+  .nav-links{gap:12px;font-size:11px}
+  .grid-3{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:620px){
+  .nav-inner{min-height:60px}
+  .nav-links{display:none}
+  .hero{padding:65px 0 42px}
+  .hero h1{letter-spacing:-1.5px}
+  .hero p{font-size:14px}
+  .section{padding:35px 0 18px}
+  .grid-2,.grid-3,.feature{grid-template-columns:1fr}
+  .card-top{padding:20px 18px 10px}
+  .card-body{padding:8px 18px 20px}
+  .photo,.photo img{min-height:230px}
+  .photo-grid{grid-template-columns:repeat(2,1fr)}
+  .skill{font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
+}
+</style>
+</head>
+
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">Dr. Ahmed <span>Ishtiak Nirob</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="experience.html">Experience</a>
+      <a class="active" href="skills.html">Skills</a>
+      <a href="presentations.html">Presentations</a>
+      <a href="awards.html">Awards</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">☀️</button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow">Competencies · Technical Proficiency · Professional Development</div>
+    <h1>Skills & Expertise</h1>
+    <p>
+      A practical overview of my research, analytical, laboratory, veterinary,
+      and academic capabilities developed through research projects,
+      laboratory work, field investigations, and teaching.
+    </p>
+    <div class="hero-line"></div>
+  </div>
+</section>
+
+<div class="container">
+
+<!-- 01 RESEARCH -->
+<section class="section reveal" style="--accent:var(--cyan)">
+  <div class="section-head">
+    <div class="kicker">01 · Research & Epidemiology 🔬</div>
+    <h2 class="section-title">Research & Epidemiological Skills</h2>
+    <p class="section-desc">Research workflows across epidemiological studies, infectious diseases, and evidence synthesis.</p>
+  </div>
+  <div class="skill-card">
+    <div class="card-top">
+      <div class="icon-box"><i class="fa-solid fa-microscope"></i></div>
+      <div><h3 class="card-title">Research Methods & Evidence Synthesis</h3></div>
+    </div>
+    <div class="card-body">
+      <div class="skill-list">
+        <span class="skill">Epidemiological Research</span>
+        <span class="skill">KAP Study Design & Assessment</span>
+        <span class="skill">Field Data Collection</span>
+        <span class="skill">Infectious Disease Research</span>
+        <span class="skill">Zoonotic Disease Research</span>
+        <span class="skill">Cross-sectional Research</span>
+        <span class="skill">Systematic Review Workflow</span>
+        <span class="skill">Literature Screening</span>
+        <span class="skill">Full-text Assessment</span>
+        <span class="skill">Data Extraction</span>
+        <span class="skill">Data Curation</span>
+        <span class="skill">Data Cleaning & Management</span>
+      </div>
+    </div>
+  </div>
+  <div class="feature">
+    <div class="photo">
+      <img loading="lazy" src="https://drive.google.com/thumbnail?id=1n3yJN4U1oS2cPo0fjZMvy21dLHJpGAVq&sz=w1200" alt="Field data collection">
+      <div class="photo-label"><i class="fa-solid fa-location-dot"></i> Field Data Collection</div>
+    </div>
+    <div class="mini-card" style="display:flex;flex-direction:column;justify-content:center">
+      <div class="kicker">Applied Research</div>
+      <h3 class="card-title" style="margin:10px 0">From Field Investigation to Research Evidence</h3>
+      <p>Experience in field-based data collection, epidemiological research workflows, and structured research data handling.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 02 DATA -->
+<section class="section reveal" style="--accent:var(--blue)">
+  <div class="section-head">
+    <div class="kicker">02 · Data Analysis & Statistics 📊</div>
+    <h2 class="section-title">Statistical & Data Skills</h2>
+    <p class="section-desc">Tools and workflows used for research data organization and analysis.</p>
+  </div>
+  <div class="grid-2">
+    <div class="skill-card">
+      <div class="card-top">
+        <div class="icon-box"><i class="fa-solid fa-chart-line"></i></div>
+        <h3 class="card-title">Analysis Tools</h3>
+      </div>
+      <div class="card-body">
+        <div class="skill-list">
+          <span class="skill">R</span>
+          <span class="skill">SPSS</span>
+          <span class="skill">Statistical Data Analysis</span>
+          <span class="skill">Data Cleaning</span>
+          <span class="skill">Data Management</span>
+          <span class="skill">Epidemiological Data Analysis</span>
+        </div>
+        <div class="note"><i class="fa-solid fa-book-open"></i> Python — Planned learning / currently preparing to learn.</div>
+      </div>
+    </div>
+    <div class="photo">
+      <img loading="lazy" src="https://drive.google.com/thumbnail?id=1iCxbKeNT33zakD-EP17VWvJc-Uf0ze9n&sz=w1200" alt="Data input for analysis">
+      <div class="photo-label"><i class="fa-solid fa-laptop"></i> Data Input for Analysis</div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 LAB -->
+<section class="section reveal" style="--accent:var(--green)">
+  <div class="section-head">
+    <div class="kicker">03 · Laboratory Skills 🧪</div>
+    <h2 class="section-title">Laboratory & Technical Experience</h2>
+    <p class="section-desc">Practical laboratory techniques and developing microbiological competencies.</p>
+  </div>
+
+  <div class="skill-card">
+    <div class="card-top">
+      <div class="icon-box"><i class="fa-solid fa-vials"></i></div>
+      <h3 class="card-title">Histology & Histopathology</h3>
+    </div>
+    <div class="card-body">
+      <div class="skill-list">
+        <span class="skill">Tissue Processing</span>
+        <span class="skill">Microtome Sectioning</span>
+        <span class="skill">Histological Staining</span>
+        <span class="skill">H&E Staining</span>
+        <span class="skill">PAS Staining</span>
+        <span class="skill">Giemsa Staining</span>
+        <span class="skill">Histopathological Evaluation</span>
+      </div>
+      <div class="feature">
+        <div class="photo">
+          <img loading="lazy" src="https://drive.google.com/thumbnail?id=1DmKLUcuw5lgtMAqpkmpt5AtY8lAbNWep&sz=w1200" alt="Mouse wound healing and remodeling research">
+          <div class="photo-label">Mouse Wound Healing & Remodeling Work</div>
+        </div>
+        <div>
+          <div class="photo-grid">
+            <a class="photo" href="https://drive.google.com/file/d/1U1Hol-qB0ikDuJsn62i7Y7AKnBaXtj4N/view" target="_blank" rel="noopener">
+              <img loading="lazy" src="https://drive.google.com/thumbnail?id=1U1Hol-qB0ikDuJsn62i7Y7AKnBaXtj4N&sz=w700" alt="Histology laboratory equipment">
+            </a>
+            <a class="photo" href="https://drive.google.com/file/d/1gr_6mlKE6OkM9b-_pWNtOkspaiU344K0/view" target="_blank" rel="noopener">
+              <img loading="lazy" src="https://drive.google.com/thumbnail?id=1gr_6mlKE6OkM9b-_pWNtOkspaiU344K0&sz=w700" alt="Histology laboratory equipment">
+            </a>
+            <a class="photo" href="https://drive.google.com/file/d/1pzmK5XTz2n-amMrGmU-T0MtALhq_roWv/view" target="_blank" rel="noopener">
+              <img loading="lazy" src="https://drive.google.com/thumbnail?id=1pzmK5XTz2n-amMrGmU-T0MtALhq_roWv&sz=w700" alt="Histology laboratory equipment">
+            </a>
+          </div>
+          <p style="font-size:12px;color:var(--muted);margin:8px 2px">Histology Laboratory · Equipment & Practical Work</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="skill-card" style="margin-top:20px">
+    <div class="card-top">
+      <div class="icon-box"><i class="fa-solid fa-bacteria"></i></div>
+      <h3 class="card-title">Microbiology</h3>
+    </div>
+    <div class="card-body">
+      <div class="skill-list">
+        <span class="skill">Bacterial Culture</span>
+        <span class="skill">Sample Collection & Preservation</span>
+        <span class="skill">Aseptic Laboratory Practices</span>
+        <span class="skill">Biosafety Awareness</span>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:9px;margin-top:18px">
+        <span class="status hands"><i class="fa-solid fa-check"></i> Hands-on · Bacterial Culture</span>
+      </div>
+      <h4 class="subhead">Observed / Developing</h4>
+      <div class="skill-list">
+        <span class="skill">PCR — Observed / Familiarity</span>
+        <span class="skill">Gram Staining — Observed</span>
+        <span class="skill">Bacterial Isolation — Currently Developing</span>
+      </div>
+      <div class="note">Skill levels are presented transparently to distinguish practical experience from observation and ongoing learning.</div>
+      <div class="photo" style="margin-top:18px">
+        <img loading="lazy" src="https://drive.google.com/thumbnail?id=1Ukl2yFKuXOk4er_1ynyK182_P7k1Bi7q&sz=w1200" alt="Practical microbiology laboratory experience">
+        <div class="photo-label">Practical Laboratory Experience · Aseptic Techniques & Culture Handling</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEAT QUALITY -->
+<section class="section reveal" style="--accent:var(--gold)">
+  <div class="section-head">
+    <div class="kicker">Laboratory Application</div>
+    <h2 class="section-title">Meat Quality Assessment</h2>
+    <p class="section-desc">Practical assessment of poultry meat quality and physicochemical parameters.</p>
+  </div>
+  <div class="skill-card">
+    <div class="card-top">
+      <div class="icon-box"><i class="fa-solid fa-drumstick-bite"></i></div>
+      <h3 class="card-title">Meat Quality & Laboratory Measurements</h3>
+    </div>
+    <div class="card-body">
+      <div class="skill-list">
+        <span class="skill">Drip Loss</span>
+        <span class="skill">Cooking Loss</span>
+        <span class="skill">pH Measurement</span>
+        <span class="skill">Water Holding Capacity (WHC)</span>
+        <span class="skill">Colour Analysis</span>
+        <span class="skill">Meat Sample Handling</span>
+      </div>
+      <div class="photo-grid">
+        <a class="photo" href="https://drive.google.com/file/d/1lUu3IoZ_w8aR5h0tyGx4t9DuYqjhUNyj/view" target="_blank" rel="noopener">
+          <img loading="lazy" src="https://drive.google.com/thumbnail?id=1lUu3IoZ_w8aR5h0tyGx4t9DuYqjhUNyj&sz=w800" alt="Meat colour testing">
+          <div class="photo-label">Meat Colour Testing</div>
+        </a>
+        <a class="photo" href="https://drive.google.com/file/d/1qPDBD3WvH4s823dysWwBlwHTo6AkR8QA/view" target="_blank" rel="noopener">
+          <img loading="lazy" src="https://drive.google.com/thumbnail?id=1qPDBD3WvH4s823dysWwBlwHTo6AkR8QA&sz=w800" alt="Homogenizing meat for pH testing">
+          <div class="photo-label">Meat Homogenization for pH Test</div>
+        </a>
+        <a class="photo" href="https://drive.google.com/file/d/1lxGgjub7v8oVwAcYK4K7lcOYqKzB4pwl/view" target="_blank" rel="noopener">
+          <img loading="lazy" src="https://drive.google.com/thumbnail?id=1lxGgjub7v8oVwAcYK4K7lcOYqKzB4pwl&sz=w800" alt="Poultry rearing">
+          <div class="photo-label">Poultry Rearing</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 VETERINARY -->
+<section class="section reveal" style="--accent:var(--pink)">
+  <div class="section-head">
+    <div class="kicker">04 · Veterinary & Experimental Skills 🩺</div>
+    <h2 class="section-title">Veterinary & Experimental Experience</h2>
+    <p class="section-desc">Clinical, animal handling, experimental, and poultry management experience.</p>
+  </div>
+  <div class="skill-card">
+    <div class="card-top">
+      <div class="icon-box"><i class="fa-solid fa-paw"></i></div>
+      <h3 class="card-title">Clinical & Experimental Competencies</h3>
+    </div>
+    <div class="card-body">
+      <div class="skill-list">
+        <span class="skill">Clinical Examination</span>
+        <span class="skill">Livestock Health Management</span>
+        <span class="skill">Emergency Veterinary Care</span>
+        <span class="skill">Animal Handling</span>
+        <span class="skill">Experimental Animal Research</span>
+        <span class="skill">Wound-model Procedures</span>
+        <span class="skill">Tissue Collection</span>
+        <span class="skill">Broiler Experimental Management</span>
+        <span class="skill">Vaccination</span>
+        <span class="skill">Feeding & Monitoring</span>
+        <span class="skill">Slaughtering</span>
+      </div>
+      <h4 class="subhead">Clinical Experience</h4>
+      <div class="photo-grid">
+        <a class="photo" href="https://drive.google.com/file/d/19cfXOFst7Bbjm5w6QriG0Fno4ZF7nowF/view" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=19cfXOFst7Bbjm5w6QriG0Fno4ZF7nowF&sz=w700" alt="Clinical experience photo"></a>
+        <a class="photo" href="https://drive.google.com/file/d/1PnZEYTorDKBii5u3wi9GqKgXJB8WPqW_/view" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1PnZEYTorDKBii5u3wi9GqKgXJB8WPqW_&sz=w700" alt="Clinical experience photo"></a>
+        <a class="photo" href="https://drive.google.com/file/d/1W8x0HRsXXdC2-EcMAs6FQJ6EdxXOXUUs/view" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1W8x0HRsXXdC2-EcMAs6FQJ6EdxXOXUUs&sz=w700" alt="Clinical experience photo"></a>
+        <a class="photo" href="https://drive.google.com/file/d/1njOenxDUEOpchMaw8AXUQkG026BdoVV2/view" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1njOenxDUEOpchMaw8AXUQkG026BdoVV2&sz=w700" alt="Clinical experience photo"></a>
+        <a class="photo" href="https://drive.google.com/file/d/1pRRqkznZshoqJGZatogBYRVhIKe6FJE7/view" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1pRRqkznZshoqJGZatogBYRVhIKe6FJE7&sz=w700" alt="Clinical experience photo"></a>
+        <a class="photo" href="https://drive.google.com/file/d/1u6KW8-0IrHy2FdStsD-IXjP8rkBxaTKn/view" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1u6KW8-0IrHy2FdStsD-IXjP8rkBxaTKn&sz=w700" alt="Clinical experience photo"></a>
+      </div>
+      <a class="video-link" style="margin-top:15px" href="https://drive.google.com/file/d/1wNIsUrTGS8VixfkEJKKfXjMfc8iISY7-/view" target="_blank" rel="noopener">View Clinical Experience Photo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- 06 DIGITAL -->
+<section class="section reveal" style="--accent:var(--purple)">
+  <div class="section-head">
+    <div class="kicker">06 · Academic & Digital Tools 💻</div>
+    <h2 class="section-title">Academic, Digital & Creative Skills</h2>
+    <p class="section-desc">Academic documentation, presentation, and science communication through digital media.</p>
+  </div>
+  <div class="skill-card">
+    <div class="card-top">
+      <div class="icon-box"><i class="fa-solid fa-laptop-code"></i></div>
+      <h3 class="card-title">Digital & Academic Tools</h3>
+    </div>
+    <div class="card-body">
+      <div class="skill-list">
+        <span class="skill">Microsoft Word</span>
+        <span class="skill">Microsoft Excel</span>
+        <span class="skill">Microsoft PowerPoint</span>
+        <span class="skill">Scientific Documentation</span>
+        <span class="skill">Research Presentation</span>
+        <span class="skill">Video Scripting</span>
+        <span class="skill">Video Editing</span>
+        <span class="skill">Video Shooting</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-head" style="margin-top:35px">
+    <div class="kicker">Selected Media Work</div>
+    <h2 class="section-title">Science Communication & Documentary Work</h2>
+    <p class="section-desc">Selected video projects involving documentary production and public awareness.</p>
+  </div>
+  <div class="grid-3">
+    <article class="video-card" style="--accent:var(--cyan)">
+      <div class="video-icon"><i class="fa-solid fa-film"></i></div>
+      <h3>Documentary on My Faculty</h3>
+      <p>Faculty-focused documentary project.</p>
+      <a class="video-link" href="https://youtu.be/IWPQHwVh3Cc?si=RFyTUasi9V7pA9tI" target="_blank" rel="noopener">Watch Video <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </article>
+    <article class="video-card" style="--accent:var(--purple)">
+      <div class="video-icon"><i class="fa-solid fa-video"></i></div>
+      <h3>Our Internship Program 2024</h3>
+      <p>Overall internship program documentary.</p>
+      <a class="video-link" href="https://www.youtube.com/watch?v=k4iRUgk9tUU&t=1s" target="_blank" rel="noopener">Watch Video <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </article>
+    <article class="video-card" style="--accent:var(--green)">
+      <div class="video-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+      <h3>One Health Awareness Video</h3>
+      <p>Public awareness content related to One Health.</p>
+      <a class="video-link" href="https://drive.google.com/file/d/15ospmK4hRwZ7yyITeN6A7N1T3uX6vyys/view" target="_blank" rel="noopener">View Video <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </article>
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>Dr. Ahmed Ishtiak Nirob · Academic & Research Portfolio</p>
+    <a href="index.html">Back to Home</a>
+  </div>
+</footer>
+
+<script>
+const themeButton=document.getElementById("themeToggle");
+const savedTheme=localStorage.getItem("portfolio-theme");
+if(savedTheme==="light") document.body.classList.add("light");
+themeButton.textContent=document.body.classList.contains("light")?"🌙":"☀️";
+
+themeButton.addEventListener("click",()=>{
+  document.body.classList.toggle("light");
+  const light=document.body.classList.contains("light");
+  localStorage.setItem("portfolio-theme",light?"light":"dark");
+  themeButton.textContent=light?"🌙":"☀️";
+});
+
+const revealObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("visible");
+      revealObserver.unobserve(entry.target);
+    }
+  });
+},{threshold:.10});
+document.querySelectorAll(".reveal").forEach(el=>revealObserver.observe(el));
+
+document.querySelectorAll(".skill-card").forEach(card=>{
+  card.addEventListener("pointermove",e=>{
+    const rect=card.getBoundingClientRect();
+    card.style.setProperty("--mx",`${e.clientX-rect.left}px`);
+    card.style.setProperty("--my",`${e.clientY-rect.top}px`);
+  });
+});
+</script>
+</body>
+</html>
