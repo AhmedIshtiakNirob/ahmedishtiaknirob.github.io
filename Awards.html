@@ -1,1 +1,562 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Awards & Achievements | Ahmed Ishtiak Nirob</title>
+<style>
+:root{
+  --bg:#070c17;--text:#eef5ff;--muted:#9eafc8;
+  --cyan:#54e6ff;--purple:#a78bfa;--gold:#f4cb72;--pink:#ff82bd;--green:#76e3b2;
+  --border:rgba(255,255,255,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.65;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:
+ radial-gradient(circle at 8% 8%,#16445f55,transparent 30%),
+ radial-gradient(circle at 90% 20%,#50327444,transparent 33%),
+ radial-gradient(circle at 40% 90%,#15534a33,transparent 33%)}
+a{color:inherit;text-decoration:none}
+.container{width:min(1180px,92%);margin:auto}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:1000;background:#070c17e8;backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+.nav-inner{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{color:#fff;font-size:15px;font-weight:800;letter-spacing:.3px}
+.brand small{display:block;color:var(--gold);font-size:10px;font-weight:500;letter-spacing:.7px}
+.nav-links{display:flex;gap:21px;flex-wrap:wrap}
+.nav-links a{color:var(--muted);font-size:13px;transition:.25s}
+.nav-links a:hover,.nav-links a.active{color:var(--cyan)}
+
+/* HERO */
+.hero{padding:90px 0 45px;text-align:center}
+.eyebrow{color:var(--cyan);font-size:11px;letter-spacing:4px;text-transform:uppercase;font-weight:700}
+.hero h1{margin:15px 0 18px;font-size:clamp(42px,7vw,78px);line-height:1.05;
+ background:linear-gradient(90deg,#fff,var(--gold),var(--cyan),var(--purple),var(--gold));background-size:250% 100%;
+ -webkit-background-clip:text;background-clip:text;color:transparent;animation:flow 8s linear infinite}
+@keyframes flow{to{background-position:250% 0}}
+.hero p{max-width:700px;margin:auto;color:var(--muted);font-size:15px}
+
+/* STATS (click to jump) */
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:0 0 20px}
+.stat{--a:var(--gold);display:block;padding:22px 12px;border-radius:18px;text-align:center;
+ background:linear-gradient(145deg,#132036,#0d1524);border:1px solid color-mix(in srgb,var(--a) 35%,transparent);
+ transition:.3s;position:relative;overflow:hidden}
+.stat::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--a),transparent)}
+.stat:hover{transform:translateY(-6px);border-color:var(--a);box-shadow:0 14px 40px color-mix(in srgb,var(--a) 22%,transparent)}
+.stat strong{display:block;font-size:46px;font-weight:800;line-height:1;margin-bottom:10px;color:var(--a)}
+.stat>span{color:var(--muted);font-size:11px;line-height:1.35}
+.stat:nth-child(2){--a:var(--cyan)}
+.stat:nth-child(3){--a:var(--green)}
+.stat:nth-child(4),.stat:nth-child(5){--a:var(--purple)}
+
+/* SECTION BLOCKS - one color each */
+.sec{--a:var(--gold);margin:55px 0;padding:34px;border-radius:30px;scroll-margin-top:85px;
+ background:linear-gradient(180deg,color-mix(in srgb,var(--a) 9%,transparent),transparent 40%);
+ border:1px solid color-mix(in srgb,var(--a) 30%,transparent)}
+.sec.green{--a:var(--green)}
+.sec.purple{--a:var(--purple)}
+.sec.cyan{--a:var(--cyan)}
+.sec-head{display:flex;justify-content:space-between;align-items:center;gap:18px;padding-bottom:20px;margin-bottom:6px;
+ border-bottom:1px solid color-mix(in srgb,var(--a) 30%,transparent)}
+.sec-head .num{color:var(--a);font-size:12px;letter-spacing:2px;font-weight:700}
+.sec-head h2{font-size:clamp(24px,3.5vw,31px);line-height:1.25;margin-top:4px}
+.sec-head h2 span{color:var(--a)}
+.sec-head p{color:var(--muted);font-size:14px;margin-top:5px;max-width:640px}
+.sec-count{flex:none;text-align:center;padding:10px 20px;border-radius:16px;color:var(--a);font-size:11px;letter-spacing:1.5px;
+ text-transform:uppercase;background:color-mix(in srgb,var(--a) 14%,transparent);border:1px solid color-mix(in srgb,var(--a) 45%,transparent)}
+.sec-count b{display:block;font-size:28px;line-height:1.1;letter-spacing:0}
+
+/* AWARD CARD */
+.award{position:relative;margin-top:24px;padding:28px;border-radius:24px;overflow:hidden;
+ background:linear-gradient(145deg,rgba(20,33,53,.97),rgba(10,17,30,.98));
+ border:1px solid color-mix(in srgb,var(--a) 25%,transparent);box-shadow:0 18px 50px #0003;transition:transform .35s,border-color .35s}
+.award:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--a) 60%,transparent)}
+.award::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--a),var(--pink),transparent)}
+.award-header{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;margin-bottom:18px}
+.idx{font-size:10px;color:var(--a);letter-spacing:2px;text-transform:uppercase;font-weight:800}
+.award-header h3{font-size:23px;line-height:1.35;margin-top:5px}
+.badge{flex:none;padding:7px 14px;border-radius:30px;font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;
+ color:#0a1020;background:linear-gradient(90deg,var(--a),color-mix(in srgb,var(--a) 60%,white))}
+
+/* WHAT I GOT: quick facts */
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:22px}
+.fact{padding:11px 14px;border-radius:13px;background:color-mix(in srgb,var(--a) 8%,#0b1322);
+ border:1px solid color-mix(in srgb,var(--a) 22%,transparent)}
+.fact small{display:block;color:var(--muted);font-size:10px;letter-spacing:1.4px;text-transform:uppercase}
+.fact b{display:block;color:var(--a);font-size:15px;line-height:1.3;margin-top:2px}
+.fact.big b{font-size:19px}
+
+.award-body{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:center}
+.award-text p{color:var(--muted);font-size:14px;margin:10px 0}
+.award-text strong{color:var(--text)}
+.hl{color:var(--a);font-weight:700}
+
+/* PHOTO: personal photos get a glow + name tag */
+.shot{position:relative;display:block;overflow:hidden;border-radius:18px;background:#09111f;
+ border:1px solid color-mix(in srgb,var(--a) 40%,transparent)}
+.award-photo{border-radius:18px;overflow:hidden;box-shadow:0 0 40px color-mix(in srgb,var(--a) 14%,transparent);order:2}
+.award-photo .shot{border-radius:0}.award-photo .shot:first-child{border-radius:18px 18px 0 0}.award-photo .shot+.shot{border-top:0}
+.shot img{display:block;width:100%;height:auto;min-height:180px;max-height:580px;object-fit:contain;background:#0b1424;transition:transform .7s}
+.shot.cert img{padding:10px}
+.shot.you{border-color:var(--a);box-shadow:0 0 0 1px color-mix(in srgb,var(--a) 50%,transparent),0 0 38px color-mix(in srgb,var(--a) 26%,transparent)}
+.shot.you::after{content:"★ Ahmed Ishtiak Nirob";position:absolute;left:14px;bottom:14px;padding:7px 13px;border-radius:30px;
+ font-size:11px;font-weight:800;letter-spacing:.8px;color:#0a1020;background:linear-gradient(90deg,var(--a),color-mix(in srgb,var(--a) 55%,white))}
+.shot::before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+ background:linear-gradient(115deg,transparent 35%,#ffffff2e 50%,transparent 65%);transform:translateX(-120%);transition:transform .9s}
+.shot:hover::before{transform:translateX(120%)}
+.cap{padding:11px 14px;color:var(--muted);font-size:11px;border:1px solid color-mix(in srgb,var(--a) 25%,transparent);border-top:0;
+ border-radius:0 0 18px 18px;background:#0a1220}
+
+/* BUTTONS stay with each card as "Proof & links" */
+.proof{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:20px;padding-top:16px;border-top:1px dashed color-mix(in srgb,var(--a) 28%,transparent)}
+.proof>span{color:var(--muted);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;margin-right:2px}
+.btn{padding:9px 15px;border-radius:9px;border:1px solid color-mix(in srgb,var(--a) 55%,transparent);color:var(--a);font-size:11px;font-weight:800;transition:.25s}
+.btn:hover,.btn.p{background:var(--a);color:#07111c}
+.btn.p:hover{filter:brightness(1.12)}
+.award-body+.proof{margin-top:24px}
+
+/* COMPETITION GRID */
+.comp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:24px}
+.comp-grid .award{margin-top:0;display:flex;flex-direction:column}
+.comp-grid .award-header h3{font-size:20px}
+.comp-text p{color:var(--muted);font-size:13px;margin:8px 0}
+.comp-text strong{color:var(--text)}
+.comp-photos{display:grid;grid-template-columns:1.35fr 1fr;gap:10px;margin-top:18px;align-items:center}
+.comp-photos .shot img{max-height:420px}
+.comp-photos .shot.you::after{font-size:9px;padding:5px 10px;left:10px;bottom:10px}
+.comp-grid .proof{margin-top:auto}
+.comp-photos+.proof{margin-top:20px}
+
+/* DISTINCTIONS */
+.dist-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:24px}
+.dist.wide{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.dist-info{display:flex;flex-direction:column;align-self:stretch}
+.dist-info .proof{margin-top:auto}
+.dist{position:relative;padding:24px;border-radius:20px;background:linear-gradient(145deg,#121c2e,#0c1421);
+ border:1px solid color-mix(in srgb,var(--a) 22%,transparent);transition:.3s;display:flex;flex-direction:column}
+.dist:hover{transform:translateY(-5px);border-color:var(--a)}
+.dist .yr{display:inline-block;align-self:flex-start;padding:4px 12px;border-radius:30px;color:var(--a);font-size:11px;letter-spacing:1.5px;font-weight:800;
+ background:color-mix(in srgb,var(--a) 12%,transparent);border:1px solid color-mix(in srgb,var(--a) 35%,transparent)}
+.dist h3{margin:12px 0 8px;font-size:19px}
+.dist p{color:var(--muted);font-size:13px;margin-bottom:8px}
+.dist .proof{margin-top:auto;border-top-style:dashed}
+
+.note{margin-top:55px;padding:22px 26px;border-radius:18px;border:1px solid #54e6ff22;background:linear-gradient(145deg,#0e1929,#0a1220);color:var(--muted);font-size:13px}
+.note strong{color:var(--cyan)}
+footer{text-align:center;color:var(--muted);padding:60px 0 50px;font-size:12px}
+
+/* ANIMATION: slide-up reveal + photo zoom-settle */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.rv .shot img{transform:scale(1.1)}
+.rv.in .shot img{transform:scale(1);transition:transform 1.8s cubic-bezier(.2,.7,.2,1)}
+.rv.in .shot:hover img{transform:scale(1.04);transition:transform .7s}
+.rv.in.award:hover,.rv.in.stat:hover,.rv.in.dist:hover{transition:transform .3s,border-color .3s}
+noscript .x{display:none}
+
+@media(max-width:900px){
+ .stats{grid-template-columns:repeat(3,1fr)}
+ .award-body{grid-template-columns:1fr}.award-photo{order:-1}
+ .shot img{max-height:520px}
+ .comp-grid{grid-template-columns:1fr}
+ .dist.wide{grid-template-columns:1fr}.dist.wide .shot{order:-1}
+}
+@media(max-width:700px){
+ .nav-inner{padding:14px 0;flex-direction:column;align-items:flex-start}
+ .nav-links{gap:13px}
+ .hero{padding:60px 0 30px}
+ .stats{grid-template-columns:repeat(2,1fr)}.stat:last-child{grid-column:1/-1}.stat strong{font-size:38px}
+ .sec{padding:18px;border-radius:22px;margin:40px 0}
+ .sec-head{flex-direction:column;align-items:flex-start}
+ .award{padding:18px;border-radius:20px}
+ .award-header{flex-direction:column}
+ .award-header h3{font-size:20px}
+ .shot img{max-height:480px}
+ .comp-photos{grid-template-columns:1fr}
+ .dist-grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+ .rv,.rv .shot img{opacity:1!important;transform:none!important;transition:none!important}
+ .hero h1{animation:none}html{scroll-behavior:auto}
+}
+</style>
+<noscript><style>.rv,.rv .shot img{opacity:1;transform:none}</style></noscript>
+</head>
+
+<body>
+<nav>
+ <div class="container nav-inner">
+  <div class="brand">Ahmed Ishtiak Nirob<small>B.Sc. Vet. Sci. &amp; A.H.</small></div>
+  <div class="nav-links">
+   <a href="index.html">Home</a>
+   <a href="research.html">Research</a>
+   <a href="publications.html">Publications</a>
+   <a href="education.html">Education</a>
+   <a href="experience.html">Experience</a>
+   <a href="skills.html">Skills</a>
+   <a href="presentations.html">Presentations</a>
+   <a href="awards.html" class="active">Awards</a>
+  </div>
+ </div>
+</nav>
+
+<header class="hero container">
+ <div class="eyebrow">Recognition · Scholarships · Competition</div>
+ <h1>Awards &amp;<br>Achievements</h1>
+ <p>A record of international scholarship recognition, national awards, competition achievements, and academic distinctions built through research, leadership, teamwork, and community engagement.</p>
+</header>
+
+<main class="container">
+
+<!-- STATS: click to jump to section -->
+<section class="stats">
+ <a class="stat rv" href="#intl"><strong><span class="n" data-n="1">1</span></strong><span>International<br>Scholarship</span></a>
+ <a class="stat rv" href="#academic"><strong><span class="n" data-n="3">3</span></strong><span>National<br>Scholarships</span></a>
+ <a class="stat rv" href="#national"><strong><span class="n" data-n="3">3</span></strong><span>Major<br>Awards</span></a>
+ <a class="stat rv" href="#comp"><strong>Top 10</strong><span>One Health Day<br>2025</span></a>
+ <a class="stat rv" href="#comp"><strong>Top 15</strong><span>Youth for Earth<br>2025</span></a>
+</section>
+
+<!-- ============ 01 INTERNATIONAL (gold) ============ -->
+<section class="sec" id="intl">
+ <div class="sec-head">
+  <div>
+   <div class="num">01 / INTERNATIONAL RECOGNITION</div>
+   <h2>International <span>Scholarship</span></h2>
+   <p>A global veterinary scholarship, awarded to 40 students worldwide.</p>
+  </div>
+  <div class="sec-count"><b>1</b>Scholarship</div>
+ </div>
+
+ <article class="award rv">
+  <div class="award-header">
+   <div>
+    <div class="idx">International Winner · 2024–2025</div>
+    <h3>WVA/MSD Veterinary Student Scholarship</h3>
+   </div>
+   <div class="badge">Global Selection</div>
+  </div>
+
+  <div class="facts">
+   <div class="fact big"><small>What I got</small><b>$5,000 Scholarship</b></div>
+   <div class="fact"><small>Selection</small><b>1 of 40 students worldwide</b></div>
+   <div class="fact"><small>Awarded by</small><b>WVA / MSD Animal Health</b></div>
+   <div class="fact"><small>Year</small><b>2024–2025</b></div>
+  </div>
+
+  <div class="award-body">
+   <div class="award-text">
+    <p>Selected as one of <span class="hl">40 veterinary students worldwide</span> for the WVA/MSD Veterinary Student Scholarship 2024–2025.</p>
+    <p>This international scholarship recognized veterinary students demonstrating academic commitment and engagement in veterinary and animal health.</p>
+   </div>
+   <div class="award-photo">
+    <a class="shot you" href="https://drive.google.com/file/d/1-UNHl3EDpqQYbdIeubEMK0PK4R7lVKEJ/view?usp=sharing" target="_blank">
+     <img loading="lazy" src="https://drive.google.com/thumbnail?id=1-UNHl3EDpqQYbdIeubEMK0PK4R7lVKEJ&sz=w1600" alt="WVA MSD Veterinary Student Scholarship winners">
+    </a>
+    <div class="cap">WVA/MSD Veterinary Student Scholarship 2024 winners · Ahmed Ishtiak Nirob among the selected scholars</div>
+   </div>
+  </div>
+
+  <div class="proof">
+   <span>Proof &amp; links</span>
+   <a class="btn p" href="https://worldvet.org/news/announcing-the-wva-msd-animal-health-veterinary-student-scholarships-2024-winners/" target="_blank">WVA Official Announcement ↗</a>
+   <a class="btn" href="https://drive.google.com/file/d/1-UNHl3EDpqQYbdIeubEMK0PK4R7lVKEJ/view?usp=sharing" target="_blank">View Winner Photo ↗</a>
+  </div>
+ </article>
+</section>
+
+<!-- ============ 02 MAJOR AWARDS (green) ============ -->
+<section class="sec green" id="national">
+ <div class="sec-head">
+  <div>
+   <div class="num">02 / NATIONAL RECOGNITION</div>
+   <h2>Major <span>Awards</span></h2>
+   <p>One national 1st place and two national championships in One Health and sustainability.</p>
+  </div>
+  <div class="sec-count"><b>3</b>Awards</div>
+ </div>
+
+ <!-- ONE HEALTH VIDEO -->
+ <article class="award rv">
+  <div class="award-header">
+   <div>
+    <div class="idx">National Winner · 2024</div>
+    <h3>One Health in Community Video Competition</h3>
+   </div>
+   <div class="badge">1st Place</div>
+  </div>
+
+  <div class="facts">
+   <div class="fact big"><small>What I got</small><b>1st Place · 25,000 BDT</b></div>
+   <div class="fact"><small>Event</small><b>World One Health Day 2024</b></div>
+   <div class="fact"><small>Entry</small><b>My video, Bangladesh</b></div>
+   <div class="fact"><small>Presented by</small><b>Advisor, Ministry of Fisheries &amp; Livestock</b></div>
+  </div>
+
+  <div class="award-body">
+   <div class="award-text">
+    <p>My video won <span class="hl">1st place</span> in the World One Health Day 2024 video competition in Bangladesh.</p>
+    <p>The video highlighted the critical connections between <strong>human, animal, and environmental health</strong>, with a focus on One Health principles and challenges including zoonotic diseases, antimicrobial resistance, and environmental conservation.</p>
+    <p>The award was presented by an <strong>Advisor of the Ministry of Fisheries and Livestock</strong>.</p>
+   </div>
+   <div class="award-photo">
+    <a class="shot you" href="https://drive.google.com/file/d/19uePrInDwIYDXhFA4sn4UMwkDuIA-wij/view?usp=sharing" target="_blank">
+     <img loading="lazy" src="https://drive.google.com/thumbnail?id=19uePrInDwIYDXhFA4sn4UMwkDuIA-wij&sz=w1600" alt="Ahmed Ishtiak Nirob receiving the One Health in Community video competition award">
+    </a>
+    <a class="shot cert" href="https://drive.google.com/file/d/1YpYfc4_IIxwfWS1YDoKb9R5wJyFeoEi6/view?usp=sharing" target="_blank">
+     <img loading="lazy" src="https://drive.google.com/thumbnail?id=1YpYfc4_IIxwfWS1YDoKb9R5wJyFeoEi6&sz=w1600" alt="One Health in Community Video Competition winner certificate">
+    </a>
+    <div class="cap">Receiving the 1st place award, with the winner certificate · World One Health Day 2024</div>
+   </div>
+  </div>
+
+  <div class="proof">
+   <span>Proof &amp; links</span>
+   <a class="btn p" href="https://drive.google.com/file/d/15ospmK4hRwZ7yyITeN6A7N1T3uX6vyys/view" target="_blank">▶ Watch Winning Video ↗</a>
+   <a class="btn" href="https://drive.google.com/file/d/1YpYfc4_IIxwfWS1YDoKb9R5wJyFeoEi6/view?usp=sharing" target="_blank">View Certificate ↗</a>
+   <a class="btn" href="https://drive.google.com/file/d/19uePrInDwIYDXhFA4sn4UMwkDuIA-wij/view?usp=sharing" target="_blank">View Award Photo ↗</a>
+  </div>
+ </article>
+
+ <!-- GREENOVATION 2.0 -->
+ <article class="award rv">
+  <div class="award-header">
+   <div>
+    <div class="idx">National Champion · 2024</div>
+    <h3>Greenovation 2.0 — Sustainable Eco-Friendly Startup Challenge</h3>
+   </div>
+   <div class="badge">Champion</div>
+  </div>
+
+  <div class="facts">
+   <div class="fact big"><small>What I got</small><b>Champion Award</b></div>
+   <div class="fact"><small>My role</small><b>Team Leader</b></div>
+   <div class="fact"><small>Team</small><b>SUPERBUG</b></div>
+   <div class="fact"><small>Organized by</small><b>Youthpreneur Network</b></div>
+  </div>
+
+  <div class="award-body">
+   <div class="award-text">
+    <p>Led my team <strong>SUPERBUG</strong> to win the <span class="hl">Champion Award</span> in Greenovation 2.0, organized by the Youthpreneur Network.</p>
+    <p>Our idea was selected as the best among participating universities across Bangladesh.</p>
+    <p>The experience strengthened teamwork, problem-solving, sustainable innovation, and entrepreneurial thinking.</p>
+   </div>
+   <div class="award-photo">
+    <a class="shot you" href="https://drive.google.com/file/d/18vEW5a5jz_iKYPgQ-0pSmqDgwxeJ3VKF/view?usp=sharing" target="_blank">
+     <img loading="lazy" src="https://drive.google.com/thumbnail?id=18vEW5a5jz_iKYPgQ-0pSmqDgwxeJ3VKF&sz=w1600" alt="Ahmed Ishtiak Nirob with Greenovation winner crest and certificate">
+    </a>
+    <div class="cap">Greenovation 2.0 · Winner crest and championship certificate</div>
+   </div>
+  </div>
+
+  <div class="proof">
+   <span>Proof &amp; links</span>
+   <a class="btn p" href="https://drive.google.com/file/d/1tMj9MgsnNXc-W2O2eB3LXE7HEnux7BIn/view?usp=sharing" target="_blank">View Championship Certificate ↗</a>
+   <a class="btn" href="https://drive.google.com/file/d/18vEW5a5jz_iKYPgQ-0pSmqDgwxeJ3VKF/view?usp=sharing" target="_blank">Winner Photo ↗</a>
+  </div>
+ </article>
+
+ <!-- GREENOVATION 2025 -->
+ <article class="award rv">
+  <div class="award-header">
+   <div>
+    <div class="idx">Champion · December 2025</div>
+    <h3>Greenovation Challenge 2025</h3>
+   </div>
+   <div class="badge">Champion</div>
+  </div>
+
+  <div class="facts">
+   <div class="fact big"><small>What I got</small><b>Champion Award</b></div>
+   <div class="fact"><small>Team</small><b>Team Black Soldiers</b></div>
+   <div class="fact"><small>Event</small><b>Environment Innovation Summit &amp; Awards 2025</b></div>
+   <div class="fact"><small>Date</small><b>December 2025</b></div>
+  </div>
+
+  <div class="award-body">
+   <div class="award-text">
+    <p>Awarded as a <span class="hl">Champion of the Greenovation Challenge 2025</span> at the Environment Innovation Summit &amp; Awards 2025.</p>
+    <p>The recognition was received for developing impactful and sustainable environmental innovation initiatives with <strong>Team Black Soldiers</strong>.</p>
+   </div>
+   <div class="award-photo">
+    <a class="shot you" href="https://drive.google.com/file/d/1DIWrFg0OqlkpmqfSwlwwNfI5o4VlsPAG/view?usp=sharing" target="_blank">
+     <img loading="lazy" src="https://drive.google.com/thumbnail?id=1DIWrFg0OqlkpmqfSwlwwNfI5o4VlsPAG&sz=w1600" alt="Greenovation Challenge 2025 award winning moment">
+    </a>
+    <div class="cap">Greenovation Challenge 2025 · Award-winning moment with Team Black Soldiers</div>
+   </div>
+  </div>
+
+  <div class="proof">
+   <span>Proof &amp; links</span>
+   <a class="btn p" href="https://drive.google.com/file/d/1DIWrFg0OqlkpmqfSwlwwNfI5o4VlsPAG/view?usp=sharing" target="_blank">Winning Moment ↗</a>
+   <a class="btn" href="https://drive.google.com/file/d/1go4wUEFLEeQxsSLQ6BryQu2Nb-r8U4Mn/view?usp=sharing" target="_blank">All Winners ↗</a>
+   <a class="btn" href="https://drive.google.com/file/d/1nMuXzMUmLEpMSKpWqZ0HJA3LVAHgUrRN/view?usp=sharing" target="_blank">Crest Photo ↗</a>
+  </div>
+ </article>
+</section>
+
+<!-- ============ 03 COMPETITION (purple) ============ -->
+<section class="sec purple" id="comp">
+ <div class="sec-head">
+  <div>
+   <div class="num">03 / COMPETITION ACHIEVEMENTS</div>
+   <h2>National <span>Finalist Positions</span></h2>
+   <p>Team SUPERBUG’s ranked positions in national One Health and sustainability competitions.</p>
+  </div>
+  <div class="sec-count"><b>2</b>Rankings</div>
+ </div>
+
+ <div class="comp-grid">
+
+  <!-- ONE HEALTH DAY -->
+  <article class="award rv">
+   <div class="award-header">
+    <div>
+     <div class="idx">One Health Day 2025</div>
+     <h3>One Health Poster Competition</h3>
+    </div>
+    <div class="badge">Top 10</div>
+   </div>
+   <div class="facts">
+    <div class="fact big"><small>What I got</small><b>Top 10 · of 98 teams</b></div>
+    <div class="fact"><small>Team</small><b>SUPERBUG</b></div>
+    <div class="fact"><small>Venue</small><b>icddr,b</b></div>
+   </div>
+   <div class="comp-text">
+    <p>Our team <strong>SUPERBUG</strong> secured a Top 10 position at the One Health Day 2025 Poster Competition organized at <strong>icddr,b</strong>.</p>
+    <p>The team focused on the theme <em>“Our future is our responsibility”</em>, emphasizing that a healthier future begins with One Health.</p>
+   </div>
+   <div class="comp-photos">
+    <a class="shot you" href="https://drive.google.com/file/d/1GjlvBDtQoM_4oE9bvG8slCzPgO5jkYNZ/view?usp=sharing" target="_blank"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1GjlvBDtQoM_4oE9bvG8slCzPgO5jkYNZ&sz=w1200" alt="One Health Day 2025 poster presentation"></a>
+    <a class="shot" href="https://drive.google.com/file/d/1L4YrtmMMVvubRUK77OdgKmTuAyWRaZoe/view?usp=sharing" target="_blank"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1L4YrtmMMVvubRUK77OdgKmTuAyWRaZoe&sz=w1200" alt="Team SUPERBUG at One Health Day"></a>
+   </div>
+   <div class="proof">
+    <span>Proof &amp; links</span>
+    <a class="btn p" href="https://drive.google.com/file/d/1GjlvBDtQoM_4oE9bvG8slCzPgO5jkYNZ/view?usp=sharing" target="_blank">Presentation Photo ↗</a>
+    <a class="btn" href="https://drive.google.com/file/d/1L4YrtmMMVvubRUK77OdgKmTuAyWRaZoe/view?usp=sharing" target="_blank">Team Photo ↗</a>
+   </div>
+  </article>
+
+  <!-- YOUTH FOR EARTH -->
+  <article class="award rv">
+   <div class="award-header">
+    <div>
+     <div class="idx">Youth Festival · 2025</div>
+     <h3>Youth for Earth: An Innovative Case Solution Championship</h3>
+    </div>
+    <div class="badge">Top 15</div>
+   </div>
+   <div class="facts">
+    <div class="fact big"><small>What I got</small><b>Top 15 · Ranked 11th</b></div>
+    <div class="fact"><small>Team</small><b>SUPERBUG</b></div>
+    <div class="fact"><small>Category</small><b>Model Campus</b></div>
+   </div>
+   <div class="comp-text">
+    <p>Team <strong>SUPERBUG</strong> was selected as the <strong>11th team among the top 15</strong>, presenting a “Zero Waste Green Campus” vision in the <strong>Model Campus</strong> category.</p>
+    <p>The final was not attended due to a departmental tour on the same date, but the competition provided a valuable experience in teamwork, sustainability, and idea presentation.</p>
+   </div>
+   <div class="comp-photos">
+    <a class="shot you" href="https://drive.google.com/file/d/1L4pE91Y35QhpMbAWe8IrLT1eir5ugvsC/view?usp=sharing" target="_blank"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1L4pE91Y35QhpMbAWe8IrLT1eir5ugvsC&sz=w1200" alt="Ahmed Ishtiak Nirob speaking during Youth for Earth"></a>
+    <a class="shot" href="https://drive.google.com/file/d/16iI7TP7y1_dpX7fN5SSvVtCKiXHqcNFm/view?usp=sharing" target="_blank"><img loading="lazy" src="https://drive.google.com/thumbnail?id=16iI7TP7y1_dpX7fN5SSvVtCKiXHqcNFm&sz=w1200" alt="Team SUPERBUG selected among top 15"></a>
+   </div>
+   <div class="proof">
+    <span>Proof &amp; links</span>
+    <a class="btn p" href="https://drive.google.com/file/d/1L4pE91Y35QhpMbAWe8IrLT1eir5ugvsC/view?usp=sharing" target="_blank">My Speaking Photo ↗</a>
+    <a class="btn" href="https://drive.google.com/file/d/1sPI8MSAQSrL5IeIR4Gx3K70LL5es4Onq/view?usp=drive_link" target="_blank">Team Presentation ↗</a>
+   </div>
+  </article>
+
+ </div>
+</section>
+
+<!-- ============ 04 ACADEMIC (cyan) ============ -->
+<section class="sec cyan" id="academic">
+ <div class="sec-head">
+  <div>
+   <div class="num">04 / EARLY ACADEMIC RECOGNITION</div>
+   <h2>Academic <span>Distinctions</span></h2>
+   <p>Three board scholarships (PSC, JSC, HSC), each with full free studentship and a monthly stipend.</p>
+  </div>
+  <div class="sec-count"><b>3</b>Scholarships</div>
+ </div>
+
+ <div class="dist-grid">
+
+  <article class="dist wide rv">
+   <div class="dist-info">
+    <div class="yr">HSC · 2018</div>
+    <h3>HSC Board Scholarship</h3>
+    <div class="facts" style="grid-template-columns:1fr;margin:4px 0 12px">
+     <div class="fact"><small>What I got</small><b>Free studentship + monthly stipend</b></div>
+    </div>
+    <p>Academic recognition from the Rajshahi Education Board, including full free studentship and a monthly stipend till the end of the course.</p>
+    <div class="proof">
+     <span>Proof &amp; links</span>
+     <a class="btn p" href="https://rajshahiboard.gov.bd/wp-content/uploads/2019/01/HSC-2018-Stipend-List.pdf" target="_blank">Rajshahi Board Official List ↗</a>
+     <a class="btn" href="https://drive.google.com/file/d/1xbVIkVJJnhvyWv-aPumbL_7Rh3hpA0TJ/view?usp=sharing" target="_blank">View My Name in List ↗</a>
+    </div>
+   </div>
+   <a class="shot cert" href="https://drive.google.com/file/d/1xbVIkVJJnhvyWv-aPumbL_7Rh3hpA0TJ/view?usp=sharing" target="_blank">
+    <img loading="lazy" src="https://drive.google.com/thumbnail?id=1xbVIkVJJnhvyWv-aPumbL_7Rh3hpA0TJ&sz=w1600" alt="Ahmed Ishtiak Nirob name in the HSC 2018 Rajshahi Board stipend list">
+   </a>
+  </article>
+
+  <article class="dist rv">
+   <div class="yr">JSC · 2013</div>
+   <h3>Talent Pool Board Scholarship</h3>
+   <div class="facts" style="grid-template-columns:1fr;margin:4px 0 12px">
+    <div class="fact"><small>What I got</small><b>Free studentship + monthly stipend</b></div>
+   </div>
+   <p>Talent Pool Board Scholarship awarded during the Junior School Certificate stage as an early academic distinction.</p>
+   <p>Full free studentship and monthly stipend till the end of the course.</p>
+  </article>
+
+  <article class="dist rv">
+   <div class="yr">PSC · 2010</div>
+   <h3>Talent Pool Board Scholarship</h3>
+   <div class="facts" style="grid-template-columns:1fr;margin:4px 0 12px">
+    <div class="fact"><small>What I got</small><b>Free studentship + monthly stipend</b></div>
+   </div>
+   <p>Board Scholarship – Talent Pool received at the Primary School Certificate stage.</p>
+   <p>Full free studentship and monthly stipend till the end of the course.</p>
+  </article>
+
+ </div>
+</section>
+
+<div class="note rv">
+ <strong>From academic recognition to global scholarship:</strong><br>
+ These achievements reflect a progression from early academic recognition through national competitions, sustainability initiatives, One Health engagement, and international veterinary scholarship recognition.
+</div>
+
+</main>
+
+<footer>© 2026 Ahmed Ishtiak Nirob · Awards &amp; Academic Achievements</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting)return;
+      var el=e.target,sib=el.parentNode.querySelectorAll(':scope > .rv'),i=Array.prototype.indexOf.call(sib,el);
+      el.style.transitionDelay=(el.classList.contains('stat')||el.classList.contains('dist')||el.closest('.comp-grid'))?(i*90)+'ms':'0ms';
+      el.classList.add('in');
+      el.querySelectorAll('.n').forEach(count);
+      setTimeout(function(){el.style.transitionDelay=''},1400);
+      io.unobserve(el);
+    });
+  },{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+  function count(n){
+    var t=+n.dataset.n,c=0;if(!t||n.dataset.done)return;n.dataset.done=1;n.textContent='0';
+    var s=setInterval(function(){c++;n.textContent=c;if(c>=t)clearInterval(s)},260);
+  }
+})();
+</script>
+</body>
+</html>
