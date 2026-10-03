@@ -1,1 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Ahmed Ishtiak Nirob</title>
+<style>
+:root{
+  --bg:#070c17;--text:#eef5ff;--muted:#9eafc8;
+  --cyan:#54e6ff;--purple:#a78bfa;--gold:#f4cb72;--pink:#ff82bd;--green:#76e3b2;
+  --border:rgba(255,255,255,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.65;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:
+ radial-gradient(circle at 10% 10%,#16445f55,transparent 30%),
+ radial-gradient(circle at 90% 25%,#50327444,transparent 33%),
+ radial-gradient(circle at 40% 90%,#15534a33,transparent 33%)}
+a{color:inherit;text-decoration:none}
+.container{width:min(1160px,92%);margin:auto}
 
+/* NAV */
+nav{position:sticky;top:0;z-index:1000;background:#070c17e8;backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+.nav-inner{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{color:#fff;font-size:15px;font-weight:800;letter-spacing:.3px}
+.brand small{display:block;color:var(--gold);font-size:10px;font-weight:500;letter-spacing:.7px}
+.nav-links{display:flex;gap:20px;flex-wrap:wrap}
+.nav-links a{color:var(--muted);font-size:13px;transition:.25s}
+.nav-links a:hover,.nav-links a.active{color:var(--cyan)}
+
+/* HERO: photo is the background vibe */
+.hero{position:relative;margin-top:44px;border-radius:32px;overflow:hidden;min-height:540px;display:flex;align-items:center;
+ background:#0a1220;border:1px solid #54e6ff33;box-shadow:0 25px 70px #0005}
+.hero-photo{position:absolute;top:0;right:0;bottom:0;width:60%;
+ -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 48%);mask-image:linear-gradient(90deg,transparent 0,#000 48%)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 16%;display:block;
+ transform:scale(1.12);animation:settle 2.2s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes settle{to{transform:scale(1)}}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+ background:linear-gradient(90deg,#0a1220 25%,#0a122099 55%,transparent 80%),
+ radial-gradient(circle at 85% 100%,#54e6ff22,transparent 45%)}
+.hero-body{position:relative;z-index:2;padding:56px;max-width:640px}
+.eyebrow{color:var(--cyan);font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase}
+.hero h1{margin:14px 0 16px;font-size:clamp(42px,6.5vw,74px);line-height:1.05;
+ background:linear-gradient(90deg,#fff,var(--cyan),var(--purple),var(--gold),#fff);background-size:250% 100%;
+ -webkit-background-clip:text;background-clip:text;color:transparent;animation:flow 9s linear infinite}
+@keyframes flow{to{background-position:250% 0}}
+.hero p{color:#b9c8dd;font-size:15px;max-width:520px}
+.who{margin-top:14px;font-size:12px;color:var(--gold);letter-spacing:.8px}
+.email-box{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:26px;padding:13px 16px;max-width:520px;
+ border-radius:14px;border:1px solid #54e6ff44;background:#07111dcc;backdrop-filter:blur(8px)}
+.email-box small{display:block;color:var(--muted);font-size:9px;letter-spacing:1.6px;text-transform:uppercase}
+.email-address{color:var(--cyan);font-size:15px;font-weight:700;overflow-wrap:anywhere}
+.copy-btn{flex:none;cursor:pointer;padding:8px 14px;border-radius:8px;background:#54e6ff16;border:1px solid #54e6ff55;color:var(--cyan);font-size:10px;font-weight:800;transition:.25s}
+.copy-btn:hover{background:var(--cyan);color:#07111c}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.cta a{padding:11px 20px;border-radius:11px;font-size:12px;font-weight:800;letter-spacing:.4px;transition:.25s;border:1px solid var(--c)}
+.cta .mail{--c:var(--cyan);background:var(--cyan);color:#06101c}
+.cta .mail:hover{box-shadow:0 0 30px #54e6ff55;transform:translateY(-2px)}
+.cta .wa{--c:var(--green);color:var(--green);background:#76e3b210}
+.cta .wa:hover{background:var(--green);color:#06140e;transform:translateY(-2px)}
+
+/* SECTION BLOCKS - one color each */
+.sec{--a:var(--gold);margin:56px 0;padding:34px;border-radius:30px;scroll-margin-top:85px;
+ background:linear-gradient(180deg,color-mix(in srgb,var(--a) 9%,transparent),transparent 45%);
+ border:1px solid color-mix(in srgb,var(--a) 28%,transparent)}
+.sec.pink{--a:var(--pink)}
+.sec.green{--a:var(--green)}
+.sec-head{padding-bottom:20px;margin-bottom:22px;border-bottom:1px solid color-mix(in srgb,var(--a) 30%,transparent)}
+.sec-head .num{color:var(--a);font-size:12px;letter-spacing:2px;font-weight:800}
+.sec-head h2{font-size:clamp(24px,3.4vw,30px);line-height:1.25;margin-top:4px}
+.sec-head h2 span{color:var(--a)}
+.sec-head p{color:var(--muted);font-size:14px;margin-top:5px;max-width:640px}
+
+/* LINK CARDS (each link appears ONCE on this page) */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.lc{--c:var(--cyan);position:relative;display:flex;flex-direction:column;padding:22px;border-radius:20px;overflow:hidden;
+ background:linear-gradient(145deg,#142137,#0b1422);border:1px solid color-mix(in srgb,var(--c) 22%,transparent);transition:transform .35s,border-color .35s,box-shadow .35s}
+.lc::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--c),transparent)}
+.lc::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 35%,#ffffff12 50%,transparent 65%);transform:translateX(-120%);transition:transform .9s;pointer-events:none}
+.lc:hover{transform:translateY(-7px);border-color:var(--c);box-shadow:0 18px 45px color-mix(in srgb,var(--c) 22%,transparent)}
+.lc:hover::after{transform:translateX(120%)}
+.lc-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.ico{width:50px;height:50px;display:flex;align-items:center;justify-content:center;border-radius:15px;color:var(--c);font-size:19px;font-weight:900;
+ background:color-mix(in srgb,var(--c) 12%,transparent);border:1px solid color-mix(in srgb,var(--c) 30%,transparent);transition:.3s}
+.lc:hover .ico{transform:scale(1.1) rotate(-4deg)}
+.type{color:var(--muted);font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;text-align:right}
+.lc h3{margin:18px 0 4px;font-size:18px}
+.lc p{color:var(--muted);font-size:12px;flex:1;overflow-wrap:anywhere}
+.go{margin-top:16px;padding:9px 12px;border-radius:9px;text-align:center;font-size:11px;font-weight:800;color:var(--c);
+ border:1px solid color-mix(in srgb,var(--c) 55%,transparent);transition:.25s}
+.lc:hover .go{background:var(--c);color:#07101c}
+.scholar{--c:var(--gold)}.rg{--c:var(--purple)}.orcid{--c:var(--green)}.linkedin{--c:#6fa8ff}
+.facebook{--c:#6ea1ff}.instagram{--c:var(--pink)}.youtube{--c:#ff6674}.x{--c:#e8f0ff}
+
+/* NOTE + chips */
+.note{--a:var(--green);margin:56px 0 0;padding:30px 32px;border-radius:24px;border:1px solid color-mix(in srgb,var(--green) 30%,transparent);
+ background:linear-gradient(145deg,#0e1b1d,#0a121f)}
+.note h2{font-size:22px}.note h2 span{color:var(--green)}
+.note p{color:var(--muted);font-size:14px;margin-top:6px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.chip{padding:8px 15px;border-radius:30px;font-size:12px;font-weight:700;color:#c8f5de;background:#76e3b212;border:1px solid #76e3b236;transition:.25s}
+.chip:hover{background:var(--green);color:#06140e;transform:translateY(-3px)}
+footer{text-align:center;color:var(--muted);padding:60px 0 50px;font-size:12px}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(32px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.rv.in.lc:hover{transition:transform .35s,border-color .35s,box-shadow .35s}
+.hero-body>*{opacity:0;transform:translateY(22px);animation:up .8s ease forwards}
+.hero-body>:nth-child(2){animation-delay:.12s}.hero-body>:nth-child(3){animation-delay:.24s}
+.hero-body>:nth-child(4){animation-delay:.36s}.hero-body>:nth-child(5){animation-delay:.48s}.hero-body>:nth-child(6){animation-delay:.6s}
+@keyframes up{to{opacity:1;transform:none}}
+
+@media(max-width:950px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){
+ .nav-inner{padding:14px 0;flex-direction:column;align-items:flex-start}.nav-links{gap:12px}
+ .hero{margin-top:26px;flex-direction:column;align-items:stretch;min-height:0;border-radius:24px}
+ .hero-photo{position:relative;width:100%;height:340px;
+  -webkit-mask-image:linear-gradient(180deg,#000 55%,transparent);mask-image:linear-gradient(180deg,#000 55%,transparent)}
+ .hero::before{background:linear-gradient(180deg,transparent 30%,#0a1220 62%)}
+ .hero-body{padding:0 22px 30px;margin-top:-90px}
+ .email-box{flex-direction:column;align-items:flex-start}
+ .sec{padding:18px;border-radius:22px;margin:40px 0}
+ .note{padding:22px}
+}
+@media(max-width:470px){.grid{grid-template-columns:1fr}.hero-photo{height:300px}}
+@media(prefers-reduced-motion:reduce){
+ .rv,.hero-body>*{opacity:1!important;transform:none!important;animation:none!important;transition:none!important}
+ .hero-photo img,.hero h1{animation:none;transform:none}html{scroll-behavior:auto}
+}
+</style>
+<noscript><style>.rv{opacity:1;transform:none}</style></noscript>
+</head>
+
+<body>
+<nav>
+ <div class="container nav-inner">
+  <div class="brand">Ahmed Ishtiak Nirob<small>B.Sc. Vet. Sci. &amp; A.H.</small></div>
+  <div class="nav-links">
+   <a href="index.html">Home</a>
+   <a href="research.html">Research</a>
+   <a href="publications.html">Publications</a>
+   <a href="education.html">Education</a>
+   <a href="experience.html">Experience</a>
+   <a href="skills.html">Skills</a>
+   <a href="presentations.html">Presentations</a>
+   <a href="awards.html">Awards</a>
+   <a href="contact.html" class="active">Contact</a>
+  </div>
+ </div>
+</nav>
+
+<main class="container">
+
+<!-- HERO: photo as background vibe, email + WhatsApp live here only -->
+<header class="hero">
+ <div class="hero-photo">
+  <img src="https://drive.google.com/thumbnail?id=1BCm_-ghVclfK30EiVxyKr0qFTjJxaTOT&sz=w1600" alt="Ahmed Ishtiak Nirob">
+ </div>
+ <div class="hero-body">
+  <div class="eyebrow">Connect · Collaborate · Communicate</div>
+  <h1>Get in Touch</h1>
+  <p>Open to research collaboration, academic discussion, and PhD-related opportunities in veterinary science, microbiology, and One Health. Email is the preferred channel.</p>
+  <div class="who">Veterinary Science · Microbiology · One Health · Research</div>
+  <div class="email-box">
+   <div><small>Academic Email</small><div class="email-address">ahmedishtiaknirob@gmail.com</div></div>
+   <button class="copy-btn" id="copyBtn" type="button">COPY EMAIL</button>
+  </div>
+  <div class="cta">
+   <a class="mail" href="mailto:ahmedishtiaknirob@gmail.com">✉ Send Email</a>
+   <a class="wa" href="https://wa.me/8801706284577" target="_blank" rel="noopener">☎ WhatsApp ↗</a>
+  </div>
+ </div>
+</header>
+
+<!-- 01 ACADEMIC (gold) -->
+<section class="sec" id="academic">
+ <div class="sec-head">
+  <div class="num">01 / ACADEMIC &amp; PROFESSIONAL</div>
+  <h2>Research <span>Profiles</span></h2>
+  <p>Publications, research activity, researcher identity, and professional networking.</p>
+ </div>
+ <div class="grid">
+  <a class="lc scholar rv" href="https://scholar.google.com/citations?user=nqe--60AAAAJ&hl=en&authuser=1" target="_blank" rel="noopener">
+   <div class="lc-top"><div class="ico">★</div><div class="type">Publications</div></div>
+   <h3>Google Scholar</h3><p>Publications &amp; citation profile</p><div class="go">View profile ↗</div>
+  </a>
+  <a class="lc rg rv" href="https://www.researchgate.net/profile/Ahmed-Ishtiak-Nirob" target="_blank" rel="noopener">
+   <div class="lc-top"><div class="ico">RG</div><div class="type">Research</div></div>
+   <h3>ResearchGate</h3><p>Research projects &amp; scientific work</p><div class="go">View profile ↗</div>
+  </a>
+  <a class="lc orcid rv" href="https://orcid.org/0009-0009-4385-8481" target="_blank" rel="noopener">
+   <div class="lc-top"><div class="ico">iD</div><div class="type">Research ID</div></div>
+   <h3>ORCID</h3><p>0009-0009-4385-8481</p><div class="go">Verify identity ↗</div>
+  </a>
+  <a class="lc linkedin rv" href="https://www.linkedin.com/in/ahmed-ishtiak-nirob/" target="_blank" rel="noopener">
+   <div class="lc-top"><div class="ico">in</div><div class="type">Networking</div></div>
+   <h3>LinkedIn</h3><p>Professional profile &amp; networking</p><div class="go">Connect ↗</div>
+  </a>
+ </div>
+</section>
+
+<!-- 02 SOCIAL (pink) -->
+<section class="sec pink" id="social">
+ <div class="sec-head">
+  <div class="num">02 / SOCIAL &amp; MEDIA</div>
+  <h2>Follow my <span>Journey</span></h2>
+  <p>Academic updates, research activities, presentations, field experiences, and selected creative content.</p>
+ </div>
+ <div class="grid">
+  <a class="lc facebook rv" href="https://www.facebook.com/rj.neerob.18/" target="_blank" rel="noopener">
+   <div class="lc-top"><div class="ico">f</div><div class="type">Social Profile</div></div>
+   <h3>Facebook</h3><p>Personal updates, activities &amp; community engagement.</p><div class="go">Visit Facebook ↗</div>
+  </a>
+  <a class="lc instagram rv" href="https://www.instagram.com/dr_nirob_/" target="_blank" rel="noopener">
+   <div class="lc-top"><div class="ico">◎</div><div class="type">Visual Updates</div></div>
+   <h3>Instagram</h3><p>Photos, reels, moments &amp; selected creative content.</p><div class="go">Visit Instagram ↗</div>
+  </a>
+  <a class="lc youtube rv" href="https://www.youtube.com/@nirobnero" target="_blank" rel="noopener">
+   <div class="lc-top"><div class="ico">▶</div><div class="type">Video Channel</div></div>
+   <h3>YouTube</h3><p>Academic, research, presentation &amp; creative videos.</p><div class="go">Visit YouTube ↗</div>
+  </a>
+  <a class="lc x rv" href="https://x.com/Nirobnero" target="_blank" rel="noopener">
+   <div class="lc-top"><div class="ico">𝕏</div><div class="type">Social Network</div></div>
+   <h3>X</h3><p>Updates, ideas, public engagement &amp; conversations.</p><div class="go">Visit X ↗</div>
+  </a>
+ </div>
+</section>
+
+<!-- 03 COLLABORATION (green) -->
+<section class="note rv">
+ <h2>Research &amp; Academic <span>Collaboration</span></h2>
+ <p>I am particularly interested in connecting with researchers, academics, students, and professionals working in:</p>
+ <div class="chips">
+  <span class="chip">Veterinary Science</span><span class="chip">Microbiology</span><span class="chip">One Health</span>
+  <span class="chip">Infectious Diseases</span><span class="chip">Antimicrobial Resistance</span><span class="chip">Epidemiology</span>
+ </div>
+</section>
+
+</main>
+
+<footer>© 2026 Ahmed Ishtiak Nirob · Academic &amp; Research Portfolio</footer>
+
+<script>
+(function(){
+  var email="ahmedishtiaknirob@gmail.com",btn=document.getElementById("copyBtn");
+  btn.addEventListener("click",function(){
+    function done(){btn.textContent="COPIED ✓";setTimeout(function(){btn.textContent="COPY EMAIL"},2000)}
+    if(navigator.clipboard){navigator.clipboard.writeText(email).then(done).catch(function(){location.href="mailto:"+email})}
+    else{location.href="mailto:"+email}
+  });
+  var els=document.querySelectorAll(".rv");
+  if(!("IntersectionObserver" in window)){els.forEach(function(e){e.classList.add("in")});return}
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting)return;
+      var el=e.target,sib=el.parentNode.querySelectorAll(":scope > .rv"),i=Array.prototype.indexOf.call(sib,el);
+      el.style.transitionDelay=(i*100)+"ms";el.classList.add("in");
+      setTimeout(function(){el.style.transitionDelay=""},1400);
+      io.unobserve(el);
+    });
+  },{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
