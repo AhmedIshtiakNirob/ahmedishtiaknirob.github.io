@@ -2653,6 +2653,181 @@ body.light .ielts-card{
 
 }
 
+
+/* =========================================================
+   EDX — sectioned education page (v2)
+========================================================= */
+html{scroll-padding-top:150px}
+.edx{padding:70px 0 100px;font-size:16px;line-height:1.7}
+.edx h1,.edx h2,.edx h3,.edx p{margin:0}
+.edx-hero{text-align:center;margin-bottom:34px}
+.edx-hero h1{font-size:clamp(46px,7vw,76px);line-height:1;letter-spacing:-.045em;background:linear-gradient(100deg,var(--text),var(--cyan) 55%,var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+.edx-hero p{max-width:620px;margin:14px auto 0;color:var(--text-soft);font-size:17px}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:34px}
+.st{padding:18px 16px;border-radius:20px;text-align:center;border:1px solid color-mix(in srgb,var(--ac) 40%,var(--border));background:linear-gradient(160deg,color-mix(in srgb,var(--ac) 12%,var(--surface-strong)),var(--surface-strong))}
+.st b{display:block;font-size:clamp(32px,4.4vw,46px);line-height:1.1;letter-spacing:-.03em;color:var(--ac)}
+.st small{display:block;margin-top:4px;font-size:13.5px;line-height:1.4;color:var(--text-soft)}
+
+/* jump bar */
+.jump{position:sticky;top:76px;z-index:50;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:10px;margin:0 auto 34px;width:fit-content;max-width:100%;border-radius:18px;border:1px solid var(--border);background:color-mix(in srgb,var(--bg) 80%,transparent);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.jump a{padding:8px 15px;border-radius:12px;font-size:14px;font-weight:700;color:var(--text-soft);border:1px solid transparent;transition:.25s}
+.jump a:hover{color:var(--text);border-color:color-mix(in srgb,var(--ac) 50%,transparent)}
+.jump a.on{color:var(--text);background:color-mix(in srgb,var(--ac) 18%,transparent);border-color:color-mix(in srgb,var(--ac) 60%,transparent)}
+
+/* section panels */
+.edx-sec{position:relative;margin:0 0 36px;border-radius:30px;border:1px solid color-mix(in srgb,var(--ac) 30%,var(--border));background:linear-gradient(165deg,color-mix(in srgb,var(--ac) 7%,var(--surface-strong)),var(--surface-strong) 38%);box-shadow:var(--shadow);overflow:hidden}
+.edx-sec:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--ac),transparent 85%)}
+.edx-head{display:flex;align-items:center;gap:18px;padding:30px 34px 22px;border-bottom:1px solid color-mix(in srgb,var(--ac) 20%,var(--border))}
+.edx-num{flex:none;width:48px;height:48px;display:grid;place-items:center;border-radius:15px;font-size:22px;font-weight:900;color:var(--bg);background:var(--ac);box-shadow:0 0 24px color-mix(in srgb,var(--ac) 45%,transparent)}
+.edx-head h2{font-size:clamp(25px,3.4vw,34px);line-height:1.15;letter-spacing:-.03em;color:var(--text)}
+.edx-head p{margin-top:3px;font-size:15px;color:var(--text-soft)}
+.edx-hico{margin-left:auto;flex:none;width:44px;height:44px;color:var(--ac);opacity:.9}
+.edx-hico svg,.deg-ico svg,.tr-ico svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.edx-body{padding:30px 34px 34px}
+
+/* shared */
+.pill{display:inline-block;padding:5px 12px;border-radius:999px;font-size:13px;font-weight:800;border:1px solid color-mix(in srgb,var(--ac) 55%,transparent);color:var(--ac);background:color-mix(in srgb,var(--ac) 12%,transparent)}
+.pill.live:before{content:"";display:inline-block;width:7px;height:7px;margin-right:7px;border-radius:50%;background:var(--ac);animation:edxBlink 1.5s ease-in-out infinite}
+@keyframes edxBlink{50%{opacity:.25}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chips span{padding:6px 12px;border-radius:999px;font-size:13.5px;color:var(--text);border:1px solid var(--border-strong);background:color-mix(in srgb,var(--text) 5%,transparent)}
+.chips .gchip{display:inline-flex;align-items:center;gap:7px;font-weight:800;color:#2a1b00;border-color:var(--gold);background:linear-gradient(110deg,#f7d57a,#f2c45c 45%,#e7ab3b);box-shadow:0 0 18px rgba(242,196,92,.35)}
+.gchip svg{width:18px;height:18px}
+.gchip .m-rib{fill:#8a5a00}.gchip .m-disc{fill:#fff3c9;stroke:#8a5a00;stroke-width:1.5}.gchip .m-star{fill:#c98a00}
+body.light .chips .gchip{color:#3a2600}
+
+/* progress ring */
+.ring{--s:150px;position:relative;width:var(--s);height:var(--s);flex:none}
+.ring.lg{--s:190px}.ring.sm{--s:112px}.ring.xs{--s:92px}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:9;stroke-linecap:round}
+.rg-bg{stroke:color-mix(in srgb,var(--ac) 16%,transparent)}
+.rg-fg{stroke:var(--ac);stroke-dasharray:326.7;stroke-dashoffset:326.7;filter:drop-shadow(0 0 7px color-mix(in srgb,var(--ac) 65%,transparent));transition:stroke-dashoffset 1.7s cubic-bezier(.2,.8,.2,1) .2s}
+.in .rg-fg,.ring.in .rg-fg{stroke-dashoffset:calc(326.7 * (1 - var(--p)))}
+.rg-txt{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}
+.rg-txt b{font-size:calc(var(--s) * .27);letter-spacing:-.04em;color:var(--text)}
+.rg-txt small{margin-top:5px;font-size:calc(var(--s) * .09);color:var(--text-soft);font-weight:700}
+.ring.xs .rg-txt small{font-size:11px}.ring.sm .rg-txt small{font-size:12px}
+
+/* 1 degrees */
+.deg-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.deg{--ac:var(--cyan);padding:26px;border-radius:24px;border:1px solid color-mix(in srgb,var(--ac) 38%,var(--border));background:linear-gradient(160deg,color-mix(in srgb,var(--ac) 9%,var(--surface-strong)),var(--surface-strong))}
+.deg-top{display:flex;justify-content:space-between;align-items:center}
+.deg-ico{width:50px;height:50px;padding:11px;border-radius:15px;color:var(--ac);background:color-mix(in srgb,var(--ac) 13%,transparent);border:1px solid color-mix(in srgb,var(--ac) 45%,transparent)}
+.deg-lvl{margin-top:18px;font-size:14px;font-weight:800;color:var(--ac)}
+.deg h3{margin-top:4px;font-size:clamp(23px,2.6vw,29px);line-height:1.2;letter-spacing:-.025em;color:var(--text)}
+.deg-uni{margin-top:8px;font-size:15px;color:var(--text-soft)}
+.deg-period{display:inline-block;margin-top:12px;padding:6px 13px;border-radius:999px;font-size:14px;font-weight:800;color:var(--text);background:color-mix(in srgb,var(--ac) 14%,transparent);border:1px solid color-mix(in srgb,var(--ac) 40%,transparent)}
+.sup{margin-top:20px;padding:16px 18px;border-radius:18px;border:1px solid var(--border-strong);background:color-mix(in srgb,var(--text) 4%,transparent)}
+.sup small{display:block;font-size:13px;font-weight:800;color:var(--ac)}
+.sup b{display:block;margin-top:2px;font-size:19px;color:var(--text)}
+.sup span{display:block;margin-top:2px;font-size:14px;color:var(--text-soft)}
+.sup a{display:inline-block;margin-top:8px;font-size:14px;font-weight:700;color:var(--ac);border-bottom:1px solid color-mix(in srgb,var(--ac) 50%,transparent)}
+.deg-result{display:flex;align-items:center;gap:20px;margin-top:20px;padding:16px 18px;border-radius:18px;border:1px solid color-mix(in srgb,var(--gold) 45%,transparent);background:color-mix(in srgb,var(--gold) 9%,transparent)}
+.deg-result small{display:block;font-size:13px;font-weight:800;color:var(--gold)}
+.deg-result b{display:block;font-size:22px;line-height:1.25;color:var(--text)}
+.deg-result span{display:block;margin-top:3px;font-size:14px;color:var(--text-soft)}
+.link-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}
+.lnk{display:block;padding:15px 18px;border-radius:16px;border:1px solid var(--border-strong);background:color-mix(in srgb,var(--text) 4%,transparent);transition:.28s}
+.lnk:hover{transform:translateY(-3px);border-color:var(--ac);box-shadow:0 0 22px color-mix(in srgb,var(--ac) 22%,transparent)}
+.lnk small{display:block;font-size:13px;font-weight:800;color:var(--ac)}
+.lnk b{display:block;font-size:16px;line-height:1.4;color:var(--text)}
+
+/* bars (performance + ielts) */
+.perf,.ie{display:grid;grid-template-columns:minmax(220px,.7fr) minmax(0,1.3fr);gap:34px;align-items:center}
+.perf-main,.ie-main{display:flex;flex-direction:column;align-items:center;gap:14px;padding:26px 18px;border-radius:24px;border:1px solid color-mix(in srgb,var(--ac) 38%,var(--border));background:color-mix(in srgb,var(--ac) 7%,transparent)}
+.perf-cap{text-align:center}.perf-cap b{display:block;font-size:20px;color:var(--text)}.perf-cap span{font-size:14px;color:var(--text-soft)}
+.bars h3{margin-bottom:14px;font-size:20px;color:var(--text)}
+.bar{display:grid;grid-template-columns:118px minmax(0,1fr) 50px;align-items:center;gap:12px;margin:0 0 12px;padding:10px 14px;border-radius:14px;border:1px solid transparent;position:relative}
+.b-l{font-size:15px;font-weight:700;color:var(--text-soft)}
+.b-t{height:14px;border-radius:99px;overflow:hidden;background:color-mix(in srgb,var(--ac) 14%,transparent)}
+.b-t i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,color-mix(in srgb,var(--ac) 60%,transparent),var(--ac));box-shadow:0 0 14px color-mix(in srgb,var(--ac) 55%,transparent);transition:width 1.4s cubic-bezier(.2,.8,.2,1) .25s}
+.in .b-t i{width:var(--w)}
+.b-v{font-size:19px;text-align:right;color:var(--text)}
+.bar.top{border-color:color-mix(in srgb,var(--gold) 65%,transparent);background:linear-gradient(100deg,color-mix(in srgb,var(--gold) 16%,transparent),transparent);box-shadow:0 0 26px color-mix(in srgb,var(--gold) 20%,transparent)}
+.bar.top .b-v{color:var(--gold);font-size:23px}
+.bar.top em{position:absolute;right:14px;top:-11px;padding:2px 10px;border-radius:99px;font-style:normal;font-size:12px;font-weight:900;color:#2a1b00;background:var(--gold)}
+.scale{margin-top:6px;font-size:13px;color:var(--muted)}
+.ie-foot{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-top:16px;font-size:15px;color:var(--text-soft)}
+.ie-foot b{color:var(--text)}
+
+/* 3 scholarships */
+.sch-banner{display:flex;align-items:center;gap:24px;padding:24px 28px;border-radius:24px;margin-bottom:22px;position:relative;overflow:hidden;border:1px solid var(--gold);background:linear-gradient(110deg,color-mix(in srgb,var(--gold) 22%,var(--surface-strong)),color-mix(in srgb,var(--orange) 10%,var(--surface-strong)));box-shadow:0 0 40px rgba(242,196,92,.18)}
+.sch-banner:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,#ffffff22 50%,transparent 65%);transform:translateX(-120%);animation:edxShine 5.5s ease-in-out infinite}
+@keyframes edxShine{0%,50%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+.sb-num{flex:none;width:88px;height:88px;display:grid;place-items:center;border-radius:24px;background:linear-gradient(145deg,#f7d57a,#e7ab3b);box-shadow:0 0 30px rgba(242,196,92,.5)}
+.sb-num b{font-size:54px;line-height:1;color:#2a1b00}
+.sch-banner h3{font-size:clamp(24px,3vw,32px);color:var(--text)}
+.sch-banner p{margin-top:4px;font-size:16px;color:var(--text-soft)}
+.sch-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.sch{--ac:var(--gold);position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:flex-start;padding:24px 22px;border-radius:24px;border:1px solid color-mix(in srgb,var(--gold) 55%,var(--border));background:linear-gradient(170deg,color-mix(in srgb,var(--gold) 13%,var(--surface-strong)),var(--surface-strong) 60%);transition:transform .35s,box-shadow .35s}
+.edx .sch.in:hover{transform:translateY(-6px);box-shadow:0 22px 50px #0004,0 0 34px rgba(242,196,92,.28)}
+.sch-medal{width:62px;height:62px;margin-bottom:12px}
+.sch-medal svg{width:100%;height:100%;filter:drop-shadow(0 0 12px rgba(242,196,92,.6));transform-origin:50% 0}
+.m-rib{fill:#e0636f}.m-disc{fill:#f2c45c;stroke:#fff3c9;stroke-width:1.6}.m-star{fill:#fff7dc}
+.sch:hover .sch-medal svg{animation:edxSwing 1s ease-in-out}
+@keyframes edxSwing{20%{transform:rotate(11deg)}50%{transform:rotate(-8deg)}80%{transform:rotate(4deg)}}
+.sch-year{position:absolute;right:18px;top:16px;font-size:34px;font-weight:900;letter-spacing:-.03em;color:color-mix(in srgb,var(--gold) 55%,transparent)}
+.sch-lvl{font-size:14px;font-weight:800;color:var(--gold)}
+.sch h3{margin-top:3px;font-size:24px;line-height:1.2;color:var(--text)}
+.sch-tag{display:inline-block;margin-top:10px;padding:4px 12px;border-radius:99px;font-size:13px;font-weight:900;color:#2a1b00;background:var(--gold)}
+.sch p{margin-top:12px;margin-bottom:16px;font-size:15px;color:var(--text)}
+.sch small{display:block;margin-top:4px;font-size:14px;color:var(--text-soft)}
+.sch-gpa{display:flex;align-items:baseline;gap:6px;margin-top:auto;align-self:stretch;padding-top:14px;border-top:1px solid color-mix(in srgb,var(--gold) 30%,transparent)}
+.sch-gpa b{font-size:22px;color:var(--gold)}.sch-gpa span{font-size:14px;color:var(--text-soft)}
+
+/* 4 internship */
+.tr{--ac:var(--purple);display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:26px;align-items:center;padding:28px;border-radius:24px;border:1px solid color-mix(in srgb,var(--ac) 40%,var(--border));background:linear-gradient(160deg,color-mix(in srgb,var(--ac) 9%,var(--surface-strong)),var(--surface-strong))}
+.tr-ico{width:70px;height:70px;padding:16px;border-radius:20px;color:var(--ac);background:color-mix(in srgb,var(--ac) 13%,transparent);border:1px solid color-mix(in srgb,var(--ac) 45%,transparent)}
+.tr-main small{display:block;font-size:14px;font-weight:800;color:var(--ac)}
+.tr-main h3{font-size:clamp(23px,2.8vw,30px);line-height:1.2;color:var(--text)}
+.tr-main p{margin-top:4px;font-size:16px;color:var(--text-soft)}
+.tr-stats{display:flex;gap:14px}
+.tr-stats div{min-width:130px;padding:16px;border-radius:18px;text-align:center;border:1px solid color-mix(in srgb,var(--ac) 40%,transparent);background:color-mix(in srgb,var(--ac) 9%,transparent)}
+.tr-stats b{display:block;font-size:40px;line-height:1.1;color:var(--ac)}
+.tr-stats span{display:block;margin-top:2px;font-size:13px;line-height:1.35;color:var(--text-soft)}
+
+/* 5 school */
+.sc-list{position:relative;padding-left:44px}
+.sc-list:before{content:"";position:absolute;left:13px;top:12px;bottom:12px;width:2px;background:linear-gradient(180deg,var(--rose),var(--gold),var(--purple),var(--teal));opacity:.55}
+.sc{--ac:var(--rose);position:relative;display:grid;grid-template-columns:76px minmax(0,1fr) auto;gap:20px;align-items:center;margin-bottom:16px;padding:20px 22px;border-radius:22px;border:1px solid color-mix(in srgb,var(--rose) 28%,var(--border));background:linear-gradient(160deg,color-mix(in srgb,var(--rose) 7%,var(--surface-strong)),var(--surface-strong));transition:transform .3s}
+.edx .sc.in:hover{transform:translateX(5px)}
+.sc-node{position:absolute;left:-39px;top:50%;width:16px;height:16px;margin-top:-8px;border-radius:50%;background:var(--bg);border:3px solid var(--gold);box-shadow:0 0 14px var(--gold)}
+.sc-logo{width:76px;height:76px;object-fit:contain;padding:8px;border-radius:18px;background:#fff;border:1px solid var(--border-strong)}
+.sc-lvl{font-size:13.5px;font-weight:800;color:var(--rose)}
+.sc h3{margin-top:2px;font-size:clamp(18px,2.2vw,22px);line-height:1.3;color:var(--text)}
+.sc-yr{margin-top:2px;font-size:15px;font-weight:700;color:var(--text-soft)}
+
+/* motion: reveal + one orchestrated stagger */
+.edx .r{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.16,1,.3,1)}
+.edx .r.in{opacity:1;transform:none}
+.sch-grid .sch:nth-child(2){transition-delay:.12s}.sch-grid .sch:nth-child(3){transition-delay:.24s}
+.bars .bar:nth-of-type(2) .b-t i{transition-delay:.4s}.bars .bar:nth-of-type(3) .b-t i{transition-delay:.55s}.bars .bar:nth-of-type(4) .b-t i{transition-delay:.7s}
+
+/* focus + a11y */
+.edx a:focus-visible,.jump a:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.edx *,.edx *:before,.edx *:after{animation:none!important;transition:none!important}.edx .r{opacity:1;transform:none}.rg-fg{stroke-dashoffset:calc(326.7 * (1 - var(--p)))}.b-t i{width:var(--w)}}
+
+/* responsive */
+@media(max-width:980px){
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .deg-grid,.link-row{grid-template-columns:1fr}
+  .perf,.ie{grid-template-columns:1fr;gap:22px}
+  .sch-grid{grid-template-columns:1fr}
+  .tr{grid-template-columns:auto minmax(0,1fr)}.tr-stats{grid-column:1 / -1}
+}
+@media(max-width:620px){
+  .edx{padding:56px 0 70px}
+  .jump{top:70px;flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;width:100%;scrollbar-width:none}.jump::-webkit-scrollbar{display:none}.jump a{flex:none}
+  .edx-head{padding:22px 18px 16px;gap:12px}.edx-num{width:40px;height:40px;font-size:19px;border-radius:12px}.edx-hico{display:none}
+  .edx-body{padding:20px 16px 24px}
+  .deg{padding:20px}.deg-result{flex-direction:column;align-items:flex-start}
+  .bar{grid-template-columns:96px minmax(0,1fr) 44px;gap:8px;padding:9px 6px}.b-l{font-size:13.5px}
+  .sch-banner{flex-direction:column;align-items:flex-start;padding:20px}
+  .tr{grid-template-columns:1fr;padding:20px}.tr-stats{flex-direction:column}
+  .sc-list{padding-left:30px}.sc-list:before{left:6px}.sc-node{left:-30px}
+  .sc{grid-template-columns:60px minmax(0,1fr);padding:16px}.sc-logo{width:60px;height:60px}.sc .ring{grid-column:1 / -1;justify-self:start;--s:84px}
+}
 </style>
 </head>
 
@@ -2738,928 +2913,224 @@ body.light .ielts-card{
      EDUCATION PAGE
 ========================================================= -->
 
-<main class="education-page">
-
+<main class="education-page edx">
   <div class="container">
-
-
-    <!-- =====================================================
-         HERO
-    ====================================================== -->
-
-    <header class="edu-hero edu-reveal">
-
-      <div class="edu-eyebrow">
-        Academic Journey
+    <header class="edx-hero">
+      <h1>Education</h1>
+      <p>From primary school to postgraduate microbiology: results, scholarships and training, in one place.</p>
+      <div class="stats">
+        <div class="st" style="--ac:var(--gold)"><b><span data-count="3.54" data-dec="2">3.54</span></b><small>B.Sc. CGPA out of 4.00</small></div>
+        <div class="st" style="--ac:var(--gold)"><b><span data-count="4">4</span>×</b><small>GPA 5.00 in PSC, JSC, SSC, HSC</small></div>
+        <div class="st" style="--ac:var(--orange)"><b><span data-count="3">3</span></b><small>Board Scholarships</small></div>
+        <div class="st" style="--ac:var(--teal)"><b><span data-count="7.5" data-dec="1">7.5</span></b><small>IELTS Academic overall</small></div>
       </div>
-
-      <h1>
-        Education
-      </h1>
-
-      <p>
-        Academic training spanning veterinary science, microbiology,
-        laboratory research, and foundational education, supported by
-        continuous professional and academic development.
-      </p>
-
     </header>
-
-
-    <!-- =====================================================
-         01 · ACADEMIC QUALIFICATIONS
-    ====================================================== -->
-
-    <section class="edu-section">
-
-      <div class="edu-section-heading edu-reveal">
-
-        <div class="edu-section-kicker">
-          01 · Academic Qualifications
-        </div>
-
-        <h2>
-          Academic Qualifications
-        </h2>
-
-        <p>
-          My formal academic progression from veterinary science to
-          postgraduate microbiology training.
-        </p>
-
-      </div>
-
-
-      <div class="degree-grid">
-
-
-        <!-- =================================================
-             MASTER
-        ================================================= -->
-
-        <article
-          class="degree-card edu-reveal"
-        >
-
-          <div class="degree-top">
-
-            <div class="degree-icon">
-
-              <svg viewBox="0 0 24 24">
-
-                <path d="M4 19h16"/>
-
-                <path d="M6 17V8l6-4 6 4v9"/>
-
-                <path d="M9 17v-4h6v4"/>
-
-              </svg>
-
-            </div>
-
-            <span class="degree-status">
-              Ongoing
-            </span>
-
-          </div>
-
-
-          <div class="degree-label">
-            Postgraduate Study
-          </div>
-
-          <h3>
-            M.S. in Microbiology
-          </h3>
-
-          <p class="degree-university">
-            Sher-e-Bangla Agricultural University (SAU), Bangladesh
-          </p>
-
-
-          <div class="degree-period">
-            July 2026 – Present
-          </div>
-
-
-          <img
-            class="degree-logo"
-            src="https://drive.google.com/thumbnail?id=1UyGHuKLyBxMFoNKymHHE0TlY-MMUYy4U&sz=w1000"
-            alt="Sher-e-Bangla Agricultural University logo"
-          >
-
-
-          <div class="supervisor-box">
-
-            <div class="supervisor-title">
-              Research Supervisor
-            </div>
-
-            <div class="supervisor-name">
-              Dr. Mahfuzul Islam
-            </div>
-
-            <div class="supervisor-role">
-              Associate Professor<br>
-              Department of Microbiology and Parasitology<br>
-              Sher-e-Bangla Agricultural University
-            </div>
-
-            <a
-              class="supervisor-email"
-              href="mailto:mislam.mipa@sau.edu.bd"
-            >
-              mislam.mipa@sau.edu.bd →
-            </a>
-
-          </div>
-
-
-        </article>
-
-
-        <!-- =================================================
-             BSC
-        ================================================= -->
-
-        <article
-          class="degree-card edu-reveal"
-        >
-
-          <div class="degree-top">
-
-            <div class="degree-icon">
-
-              <svg viewBox="0 0 24 24">
-
-                <path d="M3.5 9 12 4l8.5 5-8.5 5-8.5-5Z"/>
-
-                <path d="M6.5 11.5v5L12 20l5.5-3.5v-5"/>
-
-                <path d="M20.5 9v5"/>
-
-              </svg>
-
-            </div>
-
-            <span class="degree-status">
-              Completed
-            </span>
-
-          </div>
-
-
-          <div class="degree-label">
-            Undergraduate Degree
-          </div>
-
-          <h3>
-            B.Sc. in Veterinary Science and Animal Husbandry
-          </h3>
-
-          <p class="degree-university">
-            Sher-e-Bangla Agricultural University (SAU), Bangladesh
-          </p>
-
-
-          <div class="degree-period">
-            2020 – 2026
-          </div>
-
-
-          <img
-            class="degree-logo"
-            src="https://drive.google.com/thumbnail?id=1UyGHuKLyBxMFoNKymHHE0TlY-MMUYy4U&sz=w1000"
-            alt="Sher-e-Bangla Agricultural University logo"
-          >
-
-
-          <div class="degree-bottom">
-
-            <div class="degree-metric">
-
-              <span>
-                Major
-              </span>
-
-              <strong
-                style="font-size:13px;"
-              >
-                Veterinary Medicine &amp; Animal Husbandry
-              </strong>
-
-            </div>
-
-
-            <div class="degree-metric">
-
-              <span>
-                Total Credits
-              </span>
-
-              <strong>
-                228
-              </strong>
-
-            </div>
-
-          </div>
-
-
-          <div class="supervisor-box">
-
-            <div class="supervisor-title">
-              Overall Academic Result
-            </div>
-
-            <div class="supervisor-name">
-              CGPA 3.54 / 4.00
-            </div>
-
-            <div class="supervisor-role">
-              After 10 semesters
-            </div>
-
-          </div>
-
-
-        </article>
-
-      </div>
-
-
-      <!-- UNIVERSITY LINKS -->
-
-      <div class="edu-links edu-reveal">
-
-        <a
-          class="edu-link"
-          href="https://sau.edu.bd/"
-          target="_blank"
-          rel="noopener"
-        >
-
-          <div class="edu-link-label">
-            University Website
-          </div>
-
-          <h3>
-            Sher-e-Bangla Agricultural University
-          </h3>
-
-          <p>
-            Official university website →
-          </p>
-
-        </a>
-
-
-        <a
-          class="edu-link"
-          href="https://sau.edu.bd/uploads/pdf/other/2020-08-18-5f3b88e17fbf2.pdf"
-          target="_blank"
-          rel="noopener"
-        >
-
-          <div class="edu-link-label">
-            Curriculum
-          </div>
-
-          <h3>
-            B.Sc. Veterinary Science &amp; Animal Husbandry Curriculum
-          </h3>
-
-          <p>
-            View curriculum document →
-          </p>
-
-        </a>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         02 · ACADEMIC PERFORMANCE
-    ====================================================== -->
-
-    <section class="edu-section">
-
-      <div class="edu-section-heading edu-reveal">
-
-        <div class="edu-section-kicker">
-          02 · Academic Performance
-        </div>
-
-        <h2>
-          Academic Performance
-        </h2>
-
-        <p>
-          Selected results from the final four semesters of my
-          undergraduate program.
-        </p>
-
-      </div>
-
-
-      <div class="performance-box edu-reveal">
-
-        <div class="performance-header">
-
-          <div>
-
-            <div class="performance-title">
-              B.Sc. Academic Performance
-            </div>
-
-            <p
-              style="
-                color:var(--muted);
-                font-size:13px;
-                margin-top:4px;
-              "
-            >
-              Sher-e-Bangla Agricultural University
-            </p>
-
-          </div>
-
-
-          <div class="overall-cgpa">
-
-            <small>
-              Overall CGPA
-            </small>
-
-            <strong>
-              3.54
-            </strong>
-
-            <small>
-              / 4.00
-            </small>
-
-          </div>
-
-        </div>
-
-
-        <div class="semester-grid">
-
-
-          <div class="semester-card">
-
-            <span>
-              Semester 4-I
-            </span>
-
-            <strong>
-              3.61
-            </strong>
-
-          </div>
-
-
-          <div class="semester-card">
-
-            <span>
-              Semester 4-II
-            </span>
-
-            <strong>
-              3.59
-            </strong>
-
-          </div>
-
-
-          <div class="semester-card">
-
-            <span>
-              Semester 5-I
-            </span>
-
-            <strong>
-              3.63
-            </strong>
-
-          </div>
-
-
-          <div class="semester-card">
-
-            <span>
-              Semester 5-II
-            </span>
-
-            <strong>
-              4.00
-            </strong>
-
-          </div>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         03 · VETERINARY INTERNSHIP
-    ====================================================== -->
-
-    <section class="edu-section">
-
-      <div class="edu-section-heading edu-reveal">
-
-        <div class="edu-section-kicker">
-          03 · Academic Training
-        </div>
-
-        <h2>
-          Six-Month Veterinary Internship Program
-        </h2>
-
-        <p>
-          Formal internship training completed through multiple
-          veterinary, laboratory, livestock, research and animal
-          production placements.
-        </p>
-
-      </div>
-
-
-      <div class="training-box edu-reveal">
-
-
-        <div class="training-icon">
-
-          <svg viewBox="0 0 24 24">
-
-            <path d="M4 7h16"/>
-
-            <path d="M6 7v12h12V7"/>
-
-            <path d="M9 7V4h6v3"/>
-
-            <path d="M8.5 11h7"/>
-
-            <path d="M8.5 15h5"/>
-
-          </svg>
-
-        </div>
-
-
-        <div>
-
-          <div class="training-kicker">
-            Formal Veterinary Training
-          </div>
-
-          <h3>
-            Six-Month Veterinary Internship Program
-          </h3>
-
-          <div class="training-institution">
-            Sher-e-Bangla Agricultural University
-          </div>
-
-          <div class="training-meta">
-
-            <span>
-              20 Training Placements
-            </span>
-
-            <span>
-              Bangladesh
-            </span>
-
-            <span>
-              Malaysia
-            </span>
-
-            <span>
-              Veterinary Clinical Training
-            </span>
-
-            <span>
-              Laboratory Exposure
-            </span>
-
-            <span>
-              Animal Health &amp; Production
-            </span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         04 · SCHOOL EDUCATION
-    ====================================================== -->
-
-    <section class="edu-section">
-
-      <div class="edu-section-heading edu-reveal">
-
-        <div class="edu-section-kicker">
-          04 · Foundational Education
-        </div>
-
-        <h2>
-          Secondary &amp; School Education
-        </h2>
-
-        <p>
-          Academic foundation from higher secondary education through
-          primary schooling.
-        </p>
-
-      </div>
-
-
-      <div class="school-timeline">
-
-
-        <!-- HSC -->
-
-        <article class="school-card edu-reveal">
-
-          <div class="school-node">
-            <span></span>
-          </div>
-
-
-          <div class="school-card-grid">
-
-            <img
-              class="school-logo"
-              src="https://drive.google.com/thumbnail?id=1hUxs3k-3QY4UwFPwnNX2g5-lmD_aaTnZ&sz=w1000"
-              alt="Rural Development Academy Laboratory School & College logo"
-            >
-
-
-            <div>
-
-              <div class="school-type">
-                Higher Secondary Certificate · HSC
-              </div>
-
-              <h3>
-                Rural Development Academy Laboratory School &amp; College, Bogra
-              </h3>
-
-              <div class="school-location">
-                2016 – 2018
-              </div>
-
-
-              <div class="school-details">
-
-                <span class="score">
-                  GPA 5.00 / 5.00
-                </span>
-
-                <span>
-                  Rajshahi Board
-                </span>
-
-                <span>
-                  Board Scholarship
-                </span>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </article>
-
-
-        <!-- SSC -->
-
-        <article class="school-card edu-reveal">
-
-          <div class="school-node">
-            <span></span>
-          </div>
-
-
-          <div class="school-card-grid">
-
-            <img
-              class="school-logo"
-              src="https://drive.google.com/thumbnail?id=1PGkan8Kio3xNU9HPpezGr5_Sw-_Jf9PX&sz=w1000"
-              alt="Chhayabeethi Society High School logo"
-            >
-
-
-            <div>
-
-              <div class="school-type">
-                Secondary School Certificate · SSC
-              </div>
-
-              <h3>
-                Chhayabeethi Society High School, Gazipur
-              </h3>
-
-              <div class="school-location">
-                2014 – 2016
-              </div>
-
-
-              <div class="school-details">
-
-                <span class="score">
-                  GPA 5.00 / 5.00
-                </span>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </article>
-
-
-        <!-- JSC -->
-
-        <article class="school-card edu-reveal">
-
-          <div class="school-node">
-            <span></span>
-          </div>
-
-
-          <div class="school-card-grid">
-
-            <img
-              class="school-logo"
-              src="https://drive.google.com/thumbnail?id=1RPIEWe6LggJU3RbkoNe0yGi08cSpeg4G&sz=w1000"
-              alt="Shaheed Cadet Academy logo"
-            >
-
-
-            <div>
-
-              <div class="school-type">
-                Junior School Certificate · JSC
-              </div>
-
-              <h3>
-                Shaheed Cadet Academy
-              </h3>
-
-              <div class="school-location">
-                2013
-              </div>
-
-
-              <div class="school-details">
-
-                <span class="score">
-                  GPA 5.00 / 5.00
-                </span>
-
-                <span>
-                  Board Scholarship · Talent Pool
-                </span>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </article>
-
-
-        <!-- PSC -->
-
-        <article class="school-card edu-reveal">
-
-          <div class="school-node">
-            <span></span>
-          </div>
-
-
-          <div class="school-card-grid">
-
-            <img
-              class="school-logo"
-              src="https://drive.google.com/thumbnail?id=1dBcftXS_aNNRxBEUpHRXz862vVUdfTWu&sz=w1000"
-              alt="Gabtali Model Government Primary School logo"
-            >
-
-
-            <div>
-
-              <div class="school-type">
-                Primary School Certificate · PSC
-              </div>
-
-              <h3>
-                Gabtali Model Government Primary School
-              </h3>
-
-              <div class="school-location">
-                2010
-              </div>
-
-
-              <div class="school-details">
-
-                <span class="score">
-                  GPA 5.00 / 5.00
-                </span>
-
-                <span>
-                  Board Scholarship · Talent Pool
-                </span>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </article>
-
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         05 · IELTS
-    ====================================================== -->
-
-    <section class="edu-section">
-
-      <div class="edu-section-heading edu-reveal">
-
-        <div class="edu-section-kicker">
-          05 · Academic English
-        </div>
-
-        <h2>
-          IELTS Academic
-        </h2>
-
-        <p>
-          Standardized English-language assessment supporting
-          international academic progression.
-        </p>
-
-      </div>
-
-
-      <div class="ielts-card edu-reveal">
-
-        <div class="ielts-layout">
-
-
-          <div class="ielts-brand">
-
-            <div class="ielts-circle">
-
-              <strong>
-                7.5
-              </strong>
-
-              <small>
-                Overall
-              </small>
-
-            </div>
-
-            <h3>
-              IELTS Academic
-            </h3>
-
-            <p>
-              Academic English Proficiency
-            </p>
-
-          </div>
-
-
-          <div>
-
-            <div class="ielts-scores">
-
-
-              <div class="ielts-score">
-
-                <strong>
-                  8.0
-                </strong>
-
-                <span>
-                  Listening
-                </span>
-
-              </div>
-
-
-              <div class="ielts-score">
-
-                <strong>
-                  7.5
-                </strong>
-
-                <span>
-                  Reading
-                </span>
-
-              </div>
-
-
-              <div class="ielts-score">
-
-                <strong>
-                  6.5
-                </strong>
-
-                <span>
-                  Writing
-                </span>
-
-              </div>
-
-
-              <div class="ielts-score">
-
-                <strong>
-                  7.0
-                </strong>
-
-                <span>
-                  Speaking
-                </span>
-
-              </div>
-
-
-            </div>
-
-
-            <div class="ielts-date">
-
-              Test Date:
-              <strong style="color:var(--text);">
-                21 August 2026
-              </strong>
-
-              &nbsp; · &nbsp;
-
-              No band below 6.5
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
-
-    <footer class="edu-footer edu-reveal">
-
-      <span></span>
-
-      <p>
-        Academic growth is built through structured learning,
-        practical training, research exposure and continuous development.
-      </p>
-
-      <span></span>
-
-    </footer>
-
-
+    <nav class="jump" aria-label="Education sections"><a href="#degrees" style="--ac:var(--cyan)">Degrees</a><a href="#performance" style="--ac:var(--gold)">Performance</a><a href="#scholarships" style="--ac:var(--gold)">Scholarships</a><a href="#internship" style="--ac:var(--purple)">Internship</a><a href="#school" style="--ac:var(--rose)">School</a><a href="#ielts" style="--ac:var(--teal)">IELTS</a></nav>
+    
+<section class="edx-sec" id="degrees" style="--ac:var(--cyan)">
+  <div class="edx-head">
+    <span class="edx-num">1</span>
+    <div><h2>Degrees</h2><p>Postgraduate and undergraduate study at SAU.</p></div>
+    <span class="edx-hico"><svg viewBox="0 0 24 24"><path d="M3.5 9 12 4l8.5 5-8.5 5-8.5-5Z"/><path d="M6.5 11.5v5L12 20l5.5-3.5v-5"/><path d="M20.5 9v5"/></svg></span>
   </div>
-
+  <div class="edx-body">
+<div class="deg-grid">
+  <article class="deg r">
+    <div class="deg-top"><span class="deg-ico"><svg viewBox="0 0 24 24"><path d="M4 19h16"/><path d="M6 17V8l6-4 6 4v9"/><path d="M9 17v-4h6v4"/></svg></span><span class="pill live">Ongoing</span></div>
+    <div class="deg-lvl">Postgraduate</div>
+    <h3>M.S. in Microbiology</h3>
+    <p class="deg-uni">Sher-e-Bangla Agricultural University (SAU), Bangladesh</p>
+    <div class="deg-period">July 2026 – Present</div>
+    <div class="sup">
+      <small>Research Supervisor</small>
+      <b>Dr. Mahfuzul Islam</b>
+      <span>Associate Professor, Department of Microbiology and Parasitology, SAU</span>
+      <a href="mailto:mislam.mipa@sau.edu.bd">mislam.mipa@sau.edu.bd</a>
+    </div>
+  </article>
+  <article class="deg r" style="--ac:var(--gold)">
+    <div class="deg-top"><span class="deg-ico"><svg viewBox="0 0 24 24"><path d="M3.5 9 12 4l8.5 5-8.5 5-8.5-5Z"/><path d="M6.5 11.5v5L12 20l5.5-3.5v-5"/><path d="M20.5 9v5"/></svg></span><span class="pill done">Completed</span></div>
+    <div class="deg-lvl">Undergraduate</div>
+    <h3>B.Sc. in Veterinary Science and Animal Husbandry</h3>
+    <p class="deg-uni">Sher-e-Bangla Agricultural University (SAU), Bangladesh</p>
+    <div class="deg-period">2020 – 2026</div>
+    <div class="deg-result">
+      <div class="ring sm" style="--p:0.885;--ac:var(--gold)"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="rg-bg" cx="60" cy="60" r="52"/><circle class="rg-fg" cx="60" cy="60" r="52"/></svg><div class="rg-txt"><b>3.54</b><small>/ 4.00</small></div></div>
+      <div><small>Overall result</small><b>CGPA 3.54 / 4.00</b><span>After 10 semesters · 228 credits</span><span>Major: Veterinary Medicine &amp; Animal Husbandry</span></div>
+    </div>
+  </article>
+</div>
+<div class="link-row r">
+  <a class="lnk" href="https://sau.edu.bd/" target="_blank" rel="noopener"><small>University website</small><b>Sher-e-Bangla Agricultural University</b></a>
+  <a class="lnk" href="https://sau.edu.bd/uploads/pdf/other/2020-08-18-5f3b88e17fbf2.pdf" target="_blank" rel="noopener"><small>Curriculum</small><b>B.Sc. Veterinary Science &amp; Animal Husbandry</b></a>
+</div></div>
+</section>
+    
+<section class="edx-sec" id="performance" style="--ac:var(--gold)">
+  <div class="edx-head">
+    <span class="edx-num">2</span>
+    <div><h2>Academic Performance</h2><p>Overall CGPA and results from the final four semesters.</p></div>
+    <span class="edx-hico"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+  </div>
+  <div class="edx-body">
+<div class="perf r">
+  <div class="perf-main">
+    <div class="ring lg" style="--p:0.885;--ac:var(--gold)"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="rg-bg" cx="60" cy="60" r="52"/><circle class="rg-fg" cx="60" cy="60" r="52"/></svg><div class="rg-txt"><b>3.54</b><small>/ 4.00</small></div></div>
+    <div class="perf-cap"><b>Overall CGPA</b><span>B.Sc. · SAU · 10 semesters</span></div>
+  </div>
+  <div class="bars">
+    <h3>Final four semesters</h3>
+    <div class="bar" style="--w:90.2%;--ac:var(--blue)"><span class="b-l">Semester 4-I</span><div class="b-t"><i></i></div><b class="b-v">3.61</b></div>
+    <div class="bar" style="--w:89.8%;--ac:var(--teal)"><span class="b-l">Semester 4-II</span><div class="b-t"><i></i></div><b class="b-v">3.59</b></div>
+    <div class="bar" style="--w:90.8%;--ac:var(--purple)"><span class="b-l">Semester 5-I</span><div class="b-t"><i></i></div><b class="b-v">3.63</b></div>
+    <div class="bar top" style="--w:100.0%;--ac:var(--gold)"><span class="b-l">Semester 5-II</span><div class="b-t"><i></i></div><b class="b-v">4.00</b><em>Perfect score</em></div>
+    <p class="scale">Bars drawn on the full 0 – 4.00 scale.</p>
+  </div>
+</div></div>
+</section>
+    
+<section class="edx-sec" id="scholarships" style="--ac:var(--orange)">
+  <div class="edx-head">
+    <span class="edx-num">3</span>
+    <div><h2>Scholarships</h2><p>Board scholarships earned across three education levels.</p></div>
+    <span class="edx-hico"><svg viewBox="0 0 48 48" aria-hidden="true"><path class="m-rib" d="M15 3h8l3 13-7 3zM33 3h-8l-3 13 7 3z"/><circle class="m-disc" cx="24" cy="30" r="13"/><path class="m-star" d="M24 21.5l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"/></svg></span>
+  </div>
+  <div class="edx-body">
+<div class="sch-banner r">
+  <div class="sb-num"><b data-count="3">3</b></div>
+  <div><h3>Board Scholarships</h3><p>Awarded at primary, junior and higher secondary level, each with a perfect GPA 5.00.</p></div>
+</div>
+<div class="sch-grid">
+  <article class="sch r">
+  <div class="sch-medal"><svg viewBox="0 0 48 48" aria-hidden="true"><path class="m-rib" d="M15 3h8l3 13-7 3zM33 3h-8l-3 13 7 3z"/><circle class="m-disc" cx="24" cy="30" r="13"/><path class="m-star" d="M24 21.5l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"/></svg></div>
+  <div class="sch-year">2010</div>
+  <div class="sch-lvl">Primary · PSC</div>
+  <h3>Board Scholarship</h3>
+  <span class="sch-tag">Talent Pool</span>
+  <p>Gabtali Model Government Primary School</p>
+  
+  <div class="sch-gpa"><b>GPA 5.00</b><span>/ 5.00</span></div>
+</article>
+  <article class="sch r">
+  <div class="sch-medal"><svg viewBox="0 0 48 48" aria-hidden="true"><path class="m-rib" d="M15 3h8l3 13-7 3zM33 3h-8l-3 13 7 3z"/><circle class="m-disc" cx="24" cy="30" r="13"/><path class="m-star" d="M24 21.5l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"/></svg></div>
+  <div class="sch-year">2013</div>
+  <div class="sch-lvl">Junior · JSC</div>
+  <h3>Board Scholarship</h3>
+  <span class="sch-tag">Talent Pool</span>
+  <p>Shaheed Cadet Academy</p>
+  
+  <div class="sch-gpa"><b>GPA 5.00</b><span>/ 5.00</span></div>
+</article>
+  <article class="sch r">
+  <div class="sch-medal"><svg viewBox="0 0 48 48" aria-hidden="true"><path class="m-rib" d="M15 3h8l3 13-7 3zM33 3h-8l-3 13 7 3z"/><circle class="m-disc" cx="24" cy="30" r="13"/><path class="m-star" d="M24 21.5l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"/></svg></div>
+  <div class="sch-year">2018</div>
+  <div class="sch-lvl">Higher Secondary · HSC</div>
+  <h3>Board Scholarship</h3>
+  
+  <p>Rural Development Academy Laboratory School &amp; College, Bogra</p>
+  <small>Rajshahi Board</small>
+  <div class="sch-gpa"><b>GPA 5.00</b><span>/ 5.00</span></div>
+</article>
+</div></div>
+</section>
+    
+<section class="edx-sec" id="internship" style="--ac:var(--purple)">
+  <div class="edx-head">
+    <span class="edx-num">4</span>
+    <div><h2>Veterinary Internship</h2><p>Six months of formal clinical, laboratory and production training.</p></div>
+    <span class="edx-hico"><svg viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M6 7v12h12V7"/><path d="M9 7V4h6v3"/><path d="M8.5 11h7"/><path d="M8.5 15h5"/></svg></span>
+  </div>
+  <div class="edx-body">
+<article class="tr r">
+  <span class="tr-ico"><svg viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M6 7v12h12V7"/><path d="M9 7V4h6v3"/><path d="M8.5 11h7"/><path d="M8.5 15h5"/></svg></span>
+  <div class="tr-main">
+    <small>Formal veterinary training</small>
+    <h3>Six-Month Veterinary Internship Program</h3>
+    <p>Sher-e-Bangla Agricultural University</p>
+    <div class="chips"><span>Veterinary Clinical Training</span><span>Laboratory Exposure</span><span>Animal Health &amp; Production</span></div>
+  </div>
+  <div class="tr-stats">
+    <div><b data-count="20">20</b><span>Training placements</span></div>
+    <div><b data-count="2">2</b><span>Countries: Bangladesh, Malaysia</span></div>
+  </div>
+</article></div>
+</section>
+    
+<section class="edx-sec" id="school" style="--ac:var(--rose)">
+  <div class="edx-head">
+    <span class="edx-num">5</span>
+    <div><h2>School Education</h2><p>HSC back to PSC, every level finished with GPA 5.00.</p></div>
+    <span class="edx-hico"><svg viewBox="0 0 24 24"><path d="M3 10l9-5 9 5M5 10v8M19 10v8M9 18v-6M15 18v-6M3 20h18"/></svg></span>
+  </div>
+  <div class="edx-body">
+<div class="sc-list">
+  <article class="sc r">
+  <span class="sc-node"></span>
+  <img class="sc-logo" src="https://drive.google.com/thumbnail?id=1hUxs3k-3QY4UwFPwnNX2g5-lmD_aaTnZ&sz=w1000" alt="Rural Development Academy Laboratory School &amp; College, Bogra logo" loading="lazy">
+  <div class="sc-main">
+    <div class="sc-lvl">Higher Secondary Certificate · HSC</div>
+    <h3>Rural Development Academy Laboratory School &amp; College, Bogra</h3>
+    <div class="sc-yr">2016 – 2018</div>
+    <div class="chips"><span>Rajshahi Board</span><span class="gchip"><svg viewBox="0 0 48 48" aria-hidden="true"><path class="m-rib" d="M15 3h8l3 13-7 3zM33 3h-8l-3 13 7 3z"/><circle class="m-disc" cx="24" cy="30" r="13"/><path class="m-star" d="M24 21.5l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"/></svg>Board Scholarship</span></div>
+  </div>
+  <div class="ring xs" style="--p:1;--ac:var(--gold)"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="rg-bg" cx="60" cy="60" r="52"/><circle class="rg-fg" cx="60" cy="60" r="52"/></svg><div class="rg-txt"><b>5.00</b><small>GPA</small></div></div>
+</article>
+  <article class="sc r">
+  <span class="sc-node"></span>
+  <img class="sc-logo" src="https://drive.google.com/thumbnail?id=1PGkan8Kio3xNU9HPpezGr5_Sw-_Jf9PX&sz=w1000" alt="Chhayabeethi Society High School, Gazipur logo" loading="lazy">
+  <div class="sc-main">
+    <div class="sc-lvl">Secondary School Certificate · SSC</div>
+    <h3>Chhayabeethi Society High School, Gazipur</h3>
+    <div class="sc-yr">2014 – 2016</div>
+    <div class="chips"></div>
+  </div>
+  <div class="ring xs" style="--p:1;--ac:var(--gold)"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="rg-bg" cx="60" cy="60" r="52"/><circle class="rg-fg" cx="60" cy="60" r="52"/></svg><div class="rg-txt"><b>5.00</b><small>GPA</small></div></div>
+</article>
+  <article class="sc r">
+  <span class="sc-node"></span>
+  <img class="sc-logo" src="https://drive.google.com/thumbnail?id=1RPIEWe6LggJU3RbkoNe0yGi08cSpeg4G&sz=w1000" alt="Shaheed Cadet Academy logo" loading="lazy">
+  <div class="sc-main">
+    <div class="sc-lvl">Junior School Certificate · JSC</div>
+    <h3>Shaheed Cadet Academy</h3>
+    <div class="sc-yr">2013</div>
+    <div class="chips"><span class="gchip"><svg viewBox="0 0 48 48" aria-hidden="true"><path class="m-rib" d="M15 3h8l3 13-7 3zM33 3h-8l-3 13 7 3z"/><circle class="m-disc" cx="24" cy="30" r="13"/><path class="m-star" d="M24 21.5l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"/></svg>Board Scholarship · Talent Pool</span></div>
+  </div>
+  <div class="ring xs" style="--p:1;--ac:var(--gold)"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="rg-bg" cx="60" cy="60" r="52"/><circle class="rg-fg" cx="60" cy="60" r="52"/></svg><div class="rg-txt"><b>5.00</b><small>GPA</small></div></div>
+</article>
+  <article class="sc r">
+  <span class="sc-node"></span>
+  <img class="sc-logo" src="https://drive.google.com/thumbnail?id=1dBcftXS_aNNRxBEUpHRXz862vVUdfTWu&sz=w1000" alt="Gabtali Model Government Primary School logo" loading="lazy">
+  <div class="sc-main">
+    <div class="sc-lvl">Primary School Certificate · PSC</div>
+    <h3>Gabtali Model Government Primary School</h3>
+    <div class="sc-yr">2010</div>
+    <div class="chips"><span class="gchip"><svg viewBox="0 0 48 48" aria-hidden="true"><path class="m-rib" d="M15 3h8l3 13-7 3zM33 3h-8l-3 13 7 3z"/><circle class="m-disc" cx="24" cy="30" r="13"/><path class="m-star" d="M24 21.5l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"/></svg>Board Scholarship · Talent Pool</span></div>
+  </div>
+  <div class="ring xs" style="--p:1;--ac:var(--gold)"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="rg-bg" cx="60" cy="60" r="52"/><circle class="rg-fg" cx="60" cy="60" r="52"/></svg><div class="rg-txt"><b>5.00</b><small>GPA</small></div></div>
+</article>
+</div></div>
+</section>
+    
+<section class="edx-sec" id="ielts" style="--ac:var(--teal)">
+  <div class="edx-head">
+    <span class="edx-num">6</span>
+    <div><h2>IELTS Academic</h2><p>English-language assessment for international academic study.</p></div>
+    <span class="edx-hico"><svg viewBox="0 0 24 24"><path d="M3 5h8a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H3zM21 5h-5a3 3 0 0 0-2 .8M21 5v13h-7"/></svg></span>
+  </div>
+  <div class="edx-body">
+<div class="ie r">
+  <div class="ie-main">
+    <div class="ring lg" style="--p:0.833;--ac:var(--teal)"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="rg-bg" cx="60" cy="60" r="52"/><circle class="rg-fg" cx="60" cy="60" r="52"/></svg><div class="rg-txt"><b>7.5</b><small>Overall</small></div></div>
+    <div class="perf-cap"><b>IELTS Academic</b><span>Academic English proficiency</span></div>
+  </div>
+  <div class="bars">
+    <h3>Band scores</h3>
+    <div class="bar" style="--w:88.9%;--ac:var(--teal)"><span class="b-l">Listening</span><div class="b-t"><i></i></div><b class="b-v">8.0</b></div><div class="bar" style="--w:83.3%;--ac:var(--teal)"><span class="b-l">Reading</span><div class="b-t"><i></i></div><b class="b-v">7.5</b></div><div class="bar" style="--w:72.2%;--ac:var(--teal)"><span class="b-l">Writing</span><div class="b-t"><i></i></div><b class="b-v">6.5</b></div><div class="bar" style="--w:77.8%;--ac:var(--teal)"><span class="b-l">Speaking</span><div class="b-t"><i></i></div><b class="b-v">7.0</b></div>
+    <div class="ie-foot"><span>Test date: <b>21 August 2026</b></span><span class="pill done">No band below 6.5</span></div>
+  </div>
+</div></div>
+</section>
+  </div>
 </main>
 
 
@@ -3799,6 +3270,36 @@ document
     );
 
   });
+
+
+/* ===== EDX: reveal, counters, active jump chip ===== */
+(()=>{
+const els=document.querySelectorAll('.edx .r');
+const fmt=(v,d)=>v.toFixed(d);
+const count=el=>{
+  const to=parseFloat(el.dataset.count),d=+(el.dataset.dec||0),t0=performance.now(),dur=1400;
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches){el.textContent=fmt(to,d);return}
+  const step=n=>{const k=Math.min(1,(n-t0)/dur),e=1-Math.pow(1-k,3);el.textContent=fmt(to*e,d);if(k<1)requestAnimationFrame(step)};
+  requestAnimationFrame(step);
+};
+const io=new IntersectionObserver((es,o)=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  e.target.classList.add('in');
+  e.target.querySelectorAll('.ring').forEach(r=>r.classList.add('in'));
+  e.target.querySelectorAll('[data-count]').forEach(count);
+  o.unobserve(e.target);
+}),{threshold:.15});
+els.forEach(e=>io.observe(e));
+/* hero stats + standalone rings count on load */
+document.querySelectorAll('.stats [data-count]').forEach(count);
+/* active chip */
+const chips=[...document.querySelectorAll('.jump a')];
+const secs=chips.map(a=>document.querySelector(a.getAttribute('href')));
+const so=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){chips.forEach(c=>c.classList.toggle('on',c.getAttribute('href')==='#'+e.target.id))}
+}),{rootMargin:'-35% 0px -55% 0px'});
+secs.forEach(s=>s&&so.observe(s));
+})();
 
 </script>
 
