@@ -1,1 +1,312 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Presentations | Ahmed Ishtiak Nirob</title>
+
+<style>
+:root{
+  --bg:#080d19;
+  --surface:#111a2b;
+  --text:#edf4ff;
+  --muted:#9aabc4;
+  --cyan:#54e6ff;
+  --purple:#a78bfa;
+  --gold:#f5c96b;
+  --pink:#ff82bd;
+  --green:#74e5b0;
+  --border:rgba(255,255,255,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:Inter,Arial,sans-serif;line-height:1.65;
+}
+body:before{
+  content:"";position:fixed;inset:0;z-index:-1;
+  background:
+  radial-gradient(circle at 10% 10%,#153c5a55,transparent 32%),
+  radial-gradient(circle at 90% 40%,#49316a44,transparent 35%),
+  radial-gradient(circle at 40% 90%,#124b4a33,transparent 35%);
+}
+a{color:var(--cyan);text-decoration:none}
+a:hover{color:white}
+.container{width:min(1160px,92%);margin:auto}
+nav{
+  position:sticky;top:0;z-index:10;
+  background:#080d19dd;backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:15px 0;gap:15px;
+}
+.brand{font-weight:800;color:white;letter-spacing:.3px}
+.brand small{display:block;color:var(--gold);font-size:11px;font-weight:500}
+.nav-links{display:flex;gap:20px;flex-wrap:wrap;font-size:13px}
+.nav-links a{color:var(--muted)}
+.nav-links a:hover{color:var(--cyan)}
+.hero{text-align:center;padding:85px 0 55px}
+.eyebrow{color:var(--cyan);font-size:12px;letter-spacing:4px;text-transform:uppercase}
+h1{
+  font-size:clamp(38px,7vw,70px);line-height:1.1;margin:15px 0;
+  background:linear-gradient(90deg,#fff,var(--cyan),var(--purple));
+  -webkit-background-clip:text;color:transparent;
+}
+.hero p{color:var(--muted);max-width:650px;margin:15px auto}
+.section-title{font-size:27px;margin:65px 0 25px}
+.section-title span{color:var(--cyan)}
+.card{
+  position:relative;background:linear-gradient(145deg,#142137,#0d1525);
+  border:1px solid var(--border);border-radius:22px;
+  padding:25px;margin:25px 0;overflow:hidden;
+  transition:.35s;box-shadow:0 15px 45px #0003;
+}
+.card:hover{transform:translateY(-5px);border-color:#54e6ff66}
+.card:before{
+  content:"";position:absolute;top:0;left:0;width:100%;height:2px;
+  background:linear-gradient(90deg,var(--cyan),var(--purple),transparent);
+}
+.card h3{font-size:21px;line-height:1.4;margin:8px 0 12px}
+.kicker{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan)}
+.meta{color:var(--muted);font-size:13px;margin:4px 0}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}
+.tag{
+  font-size:11px;padding:5px 11px;border-radius:30px;
+  background:#54e6ff12;border:1px solid #54e6ff30;color:#aeefff;
+}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.btn{
+  display:inline-block;padding:9px 15px;border-radius:9px;
+  border:1px solid #54e6ff55;font-size:12px;font-weight:700;
+  color:var(--cyan);transition:.25s;
+}
+.btn:hover{background:var(--cyan);color:#07111d}
+.btn.gold{border-color:#f5c96b66;color:var(--gold)}
+.btn.purple{border-color:#a78bfa66;color:var(--purple)}
+.gallery{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px;
+}
+.gallery a{display:block;overflow:hidden;border-radius:12px;border:1px solid var(--border)}
+.gallery img{width:100%;height:190px;object-fit:cover;display:block;transition:.4s}
+.gallery a:hover img{transform:scale(1.06)}
+/* Personal presenting image gets priority */
+.featured-photo{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:25px;align-items:center;
+  margin:20px 0 25px;
+}
+.featured-photo .main-image{
+  position:relative;border-radius:17px;overflow:hidden;
+  border:1px solid #54e6ff88;box-shadow:0 0 35px #54e6ff18;
+}
+.featured-photo .main-image img{
+  display:block;width:100%;height:390px;object-fit:cover;
+  transition:transform .5s;
+}
+.featured-photo .main-image:hover img{transform:scale(1.035)}
+.featured-photo .main-image:after{
+  content:"PRESENTING AUTHOR";position:absolute;bottom:15px;left:15px;
+  background:#07111ddd;color:var(--cyan);padding:7px 12px;
+  border:1px solid #54e6ff77;border-radius:7px;font-size:10px;letter-spacing:1.5px;
+}
+.photo-note{color:var(--muted);font-size:14px}
+.photo-note strong{color:var(--text)}
+.highlight{color:var(--gold)}
+.speaking-card{border-color:#a78bfa44}
+.speaking-card:before{background:linear-gradient(90deg,var(--purple),var(--pink),transparent)}
+.speaking-card .main-image{border-color:#a78bfa88;box-shadow:0 0 35px #a78bfa18}
+.speaking-card .main-image:after{color:#d7c5ff;border-color:#a78bfa77}
+footer{text-align:center;color:var(--muted);padding:55px 0;font-size:12px}
+.reveal{animation:rise .7s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:760px){
+  .nav-inner{align-items:flex-start;flex-direction:column}
+  .nav-links{gap:12px}
+  .hero{padding:55px 0 30px}
+  .card{padding:18px}
+  .featured-photo{grid-template-columns:1fr}
+  .featured-photo .main-image img{height:310px}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .gallery img{height:145px}
+}
+@media(max-width:420px){
+  .gallery{grid-template-columns:1fr}
+  .gallery img{height:220px}
+}
+</style>
+</head>
+
+<body>
+<nav>
+ <div class="container nav-inner">
+  <div class="brand">Ahmed Ishtiak Nirob<small>B.Sc. Vet. Sci. & A.H.</small></div>
+  <div class="nav-links">
+   <a href="index.html">Home</a>
+   <a href="research.html">Research</a>
+   <a href="publications.html">Publications</a>
+   <a href="presentations.html">Presentations</a>
+  </div>
+ </div>
+</nav>
+
+<header class="hero container">
+ <div class="eyebrow">Scientific Communication · Academic Engagement</div>
+ <h1>Presentations</h1>
+ <p>Sharing research findings, presenting scientific ideas, and engaging in collaborative initiatives across veterinary science, One Health, and sustainable development.</p>
+</header>
+
+<main class="container">
+
+<h2 class="section-title"><span>01 /</span> Poster Presentations</h2>
+
+<!-- POSTER 01 -->
+<article class="card reveal">
+ <div class="kicker">Poster 01 · October 2025</div>
+ <h3>Meteorological Determinants and Spatiotemporal Dynamics of Foot-and-Mouth Disease in Bangladesh (2017–2023): Insights from Machine Learning Forecasting</h3>
+ <p class="meta">3rd International Poster Competition for Young Researchers 2025</p>
+ <p class="meta">Role: <strong>Presenting Author</strong></p>
+ <div class="tags"><span class="tag">ARIMA</span><span class="tag">Random Forest</span><span class="tag">XGBoost</span><span class="tag">FMD</span></div>
+ <div class="gallery">
+  <a href="https://drive.google.com/file/d/1rGhtQ757G6Tml_fPl1tjzff_Y3LJDv5o/view?usp=sharing" target="_blank"><img src="https://drive.google.com/thumbnail?id=1rGhtQ757G6Tml_fPl1tjzff_Y3LJDv5o&sz=w1000" alt="FMD abstract"></a>
+  <a href="https://drive.google.com/file/d/1me93bzY3_XbC7fj4NxKYHZLLMRazYD-S/view?usp=sharing" target="_blank"><img src="https://drive.google.com/thumbnail?id=1me93bzY3_XbC7fj4NxKYHZLLMRazYD-S&sz=w1000" alt="FMD presentation video cover"></a>
+ </div>
+ <div class="actions">
+  <a class="btn" href="https://www.researchgate.net/publication/396750035_Meteorological_Determinants_and_Spatiotemporal_Dynamics_of_Foot-and-Mouth_Disease_in_Bangladesh_2017-2023_Insights_from_Machine_Learning_Forecasting" target="_blank">View on ResearchGate ↗</a>
+  <a class="btn gold" href="https://drive.google.com/file/d/1bhslZ2grS49kZTJQCYdXuhMs-H6sMv3d/view?usp=sharing" target="_blank">Watch Presentation Video ↗</a>
+ </div>
+</article>
+
+<!-- POSTER 02 -->
+<article class="card reveal">
+ <div class="kicker">Poster 02 · November 2025</div>
+ <h3>Spatiotemporal Analysis of Theileriosis and its Associated Climatic Risk Factors in Bangladesh from 2017 to 2023</h3>
+ <p class="meta">1st Scientific Conference of Veterinary and Animal Sciences 2025</p>
+ <p class="meta">Role: <strong>Presenting Author</strong></p>
+ <div class="tags"><span class="tag">LISA</span><span class="tag">Getis-Ord Gi* Hotspot</span><span class="tag">IDW Interpolation</span><span class="tag">Spearman Correlation</span></div>
+
+ <div class="featured-photo">
+  <a class="main-image" href="https://drive.google.com/file/d/1lYC7MjQg8g4WkSZJvNp7fJriFocnrThp/view?usp=sharing" target="_blank">
+   <img src="https://drive.google.com/thumbnail?id=1lYC7MjQg8g4WkSZJvNp7fJriFocnrThp&sz=w1600" alt="Ahmed Ishtiak Nirob presenting Theileriosis poster">
+  </a>
+  <div class="photo-note">
+   <div class="kicker">Research Presentation</div>
+   <h3 class="highlight">Presenting my research</h3>
+   <p>Scientific communication of spatial and climatic risk analysis of Theileriosis in Bangladesh.</p>
+   <p><strong>Role:</strong> Presenting Author</p>
+   <p class="meta">The presentation photograph is intentionally featured as the main visual of this research entry.</p>
+  </div>
+ </div>
+
+ <div class="gallery">
+  <a href="https://drive.google.com/file/d/1-hTXotcbzZLMy1tpft83bbIXRYObl3SZ/view?usp=sharing" target="_blank"><img src="https://drive.google.com/thumbnail?id=1-hTXotcbzZLMy1tpft83bbIXRYObl3SZ&sz=w1000" alt="Theileriosis poster"></a>
+  <a href="https://drive.google.com/file/d/1BxxQVJVk8aKyYKCGEWTLR-9chZ7WIDjB/view?usp=sharing" target="_blank"><img src="https://drive.google.com/thumbnail?id=1BxxQVJVk8aKyYKCGEWTLR-9chZ7WIDjB&sz=w1000" alt="Theileriosis certificate"></a>
+  <a href="https://drive.google.com/file/d/16yd7iFE0tATrKeLu_CrTh8BU0tnknBR0/view?usp=sharing" target="_blank"><img src="https://drive.google.com/thumbnail?id=16yd7iFE0tATrKeLu_CrTh8BU0tnknBR0&sz=w1000" alt="Conference team photo"></a>
+ </div>
+ <div class="actions">
+  <a class="btn" href="https://doi.org/10.13140/RG.2.2.16759.48808" target="_blank">View Poster / DOI ↗</a>
+  <a class="btn purple" href="https://drive.google.com/file/d/1lYC7MjQg8g4WkSZJvNp7fJriFocnrThp/view?usp=sharing" target="_blank">Presentation Photo ↗</a>
+ </div>
+</article>
+
+<!-- POSTER 03 -->
+<article class="card reveal">
+ <div class="kicker">Poster 03 · December 2025</div>
+ <h3>Economic Losses of Marginal Farmers Due to Lumpy Skin Disease (LSD) in Sylhet District, Bangladesh</h3>
+ <p class="meta">10th Biennial Conference of BFRF · Poster No. PSE01</p>
+ <p class="meta">Role: <strong>Presenting Author</strong></p>
+ <div class="featured-photo">
+  <a class="main-image" href="https://drive.google.com/file/d/1_Re5Q7fi2B7zVqsGXuH8OnXtjvM-m_U9/view?usp=sharing" target="_blank">
+   <img src="https://drive.google.com/thumbnail?id=1_Re5Q7fi2B7zVqsGXuH8OnXtjvM-m_U9&sz=w1600" alt="Nirob presenting LSD research">
+  </a>
+  <div class="photo-note">
+   <div class="kicker">Poster Presentation</div>
+   <h3 class="highlight">Presenting Author</h3>
+   <p>Presenting research on the economic burden of Lumpy Skin Disease among marginal farmers in Sylhet, Bangladesh.</p>
+  </div>
+ </div>
+ <div class="gallery">
+  <a href="https://drive.google.com/file/d/1R1GkanhM2TT-FGk86dl_RZid-dOGwu97/view?usp=sharing" target="_blank"><img src="https://drive.google.com/thumbnail?id=1R1GkanhM2TT-FGk86dl_RZid-dOGwu97&sz=w1000" alt="LSD poster PDF"></a>
+  <a href="https://drive.google.com/file/d/1uuu35WYfUafF_6CSfX3-dhOjVcKphoaU/view?usp=sharing" target="_blank"><img src="https://drive.google.com/thumbnail?id=1uuu35WYfUafF_6CSfX3-dhOjVcKphoaU&sz=w1000" alt="LSD certificate"></a>
+  <a href="https://drive.google.com/file/d/1AmGnlSi1erozNtxKwBVCvrEkXXYiThF6/view?usp=sharing" target="_blank"><img src="https://drive.google.com/thumbnail?id=1AmGnlSi1erozNtxKwBVCvrEkXXYiThF6&sz=w1000" alt="BFRF conference photo"></a>
+ </div>
+ <div class="actions">
+  <a class="btn" href="https://doi.org/10.13140/RG.2.2.12566.82240" target="_blank">View Poster / DOI ↗</a>
+  <a class="btn gold" href="https://drive.google.com/file/d/1R1GkanhM2TT-FGk86dl_RZid-dOGwu97/view?usp=sharing" target="_blank">Poster PDF ↗</a>
+ </div>
+</article>
+
+<h2 class="section-title"><span>02 /</span> Public Speaking & Team Engagement</h2>
+
+<!-- ONE HEALTH -->
+<article class="card speaking-card reveal">
+ <div class="kicker">One Health Day 2025 · icddr,b</div>
+ <h3>One Health Day 2025 Poster Competition</h3>
+ <p>Our team <strong>SUPERBUG</strong> secured a <span class="highlight">Top 10 position among 98 teams</span> from across Bangladesh.</p>
+ <p>We focused on this year’s One Health Day theme — “Our future is our responsibility,” highlighting how a healthier future begins with One Health.</p>
+
+ <div class="featured-photo">
+  <a class="main-image" href="https://drive.google.com/file/d/1GjlvBDtQoM_4oE9bvG8slCzPgO5jkYNZ/view?usp=sharing" target="_blank">
+   <img src="https://drive.google.com/thumbnail?id=1GjlvBDtQoM_4oE9bvG8slCzPgO5jkYNZ&sz=w1600" alt="Nirob at One Health Day poster presentation">
+  </a>
+  <div class="photo-note">
+   <div class="kicker">Featured Moment</div>
+   <h3 class="highlight">One Health in action</h3>
+   <p>Participation in a national-level One Health poster competition at icddr,b.</p>
+   <p><strong>Team:</strong> SUPERBUG</p>
+   <p><strong>Achievement:</strong> Top 10 / 98 teams</p>
+  </div>
+ </div>
+ <div class="gallery">
+  <a href="https://drive.google.com/file/d/1L4YrtmMMVvubRUK77OdgKmTuAyWRaZoe/view?usp=sharing" target="_blank"><img src="https://drive.google.com/thumbnail?id=1L4YrtmMMVvubRUK77OdgKmTuAyWRaZoe&sz=w1000" alt="Team SUPERBUG"></a>
+ </div>
+</article>
+
+<!-- YOUTH FOR EARTH -->
+<article class="card speaking-card reveal">
+ <div class="kicker">Youth Festival · Ministry of Youth and Sports</div>
+ <h3>Youth for Earth: An Innovative Case Solution Championship</h3>
+ <p>Our team <strong>SUPERBUG</strong> was selected as the <span class="highlight">11th team among the top 15</span>, presenting a “Zero Waste Green Campus” vision in the Model Campus category.</p>
+ <p>Due to a departmental tour on the same date, our team could not attend the final. Nevertheless, the experience provided valuable learning in teamwork, sustainability, and idea presentation.</p>
+
+ <div class="featured-photo">
+  <a class="main-image" href="https://drive.google.com/file/d/1L4pE91Y35QhpMbAWe8IrLT1eir5ugvsC/view?usp=sharing" target="_blank">
+   <img src="https://drive.google.com/thumbnail?id=1L4pE91Y35QhpMbAWe8IrLT1eir5ugvsC&sz=w1600" alt="Nirob speaking during Youth for Earth">
+  </a>
+  <div class="photo-note">
+   <div class="kicker">Public Speaking</div>
+   <h3 class="highlight">Sharing ideas for a greener campus</h3>
+   <p>Presenting the team's sustainability vision and Zero Waste Green Campus concept.</p>
+   <p><strong>Team:</strong> SUPERBUG</p>
+   <p><strong>Selection:</strong> Top 15 · Ranked 11th</p>
+  </div>
+ </div>
+ <div class="gallery">
+  <a href="https://drive.google.com/file/d/16iI7TP7y1_dpX7fN5SSvVtCKiXHqcNFm/view?usp=sharing" target="_blank"><img src="https://drive.google.com/thumbnail?id=16iI7TP7y1_dpX7fN5SSvVtCKiXHqcNFm&sz=w1000" alt="Team selected among top 15"></a>
+  <a href="https://drive.google.com/file/d/1sPI8MSAQSrL5IeIR4Gx3K70LL5es4Onq/view?usp=drive_link" target="_blank"><img src="https://drive.google.com/thumbnail?id=1sPI8MSAQSrL5IeIR4Gx3K70LL5es4Onq&sz=w1000" alt="Presenting with team"></a>
+ </div>
+</article>
+
+<!-- FOOD SYSTEMS -->
+<article class="card speaking-card reveal">
+ <div class="kicker">Food Systems · Youth Leadership</div>
+ <h3>Food Systems Youth Leadership Programme</h3>
+ <p>A three-day programme powered by GAIN, SUN, Global Platform Bangladesh, and SUN Youth Network Bangladesh, organized by IAAS Bangladesh SAU Dhaka in association with the Bangladesh Medical Students’ Society.</p>
+ <p>From thought-provoking keynotes to interactive project-based learning, the programme strengthened leadership skills, expanded understanding of sustainable food systems, and connected young changemakers.</p>
+ <p class="highlight">Inspired to turn these learnings into action for a safer, more sustainable, and nutrition-secure future.</p>
+
+ <div class="gallery">
+  <a href="https://drive.google.com/file/d/14_4XEypZFxmXUnEw4ApVUMCq_2GGy8Nw/view?usp=sharing" target="_blank"><img src="https://drive.google.com/thumbnail?id=14_4XEypZFxmXUnEw4ApVUMCq_2GGy8Nw&sz=w1000" alt="Food Systems Youth Leadership Programme"></a>
+  <a href="https://drive.google.com/file/d/1ZwoYDcTywJna_zS5z9YkXvvSd4oh-yL4/view?usp=sharing" target="_blank"><img src="https://drive.google.com/thumbnail?id=1ZwoYDcTywJna_zS5z9YkXvvSd4oh-yL4&sz=w1000" alt="Presenting ideas with team"></a>
+ </div>
+</article>
+
+</main>
+
+<footer>
+© 2026 Ahmed Ishtiak Nirob · Scientific Presentations & Academic Engagement
+</footer>
+</body>
+</html>
