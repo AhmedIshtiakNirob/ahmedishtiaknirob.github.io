@@ -9441,12 +9441,12 @@ html[data-theme="light"] #page-education .sb-num b{color:#2a1b00}
 
 #page-education{--bg:var(--site-bg)}
 /* ===== CSS: EXPERIENCE ===== */
-#page-experience{
+#page-experience,#expModal{
   --bg:#06111f;--panel:#0b1b2c;--panel2:#0e253b;--text:#eef7ff;--muted:#9db4c9;--soft:#d2e2ee;
   --cyan:#43d5ff;--blue:#719dff;--violet:#bd8cff;--mint:#55e4c4;--gold:#ffd166;--pink:#f18bc5;--orange:#ff9f68;
   --radius:22px;--shadow:0 20px 55px #0005;
 }
-#page-experience *{box-sizing:border-box}
+:is(#page-experience,#expModal) *{box-sizing:border-box}
 #page-experience{scroll-behavior:smooth;scroll-padding-top:24px}
 #page-experience{
   margin:0;color:var(--text);font:15px/1.7 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:clip;
@@ -9454,196 +9454,200 @@ html[data-theme="light"] #page-education .sb-num b{color:#2a1b00}
 }
 #page-experience:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.08;background-image:linear-gradient(#55c9ec18 1px,transparent 1px),linear-gradient(90deg,#55c9ec18 1px,transparent 1px);background-size:44px 44px}
 #page-experience:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(circle at 50% 20%,transparent 0,transparent 46%,#02081166 100%)}
-#page-experience a{color:inherit}
-#page-experience .wrap{width:min(1180px,calc(100% - 34px));margin:auto}
-#page-experience .hero{text-align:center;padding:72px 0 52px}
-#page-experience .eyebrow{font-size:11px;letter-spacing:.33em;text-transform:uppercase;font-weight:900;color:var(--cyan);text-shadow:0 0 22px #43d5ff66}
-#page-experience h1{font-size:clamp(48px,7vw,78px);line-height:.98;letter-spacing:-.055em;margin:12px 0;background:linear-gradient(100deg,#f9fbff,#7ee7ff 52%,#c8a6ff);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 22px #43d5ff1a)}
-#page-experience .hero p{max-width:850px;margin:16px auto 0;color:var(--muted);font-size:15px}
-#page-experience .hero-rule{width:min(520px,72%);height:1px;margin:28px auto 0;background:linear-gradient(90deg,transparent,var(--cyan),var(--violet),transparent);box-shadow:0 0 20px #43d5ff22}
-#page-experience .section{padding:10px 0 62px}
-#page-experience .section-title{width:min(690px,100%);margin:0 auto 36px;padding:18px 28px;text-align:center;border:1px solid color-mix(in srgb,var(--accent) 38%,#6aa9c5);border-radius:20px;background:linear-gradient(145deg,#0d263ae6,#081827f0);box-shadow:0 14px 46px #00045,0 0 30px color-mix(in srgb,var(--accent) 9%,transparent);position:relative;overflow:hidden;animation:experience-titlePulse 4.5s ease-in-out infinite}
-#page-experience .section-title:before{content:"";position:absolute;inset:-80% 22% auto;height:180%;transform:rotate(16deg);background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--accent) 11%,transparent),transparent);animation:experience-sweep 4.8s linear infinite}
-#page-experience .section-title:after{content:"";position:absolute;left:10%;right:10%;bottom:0;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);box-shadow:0 0 18px var(--accent)}
-#page-experience .section-title h2{position:relative;z-index:1;margin:0;font-size:clamp(25px,4vw,38px);letter-spacing:-.035em;line-height:1.12}
-@keyframes experience-sweep{0%{transform:translateX(-120%) rotate(16deg)}100%{transform:translateX(120%) rotate(16deg)}}@keyframes experience-titlePulse{0%,100%{box-shadow:0 14px 46px #00045,0 0 24px color-mix(in srgb,var(--accent) 8%,transparent)}50%{box-shadow:0 18px 52px #00055,0 0 34px color-mix(in srgb,var(--accent) 14%,transparent)}}#page-experience .timeline{position:relative}
-#page-experience .timeline:before{content:"";position:absolute;left:45px;top:20px;bottom:20px;width:2px;background:linear-gradient(180deg,var(--cyan),var(--blue),var(--violet),var(--mint),var(--gold),var(--pink),var(--orange));box-shadow:0 0 20px #43d5ff45}
-#page-experience .timeline-item{display:grid;grid-template-columns:90px minmax(0,1fr);gap:22px;position:relative;margin:0 0 26px}
-#page-experience .rail{position:relative;display:flex;justify-content:center;z-index:2}
-#page-experience .node{width:24px;height:24px;margin-top:20px;border-radius:50%;border:2px solid var(--accent);background:#061521;box-shadow:0 0 0 7px color-mix(in srgb,var(--accent) 9%,transparent),0 0 24px var(--accent);position:relative;animation:experience-nodePulse 2.8s ease-in-out infinite}
-#page-experience .node:after{content:"";position:absolute;inset:5px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
-#page-experience .time{position:absolute;top:52px;right:-4px;white-space:nowrap;padding:8px 10px;border:1px solid color-mix(in srgb,var(--accent) 48%,transparent);border-radius:10px;background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 14%,#081726),#081726e8);font-size:10px;font-weight:900;letter-spacing:.04em;box-shadow:0 8px 24px #0003,0 0 16px color-mix(in srgb,var(--accent) 12%,transparent)}
-@keyframes experience-nodePulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}#page-experience .card,#page-experience .role-card,#page-experience .document-box,#page-experience .placement-box,#page-experience .initiative-box{position:relative;overflow:hidden;border:1px solid color-mix(in srgb,var(--accent) 27%,#6ca9c4);background:linear-gradient(145deg,#10283dec,#081827f2);box-shadow:var(--shadow);border-radius:var(--radius);transition:transform .32s ease,border-color .32s ease,box-shadow .32s ease}
-#page-experience .card:before,#page-experience .role-card:before,#page-experience .document-box:before,#page-experience .placement-box:before,#page-experience .initiative-box:before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,transparent,var(--accent),transparent);box-shadow:0 0 17px var(--accent)}
-#page-experience .card:after,#page-experience .role-card:after,#page-experience .document-box:after,#page-experience .placement-box:after,#page-experience .initiative-box:after{content:"";position:absolute;right:-120px;top:-130px;width:230px;height:230px;border-radius:50%;background:var(--accent);filter:blur(80px);opacity:.10;pointer-events:none}
-#page-experience .card:hover,#page-experience .role-card:hover,#page-experience .document-box:hover,#page-experience .placement-box:hover,#page-experience .initiative-box:hover{transform:translateY(-5px);border-color:color-mix(in srgb,var(--accent) 67%,#75b6d2);box-shadow:0 25px 62px #00055,0 0 30px color-mix(in srgb,var(--accent) 11%,transparent)}
-#page-experience .card-inner{padding:28px 30px}
-#page-experience .kicker{display:flex;align-items:center;gap:10px;color:var(--accent);font-size:10px;letter-spacing:.17em;text-transform:uppercase;font-weight:900}
-#page-experience .num{width:35px;height:35px;display:grid;place-items:center;border-radius:11px;border:1px solid color-mix(in srgb,var(--accent) 62%,transparent);background:color-mix(in srgb,var(--accent) 11%,transparent);box-shadow:inset 0 0 16px color-mix(in srgb,var(--accent) 9%,transparent)}
-#page-experience .card h3,#page-experience .role-card h3,#page-experience .initiative-box h3{margin:15px 0 4px;font-size:clamp(24px,3.2vw,34px);line-height:1.12;letter-spacing:-.035em}
-#page-experience .org{font-size:16px;font-weight:850;color:var(--accent);text-shadow:0 0 17px color-mix(in srgb,var(--accent) 13%,transparent);transition:filter .25s ease,transform .25s ease}
-#page-experience .card:hover .org,#page-experience .role-card:hover .org,#page-experience .initiative-box:hover .org{filter:brightness(1.16);transform:translateX(3px)}
-#page-experience .meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
-#page-experience .tag{display:inline-flex;align-items:center;min-height:28px;padding:5px 10px;border-radius:999px;border:1px solid #aec8da2b;background:#ffffff07;color:#c4d6e5;font-size:10.5px;line-height:1.2}
-#page-experience .copy{margin:15px 0 0;color:#c9d9e6;font-size:13px;max-width:1000px}
-#page-experience .points{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 24px;margin:18px 0 0;padding:0;list-style:none}
-#page-experience .points li{position:relative;padding-left:22px;color:#dce8f1;font-size:12.5px}
-#page-experience .points li:before{content:"";position:absolute;left:0;top:.7em;width:7px;height:7px;border-radius:2px;background:var(--accent);box-shadow:0 0 11px var(--accent);transform:rotate(45deg)}
-#page-experience .feature-split{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(340px,.95fr);gap:22px;align-items:center;margin-top:20px}
-#page-experience .feature-points{padding-right:4px}
-#page-experience .feature-media{position:relative}
-#page-experience .feature-photo{display:block;padding:10px;border-radius:18px;border:1px solid color-mix(in srgb,var(--accent) 26%,#6d9fb7);background:#061420;box-shadow:0 14px 36px #0004;cursor:zoom-in}
-#page-experience .feature-photo img{display:block;width:100%;height:auto;max-height:420px;object-fit:contain;border-radius:12px;background:#020a12}
-#page-experience .photo-caption{margin-top:9px;color:#b9cad9;font-size:10.5px;line-height:1.45;text-align:center}
-#page-experience .interview-button-wrap{display:flex;justify-content:center;margin-top:17px}
-#page-experience .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
-#page-experience .btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;text-decoration:none;color:#ecfaff;font-size:11.5px;font-weight:900;padding:10px 14px;border-radius:12px;border:1px solid color-mix(in srgb,var(--accent) 40%,#6fb0cb);background:color-mix(in srgb,var(--accent) 9%,#071522);position:relative;overflow:hidden;transition:transform .25s,border-color .25s,box-shadow .25s,background .25s}
-#page-experience .btn:before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,#ffffff19 50%,transparent 65%);transform:translateX(-120%);transition:transform .55s}
-#page-experience .btn:hover{transform:translateY(-2px);border-color:var(--accent);box-shadow:0 0 20px color-mix(in srgb,var(--accent) 18%,transparent),0 8px 20px #0003;background:color-mix(in srgb,var(--accent) 14%,#071522)}
-#page-experience .btn:hover:before{transform:translateX(120%)}
-#page-experience .placement-box{padding:22px 24px;margin-top:20px;--accent:var(--blue)}
-#page-experience .placement-title{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:900;color:var(--blue)}
-#page-experience .placements{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px 22px;margin:15px 0 0;padding:0;list-style:none;counter-reset:place}
-#page-experience .placements li{counter-increment:place;position:relative;padding-left:33px;color:#d5e4ed;font-size:12px}
-#page-experience .placements li:before{content:counter(place,"decimal-leading-zero");position:absolute;left:0;top:0;width:25px;height:23px;display:grid;place-items:center;border:1px solid #719dff42;border-radius:7px;color:var(--blue);background:#719dff0b;font-size:9px;font-weight:900}
-#page-experience .document-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:18px}
-#page-experience .document-box{padding:19px 20px;--accent:var(--cyan)}
-#page-experience .document-box.certificate{--accent:var(--violet)}
-#page-experience .doc-label{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:var(--accent);font-weight:900}
-#page-experience .document-box h4{margin:7px 0 3px;font-size:19px}
-#page-experience .document-box p{margin:0;color:var(--muted);font-size:11.5px}
-#page-experience .media-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:12px;margin-top:20px}
-#page-experience .lab-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-#page-experience .lab-card{--accent:var(--violet);position:relative;overflow:hidden;border:1px solid color-mix(in srgb,var(--accent) 28%,#71a9c3);border-radius:22px;background:linear-gradient(145deg,#102840ed,#081827f4);box-shadow:var(--shadow);transition:.32s}
-#page-experience .lab-card:before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,transparent,var(--accent),transparent);box-shadow:0 0 18px var(--accent)}
-#page-experience .lab-card:hover{transform:translateY(-5px);border-color:color-mix(in srgb,var(--accent) 70%,#7ab5cf);box-shadow:0 25px 60px #00055,0 0 28px color-mix(in srgb,var(--accent) 11%,transparent)}
-#page-experience .lab-visual{margin:13px 13px 0;height:190px;border-radius:16px;border:1px solid #a5d1e92a;background:linear-gradient(145deg,#06121f,#0b2134);display:flex;align-items:center;justify-content:center;overflow:hidden}
-#page-experience .lab-visual img{width:100%;height:100%;object-fit:contain;padding:10px}
-#page-experience .lab-art{font-size:62px;color:var(--accent);filter:drop-shadow(0 0 18px var(--accent));animation:floatIcon 3.2s ease-in-out infinite}
-#page-experience .lab-body{padding:19px 20px 22px}
-#page-experience .lab-role{font-size:10px;letter-spacing:.17em;text-transform:uppercase;color:var(--accent);font-weight:900}
-#page-experience .lab-body h3{margin:7px 0 4px;font-size:22px}
-#page-experience .lab-super{margin-top:10px;color:#d0dfeb;font-size:12px}
-#page-experience .lab-super span{display:block;color:#7f9bb0;font-size:9px;text-transform:uppercase;letter-spacing:.12em}
-#page-experience .lab-period{margin-top:13px;padding:9px 11px;border-radius:10px;border:1px solid color-mix(in srgb,var(--accent) 32%,transparent);background:color-mix(in srgb,var(--accent) 8%,transparent);font-size:10.5px;font-weight:900;color:#edf8ff}
-#page-experience .lab-status{display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:5px 9px;border-radius:999px;border:1px solid color-mix(in srgb,var(--accent) 34%,transparent);background:color-mix(in srgb,var(--accent) 11%,transparent);font-size:9.5px;font-weight:900;color:var(--accent)}
-#page-experience .lab-status:before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;box-shadow:0 0 9px currentColor}
-#page-experience .lab-points{display:grid;gap:8px;margin:13px 0 0;padding:0;list-style:none}
-#page-experience .lab-points li{position:relative;padding-left:17px;color:#d4e3ed;font-size:11.5px}
-#page-experience .lab-points li:before{content:"";position:absolute;left:0;top:.74em;width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 9px var(--accent)}
-#page-experience .role-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-#page-experience .teaching-grid{grid-template-columns:minmax(0,650px);justify-content:center}
-#page-experience .role-card{padding:20px;--accent:var(--gold)}
-#page-experience .role-top{display:grid;grid-template-columns:88px 1fr;gap:17px;align-items:center}
-#page-experience .role-logo{width:88px;height:88px;object-fit:contain;padding:9px;border-radius:18px;border:1px solid color-mix(in srgb,var(--accent) 28%,#6ea9bf);background:#06131f;box-shadow:0 10px 25px #0004;transition:transform .3s,filter .3s,border-color .3s}
-#page-experience .role-card:hover .role-logo{transform:scale(1.06) rotate(-1deg);filter:brightness(1.08);border-color:var(--accent)}
-#page-experience .role-card h3{font-size:24px;margin:0 0 4px}
-#page-experience .role-org{color:var(--accent);font-size:13px;font-weight:850}
-#page-experience .role-desc{margin:14px 0 0;color:#c9dbe7;font-size:12px}
-#page-experience .role-date{display:inline-flex;margin-top:13px;padding:6px 10px;border-radius:999px;color:#eef8ff;font-size:10px;font-weight:900;border:1px solid color-mix(in srgb,var(--accent) 36%,transparent);background:color-mix(in srgb,var(--accent) 9%,transparent)}
-#page-experience .initiative-layout{display:grid;grid-template-columns:1fr minmax(320px,.88fr);gap:20px;align-items:center}
-#page-experience .initiative-box{padding:25px 27px;--accent:var(--orange)}
-#page-experience .initiative-box h3{font-size:31px}
-#page-experience .initiative-box .org{font-size:15px}
-#page-experience .initiative-points{display:grid;gap:9px;margin:16px 0 0;padding:0;list-style:none}
-#page-experience .initiative-points li{padding-left:19px;position:relative;color:#d8e6ee;font-size:12px}
-#page-experience .initiative-points li:before{content:"✦";position:absolute;left:0;top:0;color:var(--accent);text-shadow:0 0 10px var(--accent)}
-#page-experience .initiative-media{padding:10px;border-radius:18px;border:1px solid #ffad7335;background:#061420;box-shadow:0 14px 34px #0004}
-#page-experience .initiative-media img{display:block;width:100%;height:auto;max-height:390px;object-fit:contain;border-radius:11px;background:#030a11}
-#page-experience .simple-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}
-#page-experience .media-card{display:block;text-decoration:none;overflow:hidden;border-radius:16px;border:1px solid color-mix(in srgb,var(--accent) 25%,#659bb6);background:#061420;box-shadow:0 10px 26px #0003;cursor:zoom-in;transition:.3s}
-#page-experience .media-card:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 0 25px color-mix(in srgb,var(--accent) 12%,transparent),0 15px 30px #0004}
-#page-experience .media-card img{display:block;width:100%;height:auto;max-height:350px;object-fit:contain;background:#020a12}
-#page-experience .media-card span{display:block;padding:9px 11px;color:#bed0dd;font-size:10.5px}
-#page-experience .reveal{opacity:0;transform:translateY(22px);transition:opacity .75s ease,transform .75s ease}
-#page-experience .reveal.visible{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){#page-experience *,#page-experience *:before,#page-experience *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-#page-experience .reveal{opacity:1;transform:none}
-}@media(max-width:930px){#page-experience .lab-grid{grid-template-columns:1fr 1fr}
-#page-experience .feature-split,#page-experience .initiative-layout{grid-template-columns:1fr}
-#page-experience .role-grid{grid-template-columns:1fr}
-#page-experience .timeline-item{grid-template-columns:72px minmax(0,1fr)}
-#page-experience .timeline:before{left:36px}
-}@media(max-width:680px){#page-experience .wrap{width:calc(100% - 20px)}
-#page-experience .hero{padding:54px 0 38px}
-#page-experience .hero p{font-size:13px}
-#page-experience .section{padding-bottom:40px}
-#page-experience .section-title{padding:15px 16px;border-radius:16px;margin-bottom:22px}
-#page-experience .section-title h2{font-size:25px}
-#page-experience .timeline:before{left:12px}
-#page-experience .timeline-item{grid-template-columns:27px minmax(0,1fr);gap:11px;margin-bottom:16px}
-#page-experience .node{width:21px;height:21px;margin-top:17px}
-#page-experience .time{display:none}
-#page-experience .card-inner{padding:20px 16px}
-#page-experience .kicker{font-size:9px;gap:8px}
-#page-experience .num{width:31px;height:31px}
-#page-experience .card h3{font-size:24px}
-#page-experience .org{font-size:14px}
-#page-experience .copy{font-size:12px}
-#page-experience .points{grid-template-columns:1fr;gap:8px}
-#page-experience .points li{font-size:12px}
-#page-experience .feature-split{gap:16px}
-#page-experience .feature-photo img{max-height:330px}
-#page-experience .placements{grid-template-columns:1fr}
-#page-experience .document-grid{grid-template-columns:1fr}
-#page-experience .lab-grid{grid-template-columns:1fr}
-#page-experience .lab-visual{height:220px}
-#page-experience .role-top{grid-template-columns:72px 1fr;gap:13px}
-#page-experience .role-logo{width:72px;height:72px}
-#page-experience .role-card h3{font-size:21px}
-#page-experience .simple-gallery{grid-template-columns:1fr}
-#page-experience .initiative-box{padding:20px 17px}
-#page-experience .initiative-box h3{font-size:26px}
-#page-experience .actions{justify-content:flex-start}
-#page-experience .btn{font-size:10.5px}
-}@media(max-width:430px){#page-experience .role-top{grid-template-columns:1fr}
-#page-experience .role-logo{width:82px;height:82px}
-#page-experience .feature-photo{padding:7px}
-}#page-experience .section-title{
+:is(#page-experience,#expModal) a{color:inherit}
+:is(#page-experience,#expModal) .wrap{width:min(1180px,calc(100% - 34px));margin:auto}
+:is(#page-experience,#expModal) .hero{text-align:center;padding:72px 0 52px}
+:is(#page-experience,#expModal) .eyebrow{font-size:11px;letter-spacing:.33em;text-transform:uppercase;font-weight:900;color:var(--cyan);text-shadow:0 0 22px #43d5ff66}
+:is(#page-experience,#expModal) h1{font-size:clamp(48px,7vw,78px);line-height:.98;letter-spacing:-.055em;margin:12px 0;background:linear-gradient(100deg,#f9fbff,#7ee7ff 52%,#c8a6ff);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 22px #43d5ff1a)}
+:is(#page-experience,#expModal) .hero p{max-width:850px;margin:16px auto 0;color:var(--muted);font-size:15px}
+:is(#page-experience,#expModal) .hero-rule{width:min(520px,72%);height:1px;margin:28px auto 0;background:linear-gradient(90deg,transparent,var(--cyan),var(--violet),transparent);box-shadow:0 0 20px #43d5ff22}
+:is(#page-experience,#expModal) .section{padding:10px 0 62px}
+:is(#page-experience,#expModal) .section-title{width:min(690px,100%);margin:0 auto 36px;padding:18px 28px;text-align:center;border:1px solid color-mix(in srgb,var(--accent) 38%,#6aa9c5);border-radius:20px;background:linear-gradient(145deg,#0d263ae6,#081827f0);box-shadow:0 14px 46px #0004,0 0 30px color-mix(in srgb,var(--accent) 9%,transparent);position:relative;overflow:hidden;animation:experience-titlePulse 4.5s ease-in-out infinite}
+:is(#page-experience,#expModal) .section-title:before{content:"";position:absolute;inset:-80% 22% auto;height:180%;transform:rotate(16deg);background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--accent) 11%,transparent),transparent);animation:experience-sweep 4.8s linear infinite}
+:is(#page-experience,#expModal) .section-title:after{content:"";position:absolute;left:10%;right:10%;bottom:0;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);box-shadow:0 0 18px var(--accent)}
+:is(#page-experience,#expModal) .section-title h2{position:relative;z-index:1;margin:0;font-size:clamp(25px,4vw,38px);letter-spacing:-.035em;line-height:1.12}
+@keyframes experience-sweep{0%{transform:translateX(-120%) rotate(16deg)}100%{transform:translateX(120%) rotate(16deg)}}
+@keyframes experience-titlePulse{0%,100%{box-shadow:0 14px 46px #0004,0 0 24px color-mix(in srgb,var(--accent) 8%,transparent)}50%{box-shadow:0 18px 52px #0005,0 0 34px color-mix(in srgb,var(--accent) 14%,transparent)}}
+:is(#page-experience,#expModal) .timeline{position:relative}
+:is(#page-experience,#expModal) .timeline:before{content:"";position:absolute;left:45px;top:20px;bottom:20px;width:2px;background:linear-gradient(180deg,var(--cyan),var(--blue),var(--violet),var(--mint),var(--gold),var(--pink),var(--orange));box-shadow:0 0 20px #43d5ff45}
+:is(#page-experience,#expModal) .timeline-item{display:grid;grid-template-columns:90px minmax(0,1fr);gap:22px;position:relative;margin:0 0 26px}
+:is(#page-experience,#expModal) .rail{position:relative;display:flex;justify-content:center;z-index:2}
+:is(#page-experience,#expModal) .node{width:24px;height:24px;margin-top:20px;border-radius:50%;border:2px solid var(--accent);background:#061521;box-shadow:0 0 0 7px color-mix(in srgb,var(--accent) 9%,transparent),0 0 24px var(--accent);position:relative;animation:experience-nodePulse 2.8s ease-in-out infinite}
+:is(#page-experience,#expModal) .node:after{content:"";position:absolute;inset:5px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
+:is(#page-experience,#expModal) .time{position:absolute;top:52px;right:-4px;white-space:nowrap;padding:8px 10px;border:1px solid color-mix(in srgb,var(--accent) 48%,transparent);border-radius:10px;background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 14%,#081726),#081726e8);font-size:10px;font-weight:900;letter-spacing:.04em;box-shadow:0 8px 24px #0003,0 0 16px color-mix(in srgb,var(--accent) 12%,transparent)}
+@keyframes experience-nodePulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+:is(#page-experience,#expModal) .card,:is(#page-experience,#expModal) .role-card,:is(#page-experience,#expModal) .document-box,:is(#page-experience,#expModal) .placement-box,:is(#page-experience,#expModal) .initiative-box{position:relative;overflow:hidden;border:1px solid color-mix(in srgb,var(--accent) 27%,#6ca9c4);background:linear-gradient(145deg,#10283dec,#081827f2);box-shadow:var(--shadow);border-radius:var(--radius);transition:transform .32s ease,border-color .32s ease,box-shadow .32s ease}
+:is(#page-experience,#expModal) .card:before,:is(#page-experience,#expModal) .role-card:before,:is(#page-experience,#expModal) .document-box:before,:is(#page-experience,#expModal) .placement-box:before,:is(#page-experience,#expModal) .initiative-box:before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,transparent,var(--accent),transparent);box-shadow:0 0 17px var(--accent)}
+:is(#page-experience,#expModal) .card:after,:is(#page-experience,#expModal) .role-card:after,:is(#page-experience,#expModal) .document-box:after,:is(#page-experience,#expModal) .placement-box:after,:is(#page-experience,#expModal) .initiative-box:after{content:"";position:absolute;right:-120px;top:-130px;width:230px;height:230px;border-radius:50%;background:var(--accent);filter:blur(80px);opacity:.10;pointer-events:none}
+:is(#page-experience,#expModal) .card:hover,:is(#page-experience,#expModal) .role-card:hover,:is(#page-experience,#expModal) .document-box:hover,:is(#page-experience,#expModal) .placement-box:hover,:is(#page-experience,#expModal) .initiative-box:hover{transform:translateY(-5px);border-color:color-mix(in srgb,var(--accent) 67%,#75b6d2);box-shadow:0 25px 62px #0005,0 0 30px color-mix(in srgb,var(--accent) 11%,transparent)}
+:is(#page-experience,#expModal) .card-inner{padding:28px 30px}
+:is(#page-experience,#expModal) .kicker{display:flex;align-items:center;gap:10px;color:var(--accent);font-size:10px;letter-spacing:.17em;text-transform:uppercase;font-weight:900}
+:is(#page-experience,#expModal) .num{width:35px;height:35px;display:grid;place-items:center;border-radius:11px;border:1px solid color-mix(in srgb,var(--accent) 62%,transparent);background:color-mix(in srgb,var(--accent) 11%,transparent);box-shadow:inset 0 0 16px color-mix(in srgb,var(--accent) 9%,transparent)}
+:is(#page-experience,#expModal) .card h3,:is(#page-experience,#expModal) .role-card h3,:is(#page-experience,#expModal) .initiative-box h3{margin:15px 0 4px;font-size:clamp(24px,3.2vw,34px);line-height:1.12;letter-spacing:-.035em}
+:is(#page-experience,#expModal) .org{font-size:16px;font-weight:850;color:var(--accent);text-shadow:0 0 17px color-mix(in srgb,var(--accent) 13%,transparent);transition:filter .25s ease,transform .25s ease}
+:is(#page-experience,#expModal) .card:hover .org,:is(#page-experience,#expModal) .role-card:hover .org,:is(#page-experience,#expModal) .initiative-box:hover .org{filter:brightness(1.16);transform:translateX(3px)}
+:is(#page-experience,#expModal) .meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+:is(#page-experience,#expModal) .tag{display:inline-flex;align-items:center;min-height:28px;padding:5px 10px;border-radius:999px;border:1px solid #aec8da2b;background:#ffffff07;color:#c4d6e5;font-size:10.5px;line-height:1.2}
+:is(#page-experience,#expModal) .copy{margin:15px 0 0;color:#c9d9e6;font-size:13px;max-width:1000px}
+:is(#page-experience,#expModal) .points{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 24px;margin:18px 0 0;padding:0;list-style:none}
+:is(#page-experience,#expModal) .points li{position:relative;padding-left:22px;color:#dce8f1;font-size:12.5px}
+:is(#page-experience,#expModal) .points li:before{content:"";position:absolute;left:0;top:.7em;width:7px;height:7px;border-radius:2px;background:var(--accent);box-shadow:0 0 11px var(--accent);transform:rotate(45deg)}
+:is(#page-experience,#expModal) .feature-split{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(340px,.95fr);gap:22px;align-items:center;margin-top:20px}
+:is(#page-experience,#expModal) .feature-points{padding-right:4px}
+:is(#page-experience,#expModal) .feature-media{position:relative}
+:is(#page-experience,#expModal) .feature-photo{display:block;padding:10px;border-radius:18px;border:1px solid color-mix(in srgb,var(--accent) 26%,#6d9fb7);background:#061420;box-shadow:0 14px 36px #0004;cursor:zoom-in}
+:is(#page-experience,#expModal) .feature-photo img{display:block;width:100%;height:auto;max-height:420px;object-fit:contain;border-radius:12px;background:#020a12}
+:is(#page-experience,#expModal) .photo-caption{margin-top:9px;color:#b9cad9;font-size:10.5px;line-height:1.45;text-align:center}
+:is(#page-experience,#expModal) .interview-button-wrap{display:flex;justify-content:center;margin-top:17px}
+:is(#page-experience,#expModal) .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+:is(#page-experience,#expModal) .btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;text-decoration:none;color:#ecfaff;font-size:11.5px;font-weight:900;padding:10px 14px;border-radius:12px;border:1px solid color-mix(in srgb,var(--accent) 40%,#6fb0cb);background:color-mix(in srgb,var(--accent) 9%,#071522);position:relative;overflow:hidden;transition:transform .25s,border-color .25s,box-shadow .25s,background .25s}
+:is(#page-experience,#expModal) .btn:before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,#ffffff19 50%,transparent 65%);transform:translateX(-120%);transition:transform .55s}
+:is(#page-experience,#expModal) .btn:hover{transform:translateY(-2px);border-color:var(--accent);box-shadow:0 0 20px color-mix(in srgb,var(--accent) 18%,transparent),0 8px 20px #0003;background:color-mix(in srgb,var(--accent) 14%,#071522)}
+:is(#page-experience,#expModal) .btn:hover:before{transform:translateX(120%)}
+:is(#page-experience,#expModal) .placement-box{padding:22px 24px;margin-top:20px;--accent:var(--blue)}
+:is(#page-experience,#expModal) .placement-title{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:900;color:var(--blue)}
+:is(#page-experience,#expModal) .placements{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px 22px;margin:15px 0 0;padding:0;list-style:none;counter-reset:place}
+:is(#page-experience,#expModal) .placements li{counter-increment:place;position:relative;padding-left:33px;color:#d5e4ed;font-size:12px}
+:is(#page-experience,#expModal) .placements li:before{content:counter(place,"decimal-leading-zero");position:absolute;left:0;top:0;width:25px;height:23px;display:grid;place-items:center;border:1px solid #719dff42;border-radius:7px;color:var(--blue);background:#719dff0b;font-size:9px;font-weight:900}
+:is(#page-experience,#expModal) .document-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:18px}
+:is(#page-experience,#expModal) .document-box{padding:19px 20px;--accent:var(--cyan)}
+:is(#page-experience,#expModal) .document-box.certificate{--accent:var(--violet)}
+:is(#page-experience,#expModal) .doc-label{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:var(--accent);font-weight:900}
+:is(#page-experience,#expModal) .document-box h4{margin:7px 0 3px;font-size:19px}
+:is(#page-experience,#expModal) .document-box p{margin:0;color:var(--muted);font-size:11.5px}
+:is(#page-experience,#expModal) .media-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:12px;margin-top:20px}
+:is(#page-experience,#expModal) .lab-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+:is(#page-experience,#expModal) .lab-card{--accent:var(--violet);position:relative;overflow:hidden;border:1px solid color-mix(in srgb,var(--accent) 28%,#71a9c3);border-radius:22px;background:linear-gradient(145deg,#102840ed,#081827f4);box-shadow:var(--shadow);transition:.32s}
+:is(#page-experience,#expModal) .lab-card:before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,transparent,var(--accent),transparent);box-shadow:0 0 18px var(--accent)}
+:is(#page-experience,#expModal) .lab-card:hover{transform:translateY(-5px);border-color:color-mix(in srgb,var(--accent) 70%,#7ab5cf);box-shadow:0 25px 60px #0005,0 0 28px color-mix(in srgb,var(--accent) 11%,transparent)}
+:is(#page-experience,#expModal) .lab-visual{margin:13px 13px 0;height:190px;border-radius:16px;border:1px solid #a5d1e92a;background:linear-gradient(145deg,#06121f,#0b2134);display:flex;align-items:center;justify-content:center;overflow:hidden}
+:is(#page-experience,#expModal) .lab-visual img{width:100%;height:100%;object-fit:contain;padding:10px}
+:is(#page-experience,#expModal) .lab-art{font-size:62px;color:var(--accent);filter:drop-shadow(0 0 18px var(--accent));animation:floatIcon 3.2s ease-in-out infinite}
+:is(#page-experience,#expModal) .lab-body{padding:19px 20px 22px}
+:is(#page-experience,#expModal) .lab-role{font-size:10px;letter-spacing:.17em;text-transform:uppercase;color:var(--accent);font-weight:900}
+:is(#page-experience,#expModal) .lab-body h3{margin:7px 0 4px;font-size:22px}
+:is(#page-experience,#expModal) .lab-super{margin-top:10px;color:#d0dfeb;font-size:12px}
+:is(#page-experience,#expModal) .lab-super span{display:block;color:#7f9bb0;font-size:9px;text-transform:uppercase;letter-spacing:.12em}
+:is(#page-experience,#expModal) .lab-period{margin-top:13px;padding:9px 11px;border-radius:10px;border:1px solid color-mix(in srgb,var(--accent) 32%,transparent);background:color-mix(in srgb,var(--accent) 8%,transparent);font-size:10.5px;font-weight:900;color:#edf8ff}
+:is(#page-experience,#expModal) .lab-status{display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:5px 9px;border-radius:999px;border:1px solid color-mix(in srgb,var(--accent) 34%,transparent);background:color-mix(in srgb,var(--accent) 11%,transparent);font-size:9.5px;font-weight:900;color:var(--accent)}
+:is(#page-experience,#expModal) .lab-status:before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;box-shadow:0 0 9px currentColor}
+:is(#page-experience,#expModal) .lab-points{display:grid;gap:8px;margin:13px 0 0;padding:0;list-style:none}
+:is(#page-experience,#expModal) .lab-points li{position:relative;padding-left:17px;color:#d4e3ed;font-size:11.5px}
+:is(#page-experience,#expModal) .lab-points li:before{content:"";position:absolute;left:0;top:.74em;width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 9px var(--accent)}
+:is(#page-experience,#expModal) .role-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+:is(#page-experience,#expModal) .teaching-grid{grid-template-columns:minmax(0,650px);justify-content:center}
+:is(#page-experience,#expModal) .role-card{padding:20px;--accent:var(--gold)}
+:is(#page-experience,#expModal) .role-top{display:grid;grid-template-columns:88px 1fr;gap:17px;align-items:center}
+:is(#page-experience,#expModal) .role-logo{width:88px;height:88px;object-fit:contain;padding:9px;border-radius:18px;border:1px solid color-mix(in srgb,var(--accent) 28%,#6ea9bf);background:#06131f;box-shadow:0 10px 25px #0004;transition:transform .3s,filter .3s,border-color .3s}
+:is(#page-experience,#expModal) .role-card:hover .role-logo{transform:scale(1.06) rotate(-1deg);filter:brightness(1.08);border-color:var(--accent)}
+:is(#page-experience,#expModal) .role-card h3{font-size:24px;margin:0 0 4px}
+:is(#page-experience,#expModal) .role-org{color:var(--accent);font-size:13px;font-weight:850}
+:is(#page-experience,#expModal) .role-desc{margin:14px 0 0;color:#c9dbe7;font-size:12px}
+:is(#page-experience,#expModal) .role-date{display:inline-flex;margin-top:13px;padding:6px 10px;border-radius:999px;color:#eef8ff;font-size:10px;font-weight:900;border:1px solid color-mix(in srgb,var(--accent) 36%,transparent);background:color-mix(in srgb,var(--accent) 9%,transparent)}
+:is(#page-experience,#expModal) .initiative-layout{display:grid;grid-template-columns:1fr minmax(320px,.88fr);gap:20px;align-items:center}
+:is(#page-experience,#expModal) .initiative-box{padding:25px 27px;--accent:var(--orange)}
+:is(#page-experience,#expModal) .initiative-box h3{font-size:31px}
+:is(#page-experience,#expModal) .initiative-box .org{font-size:15px}
+:is(#page-experience,#expModal) .initiative-points{display:grid;gap:9px;margin:16px 0 0;padding:0;list-style:none}
+:is(#page-experience,#expModal) .initiative-points li{padding-left:19px;position:relative;color:#d8e6ee;font-size:12px}
+:is(#page-experience,#expModal) .initiative-points li:before{content:"✦";position:absolute;left:0;top:0;color:var(--accent);text-shadow:0 0 10px var(--accent)}
+:is(#page-experience,#expModal) .initiative-media{padding:10px;border-radius:18px;border:1px solid #ffad7335;background:#061420;box-shadow:0 14px 34px #0004}
+:is(#page-experience,#expModal) .initiative-media img{display:block;width:100%;height:auto;max-height:390px;object-fit:contain;border-radius:11px;background:#030a11}
+:is(#page-experience,#expModal) .simple-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}
+:is(#page-experience,#expModal) .media-card{display:block;text-decoration:none;overflow:hidden;border-radius:16px;border:1px solid color-mix(in srgb,var(--accent) 25%,#659bb6);background:#061420;box-shadow:0 10px 26px #0003;cursor:zoom-in;transition:.3s}
+:is(#page-experience,#expModal) .media-card:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 0 25px color-mix(in srgb,var(--accent) 12%,transparent),0 15px 30px #0004}
+:is(#page-experience,#expModal) .media-card img{display:block;width:100%;height:auto;max-height:350px;object-fit:contain;background:#020a12}
+:is(#page-experience,#expModal) .media-card span{display:block;padding:9px 11px;color:#bed0dd;font-size:10.5px}
+:is(#page-experience,#expModal) .reveal{opacity:0;transform:translateY(22px);transition:opacity .75s ease,transform .75s ease}
+:is(#page-experience,#expModal) .reveal.visible{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){:is(#page-experience,#expModal) *,:is(#page-experience,#expModal) *:before,:is(#page-experience,#expModal) *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+:is(#page-experience,#expModal) .reveal{opacity:1;transform:none}}
+@media(max-width:930px){:is(#page-experience,#expModal) .lab-grid{grid-template-columns:1fr 1fr}
+:is(#page-experience,#expModal) .feature-split,:is(#page-experience,#expModal) .initiative-layout{grid-template-columns:1fr}
+:is(#page-experience,#expModal) .role-grid{grid-template-columns:1fr}
+:is(#page-experience,#expModal) .timeline-item{grid-template-columns:72px minmax(0,1fr)}
+:is(#page-experience,#expModal) .timeline:before{left:36px}}
+@media(max-width:680px){:is(#page-experience,#expModal) .wrap{width:calc(100% - 20px)}
+:is(#page-experience,#expModal) .hero{padding:54px 0 38px}
+:is(#page-experience,#expModal) .hero p{font-size:13px}
+:is(#page-experience,#expModal) .section{padding-bottom:40px}
+:is(#page-experience,#expModal) .section-title{padding:15px 16px;border-radius:16px;margin-bottom:22px}
+:is(#page-experience,#expModal) .section-title h2{font-size:25px}
+:is(#page-experience,#expModal) .timeline:before{left:12px}
+:is(#page-experience,#expModal) .timeline-item{grid-template-columns:27px minmax(0,1fr);gap:11px;margin-bottom:16px}
+:is(#page-experience,#expModal) .node{width:21px;height:21px;margin-top:17px}
+:is(#page-experience,#expModal) .time{display:none}
+:is(#page-experience,#expModal) .card-inner{padding:20px 16px}
+:is(#page-experience,#expModal) .kicker{font-size:9px;gap:8px}
+:is(#page-experience,#expModal) .num{width:31px;height:31px}
+:is(#page-experience,#expModal) .card h3{font-size:24px}
+:is(#page-experience,#expModal) .org{font-size:14px}
+:is(#page-experience,#expModal) .copy{font-size:12px}
+:is(#page-experience,#expModal) .points{grid-template-columns:1fr;gap:8px}
+:is(#page-experience,#expModal) .points li{font-size:12px}
+:is(#page-experience,#expModal) .feature-split{gap:16px}
+:is(#page-experience,#expModal) .feature-photo img{max-height:330px}
+:is(#page-experience,#expModal) .placements{grid-template-columns:1fr}
+:is(#page-experience,#expModal) .document-grid{grid-template-columns:1fr}
+:is(#page-experience,#expModal) .lab-grid{grid-template-columns:1fr}
+:is(#page-experience,#expModal) .lab-visual{height:220px}
+:is(#page-experience,#expModal) .role-top{grid-template-columns:72px 1fr;gap:13px}
+:is(#page-experience,#expModal) .role-logo{width:72px;height:72px}
+:is(#page-experience,#expModal) .role-card h3{font-size:21px}
+:is(#page-experience,#expModal) .simple-gallery{grid-template-columns:1fr}
+:is(#page-experience,#expModal) .initiative-box{padding:20px 17px}
+:is(#page-experience,#expModal) .initiative-box h3{font-size:26px}
+:is(#page-experience,#expModal) .actions{justify-content:flex-start}
+:is(#page-experience,#expModal) .btn{font-size:10.5px}}
+@media(max-width:430px){:is(#page-experience,#expModal) .role-top{grid-template-columns:1fr}
+:is(#page-experience,#expModal) .role-logo{width:82px;height:82px}
+:is(#page-experience,#expModal) .feature-photo{padding:7px}}
+:is(#page-experience,#expModal) .section-title{
   animation:experience-titlePulse 4.5s ease-in-out infinite,experience-sectionFloat 5.5s ease-in-out infinite;
 }
 @keyframes experience-sectionFloat{
   0%,100%{transform:translateY(0)}
   50%{transform:translateY(-2px)}
-}#page-experience .teaching-grid{
+}
+:is(#page-experience,#expModal) .teaching-grid{
   grid-template-columns:minmax(0,920px)!important;
   justify-content:center!important;
 }
-#page-experience .teaching-card{
+:is(#page-experience,#expModal) .teaching-card{
   padding:32px 34px!important;
   --accent:var(--gold);
 }
-#page-experience .teaching-card .role-top{
+:is(#page-experience,#expModal) .teaching-card .role-top{
   grid-template-columns:125px minmax(0,1fr)!important;
   gap:25px!important;
 }
-#page-experience .teaching-card .role-logo{
+:is(#page-experience,#expModal) .teaching-card .role-logo{
   width:125px!important;
   height:125px!important;
   border-radius:24px!important;
   padding:13px!important;
 }
-#page-experience .teaching-card h3{
+:is(#page-experience,#expModal) .teaching-card h3{
   font-size:36px!important;
   line-height:1.06!important;
   margin:0 0 8px!important;
 }
-#page-experience .teaching-card .role-org{
+:is(#page-experience,#expModal) .teaching-card .role-org{
   font-size:18px!important;
 }
-#page-experience .teaching-intro{
+:is(#page-experience,#expModal) .teaching-intro{
   margin:23px 0 0!important;
   font-size:15px!important;
   line-height:1.85!important;
   color:#d9e8f1!important;
 }
-#page-experience .teaching-highlights{
+:is(#page-experience,#expModal) .teaching-highlights{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:13px;
   margin-top:22px;
 }
-#page-experience .teaching-highlight{
+:is(#page-experience,#expModal) .teaching-highlight{
   padding:17px 18px;
   border:1px solid color-mix(in srgb,var(--accent) 30%,#73a9be);
   border-radius:16px;
@@ -9651,69 +9655,69 @@ html[data-theme="light"] #page-education .sb-num b{color:#2a1b00}
   box-shadow:inset 0 0 20px color-mix(in srgb,var(--accent) 5%,transparent);
   transition:.28s ease;
 }
-#page-experience .teaching-highlight:hover{
+:is(#page-experience,#expModal) .teaching-highlight:hover{
   transform:translateY(-5px) scale(1.01);
   border-color:var(--accent);
   box-shadow:0 0 24px color-mix(in srgb,var(--accent) 15%,transparent);
 }
-#page-experience .teaching-highlight strong{
+:is(#page-experience,#expModal) .teaching-highlight strong{
   display:block;
   color:var(--accent);
   font-size:15px;
   margin-bottom:5px;
 }
-#page-experience .teaching-highlight span{
+:is(#page-experience,#expModal) .teaching-highlight span{
   display:block;
   color:#bfd1de;
   font-size:12px;
   line-height:1.55;
 }
-#page-experience .teaching-card .role-date{
+:is(#page-experience,#expModal) .teaching-card .role-date{
   margin-top:22px!important;
   padding:10px 14px!important;
   font-size:11.5px!important;
 }
-#page-experience .org,#page-experience .role-org{
+:is(#page-experience,#expModal) .org,:is(#page-experience,#expModal) .role-org{
   font-size:16px!important;
   font-weight:900!important;
   text-shadow:0 0 16px color-mix(in srgb,var(--accent) 12%,transparent);
 }
-#page-experience .role-org{font-size:14px!important;line-height:1.45}
-#page-experience .card h3,#page-experience .initiative-box h3{font-weight:900}
-#page-experience .leadership-grid{
+:is(#page-experience,#expModal) .role-org{font-size:14px!important;line-height:1.45}
+:is(#page-experience,#expModal) .card h3,:is(#page-experience,#expModal) .initiative-box h3{font-weight:900}
+:is(#page-experience,#expModal) .leadership-grid{
   grid-template-columns:repeat(2,minmax(0,1fr))!important;
 }
-#page-experience .leadership-grid .role-card{
+:is(#page-experience,#expModal) .leadership-grid .role-card{
   min-height:265px;
 }
-#page-experience .leadership-grid .role-card h3{
+:is(#page-experience,#expModal) .leadership-grid .role-card h3{
   font-size:29px!important;
 }
-#page-experience .media-grid.compact-gallery{
+:is(#page-experience,#expModal) .media-grid.compact-gallery{
   grid-template-columns:repeat(3,minmax(0,1fr));
   align-items:start;
 }
-#page-experience .media-grid.compact-gallery .media-card{
+:is(#page-experience,#expModal) .media-grid.compact-gallery .media-card{
   height:auto!important;
   align-self:start;
 }
-#page-experience .media-grid.compact-gallery .media-card img{
+:is(#page-experience,#expModal) .media-grid.compact-gallery .media-card img{
   height:auto!important;
   max-height:none!important;
   object-fit:contain!important;
 }
-#page-experience .gallery-extra{display:none!important}
-#page-experience .gallery-group.expanded .gallery-extra{
+:is(#page-experience,#expModal) .gallery-extra{display:none!important}
+:is(#page-experience,#expModal) .gallery-group.expanded .gallery-extra{
   display:block!important;
   animation:experience-galleryIn .55s ease both;
 }
-#page-experience .gallery-more-row{
+:is(#page-experience,#expModal) .gallery-more-row{
   display:flex;
   align-items:center;
   justify-content:center;
   margin-top:15px;
 }
-#page-experience .gallery-more{
+:is(#page-experience,#expModal) .gallery-more{
   --accent:var(--cyan);
   border:1px solid color-mix(in srgb,var(--accent) 52%,#6ba4bc);
   background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 13%,#061421),#071522);
@@ -9729,12 +9733,12 @@ html[data-theme="light"] #page-education .sb-num b{color:#2a1b00}
   box-shadow:0 0 18px color-mix(in srgb,var(--accent) 10%,transparent);
   transition:.28s ease;
 }
-#page-experience .gallery-more:hover{
+:is(#page-experience,#expModal) .gallery-more:hover{
   transform:translateY(-2px);
   border-color:var(--accent);
   box-shadow:0 0 25px color-mix(in srgb,var(--accent) 18%,transparent);
 }
-#page-experience .gallery-more:after{
+:is(#page-experience,#expModal) .gallery-more:after{
   content:"";
   position:absolute;
   inset:0;
@@ -9742,32 +9746,125 @@ html[data-theme="light"] #page-education .sb-num b{color:#2a1b00}
   transform:translateX(-120%);
   transition:transform .55s ease;
 }
-#page-experience .gallery-more:hover:after{transform:translateX(120%)}
-@keyframes experience-galleryIn{from{opacity:0;transform:translateY(12px) scale(.985)}to{opacity:1;transform:none}}#page-experience .btn,#page-experience .role-date,#page-experience .tag,#page-experience .num,#page-experience .lab-period,#page-experience .lab-status,#page-experience .teaching-highlight,#page-experience .document-box,#page-experience .placement-box,#page-experience .role-card,#page-experience .initiative-box,#page-experience .lab-card,#page-experience .card{
+:is(#page-experience,#expModal) .gallery-more:hover:after{transform:translateX(120%)}
+@keyframes experience-galleryIn{from{opacity:0;transform:translateY(12px) scale(.985)}to{opacity:1;transform:none}}
+:is(#page-experience,#expModal) .btn,:is(#page-experience,#expModal) .role-date,:is(#page-experience,#expModal) .tag,:is(#page-experience,#expModal) .num,:is(#page-experience,#expModal) .lab-period,:is(#page-experience,#expModal) .lab-status,:is(#page-experience,#expModal) .teaching-highlight,:is(#page-experience,#expModal) .document-box,:is(#page-experience,#expModal) .placement-box,:is(#page-experience,#expModal) .role-card,:is(#page-experience,#expModal) .initiative-box,:is(#page-experience,#expModal) .lab-card,:is(#page-experience,#expModal) .card{
   will-change:transform;
 }
-#page-experience .btn,#page-experience .role-date,#page-experience .tag{
+:is(#page-experience,#expModal) .btn,:is(#page-experience,#expModal) .role-date,:is(#page-experience,#expModal) .tag{
   transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease,background .25s ease,filter .25s ease;
 }
-#page-experience .btn:hover,#page-experience .role-date:hover,#page-experience .tag:hover{
+:is(#page-experience,#expModal) .btn:hover,:is(#page-experience,#expModal) .role-date:hover,:is(#page-experience,#expModal) .tag:hover{
   filter:brightness(1.08);
 }
-#page-experience .role-card:hover .role-org,#page-experience .card:hover .org,#page-experience .initiative-box:hover .org{
+:is(#page-experience,#expModal) .role-card:hover .role-org,:is(#page-experience,#expModal) .card:hover .org,:is(#page-experience,#expModal) .initiative-box:hover .org{
   text-shadow:0 0 18px color-mix(in srgb,var(--accent) 24%,transparent);
 }
-@media(max-width:930px){#page-experience .teaching-highlights{grid-template-columns:1fr}
-#page-experience .leadership-grid{grid-template-columns:1fr!important}
-#page-experience .media-grid.compact-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
-}@media(max-width:680px){#page-experience .teaching-card{padding:22px 18px!important}
-#page-experience .teaching-card .role-top{grid-template-columns:92px minmax(0,1fr)!important;gap:14px!important}
-#page-experience .teaching-card .role-logo{width:92px!important;height:92px!important}
-#page-experience .teaching-card h3{font-size:27px!important}
-#page-experience .teaching-card .role-org{font-size:14px!important}
-#page-experience .teaching-intro{font-size:12.5px!important}
-#page-experience .media-grid.compact-gallery{grid-template-columns:1fr 1fr}
-}@media(max-width:430px){#page-experience .media-grid.compact-gallery{grid-template-columns:1fr}
-}
+@media(max-width:930px){:is(#page-experience,#expModal) .teaching-highlights{grid-template-columns:1fr}
+:is(#page-experience,#expModal) .leadership-grid{grid-template-columns:1fr!important}
+:is(#page-experience,#expModal) .media-grid.compact-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){:is(#page-experience,#expModal) .teaching-card{padding:22px 18px!important}
+:is(#page-experience,#expModal) .teaching-card .role-top{grid-template-columns:92px minmax(0,1fr)!important;gap:14px!important}
+:is(#page-experience,#expModal) .teaching-card .role-logo{width:92px!important;height:92px!important}
+:is(#page-experience,#expModal) .teaching-card h3{font-size:27px!important}
+:is(#page-experience,#expModal) .teaching-card .role-org{font-size:14px!important}
+:is(#page-experience,#expModal) .teaching-intro{font-size:12.5px!important}
+:is(#page-experience,#expModal) .media-grid.compact-gallery{grid-template-columns:1fr 1fr}}
+@media(max-width:430px){:is(#page-experience,#expModal) .media-grid.compact-gallery{grid-template-columns:1fr}}
+:is(#page-experience,#expModal) .jg{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;--rh:215px}
+:is(#page-experience,#expModal) .jg:after{content:"";flex-grow:1e6}
+:is(#page-experience,#expModal) .jg .ph{--ar:1.5;position:relative;display:block;flex:var(--ar) 1 calc(var(--ar)*var(--rh));min-width:0;overflow:hidden;border-radius:14px;border:1px solid color-mix(in srgb,var(--accent) 28%,#659bb6);background:#061420;box-shadow:0 10px 26px #0003;cursor:zoom-in;transition:.3s}
+:is(#page-experience,#expModal) .jg .ph:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 0 25px color-mix(in srgb,var(--accent) 14%,transparent),0 15px 30px #0004}
+:is(#page-experience,#expModal) .jg .ph img{display:block;width:100%;aspect-ratio:var(--ar);object-fit:cover}
+:is(#page-experience,#expModal) .jg .ph span{position:absolute;left:0;right:0;bottom:0;padding:26px 11px 9px;font-size:10.5px;line-height:1.4;color:#eaf6fc;background:linear-gradient(transparent,#020a12ee);opacity:0;transition:.3s}
+:is(#page-experience,#expModal) .jg .ph:hover span{opacity:1}
+@media(hover:none){:is(#page-experience,#expModal) .jg .ph span{opacity:1}}
+:is(#page-experience,#expModal) .figwrap{margin:0}
+:is(#page-experience,#expModal) .fig{display:block;margin:0 auto;position:relative;overflow:hidden;width:min(100%,calc(var(--ar,1.5)*var(--mh,420px)));aspect-ratio:var(--ar,1.5);border-radius:16px;border:1px solid color-mix(in srgb,var(--accent) 30%,#6d9fb7);background:#061420;box-shadow:0 14px 36px #0004;cursor:zoom-in}
+:is(#page-experience,#expModal) .fig img{display:block;width:100%;height:100%;object-fit:cover}
+:is(#page-experience,#expModal) .cover{display:block;position:relative;overflow:hidden;height:clamp(200px,30vw,330px);margin:0 0 20px;border-radius:16px;border:1px solid color-mix(in srgb,var(--accent) 30%,#6d9fb7);background:#061420 center/cover;cursor:zoom-in}
+:is(#page-experience,#expModal) .cover:before{content:"";position:absolute;inset:-24px;background:inherit;filter:blur(26px) brightness(.55)}
+:is(#page-experience,#expModal) .cover img{position:relative;display:block;width:100%;height:100%;object-fit:contain}
+:is(#page-experience,#expModal) .cover.wide img{object-fit:cover}
+:is(#page-experience,#expModal) .cover.lab{height:195px;margin:13px 13px 0;cursor:default}
+:is(#page-experience,#expModal) .cover.lab[href]{cursor:zoom-in}
+:is(#page-experience,#expModal) .cover.art{display:flex;align-items:center;justify-content:center}
+:is(#page-experience,#expModal) .role-card .cover{height:185px;margin-bottom:16px}
+:is(#page-experience,#expModal) .role-card.club{display:flex;flex-direction:column}
+:is(#page-experience,#expModal) .role-card.club .actions{margin-top:auto;padding-top:16px}
+:is(#page-experience,#expModal) .leadership-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+:is(#page-experience,#expModal) .leadership-grid .role-card{min-height:0}
+:is(#page-experience,#expModal) .leadership-grid .role-card h3{font-size:25px!important}
+:is(#page-experience,#expModal) .leadership-grid .role-top{grid-template-columns:72px 1fr}
+:is(#page-experience,#expModal) .leadership-grid .role-logo{width:72px;height:72px}
+:is(#page-experience,#expModal) .lab-role{display:flex;align-items:center;gap:10px}
+:is(#page-experience,#expModal) .split2{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:18px}
+:is(#page-experience,#expModal) .split2 h5{margin:0 0 4px;color:var(--accent);font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+:is(#page-experience,#expModal) .points.one{grid-template-columns:1fr}
+:is(#page-experience,#expModal) .sub{margin:30px 0 0;padding-top:18px;border-top:1px solid #8cc9e224;color:var(--accent);font-size:11px;letter-spacing:.17em;text-transform:uppercase}
+:is(#page-experience,#expModal) .club-big{padding:0;display:block}
+:is(#page-experience,#expModal) .club-big .kicker{margin-top:4px}
+:is(#page-experience,#expModal) .club-big .feature-split{align-items:start}
+:is(#page-experience,#expModal) .modal{display:none;position:fixed;inset:0;z-index:900;overflow:auto;padding:22px;background:#01060ddb;backdrop-filter:blur(14px)}
+:is(#page-experience,#expModal) .modal.open{display:block}
+:is(#page-experience,#expModal) .modal-panel{position:relative;max-width:1100px;margin:0 auto;padding:30px;border-radius:22px;border:1px solid #8cd6ef40;background:linear-gradient(145deg,#0b1c2df8,#05101bf8);box-shadow:0 30px 90px #0009}
+:is(#page-experience,#expModal) .modal-close{position:absolute;right:14px;top:14px;width:38px;height:38px;border:1px solid #9ed6ea45;border-radius:11px;background:#ffffff08;color:#f0faff;font-size:22px;cursor:pointer}
+:is(#page-experience,#expModal) .mbody h3{margin:12px 0 4px;font-size:clamp(26px,4vw,36px);line-height:1.1}
+@media(max-width:1000px){:is(#page-experience,#expModal) .leadership-grid{grid-template-columns:1fr!important}}
+@media(max-width:930px){:is(#page-experience,#expModal) .jg{--rh:175px}}
+@media(max-width:680px){:is(#page-experience,#expModal) .jg{--rh:135px;gap:8px}
+:is(#page-experience,#expModal) .split2{grid-template-columns:1fr}
+:is(#page-experience,#expModal) .modal{padding:8px}
+:is(#page-experience,#expModal) .modal-panel{padding:20px 14px}
+:is(#page-experience,#expModal) .cover{height:200px}}
+:is(#page-experience,#expModal) .overview{margin-top:-6px;padding-bottom:46px}
+:is(#page-experience,#expModal) .ov-head{text-align:center;font-size:11px;letter-spacing:.3em;text-transform:uppercase;font-weight:900;color:var(--muted);margin-bottom:18px}
+:is(#page-experience,#expModal) .ov-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+:is(#page-experience,#expModal) .ov{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;gap:14px;min-height:150px;padding:16px 18px;text-decoration:none;border-radius:18px;border:1px solid color-mix(in srgb,var(--accent) 38%,#6ca9c4);background:linear-gradient(145deg,#10283dec,#081827f2);box-shadow:0 12px 30px #0004;transition:transform .3s,border-color .3s,box-shadow .3s}
+:is(#page-experience,#expModal) .ov:before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,transparent,var(--accent),transparent);box-shadow:0 0 14px var(--accent)}
+:is(#page-experience,#expModal) .ov:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 18px 40px #0005,0 0 26px color-mix(in srgb,var(--accent) 16%,transparent)}
+:is(#page-experience,#expModal) .ov-no{font-size:11px;font-weight:900;letter-spacing:.14em;color:var(--accent)}
+:is(#page-experience,#expModal) .ov-name{font-size:15px;font-weight:800;line-height:1.3;color:var(--text)}
+:is(#page-experience,#expModal) .ov-count{display:flex;align-items:baseline;gap:7px}
+:is(#page-experience,#expModal) .ov-count b{font-size:38px;line-height:1;font-weight:900;color:var(--accent);text-shadow:0 0 20px color-mix(in srgb,var(--accent) 40%,transparent)}
+:is(#page-experience,#expModal) .ov-count i{font-style:normal;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+:is(#page-experience,#expModal) .ov:nth-child(5){grid-column:1}
+:is(#page-experience,#expModal) .sec-no{position:relative;z-index:1;display:inline-grid;place-items:center;min-width:38px;height:26px;padding:0 9px;margin-bottom:8px;border-radius:9px;border:1px solid color-mix(in srgb,var(--accent) 55%,transparent);background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--accent);font-size:12px;font-weight:900;letter-spacing:.1em}
+:is(#page-experience,#expModal) .section-title{display:flex;flex-direction:column;align-items:center}
+:is(#page-experience,#expModal) .top-btn{position:fixed;right:18px;bottom:18px;z-index:800;width:44px;height:44px;border-radius:13px;border:1px solid #43d5ff66;background:#0b1b2cee;color:var(--cyan);font-size:20px;cursor:pointer;display:none;box-shadow:0 8px 24px #0006}
+:is(#page-experience,#expModal) .top-btn.show{display:block}
+@media(max-width:1000px){:is(#page-experience,#expModal) .ov-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+:is(#page-experience,#expModal) .ov:nth-child(7){grid-column:1/-1}}
+@media(max-width:430px){:is(#page-experience,#expModal) .ov{min-height:0;padding:14px}
+:is(#page-experience,#expModal) .ov-count b{font-size:32px}
+:is(#page-experience,#expModal) .ov-name{font-size:14px}}
+
+/* ---- integration with the merged site ---- */
 #page-experience{--bg:var(--site-bg)}
+#expModal{--bg:#06111f;--panel:#0b1b2c;--panel2:#0e253b;--text:#eef7ff;--muted:#9db4c9;--soft:#d2e2ee;--cyan:#43d5ff;--blue:#719dff;--violet:#bd8cff;--mint:#55e4c4;--gold:#ffd166;--pink:#f18bc5;--orange:#ff9f68;color:var(--text);font:15px/1.7 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+#expModal .modal{z-index:3000}
+#expModal .top-btn{z-index:1500}
+#expModal a{color:inherit}
+#page-experience .role-logo.on-white{background:#fff;padding:7px}
+
+
+/* ===== SKILLS: certificate card ===== */
+#page-skills .cert-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:24px;align-items:center;margin-top:6px}
+#page-skills .cert-copy{margin:0;color:var(--muted);font-size:14px;line-height:1.75}
+#page-skills .cert-photo{display:block;min-height:0;background:#0b1b2a;padding:10px;cursor:zoom-in}
+#page-skills .cert-photo img{width:100%;height:auto;min-height:0;max-height:430px;object-fit:contain;border-radius:10px;background:#fff}
+#page-skills .cert-photo:hover img{transform:none}
+#page-skills .cert-photo .photo-label{position:static;padding:11px 4px 2px;background:none;color:#dbe9f6}
+@media(max-width:820px){#page-skills .cert-grid{grid-template-columns:1fr}}
+
+
+/* ===== CONTACT: social cover pictures ===== */
+#page-contact .lc::before{z-index:3}
+#page-contact .lc-cover{position:relative;margin:-22px -22px 18px;height:122px;background-color:#0b1626;background-size:cover;background-position:center;border-bottom:1px solid color-mix(in srgb,var(--c) 32%,transparent);transition:transform .6s ease}
+#page-contact .lc-cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(7,12,23,.6))}
+#page-contact .lc:hover .lc-cover{transform:scale(1.04)}
+html[data-theme="light"] #page-contact .lc-cover{filter:invert(1) hue-rotate(180deg)}
+
 /* ===== CSS: SKILLS ===== */
 #page-skills{
   --bg:#071321;
@@ -12366,7 +12463,7 @@ html[data-theme="light"] #page-skills .hero p{color:#4d6379}
 
         <img style="background:#fff;padding:7px"
           class="role-logo"
-          src="https://drive.google.com/thumbnail?id=1L7CXyTfMsIFjfL91_hnQWDYzDJCmwKws&sz=w1000"
+          src="https://drive.google.com/thumbnail?id=1gzl0m2GK3mV9Qau268rZuz1cbUfdi0tO&sz=w1000"
           alt="IVSA Bangladesh SAU Dhaka" loading="lazy">
 
         <h3>
@@ -12394,7 +12491,7 @@ html[data-theme="light"] #page-skills .hero p{color:#4d6379}
 
         <img style="background:#fff;padding:7px"
           class="role-logo"
-          src="https://drive.google.com/thumbnail?id=1uIQTFjkMqR9wZ-qYXka0MohA_o6d49c5&sz=w1000"
+          src="https://drive.google.com/thumbnail?id=1L7CXyTfMsIFjfL91_hnQWDYzDJCmwKws&sz=w1000"
           alt="SAU Animal Rescue Community" loading="lazy">
 
         <h3>
@@ -14743,6 +14840,11 @@ html[data-theme="light"] #page-skills .hero p{color:#4d6379}
           class="rp-lab-card rp-lab-violet rp-card-glow rp-tilt rp-reveal"
         >
 
+          <div class="rp-lab-photo">
+            <img src="https://drive.google.com/thumbnail?id=1Ru5LsQAV04Uts7fknEAu9BxKUCTSVK3h&sz=w1400" alt="Microbiology laboratory work at Sher-e-Bangla Agricultural University" loading="lazy">
+            <span>MICROBIOLOGY · LABORATORY WORK</span>
+          </div>
+
           <div class="rp-lab-icon">
 
             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -14862,7 +14964,7 @@ html[data-theme="light"] #page-skills .hero p{color:#4d6379}
  <button class="stat s-sub" data-target="review"><b>3</b><span>Submitted</span></button>
  <button class="stat s-q1" data-target="published"><b>4</b><span>Q1 Papers</span></button>
  <button class="stat s-h" data-target="published"><b>2</b><span>h-index</span></button>
- <button class="stat s-cite" data-target="published"><b>23</b><span>Citations</span></button>
+ <button class="stat s-cite" data-target="published"><b>24</b><span>Citations</span></button>
 </section>
 
 
@@ -15165,547 +15267,17 @@ html[data-theme="light"] #page-skills .hero p{color:#4d6379}
 <!-- ===== PAGE: EXPERIENCE ===== -->
 <section id="page-experience" class="spa-page" data-title="Experience" hidden>
 
-<header class="hero wrap">
-  <div class="eyebrow">Professional Journey</div>
-  <h1>Experience</h1>
-  <p>Veterinary practice, international and national training, research, teaching, leadership and community service.</p>
-  <div class="hero-rule"></div>
-</header>
-
+<header class="hero wrap"><div class="eyebrow">Professional Journey</div><h1>Experience</h1><p>Veterinary practice, international and national training, research, teaching, leadership and community service.</p><div class="hero-rule"></div></header>
+<nav class="overview wrap" aria-label="Quick overview"><div class="ov-head">At a Glance</div><div class="ov-grid"><a class="ov" href="#s1" style="--accent:var(--cyan)"><span class="ov-no">01</span><span class="ov-name">Professional Experience</span><span class="ov-count"><b>4</b><i>roles</i></span></a><a class="ov" href="#s2" style="--accent:var(--violet)"><span class="ov-no">02</span><span class="ov-name">Research Lab Experience</span><span class="ov-count"><b>3</b><i>labs</i></span></a><a class="ov" href="#s3" style="--accent:var(--gold)"><span class="ov-no">03</span><span class="ov-name">Teaching Experience</span><span class="ov-count"><b>1</b><i>role</i></span></a><a class="ov" href="#s4" style="--accent:var(--pink)"><span class="ov-no">04</span><span class="ov-name">Leadership Experience</span><span class="ov-count"><b>3</b><i>roles</i></span></a><a class="ov" href="#s5" style="--accent:var(--orange)"><span class="ov-no">05</span><span class="ov-name">Animal Welfare &amp; Community Initiative</span><span class="ov-count"><b>1</b><i>initiative</i></span></a><a class="ov" href="#s6" style="--accent:var(--mint)"><span class="ov-no">06</span><span class="ov-name">Volunteering Experience</span><span class="ov-count"><b>4</b><i>roles</i></span></a><a class="ov" href="#s7" style="--accent:var(--blue)"><span class="ov-no">07</span><span class="ov-name">Public Service Experience</span><span class="ov-count"><b>1</b><i>role</i></span></a></div></nav>
 <main class="wrap">
-
-<!-- =========================================================
-     01 · PROFESSIONAL EXPERIENCE
-     Clean box: only the requested phrase.
-========================================================= -->
-<section class="section">
-  <div class="section-title reveal" style="--accent:var(--cyan)"><h2>Professional Experience</h2></div>
-
-  <div class="timeline">
-    <!-- VMO -->
-    <article class="timeline-item reveal" style="--accent:var(--cyan)">
-      <div class="rail"><i class="node"></i><div class="time">19–28 May 2026</div></div>
-      <section class="card">
-        <div class="card-inner">
-          <div class="kicker"><span class="num">01</span> Professional Veterinary Experience</div>
-          <h3>Veterinary Medical Officer</h3>
-          <div class="org">Dhaka North City Corporation (DNCC) · Contract</div>
-          <div class="meta"><span class="tag">May 2026</span><span class="tag">Tejgaon Industrial Area Thana, Dhaka</span><span class="tag">On-site</span></div>
-
-          <div class="feature-split">
-            <div class="feature-points">
-              <p class="copy">Appointed by DNCC to provide veterinary healthcare services at Tejgaon Colony Bazar Gorur Hat during Eid-ul-Adha 2026, supporting livestock health, welfare and disease surveillance in a market accommodating more than 5,000 cattle and numerous small ruminants.</p>
-              <ul class="points">
-                <li>Clinical examination, diagnosis and treatment</li>
-                <li>Prescription and emergency veterinary care</li>
-                <li>Animal welfare and disease surveillance</li>
-                <li>Veterinary consultation for traders, farmers and buyers</li>
-                <li>Continuous market coverage with Dr. Omar Siddik</li>
-                <li>Public veterinary communication through a TV interview</li>
-              </ul>
-            </div>
-
-            <div class="feature-media">
-              <a class="feature-photo" data-lightbox href="https://drive.google.com/file/d/1c5hWObzGwvsdLXTcBwvxM5fndB-tmmxI/view?usp=sharing" target="_blank" rel="noopener">
-                <img loading="lazy" src="https://drive.google.com/thumbnail?id=1c5hWObzGwvsdLXTcBwvxM5fndB-tmmxI&sz=w1600" alt="Channel 71 interview moment as a doctor in Tejgaon Gorur Hut">
-                <div class="photo-caption">Channel 71 Interview moment as a Doctor in Tejgaon Gorur Hut</div>
-              </a>
-              <div class="interview-button-wrap">
-                <a class="btn" style="--accent:var(--cyan)" href="https://www.youtube.com/watch?v=JDLgYv6LD1o" target="_blank" rel="noopener">▶ Watch Channel 71 Interview</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </article>
-
-    <!-- UPM -->
-    <article class="timeline-item reveal" style="--accent:var(--blue)">
-      <div class="rail"><i class="node"></i><div class="time">17–30 Jan 2026</div></div>
-      <section class="card">
-        <div class="card-inner">
-          <div class="kicker"><span class="num">02</span> International Veterinary Training</div>
-          <h3>International Veterinary Medicine Intern</h3>
-          <div class="org">Universiti Putra Malaysia (UPM)</div>
-          <div class="meta"><span class="tag">17–30 January 2026</span><span class="tag">Serdang, Selangor, Malaysia</span><span class="tag">On-site</span></div>
-          <p class="copy">Completed an international internship with multidisciplinary exposure across the Faculty of Agriculture and Faculty of Veterinary Medicine.</p>
-          <ul class="points">
-            <li>Animal handling and management: cattle, goats, sheep, broilers and layers</li>
-            <li>Farm management, biosecurity and feed practices</li>
-            <li>Silage preparation and livestock nutrition exposure</li>
-            <li>Clinical procedures, surgical cases and anesthesia observation</li>
-            <li>Farm visits, disease observation and herd-health management</li>
-            <li>Scientific writing and research-development sessions (KSI module)</li>
-          </ul>
-          <div class="gallery-group upm-gallery" data-gallery-group>
-  <div class="media-grid compact-gallery" style="--accent:var(--blue)">
-
-    <a class="media-card reveal" data-lightbox href="https://drive.google.com/file/d/10-0Sjbo5VtKzUzdyseSFJQDmFTzoMqXN/view?usp=sharing" target="_blank" rel="noopener">
-      <img loading="lazy" src="https://drive.google.com/thumbnail?id=10-0Sjbo5VtKzUzdyseSFJQDmFTzoMqXN&sz=w1800" alt="Class session in UPM">
-      <span>Class session in UPM</span>
-    </a>
-
-    <a class="media-card reveal" data-lightbox href="https://drive.google.com/file/d/194uI7xFt5m4Vi1FirpYsty9KtcrZPqDy/view?usp=sharing" target="_blank" rel="noopener">
-      <img loading="lazy" src="https://drive.google.com/thumbnail?id=194uI7xFt5m4Vi1FirpYsty9KtcrZPqDy&sz=w1800" alt="With Dr. Ubedullah Kaka, Senior Lecturer">
-      <span>With Dr. Ubedullah Kaka, Senior Lecturer</span>
-    </a>
-
-    <a class="media-card reveal" data-lightbox href="https://drive.google.com/file/d/1MdG44t8aCTjBlIlaTeHPBugEr-hKL3r1/view?usp=sharing" target="_blank" rel="noopener">
-      <img loading="lazy" src="https://drive.google.com/thumbnail?id=1MdG44t8aCTjBlIlaTeHPBugEr-hKL3r1&sz=w1800" alt="Certificate handover">
-      <span>Certificate handover</span>
-    </a>
-
-    <a class="media-card gallery-extra" data-lightbox href="https://drive.google.com/file/d/1OmNkKxy5E9ivWub0yBLvpfztvOccUZSW/view?usp=sharing" target="_blank" rel="noopener">
-      <img loading="lazy" src="https://drive.google.com/thumbnail?id=1OmNkKxy5E9ivWub0yBLvpfztvOccUZSW&sz=w1800" alt="In front of veterinary faculty of UPM">
-      <span>In front of veterinary faculty of UPM</span>
-    </a>
-
-    <a class="media-card gallery-extra" data-lightbox href="https://drive.google.com/file/d/1ukDckZbG6WNAFrlKZe6FYd8Gs0vNwRI0/view?usp=sharing" target="_blank" rel="noopener">
-      <img loading="lazy" src="https://drive.google.com/thumbnail?id=1ukDckZbG6WNAFrlKZe6FYd8Gs0vNwRI0&sz=w1800" alt="UPM Internship Certificate">
-      <span>UPM Internship Certificate</span>
-    </a>
-
-  </div>
-  <div class="gallery-more-row">
-    <button class="gallery-more" type="button" data-gallery-toggle aria-label="Show more UPM photos">More UPM Photos +</button>
-  </div>
-</div>
-        </div>
-      </section>
-    </article>
-
-    <!-- 6 MONTH INTERNSHIP -->
-    <article class="timeline-item reveal" style="--accent:var(--violet)">
-      <div class="rail"><i class="node"></i><div class="time">25 Aug – 16 Feb</div></div>
-      <section class="card">
-        <div class="card-inner">
-          <div class="kicker"><span class="num">03</span> National Internship</div>
-          <h3>Six-Month Veterinary Internship</h3>
-          <div class="org">Sher-e-Bangla Agricultural University</div>
-          <div class="meta"><span class="tag">25 August – 16 February</span><span class="tag">20 Training Placements · Bangladesh + Malaysia</span><span class="tag">Final-semester CGPA 4.00/4.00</span></div>
-          <p class="copy">A six-month practical training journey across veterinary and animal-science settings, marking the final chapter of my undergraduate life in Animal Science &amp; Veterinary Medicine.</p>
-
-          <div class="placement-box reveal" style="--accent:var(--blue)">
-            <div class="placement-title">The Internship Training Centers in Different Placements</div>
-            <ol class="placements">
-              <li>Bangladesh Veterinary Council (BVC), Dhaka</li>
-              <li>Upazilla Livestock Office &amp; Veterinary Hospital</li>
-              <li>Central Veterinary Hospital (CVH), Dhaka</li>
-              <li>Bangladesh National Zoo, Mirpur, Dhaka</li>
-              <li>Teaching &amp; Training Pet Hospital and Research Center (CVASU), Purbachal, Dhaka</li>
-              <li>Military Farm, Savar, Dhaka</li>
-              <li>RV &amp; F Depot, Savar, Dhaka</li>
-              <li>Care and Cure Pet Hospital, Dhanmondi, Dhaka</li>
-              <li>Veterinary Teaching Hospital, SAU, Dhaka</li>
-              <li>Bangladesh Livestock Research Institute (BLRI), Dhaka</li>
-              <li>NIB (National Institute of Biotechnology)</li>
-              <li>Central Disease Investigation Laboratory (CDIL), Dhaka</li>
-              <li>Livestock Research Institute (LRI), Mohakhali, Dhaka</li>
-              <li>Central Cattle Breeding and Dairy Farm (CCBDF), Savar, Dhaka</li>
-              <li>Artificial Insemination Centre, Savar</li>
-              <li>Safari Park, Gazipur</li>
-              <li>Poultry Farm</li>
-              <li>Feed Industry</li>
-              <li>Department Lab. of FASVM</li>
-              <li>Dairy Farm</li>
-            </ol>
-          </div>
-
-          <div class="document-grid">
-            <article class="document-box reveal" style="--accent:var(--cyan)">
-              <div class="doc-label">Academic Document</div>
-              <h4>Full Internship Report</h4>
-              <p>Complete six-month placement report covering the training journey.</p>
-              <div class="actions"><a class="btn" style="--accent:var(--cyan)" href="https://drive.google.com/file/d/1dO_q8FQ6FBvj3HhCBh0YN0JaTvsPXMg8/view?usp=sharing" target="_blank" rel="noopener">View Full Internship Report ↗</a></div>
-            </article>
-            <article class="document-box certificate reveal" style="--accent:var(--violet)">
-              <div class="doc-label">Official Certificate</div>
-              <h4>Internship Certificate</h4>
-              <p>Open the original certificate document directly from Drive.</p>
-              <div class="actions"><a class="btn" style="--accent:var(--violet)" href="https://drive.google.com/file/d/13MoEAMVxO_1vpfgsLbdtef7LLJ0pazuI/view?usp=sharing" target="_blank" rel="noopener">View Certificate ↗</a></div>
-            </article>
-          </div>
-
-          <div class="gallery-group internship-gallery" data-gallery-group>
-  <div class="media-grid compact-gallery" style="--accent:var(--violet)">
-
-    <a class="media-card reveal" data-lightbox href="https://drive.google.com/file/d/1Y6clcTh3VfX-HmftwKdvQKeQMYFHbxRJ/view?usp=sharing" target="_blank" rel="noopener">
-      <img loading="lazy" src="https://drive.google.com/thumbnail?id=1Y6clcTh3VfX-HmftwKdvQKeQMYFHbxRJ&sz=w1800" alt="In front of Livestock Veterinary Hospital">
-      <span>Livestock Veterinary Hospital · Click to enlarge</span>
-    </a>
-
-    <a class="media-card reveal" data-lightbox href="https://drive.google.com/file/d/19qjQvas3JrlsK_Y-ehz9hJezkKXHwvbl/view?usp=sharing" target="_blank" rel="noopener">
-      <img loading="lazy" src="https://drive.google.com/thumbnail?id=19qjQvas3JrlsK_Y-ehz9hJezkKXHwvbl&sz=w1800" alt="Internship fieldwork">
-      <span>Internship fieldwork · Click to enlarge</span>
-    </a>
-
-    <a class="media-card reveal" data-lightbox href="https://drive.google.com/file/d/1gIts3awWyAkfPBusCF2XnzdsNCz4jutk/view?usp=sharing" target="_blank" rel="noopener">
-      <img loading="lazy" src="https://drive.google.com/thumbnail?id=1gIts3awWyAkfPBusCF2XnzdsNCz4jutk&sz=w1800" alt="Internship practical work">
-      <span>Practical training · Click to enlarge</span>
-    </a>
-
-    <a class="media-card gallery-extra" data-lightbox href="https://drive.google.com/file/d/1s7CzVMZGt_60c3M9WcIN5AuQeZsr18JZ/view?usp=sharing" target="_blank" rel="noopener">
-      <img loading="lazy" src="https://drive.google.com/thumbnail?id=1s7CzVMZGt_60c3M9WcIN5AuQeZsr18JZ&sz=w1800" alt="Internship experience">
-      <span>Internship experience · Click to enlarge</span>
-    </a>
-
-    <a class="media-card gallery-extra" data-lightbox href="https://drive.google.com/file/d/1wzUct7GN4MOnpjHWpFM9AeUmFPACIc6T/view?usp=sharing" target="_blank" rel="noopener">
-      <img loading="lazy" src="https://drive.google.com/thumbnail?id=1wzUct7GN4MOnpjHWpFM9AeUmFPACIc6T&sz=w1800" alt="Internship placement work">
-      <span>Placement work · Click to enlarge</span>
-    </a>
-
-  </div>
-  <div class="gallery-more-row">
-    <button class="gallery-more" type="button" data-gallery-toggle>More Internship Photos +</button>
-  </div>
-</div>
-        </div>
-      </section>
-    </article>
-
-    <!-- DLS -->
-    <article class="timeline-item reveal" style="--accent:var(--mint)">
-      <div class="rail"><i class="node"></i><div class="time">June 2025</div></div>
-      <section class="card">
-        <div class="card-inner">
-          <div class="kicker"><span class="num">04</span> Field Veterinary Experience</div>
-          <h3>Field Intern Veterinarian</h3>
-          <div class="org">Department of Livestock Services (DLS) · LDDP Project</div>
-          <div class="meta"><span class="tag">June 2025</span><span class="tag">Dholaikhal Gorur Hat, Dhaka</span><span class="tag">3-day field service</span></div>
-          <p class="copy">Served on the veterinary medical team during pre-Eid cattle-market operations and provided free treatment to nearly 176 animals over three consecutive days (9 AM–6 PM), with medicines supplied by DLS.</p>
-          <ul class="points">
-            <li>Large-animal clinical support</li><li>On-site care and treatment at owners' tents</li><li>Team-based veterinary service</li><li>Clinical communication and emergency response</li>
-          </ul>
-          <div class="simple-gallery" style="--accent:var(--mint)">
-            <a class="media-card" data-lightbox href="https://drive.google.com/file/d/19XenvNoekG76ZRh4e_AWuQ1L5AFfgBmU/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=19XenvNoekG76ZRh4e_AWuQ1L5AFfgBmU&sz=w1400" alt="DLS field internship ID card"><span>Intern ID card · Click to enlarge</span></a>
-            <a class="media-card" data-lightbox href="https://drive.google.com/file/d/1kXkE_igaX-gn5N-ZF4tLVFVKsZL7lX8L/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1kXkE_igaX-gn5N-ZF4tLVFVKsZL7lX8L&sz=w1400" alt="Veterinary field team"><span>Veterinary team · Click to enlarge</span></a>
-            <a class="media-card" data-lightbox href="https://drive.google.com/file/d/1q-uaKia0F8w-8I6zm6rOHb4xPfP464sY/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1q-uaKia0F8w-8I6zm6rOHb4xPfP464sY&sz=w1400" alt="Team with veterinary surgeon"><span>With veterinary surgeon · Click to enlarge</span></a>
-          </div>
-        </div>
-      </section>
-    </article>
-  </div>
-</section>
-
-<!-- =========================================================
-     02 · RESEARCH EXPERIENCE
-     No extra standalone generic Research Assistant card.
-     All three laboratory environments are Research Assistant roles.
-========================================================= -->
-<section class="section">
-  <div class="section-title reveal" style="--accent:var(--violet)"><h2>Research Experience</h2></div>
-  <div class="lab-grid">
-    <article class="lab-card reveal" style="--accent:var(--pink)">
-      <div class="lab-visual"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1OWFpsCJWHSTwsNG257-Xp9Iufp7H7SNH&sz=w1400" alt="Histology laboratory work"></div>
-      <div class="lab-body">
-        <div class="lab-role">Research Assistant · 01</div><h3>Histology Laboratory</h3>
-        <div class="lab-super"><span>Research Association</span>Dr. Md. Abdul Masum</div>
-        <div class="lab-period">July 2023 → February 2025</div><div class="lab-status">Completed</div>
-        <ul class="lab-points"><li>Practical histology laboratory exposure</li><li>Tissue processing and sectioning workflow</li><li>Microscopy-oriented sample preparation</li></ul>
-      </div>
-    </article>
-    <article class="lab-card reveal" style="--accent:var(--cyan)">
-      <div class="lab-visual"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1LdiohPBidbNRtrcoJOj259_mZE5XBpWf&sz=w1800" alt="ACTG research activity"></div>
-      <div class="lab-body">
-        <div class="lab-role">Research Assistant · 02</div><h3>ACTG · Dry Lab</h3>
-        <div class="lab-super"><span>Research Association</span>Dr. Delowar Hossain &amp; Dr. Jisan Ahmed</div>
-        <div class="lab-period">June 2025 → Present</div><div class="lab-status">Active</div>
-        <ul class="lab-points"><li>Research data collection and management</li><li>Data revision, quality control and collaborative analysis</li><li>Literature screening, meta-analysis and manuscript development</li><li>Scientific activities across epidemiology, infectious disease and One Health</li></ul>
-      </div>
-    </article>
-    <article class="lab-card reveal" style="--accent:var(--violet)">
-      <div class="lab-visual" aria-label="Microbiology laboratory"><div class="lab-art">⚗</div></div>
-      <div class="lab-body">
-        <div class="lab-role">Research Assistant · 03</div><h3>Microbiology Laboratory</h3>
-        <div class="lab-super"><span>Research Association</span>Dr. Mahfuzul Islam</div>
-        <div class="lab-period">July 2026 → Present</div><div class="lab-status">Active · MS</div>
-        <ul class="lab-points"><li>Current MS-level microbiology research environment</li><li>Laboratory-based research training and practical development</li><li>Microbiology-focused academic and scientific activities</li></ul>
-      </div>
-    </article>
-  </div>
-</section>
-
-<!-- =========================================================
-     03 · TEACHING EXPERIENCE
-========================================================= -->
-<section class="section">
-
-  <div class="section-title reveal" style="--accent:var(--gold)">
-    <h2>Teaching Experience</h2>
-  </div>
-
-  <div class="role-grid teaching-grid">
-
-    <article class="role-card teaching-card reveal" style="--accent:var(--gold)">
-
-      <div class="role-top">
-        <img
-          class="role-logo"
-          loading="lazy"
-          src="https://drive.google.com/thumbnail?id=1_-6CpwgUTuyJOnA9HU7Z5cnW9yow41Zk&sz=w1400"
-          alt="AAC Coaching Center logo"
-          data-drive-id="1_-6CpwgUTuyJOnA9HU7Z5cnW9yow41Zk"
-        >
-
-        <div>
-          <h3>Biology Teacher &amp; Academic Mentor</h3>
-          <div class="role-org">AAC Coaching Center</div>
-        </div>
-      </div>
-
-      <p class="teaching-intro">
-        I have been involved in Biology teaching and academic mentoring for students from different institutes,
-        focusing on clear concept building, structured explanation and student-centered support. I have also
-        continued private tutoring since 2021, adapting lessons according to students’ academic level and needs.
-      </p>
-
-      <div class="teaching-highlights">
-
-        <div class="teaching-highlight" style="--accent:var(--gold)">
-          <strong>Biology Teaching</strong>
-          <span>Teaching Biology through structured lessons and understandable explanations.</span>
-        </div>
-
-        <div class="teaching-highlight" style="--accent:var(--cyan)">
-          <strong>Concept Building</strong>
-          <span>Breaking complex topics into clear steps to strengthen students’ understanding.</span>
-        </div>
-
-        <div class="teaching-highlight" style="--accent:var(--violet)">
-          <strong>Academic Mentoring</strong>
-          <span>Providing academic guidance, support and personalized explanation for learners.</span>
-        </div>
-
-      </div>
-
-      <span class="role-date">
-        December 2018 – Present · Private tutoring since 2021
-      </span>
-
-    </article>
-
-  </div>
-
-</section>
-
-<!-- =========================================================
-     04 · LEADERSHIP EXPERIENCE
-========================================================= -->
-<section class="section">
-
-  <div class="section-title reveal" style="--accent:var(--pink)">
-    <h2>Leadership Experience</h2>
-  </div>
-
-  <div class="role-grid leadership-grid">
-
-    <!-- IVSA -->
-    <article class="role-card reveal" style="--accent:var(--cyan)">
-      <div class="role-top">
-        <img style="background:#fff;padding:7px"
-          class="role-logo"
-          loading="lazy"
-          src="https://drive.google.com/thumbnail?id=1L7CXyTfMsIFjfL91_hnQWDYzDJCmwKws&sz=w1400"
-          alt="IVSA Bangladesh SAU Dhaka official logo"
-          data-drive-id="1L7CXyTfMsIFjfL91_hnQWDYzDJCmwKws"
-        >
-        <div>
-          <h3>President</h3>
-          <div class="role-org">International Veterinary Students’ Association Bangladesh – SAU Dhaka</div>
-        </div>
-      </div>
-      <p class="role-desc">
-        Student leadership, professional development and veterinary academic engagement, including coordination
-        of student activities and professional initiatives.
-      </p>
-      <span class="role-date">2025 – Present</span>
-    </article>
-
-    <!-- SAURC -->
-    <article class="role-card reveal" style="--accent:var(--orange)">
-      <div class="role-top">
-        <img style="background:#fff;padding:7px"
-          class="role-logo"
-          loading="lazy"
-          src="https://drive.google.com/thumbnail?id=1gzl0m2GK3mV9Qau268rZuz1cbUfdi0tO&sz=w1400"
-          alt="SAU Animal Rescue Community official logo"
-          data-drive-id="1gzl0m2GK3mV9Qau268rZuz1cbUfdi0tO"
-        >
-        <div>
-          <h3>Founder &amp; President</h3>
-          <div class="role-org">SAU Animal Rescue Community (SAURC)</div>
-        </div>
-      </div>
-      <p class="role-desc">
-        Founded and led a student initiative focused on animal rescue, treatment, welfare activities and
-        responsible animal-care awareness on and around campus.
-      </p>
-      <span class="role-date">November 2024 – Present</span>
-    </article>
-
-    <!-- SVSA -->
-    <article class="role-card reveal" style="--accent:var(--violet)">
-      <div class="role-top">
-        <img
-          class="role-logo"
-          loading="lazy"
-          src="https://drive.google.com/thumbnail?id=1BtpFyJYoRydbK7vSIi5WcfCZkEGvIQhl&sz=w1400"
-          alt="Sirajganj Veterinary Students Association official logo"
-          data-drive-id="1BtpFyJYoRydbK7vSIi5WcfCZkEGvIQhl"
-        >
-        <div>
-          <h3>Public Relations Secretary</h3>
-          <div class="role-org">Sirajganj Veterinary Students’ Association (SVSA)</div>
-        </div>
-      </div>
-      <p class="role-desc">
-        Communication, public relations and student organizational activities, supporting information sharing
-        and organizational coordination.
-      </p>
-      <span class="role-date">2023 – Present</span>
-    </article>
-
-    <!-- Rover Scout -->
-    <article class="role-card reveal" style="--accent:var(--blue)">
-      <div class="role-top">
-        <img
-          class="role-logo"
-          loading="lazy"
-          src="https://drive.google.com/thumbnail?id=1DRtqlcfGmwR7OvGqe_OYR5o5OxrGLWBW&sz=w1400"
-          alt="Rover Scout official logo"
-          data-drive-id="1DRtqlcfGmwR7OvGqe_OYR5o5OxrGLWBW"
-        >
-        <div>
-          <h3>Member</h3>
-          <div class="role-org">Rover Scout · Sher-e-Bangla Agricultural University</div>
-        </div>
-      </div>
-      <p class="role-desc">
-        Student volunteer and extracurricular engagement through university Rover Scout activities,
-        contributing to community-oriented initiatives.
-      </p>
-      <span class="role-date">2020 – Present</span>
-    </article>
-
-  </div>
-
-</section>
-
-<!-- =========================================================
-     05 · ANIMAL WELFARE & COMMUNITY INITIATIVE
-     SAURC is separated from leadership as requested.
-========================================================= -->
-<section class="section">
-  <div class="section-title reveal" style="--accent:var(--orange)"><h2>Animal Welfare &amp; Community Initiative</h2></div>
-  <div class="initiative-layout">
-    <article class="initiative-box reveal" style="--accent:var(--orange)">
-      <div class="kicker"><span class="num">01</span> Animal Welfare Initiative</div>
-      <h3>Founder &amp; President</h3>
-      <div class="org">SAU Rescue Community (SAURC)</div>
-      <div class="meta"><span class="tag">November 2024 – Present</span><span class="tag">Sher-e-Bangla Agricultural University</span></div>
-      <p class="copy">Founded and led a student initiative focused on animal rescue and welfare activities for campus dogs and cats.</p>
-      <ul class="initiative-points">
-        <li>Animal rescue, treatment and rehabilitation support</li>
-        <li>Vaccination and welfare activities</li>
-        <li>Food, shelter and medical assistance</li>
-        <li>Student-volunteer coordination and responsible animal-care awareness</li>
-      </ul>
-      <div class="actions">
-        <a class="btn" style="--accent:var(--orange)" href="https://www.kalerkantho.com/online/campus/2025/08/05/1557915" target="_blank" rel="noopener">Read Kaler Kantho Feature ↗</a>
-        <a class="btn" style="--accent:var(--cyan)" href="https://www.facebook.com/profile.php?id=61570649810309" target="_blank" rel="noopener">SAURC Facebook Page ↗</a>
-        <a class="btn" style="--accent:var(--pink)" href="https://www.facebook.com/share/v/19P4zRtaNM/" target="_blank" rel="noopener">Free Vaccination Campaign ↗</a>
-      </div>
-    </article>
-    <div class="initiative-media reveal" style="--accent:var(--orange)">
-      <a data-lightbox href="https://drive.google.com/file/d/1J0yQjbRmMi8YTbRYwpXjmCbnSGbHSIzu/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1J0yQjbRmMi8YTbRYwpXjmCbnSGbHSIzu&sz=w1400" alt="SAU Rescue Community featured in Kaler Kantho"><div class="photo-caption">SAU Rescue Community featured in Kaler Kantho · Click to enlarge</div></a>
-    </div>
-  </div>
-</section>
-
-<!-- =========================================================
-     06 · VOLUNTEERING EXPERIENCE
-========================================================= -->
-<section class="section">
-  <div class="section-title reveal" style="--accent:var(--mint)"><h2>Volunteering Experience</h2></div>
-  <div class="timeline">
-
-    <!-- BVO -->
-    <article class="timeline-item reveal" style="--accent:var(--gold)">
-      <div class="rail"><i class="node"></i><div class="time">Oct 2022</div></div>
-      <section class="card"><div class="card-inner">
-        <div class="kicker"><span class="num">01</span> Event Organization</div><h3>Event Organizer</h3><div class="org">Bangladesh Veterinary Olympiad</div>
-        <div class="meta"><span class="tag">October 2022</span><span class="tag">Sher-e-Bangla Agricultural University</span></div>
-        <ul class="points"><li>Supported campus event arrangements</li><li>Guided attendants and helped ensure smooth participation</li></ul>
-        <div class="simple-gallery" style="--accent:var(--gold)"><a class="media-card" data-lightbox href="https://drive.google.com/file/d/1RTkDUbOVRBP22yBpkfDnE2-2H0yaAXm6/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1RTkDUbOVRBP22yBpkfDnE2-2H0yaAXm6&sz=w1400" alt="Bangladesh Veterinary Olympiad volunteers"><span>Volunteer team · Click to enlarge</span></a></div>
-      </div></section>
-    </article>
-
-    <!-- INSTITUTE REPRESENTATIVE -->
-    <article class="timeline-item reveal" style="--accent:var(--cyan)">
-      <div class="rail"><i class="node"></i><div class="time">Mar 2025 – Present</div></div>
-      <section class="card"><div class="card-inner">
-        <div class="kicker"><span class="num">02</span> Volunteer Leadership</div><h3>Institute Representative</h3><div class="org">Volunteer for Bangladesh · Dhaka District South</div>
-        <div class="meta"><span class="tag">March 2025 – Present</span><span class="tag">Social Services</span></div>
-        <div class="feature-split">
-          <div><ul class="points"><li>Promoting VBD activities online and offline within campus</li><li>Engaging new volunteers from the institution</li><li>Assisting in events, campaigns and projects</li><li>Attending district meetings and representing the institution</li><li>Collaborating with team leaders and ensuring timely task submission</li></ul></div>
-          <div class="feature-media"><a class="feature-photo" data-lightbox href="https://drive.google.com/file/d/1BYKaqmyaLRe2K4JD3_KlfndRZxc8wbGu/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1BYKaqmyaLRe2K4JD3_KlfndRZxc8wbGu&sz=w1400" alt="Volunteer for Bangladesh Institute Representative ID" data-drive-id="1BYKaqmyaLRe2K4JD3_KlfndRZxc8wbGu"><div class="photo-caption">Institute Representative ID · Click to enlarge</div></a></div>
-        </div>
-      </div></section>
-    </article>
-
-    <!-- BVA EVENT ORGANIZER -->
-    <article class="timeline-item reveal" style="--accent:var(--violet)">
-      <div class="rail"><i class="node"></i><div class="time">Apr 2025</div></div>
-      <section class="card"><div class="card-inner">
-        <div class="kicker"><span class="num">03</span> Event Organization</div><h3>Event Organizer</h3><div class="org">Bangladesh Veterinary Association</div>
-        <div class="meta"><span class="tag">April 2025</span><span class="tag">International Veterinary School Debate Competition</span></div>
-        <p class="copy">Volunteered as an organizer at the International Veterinary School Debate Competition, hosted by BVA in celebration of World Veterinary Day.</p>
-        <div class="feature-split">
-          <div><ul class="points"><li>Supported event organization and coordination</li><li>Contributed to a veterinary-community academic event</li><li>Helped maintain smooth event participation</li></ul></div>
-          <div class="feature-media"><a class="feature-photo" data-lightbox href="https://drive.google.com/file/d/1oCHSuTEIDnvkiYeN7y6NTmLzTBx_Q8iP/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1oCHSuTEIDnvkiYeN7y6NTmLzTBx_Q8iP&sz=w1400" alt="International Veterinary School Debate organizers" data-drive-id="1oCHSuTEIDnvkiYeN7y6NTmLzTBx_Q8iP"><div class="photo-caption">International Veterinary School Debate · Organizing team · Click to enlarge</div></a></div>
-        </div>
-      </div></section>
-    </article>
-  </div>
-</section>
-
-<!-- =========================================================
-     07 · PUBLIC SERVICE EXPERIENCE
-========================================================= -->
-<section class="section">
-  <div class="section-title reveal" style="--accent:var(--blue)"><h2>Public Service Experience</h2></div>
-  <div class="timeline">
-    <article class="timeline-item reveal" style="--accent:var(--mint)">
-      <div class="rail"><i class="node"></i><div class="time">Aug 2024</div></div>
-      <section class="card"><div class="card-inner">
-        <div class="kicker"><span class="num">01</span> Public Service</div><h3>Traffic Controller</h3><div class="org">Bangladesh Scouts · Part-time</div>
-        <div class="meta"><span class="tag">August 2024</span><span class="tag">Dhaka, Bangladesh</span><span class="tag">Hybrid</span></div>
-        <div class="feature-split">
-          <div>
-            <p class="copy">As a Rover Scout, voluntarily supported traffic management during a period when regular enforcement presence was disrupted.</p>
-            <ul class="points"><li>Helped manage traffic flow</li><li>Prevented road blockages</li><li>Supported pedestrian safety</li><li>Assisted commuters through on-ground public service</li></ul>
-          </div>
-          <div class="feature-media"><a class="feature-photo" data-lightbox href="https://drive.google.com/file/d/1WJH8AK2WtYrKgO-vlr7VwoKMuMBkcEkf/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1WJH8AK2WtYrKgO-vlr7VwoKMuMBkcEkf&sz=w1400" alt="Monitoring traffic in absence of police in Mohammadpur Area"><div class="photo-caption">Monitoring traffic in absence of police in Mohammadpur Area · Click to enlarge</div></a></div>
-        </div>
-      </div></section>
-    </article>
-  </div>
-</section>
-
+<section class="section" id="s1"><div class="section-title reveal" style="--accent:var(--cyan)"><span class="sec-no">01</span><h2>Professional Experience</h2></div><div class="timeline"><article class="timeline-item reveal" style="--accent:var(--cyan)"><div class="rail"><i class="node"></i><div class="time">19–28 May 2026</div></div><section class="card"><div class="card-inner"><div class="kicker"><span class="num">01</span> Professional Veterinary Experience</div><h3>Veterinary Medical Officer</h3><div class="org">Dhaka North City Corporation (DNCC) · Contract</div><div class="meta"><span class="tag">May 2026 · 1 mo</span><span class="tag">Tejgaon Industrial Area Thana, Dhaka</span><span class="tag">On-site</span></div><div class="feature-split"><div><p class="copy">Appointed by DNCC to provide veterinary healthcare services at Tejgaon Colony Bazar Gorur Hat (Cattle Market) during Eid-ul-Adha 2026, in one of Bangladesh’s largest cattle markets with over 5,000 cattle and numerous small ruminants.</p><ul class="points"><li>Clinical examination, diagnosis and treatment</li><li>Prescription and emergency veterinary care</li><li>Animal health, welfare and disease surveillance</li><li>Veterinary consultation for traders, farmers and buyers</li><li>Continuous coverage 19–28 May with Dr. Omar Siddik</li><li>Live interview on Ekattor TV on veterinary responsibilities, animal welfare and livestock health</li></ul></div><div class="feature-media"><figure class="figwrap"><a class="fig" style="--mh:440px" data-lightbox href="https://drive.google.com/file/d/1c5hWObzGwvsdLXTcBwvxM5fndB-tmmxI/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1c5hWObzGwvsdLXTcBwvxM5fndB-tmmxI&sz=w1800" alt="Live interview on Ekattor TV · Tejgaon Colony Bazar Gorur Hat"></a><div class="photo-caption">Live interview on Ekattor TV · Tejgaon Colony Bazar Gorur Hat</div></figure><div class="interview-button-wrap"><a class="btn" style="--accent:var(--cyan)" href="https://www.youtube.com/watch?v=JDLgYv6LD1o" target="_blank" rel="noopener">▶ Watch the TV Interview</a></div></div></div></div></section></article><article class="timeline-item reveal" style="--accent:var(--blue)"><div class="rail"><i class="node"></i><div class="time">17–30 Jan 2026</div></div><section class="card"><div class="card-inner"><div class="kicker"><span class="num">02</span> Veterinary Internship &amp; Training</div><h3>International Veterinary Medicine Internship</h3><div class="org">Universiti Putra Malaysia (UPM)</div><div class="meta"><span class="tag">January 2026 · 1 mo</span><span class="tag">Serdang, Selangor, Malaysia</span><span class="tag">On-site</span></div><p class="copy">Completed an international internship at UPM with multidisciplinary exposure across the Faculty of Agriculture and the Faculty of Veterinary Medicine.</p><div class="split2"><div><h5>Agriculture Exposure</h5><ul class="points one"><li>Animal handling and management: cattle, goats, sheep, broilers and layers</li><li>Farm management practices and biosecurity measures</li><li>Silage preparation and feed management</li><li>Academic sessions on the KSI module for scientific writing and research development</li></ul></div><div><h5>Veterinary Exposure</h5><ul class="points one"><li>Observed and assisted in clinical procedures and surgical cases</li><li>Anesthesia techniques, including inhalation anesthesia in dogs</li><li>Farm visits for field-level disease observation and herd health management</li><li>Practical understanding of clinical workflow, diagnosis and animal care</li></ul></div></div><p class="copy">This experience enhanced my practical veterinary skills, livestock management knowledge and understanding of international veterinary and agricultural practices.</p><div class="gallery-group" data-gallery-group style="--accent:var(--blue)"><div class="jg"><a class="ph " data-lightbox href="https://drive.google.com/file/d/10-0Sjbo5VtKzUzdyseSFJQDmFTzoMqXN/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=10-0Sjbo5VtKzUzdyseSFJQDmFTzoMqXN&sz=w1800" alt="Class session in UPM"><span>Class session in UPM</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/194uI7xFt5m4Vi1FirpYsty9KtcrZPqDy/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=194uI7xFt5m4Vi1FirpYsty9KtcrZPqDy&sz=w1800" alt="With Dr. Ubedullah Kaka, Senior Lecturer"><span>With Dr. Ubedullah Kaka, Senior Lecturer</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/1MdG44t8aCTjBlIlaTeHPBugEr-hKL3r1/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1MdG44t8aCTjBlIlaTeHPBugEr-hKL3r1&sz=w1800" alt="Certificate handover"><span>Certificate handover</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/1OmNkKxy5E9ivWub0yBLvpfztvOccUZSW/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1OmNkKxy5E9ivWub0yBLvpfztvOccUZSW&sz=w1800" alt="In front of the veterinary faculty of UPM"><span>In front of the veterinary faculty of UPM</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/1ukDckZbG6WNAFrlKZe6FYd8Gs0vNwRI0/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1ukDckZbG6WNAFrlKZe6FYd8Gs0vNwRI0&sz=w1800" alt="UPM Internship Certificate"><span>UPM Internship Certificate</span></a></div></div></div></section></article><article class="timeline-item reveal" style="--accent:var(--violet)"><div class="rail"><i class="node"></i><div class="time">25 Aug – 16 Feb</div></div><section class="card"><div class="card-inner"><div class="kicker"><span class="num">03</span> National Internship</div><h3>Six-Month Veterinary Internship</h3><div class="org">Sher-e-Bangla Agricultural University</div><div class="meta"><span class="tag">25 August – 16 February</span><span class="tag">20 Training Placements · Bangladesh + Malaysia</span><span class="tag">Final-semester CGPA 4.00 / 4.00</span></div><p class="copy">A six-month journey that marks the final chapter of my undergraduate life in the Faculty of Animal Science &amp; Veterinary Medicine. It was more than academic training: hands-on learning, real-life challenges and growth, both professionally and personally.</p><div class="placement-box reveal"><div class="placement-title">The Internship Training Centers in Different Placements</div><ol class="placements"><li>Bangladesh Veterinary Council (BVC), Dhaka</li><li>Upazilla Livestock Office &amp; Veterinary Hospital</li><li>Central Veterinary Hospital (CVH), Dhaka</li><li>Bangladesh National Zoo, Mirpur, Dhaka</li><li>Teaching &amp; Training Pet Hospital and Research Center (CVASU), Purbachal, Dhaka</li><li>Military Farm, Savar, Dhaka</li><li>RV &amp; F Depot, Savar, Dhaka</li><li>Care and Cure Pet Hospital, Dhanmondi, Dhaka</li><li>Veterinary Teaching Hospital, SAU, Dhaka</li><li>Bangladesh Livestock Research Institute (BLRI), Dhaka</li><li>NIB (National Institute of Biotechnology)</li><li>Central Disease Investigation Laboratory (CDIL), Dhaka</li><li>Livestock Research Institute (LRI), Mohakhali, Dhaka</li><li>Central Cattle Breeding and Dairy Farm (CCBDF), Savar, Dhaka</li><li>Artificial Insemination Centre, Savar</li><li>Safari Park, Gazipur</li><li>Poultry Farm</li><li>Feed Industry</li><li>Department Lab. of FASVM</li><li>Dairy Farm</li></ol></div><div class="document-grid"><article class="document-box reveal" style="--accent:var(--cyan)"><div class="doc-label">Academic Document</div><h4>Full Internship Report</h4><p>Complete six-month placement report.</p><div class="actions"><a class="btn" style="--accent:var(--cyan)" href="https://drive.google.com/file/d/1dO_q8FQ6FBvj3HhCBh0YN0JaTvsPXMg8/view?usp=sharing" target="_blank" rel="noopener">View Full Internship Report ↗</a></div></article><article class="document-box certificate reveal" style="--accent:var(--violet)"><div class="doc-label">Official Certificate</div><h4>Internship Certificate</h4><p>Open the original certificate from Drive.</p><div class="actions"><a class="btn" style="--accent:var(--violet)" href="https://drive.google.com/file/d/13MoEAMVxO_1vpfgsLbdtef7LLJ0pazuI/view?usp=sharing" target="_blank" rel="noopener">View Certificate ↗</a></div></article></div><div class="gallery-group" data-gallery-group style="--accent:var(--violet)"><div class="jg"><a class="ph " data-lightbox href="https://drive.google.com/file/d/1Y6clcTh3VfX-HmftwKdvQKeQMYFHbxRJ/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1Y6clcTh3VfX-HmftwKdvQKeQMYFHbxRJ&sz=w1800" alt="Me in front of the Livestock Veterinary Hospital"><span>Me in front of the Livestock Veterinary Hospital</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/13MoEAMVxO_1vpfgsLbdtef7LLJ0pazuI/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=13MoEAMVxO_1vpfgsLbdtef7LLJ0pazuI&sz=w1800" alt="Internship Certificate"><span>Internship Certificate</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/19qjQvas3JrlsK_Y-ehz9hJezkKXHwvbl/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=19qjQvas3JrlsK_Y-ehz9hJezkKXHwvbl&sz=w1800" alt="Working as an intern"><span>Working as an intern</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/1gIts3awWyAkfPBusCF2XnzdsNCz4jutk/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1gIts3awWyAkfPBusCF2XnzdsNCz4jutk&sz=w1800" alt="Working as an intern"><span>Working as an intern</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/1s7CzVMZGt_60c3M9WcIN5AuQeZsr18JZ/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1s7CzVMZGt_60c3M9WcIN5AuQeZsr18JZ&sz=w1800" alt="Working as an intern"><span>Working as an intern</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/1wzUct7GN4MOnpjHWpFM9AeUmFPACIc6T/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1wzUct7GN4MOnpjHWpFM9AeUmFPACIc6T&sz=w1800" alt="Working as an intern"><span>Working as an intern</span></a></div></div></div></section></article><article class="timeline-item reveal" style="--accent:var(--mint)"><div class="rail"><i class="node"></i><div class="time">June 2025</div></div><section class="card"><div class="card-inner"><div class="kicker"><span class="num">04</span> Field Veterinary Experience</div><h3>Field Intern Veterinarian</h3><div class="org">Department of Livestock Services (DLS) · LDDP Project</div><div class="meta"><span class="tag">June 2025 · 1 mo</span><span class="tag">Dholaikhal Gorur Hat, Dhaka South City Corporation</span><span class="tag">On-site</span></div><p class="copy">Part of the Veterinary Medical Team assigned by DLS under the LDDP project during pre-Eid cattle-market operations at Dholaikhal Gorur Hat, one of the busiest Qurbani haats in Dhaka. Over 3 consecutive days (9 AM–6 PM) we provided free treatment to nearly 176 animals, with DLS supplying medicines.</p><ul class="points"><li>Complete market coverage, including on-site care at individual owners’ tents</li><li>Large-animal clinical practice during a critical national event</li><li>Stronger clinical, communication and emergency-response skills</li><li>Team-based veterinary service</li></ul><div class="gallery-group" data-gallery-group style="--accent:var(--mint)"><div class="jg"><a class="ph " data-lightbox href="https://drive.google.com/file/d/19XenvNoekG76ZRh4e_AWuQ1L5AFfgBmU/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=19XenvNoekG76ZRh4e_AWuQ1L5AFfgBmU&sz=w1800" alt="My intern ID card"><span>My intern ID card</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/1kXkE_igaX-gn5N-ZF4tLVFVKsZL7lX8L/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1kXkE_igaX-gn5N-ZF4tLVFVKsZL7lX8L&sz=w1800" alt="My team in position"><span>My team in position</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/1q-uaKia0F8w-8I6zm6rOHb4xPfP464sY/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1q-uaKia0F8w-8I6zm6rOHb4xPfP464sY&sz=w1800" alt="My team with the veterinary surgeon"><span>My team with the veterinary surgeon</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/1HTJxFbuiy5VBpwTLBBNzAnAGL6laZ_iA/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1HTJxFbuiy5VBpwTLBBNzAnAGL6laZ_iA&sz=w1800" alt="Talking with farmers to understand their issues"><span>Talking with farmers to understand their issues</span></a></div></div></div></section></article></div></section>
+<section class="section" id="s2"><div class="section-title reveal" style="--accent:var(--violet)"><span class="sec-no">02</span><h2>Research Experience</h2></div><div class="lab-grid"><article class="lab-card reveal" style="--accent:var(--pink)"><a class="cover lab" data-lightbox href="https://drive.google.com/file/d/1OWFpsCJWHSTwsNG257-Xp9Iufp7H7SNH/view?usp=sharing" target="_blank" rel="noopener" style="background-image:url(https://drive.google.com/thumbnail?id=1OWFpsCJWHSTwsNG257-Xp9Iufp7H7SNH&sz=w1400)"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1OWFpsCJWHSTwsNG257-Xp9Iufp7H7SNH&sz=w1800" alt="Histology laboratory work"></a><div class="lab-body"><div class="lab-role"><span class="num">01</span> Research Assistant</div><h3>Histology Laboratory</h3><div class="lab-super"><span>Research Association</span>Dr. Md. Abdul Masum</div><div class="lab-period">July 2023 → February 2025</div><div class="lab-status">Completed</div><ul class="lab-points"><li>Practical histology laboratory exposure</li><li>Tissue processing and sectioning workflow</li><li>Microscopy-oriented sample preparation</li></ul></div></article><article class="lab-card reveal" style="--accent:var(--cyan)"><a class="cover lab" data-lightbox href="https://drive.google.com/file/d/1LdiohPBidbNRtrcoJOj259_mZE5XBpWf/view?usp=sharing" target="_blank" rel="noopener" style="background-image:url(https://drive.google.com/thumbnail?id=1LdiohPBidbNRtrcoJOj259_mZE5XBpWf&sz=w1400)"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1LdiohPBidbNRtrcoJOj259_mZE5XBpWf&sz=w1800" alt="ACTG research activity"></a><div class="lab-body"><div class="lab-role"><span class="num">02</span> Research Assistant</div><h3>ACTG · Dry Lab</h3><div class="lab-super"><span>Research Association</span>Dr. Delowar Hossain &amp; Dr. Jisan Ahmed</div><div class="lab-period">June 2025 → Present</div><div class="lab-status">Active</div><ul class="lab-points"><li>Research data collection and management</li><li>Data revision, quality control and collaborative analysis</li><li>Literature screening, meta-analysis and manuscript development</li><li>Epidemiology, infectious disease and One Health research</li></ul></div></article><article class="lab-card reveal" style="--accent:var(--violet)"><a class="cover lab" data-lightbox href="https://drive.google.com/file/d/1Ru5LsQAV04Uts7fknEAu9BxKUCTSVK3h/view?usp=sharing" target="_blank" rel="noopener" style="background-image:url(https://drive.google.com/thumbnail?id=1Ru5LsQAV04Uts7fknEAu9BxKUCTSVK3h&sz=w1400)"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1Ru5LsQAV04Uts7fknEAu9BxKUCTSVK3h&sz=w1800" alt="Microbiology laboratory"></a><div class="lab-body"><div class="lab-role"><span class="num">03</span> Research Assistant</div><h3>Microbiology Laboratory</h3><div class="lab-super"><span>Research Association</span>Dr. Mahfuzul Islam</div><div class="lab-period">July 2026 → Present</div><div class="lab-status">Active · MS</div><ul class="lab-points"><li>Current MS-level microbiology research environment</li><li>Laboratory-based research training and practical development</li><li>Microbiology-focused academic and scientific activities</li></ul></div></article></div></section>
+<section class="section" id="s3"><div class="section-title reveal" style="--accent:var(--gold)"><span class="sec-no">03</span><h2>Teaching Experience</h2></div><div class="role-grid teaching-grid"><article class="role-card teaching-card reveal" style="--accent:var(--gold)"><div class="role-top"><img class="role-logo" loading="lazy" src="https://drive.google.com/thumbnail?id=1_-6CpwgUTuyJOnA9HU7Z5cnW9yow41Zk&sz=w1400" alt="AAC Coaching Center logo"><div><div class="kicker"><span class="num">01</span> Teaching</div><h3>Biology Teacher &amp; Academic Mentor</h3><div class="role-org">AAC Coaching Center</div></div></div><p class="teaching-intro">I have been involved in Biology teaching and academic mentoring for students from different institutes, focusing on clear concept building, structured explanation and student-centered support. I have also continued private tutoring since 2021, adapting lessons to each student’s academic level and needs.</p><div class="teaching-highlights"><div class="teaching-highlight" style="--accent:var(--gold)"><strong>Biology Teaching</strong><span>Teaching Biology through structured lessons and understandable explanations.</span></div><div class="teaching-highlight" style="--accent:var(--cyan)"><strong>Concept Building</strong><span>Breaking complex topics into clear steps to strengthen understanding.</span></div><div class="teaching-highlight" style="--accent:var(--violet)"><strong>Academic Mentoring</strong><span>Academic guidance, support and personalized explanation for learners.</span></div></div><span class="role-date">December 2018 – Present · Private tutoring since 2021</span></article></div></section>
+<section class="section" id="s4"><div class="section-title reveal" style="--accent:var(--pink)"><span class="sec-no">04</span><h2>Leadership Experience</h2></div><div class="role-grid leadership-grid"><article class="role-card club reveal" style="--accent:var(--cyan)"><a class="cover " data-lightbox href="https://drive.google.com/file/d/1ejI94LYEdGxT28G3OC_dllHBxnK2ylcu/view?usp=sharing" target="_blank" rel="noopener" style="background-image:url(https://drive.google.com/thumbnail?id=1ejI94LYEdGxT28G3OC_dllHBxnK2ylcu&sz=w1400)"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1ejI94LYEdGxT28G3OC_dllHBxnK2ylcu&sz=w1800" alt="IVSA Bangladesh SAU Dhaka committee"></a><div class="role-top"><img class="role-logo on-white" loading="lazy" src="https://drive.google.com/thumbnail?id=1gzl0m2GK3mV9Qau268rZuz1cbUfdi0tO&sz=w1400" alt="International Veterinary Students’ Association Bangladesh – SAU Dhaka logo"><div><div class="kicker"><span class="num">01</span> Leadership</div><h3>President</h3><div class="role-org">International Veterinary Students’ Association Bangladesh – SAU Dhaka</div></div></div><p class="role-desc">Student leadership, professional development and veterinary academic engagement, including coordination of student activities and professional initiatives.</p><span class="role-date">2025 – Present</span><div class="actions"><button class="btn" type="button" data-modal="m-ivsa" style="--accent:var(--cyan)">View All Photos &amp; Details ↗</button></div></article><article class="role-card club reveal" style="--accent:var(--violet)"><a class="cover " data-lightbox href="https://drive.google.com/file/d/1CkWv5MsB4KMUkXl6DDreNHMz8TCPE7-0/view?usp=sharing" target="_blank" rel="noopener" style="background-image:url(https://drive.google.com/thumbnail?id=1CkWv5MsB4KMUkXl6DDreNHMz8TCPE7-0&sz=w1400)"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1CkWv5MsB4KMUkXl6DDreNHMz8TCPE7-0&sz=w1800" alt="SVSA yearly meeting with all the vets"></a><div class="role-top"><img class="role-logo" loading="lazy" src="https://drive.google.com/thumbnail?id=1BtpFyJYoRydbK7vSIi5WcfCZkEGvIQhl&sz=w1400" alt="Sirajganj Veterinary Students’ Association (SVSA) logo"><div><div class="kicker"><span class="num">02</span> Leadership</div><h3>Public Relations Secretary</h3><div class="role-org">Sirajganj Veterinary Students’ Association (SVSA)</div></div></div><p class="role-desc">Communication, public relations and student organizational activities, supporting information sharing and organizational coordination.</p><span class="role-date">2023 – Present</span><div class="actions"><button class="btn" type="button" data-modal="m-svsa" style="--accent:var(--violet)">View All Photos &amp; Details ↗</button></div></article><article class="role-card club reveal" style="--accent:var(--blue)"><a class="cover " data-lightbox href="https://drive.google.com/file/d/1HISSYwZIFrhfGqElziQiFeHJcLhYszTS/view?usp=sharing" target="_blank" rel="noopener" style="background-image:url(https://drive.google.com/thumbnail?id=1HISSYwZIFrhfGqElziQiFeHJcLhYszTS&sz=w1400)"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1HISSYwZIFrhfGqElziQiFeHJcLhYszTS&sz=w1800" alt="Me with my Rover team"></a><div class="role-top"><img class="role-logo" loading="lazy" src="https://drive.google.com/thumbnail?id=1DRtqlcfGmwR7OvGqe_OYR5o5OxrGLWBW&sz=w1400" alt="Agri Rovers · Rover Scout · Sher-e-Bangla Agricultural University logo"><div><div class="kicker"><span class="num">03</span> Leadership</div><h3>Member</h3><div class="role-org">Agri Rovers · Rover Scout · Sher-e-Bangla Agricultural University</div></div></div><p class="role-desc">Student volunteer and extracurricular engagement through university Rover Scout activities, contributing to community-oriented initiatives.</p><span class="role-date">2020 – Present</span><div class="actions"><button class="btn" type="button" data-modal="m-agri" style="--accent:var(--blue)">View All Photos &amp; Details ↗</button></div></article></div></section>
+<section class="section" id="s5"><div class="section-title reveal" style="--accent:var(--orange)"><span class="sec-no">05</span><h2>Animal Welfare &amp; Community Initiative</h2></div><article class="initiative-box club-big reveal" style="--accent:var(--orange)"><div class="card-inner"><a class="cover " data-lightbox href="https://drive.google.com/file/d/1EQm24QeB3VEvrZdWm8TGbYf0ICjNfleY/view?usp=sharing" target="_blank" rel="noopener" style="background-image:url(https://drive.google.com/thumbnail?id=1EQm24QeB3VEvrZdWm8TGbYf0ICjNfleY&sz=w1400)"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1EQm24QeB3VEvrZdWm8TGbYf0ICjNfleY&sz=w1800" alt="SAU Rescue Community cover"></a><div class="kicker"><span class="num">01</span> Animal Welfare Initiative</div><h3>Founder &amp; President</h3><div class="org">SAU Rescue Community (SAURC)</div><div class="meta"><span class="tag">November 2024 – Present</span><span class="tag">Sher-e-Bangla Agricultural University</span><span class="tag">Student-led</span></div><p class="copy">SAU Rescue Community is a student-led animal welfare organization at Sher-e-Bangla Agricultural University dedicated to the care, treatment and well-being of campus dogs and cats. Our mission is to create a safe and compassionate environment through medical assistance, vaccinations, food and shelter while promoting responsible pet care and awareness among students and faculty. Through collaboration with veterinarians, volunteers and animal lovers, we are building a sustainable support system for stray animals on campus.</p><ul class="initiative-points"><li>Animal rescue, treatment and rehabilitation</li><li>Free vaccination campaigns, including World Veterinary Day 2025</li><li>Food, shelter and medical assistance</li><li>Student-volunteer coordination and responsible animal-care awareness</li></ul><div class="actions"><a class="btn" style="--accent:var(--orange)" href="https://www.kalerkantho.com/online/campus/2025/08/05/1557915" target="_blank" rel="noopener">Read Kaler Kantho Feature ↗</a><a class="btn" style="--accent:var(--cyan)" href="https://www.facebook.com/profile.php?id=61570649810309" target="_blank" rel="noopener">SAURC Facebook Page ↗</a><a class="btn" style="--accent:var(--pink)" href="https://www.facebook.com/share/v/19P4zRtaNM/" target="_blank" rel="noopener">Free Vaccination Campaign ↗</a><a class="btn" style="--accent:var(--mint)" href="https://www.facebook.com/share/v/19XTTB49jH/" target="_blank" rel="noopener">World Vet Day 2025 with SAURC ↗</a><a class="btn" style="--accent:var(--violet)" href="https://www.facebook.com/share/v/14rURAGsoTT/" target="_blank" rel="noopener">Watch Me Talking ↗</a></div><h4 class="sub">In the News · Kaler Kantho</h4><div class="feature-split"><div><p class="copy">SAU Rescue Community was featured in Kaler Kantho, one of the leading national newspapers of Bangladesh. Our efforts in rescuing, treating and rehabilitating injured, abandoned and neglected animals were recognized, a huge milestone for our journey, and my statements were published in the article.</p></div><div class="feature-media"><figure class="figwrap"><a class="fig" style="--mh:460px" data-lightbox href="https://drive.google.com/file/d/1J0yQjbRmMi8YTbRYwpXjmCbnSGbHSIzu/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1J0yQjbRmMi8YTbRYwpXjmCbnSGbHSIzu&sz=w1800" alt="Newspaper copy featuring SAURC · Click to enlarge"></a><div class="photo-caption">Newspaper copy featuring SAURC · Click to enlarge</div></figure></div></div><h4 class="sub">Rescue Mission Gallery</h4><div class="gallery-group" data-gallery-group style="--accent:var(--orange)"><div class="jg"><a class="ph " data-lightbox href="https://drive.google.com/file/d/11X1lnmmumolfApt23P5hKKXMEYzU6aKt/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=11X1lnmmumolfApt23P5hKKXMEYzU6aKt&sz=w1800" alt="Animal rescue mission"><span>Animal rescue mission</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/13-i8GVclm06a9Qyfs3ZLGMYWyx-Gwnik/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=13-i8GVclm06a9Qyfs3ZLGMYWyx-Gwnik&sz=w1800" alt="Animal rescue mission"><span>Animal rescue mission</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/15K7eUd-n7drcGQeLW0a2jbQDVum1bMBL/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=15K7eUd-n7drcGQeLW0a2jbQDVum1bMBL&sz=w1800" alt="Animal rescue mission"><span>Animal rescue mission</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/1CMn4cLn4CeHxVT1gw_F0SSeaCWkkQf6U/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1CMn4cLn4CeHxVT1gw_F0SSeaCWkkQf6U&sz=w1800" alt="Animal rescue mission"><span>Animal rescue mission</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/1GDgYUeoNLaxz9Yj6KQVjAmgab5YLviHT/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1GDgYUeoNLaxz9Yj6KQVjAmgab5YLviHT&sz=w1800" alt="Animal rescue mission"><span>Animal rescue mission</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/1Nh1588uNLrm8Io8WtIQYNxtRR-2-wIEb/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1Nh1588uNLrm8Io8WtIQYNxtRR-2-wIEb&sz=w1800" alt="Animal rescue mission"><span>Animal rescue mission</span></a><a class="ph gallery-extra" data-lightbox href="https://drive.google.com/file/d/1SeywzTYBiTQzK3Y58kr2FadHSBHRGHO2/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1SeywzTYBiTQzK3Y58kr2FadHSBHRGHO2&sz=w1800" alt="Animal rescue mission"><span>Animal rescue mission</span></a><a class="ph gallery-extra" data-lightbox href="https://drive.google.com/file/d/1YOP0tz-M-EfhtBOPp508drEZYKo5T6Xp/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1YOP0tz-M-EfhtBOPp508drEZYKo5T6Xp&sz=w1800" alt="Animal rescue mission"><span>Animal rescue mission</span></a><a class="ph gallery-extra" data-lightbox href="https://drive.google.com/file/d/1lXvWS-4rkoeEX_Brg9J4vxDtvC5bU-F1/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1lXvWS-4rkoeEX_Brg9J4vxDtvC5bU-F1&sz=w1800" alt="Animal rescue mission"><span>Animal rescue mission</span></a><a class="ph gallery-extra" data-lightbox href="https://drive.google.com/file/d/1mj47SuzLsH80M_Nl7e2bAIKuJcJiFoX4/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1mj47SuzLsH80M_Nl7e2bAIKuJcJiFoX4&sz=w1800" alt="Animal rescue mission"><span>Animal rescue mission</span></a><a class="ph gallery-extra" data-lightbox href="https://drive.google.com/file/d/1oQ1MEBDqd3fb5sN4C_7gybWPNGiUn7oI/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1oQ1MEBDqd3fb5sN4C_7gybWPNGiUn7oI&sz=w1800" alt="Animal rescue mission"><span>Animal rescue mission</span></a><a class="ph gallery-extra" data-lightbox href="https://drive.google.com/file/d/1rWDY7sm08YDD1RokKNAGLQcTnYEK-wXh/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1rWDY7sm08YDD1RokKNAGLQcTnYEK-wXh&sz=w1800" alt="Animal rescue mission"><span>Animal rescue mission</span></a><a class="ph gallery-extra" data-lightbox href="https://drive.google.com/file/d/1tpJ6z_6ZrdtzJskIqZK5iy5_vasyeT3E/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1tpJ6z_6ZrdtzJskIqZK5iy5_vasyeT3E&sz=w1800" alt="Animal rescue mission"><span>Animal rescue mission</span></a></div><div class="gallery-more-row"><button class="gallery-more" type="button" data-gallery-toggle data-label="More Rescue Photos +">More Rescue Photos +</button></div></div><h4 class="sub">Club Documents &amp; Team</h4><div class="gallery-group" data-gallery-group style="--accent:var(--orange)"><div class="jg"><a class="ph " data-lightbox href="https://drive.google.com/file/d/1eAjQssVQ6ZvBdqqzgD18BDCltNZ-Mik9/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1eAjQssVQ6ZvBdqqzgD18BDCltNZ-Mik9&sz=w1800" alt="Our founding members"><span>Our founding members</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/1SIlZvermRYEjHOual5o298GZDrFKRvWT/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1SIlZvermRYEjHOual5o298GZDrFKRvWT&sz=w1800" alt="Policy guidelines of the club"><span>Policy guidelines of the club</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/1Jn72m4v-3NoGevRBwdNB-n3_p_pVcph6/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1Jn72m4v-3NoGevRBwdNB-n3_p_pVcph6&sz=w1800" alt="Official committee"><span>Official committee</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/1L7CXyTfMsIFjfL91_hnQWDYzDJCmwKws/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1L7CXyTfMsIFjfL91_hnQWDYzDJCmwKws&sz=w1800" alt="SAURC club logo"><span>SAURC club logo</span></a></div></div></div></article></section>
+<section class="section" id="s6"><div class="section-title reveal" style="--accent:var(--mint)"><span class="sec-no">06</span><h2>Volunteering Experience</h2></div><div class="timeline"><article class="timeline-item reveal" style="--accent:var(--gold)"><div class="rail"><i class="node"></i><div class="time">Oct 2022</div></div><section class="card"><div class="card-inner"><div class="kicker"><span class="num">01</span> Event Organization</div><h3>Event Organizer</h3><div class="org">Bangladesh Veterinary Olympiad</div><div class="meta"><span class="tag">October 2022 · 1 mo</span><span class="tag">Sher-e-Bangla Agricultural University</span></div><p class="copy">Helped arrange the event on the SAU campus with proper arrangements and guided attendants with direction and help.</p><div class="gallery-group" data-gallery-group style="--accent:var(--gold)"><div class="jg"><a class="ph " data-lightbox href="https://drive.google.com/file/d/1RTkDUbOVRBP22yBpkfDnE2-2H0yaAXm6/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1RTkDUbOVRBP22yBpkfDnE2-2H0yaAXm6&sz=w1800" alt="Volunteers"><span>Volunteers</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/1TjWgJEaEDkda9GGJq7Aapim20OKs6c5l/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1TjWgJEaEDkda9GGJq7Aapim20OKs6c5l&sz=w1800" alt="Certificate"><span>Certificate</span></a></div></div></div></section></article><article class="timeline-item reveal" style="--accent:var(--mint)"><div class="rail"><i class="node"></i><div class="time">Jan 2020 – Present</div></div><section class="card"><div class="card-inner"><div class="kicker"><span class="num">02</span> Social Services</div><h3>Rover Scout Member</h3><div class="org">Bangladesh Scouts</div><div class="meta"><span class="tag">January 2020 – Present · 6 yrs 10 mos</span><span class="tag">Social Services</span></div><a class="cover " data-lightbox href="https://drive.google.com/file/d/1We7rvvmtkHiPqiK89b7SwK5Bv9-Sn-GO/view?usp=sharing" target="_blank" rel="noopener" style="background-image:url(https://drive.google.com/thumbnail?id=1We7rvvmtkHiPqiK89b7SwK5Bv9-Sn-GO&sz=w1400)"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1We7rvvmtkHiPqiK89b7SwK5Bv9-Sn-GO&sz=w1800" alt="Rover Scout cover"></a><p class="copy">As a dedicated Rover Scout I have taken part in community service and humanitarian initiatives, showing leadership, teamwork and commitment to social welfare.</p><ul class="points"><li><b>COVID-19 vaccination campaigns:</b> managed vaccination records through data entry and accurate documentation</li><li><b>International Mother Language Day</b> (Shaheed Minar, Dhaka Medical College): organized and assisted visitors</li><li><b>Campus cleanliness initiatives:</b> kept the university environment clean and eco-friendly</li><li><b>Medical and university exam support:</b> exam coordination for a smooth process for students and faculty</li><li><b>Traffic monitoring (post-August 5):</b> stepped in to manage traffic when law enforcement was absent</li></ul><p class="copy">These experiences built strong organizational, crisis-management and public-service skills, and reinforced my commitment to serving the community.</p><div class="gallery-group" data-gallery-group style="--accent:var(--mint)"><div class="jg"><a class="ph " data-lightbox href="https://drive.google.com/file/d/1bHkQA7EYiCWDEDJEQE3Xj5-1NgIZe30Z/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1bHkQA7EYiCWDEDJEQE3Xj5-1NgIZe30Z&sz=w1800" alt="COVID-19 vaccination campaign · data entry"><span>COVID-19 vaccination campaign · data entry</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/1fSPELTuh2wGLdNw1yxIy1YvalqMYDiee/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1fSPELTuh2wGLdNw1yxIy1YvalqMYDiee&sz=w1800" alt="My Rover team"><span>My Rover team</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/1LrVhohV5yoP9uEAloi7S--NE7byqdTJj/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1LrVhohV5yoP9uEAloi7S--NE7byqdTJj&sz=w1800" alt="International Mother Language Day · Shaheed Minar"><span>International Mother Language Day · Shaheed Minar</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/1tK8wTD37bfKWQhBfSiPoh65AbAdvkvIC/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1tK8wTD37bfKWQhBfSiPoh65AbAdvkvIC&sz=w1800" alt="Medical and university exam support"><span>Medical and university exam support</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/1WJH8AK2WtYrKgO-vlr7VwoKMuMBkcEkf/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1WJH8AK2WtYrKgO-vlr7VwoKMuMBkcEkf&sz=w1800" alt="Traffic monitoring after 5 August"><span>Traffic monitoring after 5 August</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/11-_sK9S52PKfvjaS1EzsDoo8rP6X4uo_/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=11-_sK9S52PKfvjaS1EzsDoo8rP6X4uo_&sz=w1800" alt="Rover Scout public service"><span>Rover Scout public service</span></a></div></div></div></section></article><article class="timeline-item reveal" style="--accent:var(--cyan)"><div class="rail"><i class="node"></i><div class="time">Mar 2025 – Present</div></div><section class="card"><div class="card-inner"><div class="kicker"><span class="num">03</span> Volunteer Leadership</div><h3>Institute Representative</h3><div class="org">Volunteer for Bangladesh · Dhaka District South</div><div class="meta"><span class="tag">March 2025 – Present · 1 yr 8 mos</span><span class="tag">Social Services</span></div><p class="copy">Institute Representative at Volunteer for Bangladesh (Dhaka District South):</p><ul class="points"><li>Promoting VBD activities online and offline within the SAU campus</li><li>Engaging new volunteers from the institution</li><li>Assisting in organizing events, campaigns and projects</li><li>Attending district meetings and representing the institution</li><li>Collaborating with team leaders and ensuring timely task submission</li></ul><div class="gallery-group" data-gallery-group style="--accent:var(--cyan)"><div class="jg"><a class="ph " data-lightbox href="https://drive.google.com/file/d/1BYKaqmyaLRe2K4JD3_KlfndRZxc8wbGu/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1BYKaqmyaLRe2K4JD3_KlfndRZxc8wbGu&sz=w1800" alt="Institute Representative ID"><span>Institute Representative ID</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/1G31I9d3s0rIrcEpwHhmOLNET3-DFq5xW/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1G31I9d3s0rIrcEpwHhmOLNET3-DFq5xW&sz=w1800" alt="Appointment letter"><span>Appointment letter</span></a></div></div></div></section></article><article class="timeline-item reveal" style="--accent:var(--violet)"><div class="rail"><i class="node"></i><div class="time">Apr 2025</div></div><section class="card"><div class="card-inner"><div class="kicker"><span class="num">04</span> Event Organization</div><h3>Event Organizer · Inter Veterinary School Debate</h3><div class="org">Bangladesh Veterinary Association</div><div class="meta"><span class="tag">April 2025 · 1 mo</span><span class="tag">Education</span><span class="tag">16 veterinary institutes</span></div><p class="copy">Proud to have volunteered as an organizer at the Inter Veterinary School Debate Competition, hosted by BVA in celebration of World Veterinary Day, an event that fosters global collaboration and critical thinking in the veterinary community, with 16 vet institutes taking part.</p><div class="gallery-group" data-gallery-group style="--accent:var(--violet)"><div class="jg"><a class="ph " data-lightbox href="https://drive.google.com/file/d/1oCHSuTEIDnvkiYeN7y6NTmLzTBx_Q8iP/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1oCHSuTEIDnvkiYeN7y6NTmLzTBx_Q8iP&sz=w1800" alt="Organizing the participants"><span>Organizing the participants</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/1TjWgJEaEDkda9GGJq7Aapim20OKs6c5l/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1TjWgJEaEDkda9GGJq7Aapim20OKs6c5l&sz=w1800" alt="Certificate"><span>Certificate</span></a></div></div></div></section></article></div></section>
+<section class="section" id="s7"><div class="section-title reveal" style="--accent:var(--blue)"><span class="sec-no">07</span><h2>Public Service Experience</h2></div><div class="timeline"><article class="timeline-item reveal" style="--accent:var(--mint)"><div class="rail"><i class="node"></i><div class="time">Aug 2024</div></div><section class="card"><div class="card-inner"><div class="kicker"><span class="num">01</span> Community &amp; Public Service</div><h3>Traffic Controller</h3><div class="org">Bangladesh Scouts · Part-time</div><div class="meta"><span class="tag">August 2024 · 1 mo</span><span class="tag">Dhaka, Bangladesh</span><span class="tag">Hybrid</span></div><div class="feature-split"><div><p class="copy">After the political turmoil and government collapse following corruption and student killings, law enforcement was largely absent from public spaces. As a Rover Scout, I voluntarily stepped in to manage traffic flow, prevent road blockages and ensure pedestrian safety, helping maintain order during a time of uncertainty and aiding commuters left without proper traffic control.</p><ul class="points"><li>Managed traffic flow</li><li>Prevented road blockages</li><li>Ensured pedestrian safety</li><li>Assisted commuters through on-ground service</li></ul></div><div class="feature-media"><figure class="figwrap"><a class="fig" style="--mh:440px" data-lightbox href="https://drive.google.com/file/d/1WJH8AK2WtYrKgO-vlr7VwoKMuMBkcEkf/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1WJH8AK2WtYrKgO-vlr7VwoKMuMBkcEkf&sz=w1800" alt="Monitoring traffic in the absence of police near the Prime Minister’s Official Residence, Mohammadpur"></a><div class="photo-caption">Monitoring traffic in the absence of police near the Prime Minister’s Official Residence, Mohammadpur</div></figure></div></div></div></section></article></div></section>
 </main>
-
-
-
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox" aria-hidden="true">
-  <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Image preview">
-    <button class="lightbox-close" type="button" aria-label="Close image preview">×</button>
-    <img id="lightboxImg" src="" alt="Expanded preview" loading="lazy">
-    <div class="lightbox-caption" id="lightboxCaption"></div>
-  </div>
-</div>
-
-
 
 </section>
 
@@ -15788,13 +15360,14 @@ html[data-theme="light"] #page-skills .hero p{color:#4d6379}
       </div>
       <div class="card-body">
         <div class="skill-list">
-          <span class="skill">R</span>
+          <span class="skill">R Programming</span>
           <span class="skill">SPSS</span>
           <span class="skill">Statistical Data Analysis</span>
           <span class="skill">Data Cleaning</span>
           <span class="skill">Data Management</span>
           <span class="skill">Epidemiological Data Analysis</span>
         </div>
+        <a class="video-link" style="margin-top:16px" href="https://drive.google.com/file/d/1suII70RDMrCE8KsIlI_Jsbhow4r6xvoJ/view?usp=sharing" target="_blank" rel="noopener">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         <div class="note"><i class="fa-solid fa-book-open"></i> Python — Planned learning / currently preparing to learn.</div>
       </div>
     </div>
@@ -15803,12 +15376,61 @@ html[data-theme="light"] #page-skills .hero p{color:#4d6379}
       <div class="photo-label"><i class="fa-solid fa-laptop"></i> Data Input for Analysis</div>
     </div>
   </div>
+
 </section>
 
-<!-- 03 LAB -->
+<!-- 03 WRITING -->
+<section class="section reveal" style="--accent:var(--purple)">
+  <div class="section-head">
+    <div class="kicker">03 · Writing & Communication ✍️</div>
+    <h2 class="section-title">Research Writing & Scientific Communication</h2>
+    <p class="section-desc">Manuscript preparation, literature work and reference management for scientific publishing.</p>
+  </div>
+  <div class="skill-card">
+    <div class="card-top">
+      <div class="icon-box"><i class="fa-solid fa-pen-nib"></i></div>
+      <h3 class="card-title">Scientific Writing & Reference Management</h3>
+    </div>
+    <div class="card-body">
+      <div class="skill-list">
+          <span class="skill">Scientific Manuscript Writing</span>
+          <span class="skill">Academic Writing</span>
+          <span class="skill">Literature Review</span>
+          <span class="skill">Citation &amp; Reference Management</span>
+          <span class="skill">EndNote</span>
+          <span class="skill">Zotero</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 TOOLS -->
+<section class="section reveal" style="--accent:var(--cyan)">
+  <div class="section-head">
+    <div class="kicker">04 · Scientific Tools 🧰</div>
+    <h2 class="section-title">Research & Scientific Tools</h2>
+    <p class="section-desc">Software used for spatial analysis, scientific illustration and field data collection.</p>
+  </div>
+  <div class="skill-card">
+    <div class="card-top">
+      <div class="icon-box"><i class="fa-solid fa-toolbox"></i></div>
+      <h3 class="card-title">Research Software</h3>
+    </div>
+    <div class="card-body">
+      <div class="skill-list">
+          <span class="skill">ArcGIS</span>
+          <span class="skill">BioRender</span>
+          <span class="skill">KoboToolbox</span>
+      </div>
+      <a class="video-link" style="margin-top:16px" href="https://drive.google.com/file/d/1IbF8aSUKmtjlJdbqGYxVJ0oOoBR6BM0p/view?usp=sharing" target="_blank" rel="noopener">ArcGIS Training Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- 05 LAB -->
 <section class="section reveal" style="--accent:var(--green)">
   <div class="section-head">
-    <div class="kicker">03 · Laboratory Skills 🧪</div>
+    <div class="kicker">05 · Laboratory Skills 🧪</div>
     <h2 class="section-title">Laboratory & Technical Experience</h2>
     <p class="section-desc">Practical laboratory techniques and developing microbiological competencies.</p>
   </div>
@@ -15923,7 +15545,7 @@ html[data-theme="light"] #page-skills .hero p{color:#4d6379}
 <!-- 04 VETERINARY -->
 <section class="section reveal" style="--accent:var(--pink)">
   <div class="section-head">
-    <div class="kicker">04 · Veterinary & Experimental Skills 🩺</div>
+    <div class="kicker">06 · Veterinary & Experimental Skills 🩺</div>
     <h2 class="section-title">Veterinary & Experimental Experience</h2>
     <p class="section-desc">Clinical, animal handling, experimental, and poultry management experience.</p>
   </div>
@@ -15963,7 +15585,7 @@ html[data-theme="light"] #page-skills .hero p{color:#4d6379}
 <!-- 06 DIGITAL -->
 <section class="section reveal" style="--accent:var(--purple)">
   <div class="section-head">
-    <div class="kicker">06 · Academic & Digital Tools 💻</div>
+    <div class="kicker">07 · Academic & Digital Tools 💻</div>
     <h2 class="section-title">Academic, Digital & Creative Skills</h2>
     <p class="section-desc">Academic documentation, presentation, and science communication through digital media.</p>
   </div>
@@ -16618,18 +16240,22 @@ html[data-theme="light"] #page-skills .hero p{color:#4d6379}
  </div>
  <div class="grid">
   <a class="lc facebook rv" href="https://www.facebook.com/rj.neerob.18/" target="_blank" rel="noopener">
+   <div class="lc-cover" role="img" aria-label="Facebook cover picture" style="background-image:url(https://drive.google.com/thumbnail?id=1w8aMLYOXqG6GB9poWMDRwAtdQWupEd1H&sz=w1000)"></div>
    <div class="lc-top"><div class="ico">f</div><div class="type">Social Profile</div></div>
    <h3>Facebook</h3><p>Personal updates, activities &amp; community engagement.</p><div class="go">Visit Facebook ↗</div>
   </a>
   <a class="lc instagram rv" href="https://www.instagram.com/dr_nirob_/" target="_blank" rel="noopener">
+   <div class="lc-cover" role="img" aria-label="Instagram picture" style="background-image:url(https://drive.google.com/thumbnail?id=1d8CLCA-sroi5n5T8R6jY3iGFn_P-vTH_&sz=w1000)"></div>
    <div class="lc-top"><div class="ico">◎</div><div class="type">Visual Updates</div></div>
    <h3>Instagram</h3><p>Photos, reels, moments &amp; selected creative content.</p><div class="go">Visit Instagram ↗</div>
   </a>
   <a class="lc youtube rv" href="https://www.youtube.com/@nirobnero" target="_blank" rel="noopener">
+   <div class="lc-cover" role="img" aria-label="YouTube picture" style="background-image:url(https://drive.google.com/thumbnail?id=1q03hT3DigW0CJKKeF58yL1KhXEmQO3qy&sz=w1000)"></div>
    <div class="lc-top"><div class="ico">▶</div><div class="type">Video Channel</div></div>
    <h3>YouTube</h3><p>Academic, research, presentation &amp; creative videos.</p><div class="go">Visit YouTube ↗</div>
   </a>
   <a class="lc x rv" href="https://x.com/Nirobnero" target="_blank" rel="noopener">
+   <div class="lc-cover" role="img" aria-label="X picture" style="background-image:url(https://drive.google.com/thumbnail?id=1Wk5YLysMWOIDKlvBAsAW79ERZzkV34F4&sz=w1000)"></div>
    <div class="lc-top"><div class="ico">𝕏</div><div class="type">Social Network</div></div>
    <h3>X</h3><p>Updates, ideas, public engagement &amp; conversations.</p><div class="go">Visit X ↗</div>
   </a>
@@ -16664,6 +16290,15 @@ html[data-theme="light"] #page-skills .hero p{color:#4d6379}
   <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="Next image">›</button>
   <div class="lb-bar"><span id="lbCap"></span><a id="lbOpen" href="#" target="_blank" rel="noopener" hidden>Open original ↗</a><span id="lbCount"></span></div>
  </div>
+</div>
+
+<!-- ===== EXPERIENCE: details modal + back-to-top (body level) ===== -->
+<div id="expModal">
+<div class="modal" id="expModalBox"><div class="modal-panel"><button class="modal-close" type="button" aria-label="Close">×</button><div id="expModalBody"></div></div></div>
+<button class="top-btn" id="expTop" type="button" aria-label="Back to top">↑</button>
+<template id="m-ivsa"><div class="mbody" style="--accent:var(--cyan)"><div class="kicker"><span class="num">01</span> International Veterinary Students’ Association Bangladesh – SAU Dhaka</div><h3>President</h3><p class="copy">Serving as President of IVSA Bangladesh – SAU Dhaka: leading student activities, professional development and veterinary academic engagement. The official committee announcement lists my role as President; the Facebook page shows our activities.</p><div class="actions"><a class="btn" style="--accent:var(--cyan)" href="https://www.facebook.com/share/p/1NU1Fyxd8i/" target="_blank" rel="noopener">Official Committee Post ↗</a><a class="btn" style="--accent:var(--blue)" href="https://www.facebook.com/profile.php?id=61575593760632" target="_blank" rel="noopener">IVSA SAU Facebook Page ↗</a></div><div class="gallery-group" data-gallery-group style="--accent:var(--cyan)"><div class="jg"><a class="ph " data-lightbox href="https://drive.google.com/file/d/1ejI94LYEdGxT28G3OC_dllHBxnK2ylcu/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1ejI94LYEdGxT28G3OC_dllHBxnK2ylcu&sz=w1800" alt="IVSA SAU Dhaka · Official committee, President"><span>IVSA SAU Dhaka · Official committee, President</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/1gzl0m2GK3mV9Qau268rZuz1cbUfdi0tO/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1gzl0m2GK3mV9Qau268rZuz1cbUfdi0tO&sz=w1800" alt="IVSA official logo"><span>IVSA official logo</span></a></div></div></div></template>
+<template id="m-svsa"><div class="mbody" style="--accent:var(--violet)"><div class="kicker"><span class="num">02</span> Sirajganj Veterinary Students’ Association (SVSA)</div><h3>Public Relations Secretary</h3><p class="copy">Public Relations Secretary of SVSA: handling communication, public relations and organizational coordination, and taking part in the yearly meetings with veterinarians.</p><div class="actions"><a class="btn" style="--accent:var(--violet)" href="https://www.facebook.com/share/p/19nXJujkS6/" target="_blank" rel="noopener">Official Committee Post ↗</a></div><div class="gallery-group" data-gallery-group style="--accent:var(--violet)"><div class="jg"><a class="ph " data-lightbox href="https://drive.google.com/file/d/1CkWv5MsB4KMUkXl6DDreNHMz8TCPE7-0/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1CkWv5MsB4KMUkXl6DDreNHMz8TCPE7-0&sz=w1800" alt="Yearly meeting with all the veterinarians"><span>Yearly meeting with all the veterinarians</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/1WZLs7GWH02MnOJt2Ib--kHbDD-foUwzN/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1WZLs7GWH02MnOJt2Ib--kHbDD-foUwzN&sz=w1800" alt="Official committee: my name and my role"><span>Official committee: my name and my role</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/1BtpFyJYoRydbK7vSIi5WcfCZkEGvIQhl/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1BtpFyJYoRydbK7vSIi5WcfCZkEGvIQhl&sz=w1800" alt="SVSA logo"><span>SVSA logo</span></a></div></div></div></template>
+<template id="m-agri"><div class="mbody" style="--accent:var(--blue)"><div class="kicker"><span class="num">03</span> Agri Rovers · Rover Scout · Sher-e-Bangla Agricultural University</div><h3>Member</h3><p class="copy">Active member of Agri Rovers: community service, volunteering and Rover Scout activities across campus and beyond.</p><div class="actions"></div><div class="gallery-group" data-gallery-group style="--accent:var(--blue)"><div class="jg"><a class="ph " data-lightbox href="https://drive.google.com/file/d/1bHkQA7EYiCWDEDJEQE3Xj5-1NgIZe30Z/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1bHkQA7EYiCWDEDJEQE3Xj5-1NgIZe30Z&sz=w1800" alt="Data entry during the Covid-19 vaccination campaign"><span>Data entry during the Covid-19 vaccination campaign</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/1HISSYwZIFrhfGqElziQiFeHJcLhYszTS/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1HISSYwZIFrhfGqElziQiFeHJcLhYszTS&sz=w1800" alt="Me with my Rover team"><span>Me with my Rover team</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/1We7rvvmtkHiPqiK89b7SwK5Bv9-Sn-GO/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1We7rvvmtkHiPqiK89b7SwK5Bv9-Sn-GO&sz=w1800" alt="My profile photo as a Rover"><span>My profile photo as a Rover</span></a><a class="ph " data-lightbox href="https://drive.google.com/file/d/1DRtqlcfGmwR7OvGqe_OYR5o5OxrGLWBW/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1DRtqlcfGmwR7OvGqe_OYR5o5OxrGLWBW&sz=w1800" alt="Agri Rovers club logo"><span>Agri Rovers club logo</span></a></div></div></div></template>
 </div>
 
 <!-- ===== SHARED FOOTER ===== -->
@@ -17580,93 +17215,52 @@ if(reduce)document.querySelectorAll('.route svg').forEach(s=>s.pauseAnimations&&
 
 /* ===== JS: EXPERIENCE ===== */
 INITS.experience=function(document){
+var D=window.document;
+var root=D.getElementById('page-experience'),wrap=D.getElementById('expModal');
+var md=D.getElementById('expModalBox'),mb=D.getElementById('expModalBody'),tb=D.getElementById('expTop');
 
-/* ----------------------------------------------------------
-   Scroll reveal
----------------------------------------------------------- */
-const revealObserver=new IntersectionObserver((entries,observer)=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}
-  });
-},{threshold:.08});
-document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+/* scroll reveal */
+var io=new IntersectionObserver(function(es,o){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('visible');o.unobserve(en.target)}})},{threshold:.08});
+root.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
 
-/* ----------------------------------------------------------
-   Google Drive image fallback
-   Keeps cards visible even when a thumbnail endpoint changes.
----------------------------------------------------------- */
-document.querySelectorAll('img[data-drive-id]').forEach(img=>{
-  img.addEventListener('error',function(){
-    if(this.dataset.fallback==='1')return;
-    this.dataset.fallback='1';
-    this.src='https://drive.google.com/uc?export=view&id='+this.dataset.driveId;
-  });
+/* keep every photo in its own aspect ratio */
+function fit(i){var w=i.naturalWidth,h=i.naturalHeight;if(!w||!h)return;
+  var p=i.closest('.ph,.fig');if(p)p.style.setProperty('--ar',Math.min(2.6,Math.max(.5,w/h)).toFixed(3));
+  var c=i.closest('.cover');if(c)c.classList.toggle('wide',w/h>=1.7)}
+function onLoad(ev){if(ev.target.tagName==='IMG')fit(ev.target)}
+function onErr(ev){var i=ev.target;if(!i||i.tagName!=='IMG')return;
+  var m=i.src.match(/id=([^&]+)/);
+  if(m&&!i.dataset.r){i.dataset.r=1;i.src='https://drive.google.com/uc?export=view&id='+m[1]}
+  else{var h=i.closest('.ph,.figwrap');if(h)h.remove()}}
+[root,wrap].forEach(function(n){n.addEventListener('load',onLoad,true);n.addEventListener('error',onErr,true)});
+root.querySelectorAll('img').forEach(function(i){if(i.complete)fit(i)});
+
+/* details modal + gallery More / Show Less (photos open in the shared site lightbox) */
+function lock(){D.body.style.overflow=md.classList.contains('open')?'hidden':''}
+function closeMD(){md.classList.remove('open');mb.innerHTML='';lock()}
+function onClick(ev){
+  var t=ev.target;
+  var m=t.closest('[data-modal]');
+  if(m){var tpl=D.getElementById(m.dataset.modal);if(!tpl)return;
+    mb.innerHTML='';mb.appendChild(tpl.content.cloneNode(true));
+    md.classList.add('open');md.scrollTop=0;lock();return}
+  var g=t.closest('[data-gallery-toggle]');
+  if(g){var grp=g.closest('[data-gallery-group]');var x=grp.classList.toggle('expanded');
+    g.textContent=x?'Show Less −':(g.dataset.label||'More Photos +');return}
+  if(t.closest('.modal-close')||t===md)closeMD();
+}
+root.addEventListener('click',onClick);
+wrap.addEventListener('click',onClick);
+D.addEventListener('keydown',function(ev){
+  if(ev.key!=='Escape')return;
+  var lbEl=D.getElementById('lb');if(lbEl&&!lbEl.hidden)return;
+  if(md.classList.contains('open'))closeMD();
 });
+window.addEventListener('hashchange',closeMD);
 
-/* ----------------------------------------------------------
-   Lightbox
----------------------------------------------------------- */
-const lightbox=document.getElementById('lightbox');
-const lightboxImg=document.getElementById('lightboxImg');
-const lightboxCaption=document.getElementById('lightboxCaption');
-const closeLightbox=()=>{
-  lightbox.classList.remove('open');lightbox.setAttribute('aria-hidden','true');lightboxImg.src='';document.body.style.overflow='';
-};
-document.querySelectorAll('[data-lightbox]').forEach(link=>{
-  link.addEventListener('click',e=>{
-    e.preventDefault();
-    const source=link.querySelector('img');
-    const src=(source?.currentSrc||source?.src||'').replace(/&sz=w\d+/i,'&sz=w2400');
-    lightboxImg.src=src||link.href;
-    lightboxImg.alt=source?.alt||'Expanded image preview';
-    const text=link.querySelector('.photo-caption,span');
-    lightboxCaption.textContent=text?.textContent.replace(' · Click to enlarge','')||source?.alt||'';
-    lightbox.classList.add('open');lightbox.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';
-  });
-});
-document.querySelector('.lightbox-close').addEventListener('click',closeLightbox);
-lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox()});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&lightbox.classList.contains('open'))closeLightbox()});
-
-
-/* ----------------------------------------------------------
-   Gallery More / Show Less
----------------------------------------------------------- */
-document.querySelectorAll('[data-gallery-toggle]').forEach(button=>{
-  button.addEventListener('click',()=>{
-    const group=button.closest('[data-gallery-group]');
-    const expanded=group.classList.toggle('expanded');
-    if(group.classList.contains('upm-gallery')){
-      button.textContent=expanded?'Show Less −':'More UPM Photos +';
-    }else{
-      button.textContent=expanded?'Show Less −':'More Internship Photos +';
-    }
-  });
-});
-
-/* ----------------------------------------------------------
-   Broken thumbnail protection — remove dead tiles rather than
-   leaving an empty gap in the gallery.
----------------------------------------------------------- */
-document.querySelectorAll('.media-card img,.feature-photo img,.initiative-media img').forEach(img=>{
-  img.addEventListener('error',function(){
-    const host=this.closest('.media-card,.feature-photo,.initiative-media');
-    if(!host)return;
-    if(this.dataset.retry==='1'){
-      if(host.classList.contains('media-card')) host.remove();
-      return;
-    }
-    this.dataset.retry='1';
-    const m=this.src.match(/id=([^&]+)/);
-    if(m){
-      this.src='https://drive.google.com/uc?export=view&id='+m[1];
-    }else if(host.classList.contains('media-card')){
-      host.remove();
-    }
-  });
-});
-
-
+/* back to top (only while the Experience page is open) */
+window.addEventListener('scroll',function(){tb.classList.toggle('show',!root.hidden&&window.scrollY>700)},{passive:true});
+tb.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
 
 };
 
@@ -17871,7 +17465,7 @@ INITS.contact=function(document){
     document.getElementById('lbPrev').style.display=document.getElementById('lbNext').style.display=shots.length>1?'':'none';
   }
   function openLb(img){
-    var pg=img.closest('.spa-page'),seen={};
+    var pg=img.closest('.spa-page,#expModal'),seen={};
     shots=[].filter.call(pg.querySelectorAll('img'),function(i){if(i.closest('button,.lb')||i.getBoundingClientRect().width<48&&i!==img)return false;var k=big(i);if(seen[k])return false;seen[k]=1;return true});
     if(shots.indexOf(img)<0)shots.unshift(img);
     lastFocus=document.activeElement;lb.hidden=false;void lb.offsetWidth;lb.classList.add('open');document.body.style.overflow='hidden';
@@ -17882,7 +17476,7 @@ INITS.contact=function(document){
     var t=e.target;if(!t.closest||t.closest('.lb,.site-nav'))return;
     var img=t.tagName==='IMG'?t:null,a=t.closest('a');
     if(!img&&a&&a.querySelector('img')&&a.textContent.trim().length<90)img=a.querySelector('img');
-    if(!img||!img.closest('.spa-page')||img.closest('button'))return;
+    if(!img||!img.closest('.spa-page,#expModal')||img.closest('button'))return;
     e.preventDefault();e.stopPropagation();openLb(img);
   },true);
   document.getElementById('lbClose').addEventListener('click',closeLb);
