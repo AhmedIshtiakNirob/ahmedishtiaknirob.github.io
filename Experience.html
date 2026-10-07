@@ -266,621 +266,263 @@ h1{font-size:clamp(48px,7vw,78px);line-height:.98;letter-spacing:-.055em;margin:
 }
 
 
-/* =========================================================
-   V5 — READABILITY + TIMELINE (When / Site) + MOTION
-========================================================= */
-body{font-size:16px;line-height:1.75}
-.hero p{font-size:17px;color:#b9cddd}
-h1{background-size:220% auto;animation:shine 7s ease-in-out infinite alternate}
-@keyframes shine{to{background-position:100% 0}}
-.copy{font-size:15.5px;line-height:1.8;color:#dce9f3;max-width:none}
-.points{gap:12px 26px}
-.points li{font-size:15px;line-height:1.65;color:#e9f2f9}
-.tag{font-size:12.5px;padding:6px 12px;color:#dce9f3}
-.kicker{font-size:12px}
-.org{font-size:17px!important}.role-org{font-size:15px!important}
-.lab-points li,.lab-super{font-size:14px}.lab-super span{font-size:11px}.lab-period{font-size:13px}.lab-status{font-size:11.5px}.lab-role{font-size:11.5px}
-.role-desc{font-size:14.5px;line-height:1.75;color:#d8e6f0}.role-date{font-size:12.5px}
-.initiative-points li,.placements li{font-size:14.5px}
-.placement-title,.doc-label{font-size:12px}
-.document-box p{font-size:13.5px}
-.media-card span,.photo-caption{font-size:12.5px}
-.btn,.gallery-more{font-size:13px}.btn{padding:11px 16px}
-.teaching-intro{font-size:clamp(14.5px,1.6vw,16px)!important}
-.teaching-highlight span{font-size:13.5px}
-a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
 
-/* scroll progress */
-.progress{position:fixed;left:0;top:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--cyan),var(--violet),var(--pink));box-shadow:0 0 14px var(--cyan);z-index:900;pointer-events:none}
+/* ================================================================
+   FINAL V5 — NUMBERED SECTIONS + CLUB EVIDENCE DRAWERS
+================================================================ */
+.section-title{width:min(820px,100%);padding:13px 18px}
+.section-title h2{gap:12px;flex-wrap:wrap}
+.section-number{width:40px;height:40px;font-size:13px}
+.section-count{display:inline-flex;align-items:center;padding:6px 11px;border-radius:999px;border:1px solid color-mix(in srgb,var(--accent) 34%,transparent);background:color-mix(in srgb,var(--accent) 8%,transparent);color:#d9eaf4;font-size:11px;font-weight:900;letter-spacing:.04em;white-space:nowrap}
+.section-lead{max-width:910px;margin:-16px auto 28px;color:var(--muted);text-align:center;font-size:13.5px;line-height:1.65}
 
-/* timeline spine draws while scrolling */
-.timeline:before{opacity:.28}
-.spine-fill{position:absolute;left:45px;top:20px;bottom:20px;width:2px;transform-origin:top;transform:scaleY(0);background:linear-gradient(180deg,var(--cyan),var(--blue),var(--violet),var(--mint),var(--gold),var(--pink),var(--orange));box-shadow:0 0 14px #43d5ff99,0 0 30px #43d5ff44;z-index:1;pointer-events:none}
-.time{left:3px;right:auto;width:calc(100% - 6px);white-space:normal;text-align:center;line-height:1.3;font-size:12px;padding:8px 6px}
+.club-card{border:1px solid color-mix(in srgb,var(--accent) 30%,#6fa0b6);background:linear-gradient(145deg,#10283dec,#081827f2);box-shadow:var(--shadow);border-radius:var(--radius);overflow:hidden;position:relative;transition:.3s}
+.club-card:before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,transparent,var(--accent),transparent);box-shadow:0 0 18px var(--accent)}
+.club-card:hover{transform:translateY(-5px);border-color:color-mix(in srgb,var(--accent) 67%,#75b6d2);box-shadow:0 25px 62px #00055,0 0 30px color-mix(in srgb,var(--accent) 12%,transparent)}
+.club-head{display:grid;grid-template-columns:96px minmax(0,1fr);gap:17px;padding:21px 21px 9px;align-items:center}
+.club-head .role-logo{width:96px;height:96px}
+.club-kicker{font-size:11px;letter-spacing:.17em;text-transform:uppercase;color:var(--accent);font-weight:900;display:flex;align-items:center;gap:9px}
+.club-kicker .num{width:32px;height:32px}
+.club-title{margin:7px 0 3px;font-size:27px;line-height:1.08;letter-spacing:-.03em;font-weight:900}
+.club-org{color:var(--accent);font-size:15px;font-weight:900;line-height:1.45;text-shadow:0 0 16px color-mix(in srgb,var(--accent) 14%,transparent)}
+.club-meta{display:flex;flex-wrap:wrap;gap:7px;margin:11px 21px 0}
+.club-meta .tag{font-size:11.5px}
+.club-toggle{margin:15px 21px 20px;border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);border-radius:13px;background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 11%,#071522),#071522);color:#eef9ff;padding:10px 14px;font-size:12px;font-weight:900;cursor:pointer;transition:.25s;display:flex;align-items:center;justify-content:center;gap:8px}
+.club-toggle:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 0 22px color-mix(in srgb,var(--accent) 17%,transparent)}
+.club-toggle span:last-child{color:var(--accent);font-size:16px;line-height:1}
+.club-card details{margin:0 15px 15px}
+.club-card details[open] .club-toggle{margin-bottom:13px}
+.club-card .cover-stage{margin:10px 21px 0}
+.club-card .cover-stage img{max-height:330px}
+.club-card .evidence-body{padding-bottom:3px}
+.club-card .evidence-head{font-size:11.5px}
+.club-card .evidence-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.club-card .media-card img{max-height:230px}
+.club-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 9px;border-radius:999px;background:color-mix(in srgb,var(--accent) 10%,transparent);border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);color:var(--accent);font-size:10.5px;font-weight:900}
 
-/* nodes pop in, then ripple */
-.timeline-item:not(.visible) .node{animation:none;transform:scale(0)}
-.timeline-item.visible .node{animation:nodePop .7s cubic-bezier(.2,1.7,.4,1) .15s both,nodePulse 2.8s ease-in-out .9s infinite}
-.node:before{content:"";position:absolute;inset:-7px;border-radius:50%;border:2px solid var(--accent);opacity:0}
-.timeline-item.visible .node:before{animation:ripple 2.8s ease-out .9s infinite}
-@keyframes nodePop{from{transform:scale(0)}to{transform:scale(1)}}
-@keyframes ripple{0%{transform:scale(.7);opacity:.7}100%{transform:scale(1.9);opacity:0}}
+.count-strip{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:0 auto 25px}
+.count-chip{display:inline-flex;align-items:center;gap:7px;padding:7px 11px;border-radius:999px;border:1px solid #a8c8d72a;background:#ffffff06;color:#cfe0eb;font-size:11px;font-weight:850}
+.count-chip b{color:var(--accent)}
 
-/* card slides in from the spine, details follow one by one */
-.timeline-item.reveal{transform:translateX(-30px)}
-.timeline-item.reveal.visible{transform:none}
-.timeline-item.visible :is(.tag,.ww-box,.points li){animation:riseIn .55s ease backwards;animation-delay:calc(var(--i,0)*70ms + .3s)}
-.timeline-item:not(.visible) :is(.tag,.ww-box,.points li){opacity:0}
-@keyframes riseIn{from{opacity:0;transform:translateY(12px)}}
+/* Cleaner gallery rhythm */
+.media-grid.compact-gallery{grid-template-columns:repeat(3,minmax(0,1fr));align-items:start}
+.media-grid.compact-gallery .media-card{height:auto!important;align-self:start}
+.media-grid.compact-gallery .media-card img{height:auto!important;max-height:none!important;object-fit:contain!important}
+.gallery-note{margin:12px 0 0;color:var(--muted);font-size:11.5px;text-align:center}
 
-/* WHEN / SITE strip */
-.ww{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0 6px}
-.ww-box{position:relative;overflow:hidden;display:flex;align-items:center;gap:13px;padding:13px 15px;border-radius:16px;border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 13%,#071522),#071522ee)}
-.ww-box:before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,#ffffff14 50%,transparent 65%);transform:translateX(-120%);animation:wwSweep 6s ease-in-out infinite}
-@keyframes wwSweep{0%,55%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
-.ww-ico{position:relative;flex:none;width:44px;height:44px;display:grid;place-items:center;border-radius:13px;color:var(--accent);background:color-mix(in srgb,var(--accent) 14%,transparent);border:1px solid color-mix(in srgb,var(--accent) 48%,transparent)}
-.ww-ico svg,.g-line svg{fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
-.ww-ico svg{width:23px;height:23px}
-.ww-where .ww-ico svg{animation:pinBounce 2.2s ease-in-out infinite}
-@keyframes pinBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
-.ww small{display:block;font-size:12px;font-weight:900;color:var(--accent)}
-.ww b{display:block;font-size:16px;line-height:1.35;color:#f2f9ff}
-.ww-dur{margin-left:auto;flex:none;padding:5px 11px;border-radius:999px;font-style:normal;font-size:12.5px;font-weight:900;color:#06111f;background:var(--accent);box-shadow:0 0 16px color-mix(in srgb,var(--accent) 45%,transparent)}
-.ww-dur.live:before{content:"";display:inline-block;width:7px;height:7px;margin-right:6px;border-radius:50%;background:#06111f;animation:blink 1.4s ease-in-out infinite}
-@keyframes blink{50%{opacity:.25}}
-.timeline-item.flash .card{animation:flash 1.8s ease}
-@keyframes flash{0%,100%{box-shadow:var(--shadow)}30%{box-shadow:0 0 0 3px var(--accent),0 0 44px color-mix(in srgb,var(--accent) 55%,transparent)}}
-
-/* Journey at a glance */
-.glance-note{margin:-14px 0 24px;text-align:center;color:var(--muted);font-size:14.5px}
-.glance-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
-.g-card{display:flex;flex-direction:column;gap:6px;padding:16px;border-radius:18px;text-decoration:none;position:relative;overflow:hidden;border:1px solid color-mix(in srgb,var(--accent) 36%,#5d8aa5);border-top:3px solid var(--accent);background:linear-gradient(145deg,#10283dec,#081827f2);transition:transform .3s,box-shadow .3s}
-.g-card:hover{transform:translateY(-5px);box-shadow:0 18px 40px #0006,0 0 26px color-mix(in srgb,var(--accent) 22%,transparent)}
-.g-grp{font-size:12px;font-weight:900;color:var(--accent)}
-.g-title{font-size:16.5px;line-height:1.3;color:#f2f9ff}
-.g-org{font-size:13px;color:var(--muted)}
-.g-line{display:flex;gap:7px;align-items:flex-start;font-size:13.5px;line-height:1.45;color:#dce9f3}
-.g-line svg{flex:none;width:15px;height:15px;margin-top:2px;color:var(--accent)}
-.reveal:not(.visible) .g-card{opacity:0}
-.reveal.visible .g-card{animation:riseIn .6s ease backwards;animation-delay:calc(var(--i,0)*90ms)}
-
-/* lightbox motion */
-.lightbox.open{animation:fadeIn .25s ease}
-.lightbox.open .lightbox-panel{animation:lbIn .4s cubic-bezier(.2,.9,.3,1.15)}
-@keyframes fadeIn{from{opacity:0}}
-@keyframes lbIn{from{opacity:0;transform:scale(.94) translateY(12px)}}
-
-@media(max-width:1000px){.glance-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:930px){.spine-fill{left:36px}}
-@media(max-width:680px){.spine-fill{left:12px}.ww{grid-template-columns:1fr}.timeline-item.reveal{transform:translateX(-14px)}}
-@media(max-width:560px){.glance-grid{grid-template-columns:1fr}}
+@media(max-width:930px){
+  .club-head{grid-template-columns:82px minmax(0,1fr)}
+  .club-head .role-logo{width:82px;height:82px}
+  .club-card .evidence-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:680px){
+  .section-title h2{font-size:24px}
+  .section-number{width:34px;height:34px;font-size:11px}
+  .section-count{font-size:9.5px}
+  .section-lead{font-size:12px}
+  .club-head{grid-template-columns:72px minmax(0,1fr);gap:12px;padding:18px 16px 8px}
+  .club-head .role-logo{width:72px;height:72px}
+  .club-title{font-size:23px}
+  .club-org{font-size:12.5px}
+  .club-meta{margin:10px 16px 0}
+  .club-toggle{margin:14px 16px 17px;font-size:10.5px}
+  .club-card .cover-stage{margin-left:16px;margin-right:16px}
+  .club-card details{margin-left:11px;margin-right:11px}
+  .club-card .evidence-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:430px){
+  .section-title h2{font-size:21px}
+  .section-count{display:none}
+  .club-head{grid-template-columns:1fr}
+  .club-head .role-logo{width:82px;height:82px}
+  .club-title{font-size:22px}
+  .club-card .evidence-grid{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
 <header class="hero wrap">
   <div class="eyebrow">Professional Journey</div>
   <h1>Experience</h1>
-  <p>Veterinary practice, international and national training, research, teaching, leadership and community service.</p>
+  <p>Veterinary practice, international and national training, research lab experience, teaching, leadership, animal welfare, volunteering and public service.</p>
   <div class="hero-rule"></div>
 </header>
 
+
 <main class="wrap">
 
+<section class="section reveal" id="journey">
+  <div class="section-title reveal" style="--accent:var(--cyan)"><h2><span class="section-number">00</span><span>Journey at a Glance</span><span class="section-count">9 highlighted experiences</span></h2></div>
+  <p class="section-lead">A visual index of the experience page. Use any card to jump to the complete entry; organization cards also contain their full supporting gallery and evidence.</p>
+  <div class="glance-grid">
+    <a class="g-card" href="#tl-prof-1" style="--accent:var(--cyan)"><span class="g-grp">Professional</span><b class="g-title">Veterinary Medical Officer</b><span class="g-org">Dhaka North City Corporation</span><span class="g-line"><svg viewBox="0 0 24 24"><path d="M7 2v3M17 2v3M3 9h18M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>19–28 May 2026 · 10 days</span><span class="g-line"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg>Tejgaon Colony Bazar Gorur Hat, Dhaka</span></a>
+    <a class="g-card" href="#tl-prof-2" style="--accent:var(--blue)"><span class="g-grp">Professional</span><b class="g-title">International Veterinary Medicine Intern</b><span class="g-org">Universiti Putra Malaysia</span><span class="g-line"><svg viewBox="0 0 24 24"><path d="M7 2v3M17 2v3M3 9h18M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>17–30 Jan 2026 · 14 days</span><span class="g-line"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg>Serdang, Selangor, Malaysia</span></a>
+    <a class="g-card" href="#tl-prof-3" style="--accent:var(--violet)"><span class="g-grp">Professional</span><b class="g-title">Six-Month Veterinary Internship</b><span class="g-org">Sher-e-Bangla Agricultural University</span><span class="g-line"><svg viewBox="0 0 24 24"><path d="M7 2v3M17 2v3M3 9h18M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>25 Aug – 16 Feb · 6 months</span><span class="g-line"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg>20 placements · Bangladesh + Malaysia</span></a>
+    <a class="g-card" href="#tl-prof-4" style="--accent:var(--mint)"><span class="g-grp">Professional</span><b class="g-title">Field Intern Veterinarian</b><span class="g-org">Department of Livestock Services · LDDP</span><span class="g-line"><svg viewBox="0 0 24 24"><path d="M7 2v3M17 2v3M3 9h18M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>June 2025 · 3 days</span><span class="g-line"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg>Dholaikhal Gorur Hat, Dhaka</span></a>
+    <a class="g-card" href="#tl-vol-1" style="--accent:var(--gold)"><span class="g-grp">Volunteering</span><b class="g-title">Event Organizer</b><span class="g-org">Bangladesh Veterinary Olympiad</span><span class="g-line"><svg viewBox="0 0 24 24"><path d="M7 2v3M17 2v3M3 9h18M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>October 2022</span><span class="g-line"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg>Sher-e-Bangla Agricultural University</span></a>
+    <a class="g-card" href="#tl-vol-2" style="--accent:var(--blue)"><span class="g-grp">Volunteering</span><b class="g-title">Rover Scout Member</b><span class="g-org">Bangladesh Scouts · Agri Rovers</span><span class="g-line"><svg viewBox="0 0 24 24"><path d="M7 2v3M17 2v3M3 9h18M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>January 2020 – Present</span><span class="g-line"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg>University + community service</span></a>
+    <a class="g-card" href="#tl-vol-3" style="--accent:var(--cyan)"><span class="g-grp">Volunteering</span><b class="g-title">Institute Representative</b><span class="g-org">Volunteer for Bangladesh · Dhaka District South</span><span class="g-line"><svg viewBox="0 0 24 24"><path d="M7 2v3M17 2v3M3 9h18M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>March 2025 – Present</span><span class="g-line"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg>Sher-e-Bangla Agricultural University</span></a>
+    <a class="g-card" href="#tl-vol-4" style="--accent:var(--violet)"><span class="g-grp">Volunteering</span><b class="g-title">Event Organizer · Inter Veterinary School Debate</b><span class="g-org">Bangladesh Veterinary Association</span><span class="g-line"><svg viewBox="0 0 24 24"><path d="M7 2v3M17 2v3M3 9h18M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>April 2025</span><span class="g-line"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg>Among 16 veterinary institutes</span></a>
+    <a class="g-card" href="#tl-public" style="--accent:var(--mint)"><span class="g-grp">Public Service</span><b class="g-title">Traffic Controller</b><span class="g-org">Bangladesh Scouts · Part-time</span><span class="g-line"><svg viewBox="0 0 24 24"><path d="M7 2v3M17 2v3M3 9h18M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>August 2024</span><span class="g-line"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg>Mohammadpur area, Dhaka</span></a>
+  </div>
+</section>
+
 <!-- =========================================================
-     01 · PROFESSIONAL EXPERIENCE
-     Clean box: only the requested phrase.
+     01 PROFESSIONAL EXPERIENCE — 4 ENTRIES
 ========================================================= -->
 <section class="section">
-  <div class="section-title reveal" style="--accent:var(--cyan)"><h2>Professional Experience</h2></div>
-
+  <div class="section-title reveal" style="--accent:var(--cyan)"><h2><span class="section-number">01</span><span>Professional Experience</span><span class="section-count">4 experiences</span></h2></div>
+  <div class="count-strip"><span class="count-chip" style="--accent:var(--cyan)"><b>04</b> Professional entries</span><span class="count-chip" style="--accent:var(--blue)"><b>20</b> Internship placements</span><span class="count-chip" style="--accent:var(--mint)"><b>176+</b> animals treated in DLS field service</span></div>
   <div class="timeline">
-    <!-- VMO -->
-    <article class="timeline-item reveal" style="--accent:var(--cyan)">
+
+    <article class="timeline-item reveal" id="tl-prof-1" style="--accent:var(--cyan)">
       <div class="rail"><i class="node"></i><div class="time">19–28 May 2026</div></div>
-      <section class="card">
-        <div class="card-inner">
-          <div class="kicker"><span class="num">01</span> Professional Veterinary Experience</div>
-          <h3>Veterinary Medical Officer</h3>
-          <div class="org">Dhaka North City Corporation (DNCC) · Contract</div>
-          <div class="meta"><span class="tag">May 2026</span><span class="tag">Tejgaon Industrial Area Thana, Dhaka</span><span class="tag">On-site</span></div>
-
-          <div class="feature-split">
-            <div class="feature-points">
-              <p class="copy">Appointed by DNCC to provide veterinary healthcare services at Tejgaon Colony Bazar Gorur Hat during Eid-ul-Adha 2026, supporting livestock health, welfare and disease surveillance in a market accommodating more than 5,000 cattle and numerous small ruminants.</p>
-              <ul class="points">
-                <li>Clinical examination, diagnosis and treatment</li>
-                <li>Prescription and emergency veterinary care</li>
-                <li>Animal welfare and disease surveillance</li>
-                <li>Veterinary consultation for traders, farmers and buyers</li>
-                <li>Continuous market coverage with Dr. Omar Siddik</li>
-                <li>Public veterinary communication through a TV interview</li>
-              </ul>
-            </div>
-
-            <div class="feature-media">
-              <a class="feature-photo" data-lightbox href="https://drive.google.com/file/d/1c5hWObzGwvsdLXTcBwvxM5fndB-tmmxI/view?usp=sharing" target="_blank" rel="noopener">
-                <img loading="lazy" src="https://drive.google.com/thumbnail?id=1c5hWObzGwvsdLXTcBwvxM5fndB-tmmxI&sz=w1600" alt="Channel 71 interview moment as a doctor in Tejgaon Gorur Hut">
-                <div class="photo-caption">Channel 71 Interview moment as a Doctor in Tejgaon Gorur Hut</div>
-              </a>
-              <div class="interview-button-wrap">
-                <a class="btn" style="--accent:var(--cyan)" href="https://www.youtube.com/watch?v=JDLgYv6LD1o" target="_blank" rel="noopener">▶ Watch Channel 71 Interview</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section class="card"><div class="card-inner">
+        <div class="kicker"><span class="num">01</span> Professional Veterinary Experience</div>
+        <h3>Veterinary Medical Officer</h3><div class="org">Dhaka North City Corporation (DNCC) · Contract</div>
+        <div class="meta"><span class="tag">May 2026</span><span class="tag">Tejgaon Industrial Area Thana, Dhaka, Bangladesh</span><span class="tag">On-site</span><span class="tag">Eid Livestock Market</span></div>
+        <div class="ww"><div class="ww-box" style="--accent:var(--cyan)"><span class="ww-ico"><svg viewBox="0 0 24 24"><path d="M7 2v3M17 2v3M3 9h18M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg></span><div><small>When</small><b>19–28 May 2026</b></div><em class="ww-dur">10 days</em></div><div class="ww-box ww-where" style="--accent:var(--cyan)"><span class="ww-ico"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg></span><div><small>Site</small><b>Tejgaon Colony Bazar Gorur Hat, Dhaka</b></div></div></div>
+        <div class="feature-split"><div>
+          <p class="copy">Appointed by DNCC to provide veterinary healthcare services at Tejgaon Colony Bazar Gorur Hat (Cattle Market) during Eid-ul-Adha 2026. The market accommodated over 5,000 cattle and numerous small ruminants.</p>
+          <ul class="points"><li>Clinical examination, diagnosis, treatment and prescription</li><li>Emergency veterinary care for market livestock</li><li>Animal welfare and disease surveillance</li><li>Veterinary consultation for traders, farmers and buyers</li><li>Continuous coverage with Dr. Omar Siddik from 19–28 May</li><li>Featured in a live interview on Ekattor TV about veterinary responsibilities, animal welfare and livestock health management</li></ul>
+          <div class="actions"><a class="proof" style="--accent:var(--cyan)" href="https://www.youtube.com/watch?v=JDLgYv6LD1o" target="_blank" rel="noopener">↗ Watch Ekattor TV Interview</a></div>
+        </div><div class="feature-media"><a class="feature-photo" data-lightbox style="--accent:var(--cyan)" href="https://drive.google.com/file/d/1c5hWObzGwvsdLXTcBwvxM5fndB-tmmxI/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1c5hWObzGwvsdLXTcBwvxM5fndB-tmmxI" src="https://drive.google.com/thumbnail?id=1c5hWObzGwvsdLXTcBwvxM5fndB-tmmxI&amp;sz=w2000" alt="Ekattor TV interview moment as a veterinary doctor"><div class="photo-caption">Ekattor TV interview moment as a Doctor at Tejgaon Gorur Hut</div></a></div></div>
+      </div></section>
     </article>
 
-    <!-- UPM -->
-    <article class="timeline-item reveal" style="--accent:var(--blue)">
+    <article class="timeline-item reveal" id="tl-prof-2" style="--accent:var(--blue)">
       <div class="rail"><i class="node"></i><div class="time">17–30 Jan 2026</div></div>
-      <section class="card">
-        <div class="card-inner">
-          <div class="kicker"><span class="num">02</span> International Veterinary Training</div>
-          <h3>International Veterinary Medicine Intern</h3>
-          <div class="org">Universiti Putra Malaysia (UPM)</div>
-          <div class="meta"><span class="tag">17–30 January 2026</span><span class="tag">Serdang, Selangor, Malaysia</span><span class="tag">On-site</span></div>
-          <p class="copy">Completed an international internship with multidisciplinary exposure across the Faculty of Agriculture and Faculty of Veterinary Medicine.</p>
-          <ul class="points">
-            <li>Animal handling and management: cattle, goats, sheep, broilers and layers</li>
-            <li>Farm management, biosecurity and feed practices</li>
-            <li>Silage preparation and livestock nutrition exposure</li>
-            <li>Clinical procedures, surgical cases and anesthesia observation</li>
-            <li>Farm visits, disease observation and herd-health management</li>
-            <li>Scientific writing and research-development sessions (KSI module)</li>
-          </ul>
-          <div class="gallery-group upm-gallery" data-gallery-group>
-  <div class="media-grid compact-gallery" style="--accent:var(--blue)">
-
-    <a class="media-card reveal" data-lightbox href="https://drive.google.com/file/d/10-0Sjbo5VtKzUzdyseSFJQDmFTzoMqXN/view?usp=sharing" target="_blank" rel="noopener">
-      <img loading="lazy" src="https://drive.google.com/thumbnail?id=10-0Sjbo5VtKzUzdyseSFJQDmFTzoMqXN&sz=w1800" alt="Class session in UPM">
-      <span>Class session in UPM</span>
-    </a>
-
-    <a class="media-card reveal" data-lightbox href="https://drive.google.com/file/d/194uI7xFt5m4Vi1FirpYsty9KtcrZPqDy/view?usp=sharing" target="_blank" rel="noopener">
-      <img loading="lazy" src="https://drive.google.com/thumbnail?id=194uI7xFt5m4Vi1FirpYsty9KtcrZPqDy&sz=w1800" alt="With Dr. Ubedullah Kaka, Senior Lecturer">
-      <span>With Dr. Ubedullah Kaka, Senior Lecturer</span>
-    </a>
-
-    <a class="media-card reveal" data-lightbox href="https://drive.google.com/file/d/1MdG44t8aCTjBlIlaTeHPBugEr-hKL3r1/view?usp=sharing" target="_blank" rel="noopener">
-      <img loading="lazy" src="https://drive.google.com/thumbnail?id=1MdG44t8aCTjBlIlaTeHPBugEr-hKL3r1&sz=w1800" alt="Certificate handover">
-      <span>Certificate handover</span>
-    </a>
-
-    <a class="media-card gallery-extra" data-lightbox href="https://drive.google.com/file/d/1OmNkKxy5E9ivWub0yBLvpfztvOccUZSW/view?usp=sharing" target="_blank" rel="noopener">
-      <img loading="lazy" src="https://drive.google.com/thumbnail?id=1OmNkKxy5E9ivWub0yBLvpfztvOccUZSW&sz=w1800" alt="In front of veterinary faculty of UPM">
-      <span>In front of veterinary faculty of UPM</span>
-    </a>
-
-    <a class="media-card gallery-extra" data-lightbox href="https://drive.google.com/file/d/1ukDckZbG6WNAFrlKZe6FYd8Gs0vNwRI0/view?usp=sharing" target="_blank" rel="noopener">
-      <img loading="lazy" src="https://drive.google.com/thumbnail?id=1ukDckZbG6WNAFrlKZe6FYd8Gs0vNwRI0&sz=w1800" alt="UPM Internship Certificate">
-      <span>UPM Internship Certificate</span>
-    </a>
-
-  </div>
-  <div class="gallery-more-row">
-    <button class="gallery-more" type="button" data-gallery-toggle aria-label="Show more UPM photos">More UPM Photos +</button>
-  </div>
-</div>
+      <section class="card"><div class="card-inner">
+        <div class="kicker"><span class="num">02</span> International Veterinary Training</div>
+        <h3>International Veterinary Medicine Intern</h3><div class="org">Universiti Putra Malaysia (UPM) · Internship</div>
+        <div class="meta"><span class="tag">17–30 January 2026</span><span class="tag">Serdang, Selangor, Malaysia</span><span class="tag">On-site</span></div>
+        <div class="ww"><div class="ww-box" style="--accent:var(--blue)"><span class="ww-ico"><svg viewBox="0 0 24 24"><path d="M7 2v3M17 2v3M3 9h18M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg></span><div><small>When</small><b>17–30 January 2026</b></div><em class="ww-dur">14 days</em></div><div class="ww-box ww-where" style="--accent:var(--blue)"><span class="ww-ico"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg></span><div><small>Site</small><b>Serdang, Selangor, Malaysia</b></div></div></div>
+        <p class="copy">Completed an international internship at Universiti Putra Malaysia (UPM), gaining multidisciplinary exposure in both the Faculty of Agriculture and Faculty of Veterinary Medicine.</p>
+        <ul class="points"><li>Animal handling and management of cattle, goats, sheep, broilers and layers</li><li>Farm management practices and biosecurity measures</li><li>Silage preparation and feed-management techniques</li><li>KSI academic sessions for scientific writing and research development</li><li>Observed and assisted in clinical procedures and surgical cases</li><li>Learned anesthesia techniques, including inhalation anesthesia in dogs</li><li>Farm visits for disease observation and herd-health management</li><li>Practical understanding of clinical workflow, diagnosis and animal care</li></ul>
+        <div class="media-grid compact-gallery" style="--accent:var(--blue)">
+          <a class="media-card" data-lightbox style="--accent:var(--blue)" href="https://drive.google.com/file/d/10-0Sjbo5VtKzUzdyseSFJQDmFTzoMqXN/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="10-0Sjbo5VtKzUzdyseSFJQDmFTzoMqXN" src="https://drive.google.com/thumbnail?id=10-0Sjbo5VtKzUzdyseSFJQDmFTzoMqXN&amp;sz=w1800" alt="Class session in UPM"><span>Class session in UPM</span></a>
+          <a class="media-card" data-lightbox style="--accent:var(--blue)" href="https://drive.google.com/file/d/194uI7xFt5m4Vi1FirpYsty9KtcrZPqDy/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="194uI7xFt5m4Vi1FirpYsty9KtcrZPqDy" src="https://drive.google.com/thumbnail?id=194uI7xFt5m4Vi1FirpYsty9KtcrZPqDy&amp;sz=w1800" alt="With Dr. Ubedullah Kaka, Senior Lecturer"><span>With Dr. Ubedullah Kaka, Senior Lecturer</span></a>
+          <a class="media-card" data-lightbox style="--accent:var(--blue)" href="https://drive.google.com/file/d/1MdG44t8aCTjBlIlaTeHPBugEr-hKL3r1/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1MdG44t8aCTjBlIlaTeHPBugEr-hKL3r1" src="https://drive.google.com/thumbnail?id=1MdG44t8aCTjBlIlaTeHPBugEr-hKL3r1&amp;sz=w1800" alt="Certificate handover"><span>Certificate handover</span></a>
+          <a class="media-card" data-lightbox style="--accent:var(--blue)" href="https://drive.google.com/file/d/1OmNkKxy5E9ivWub0yBLvpfztvOccUZSW/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1OmNkKxy5E9ivWub0yBLvpfztvOccUZSW" src="https://drive.google.com/thumbnail?id=1OmNkKxy5E9ivWub0yBLvpfztvOccUZSW&amp;sz=w1800" alt="In front of Veterinary Faculty of UPM"><span>In front of Veterinary Faculty of UPM</span></a>
+          <a class="media-card" data-lightbox style="--accent:var(--blue)" href="https://drive.google.com/file/d/1ukDckZbG6WNAFrlKZe6FYd8Gs0vNwRI0/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1ukDckZbG6WNAFrlKZe6FYd8Gs0vNwRI0" src="https://drive.google.com/thumbnail?id=1ukDckZbG6WNAFrlKZe6FYd8Gs0vNwRI0&amp;sz=w1800" alt="UPM Internship Certificate"><span>UPM Internship Certificate</span></a>
         </div>
-      </section>
+      </div></section>
     </article>
 
-    <!-- 6 MONTH INTERNSHIP -->
-    <article class="timeline-item reveal" style="--accent:var(--violet)">
+    <article class="timeline-item reveal" id="tl-prof-3" style="--accent:var(--violet)">
       <div class="rail"><i class="node"></i><div class="time">25 Aug – 16 Feb</div></div>
-      <section class="card">
-        <div class="card-inner">
-          <div class="kicker"><span class="num">03</span> National Internship</div>
-          <h3>Six-Month Veterinary Internship</h3>
-          <div class="org">Sher-e-Bangla Agricultural University</div>
-          <div class="meta"><span class="tag">25 August – 16 February</span><span class="tag">20 Training Placements · Bangladesh + Malaysia</span><span class="tag">Final-semester CGPA 4.00/4.00</span></div>
-          <p class="copy">A six-month practical training journey across veterinary and animal-science settings, marking the final chapter of my undergraduate life in Animal Science &amp; Veterinary Medicine.</p>
-
-          <div class="placement-box reveal" style="--accent:var(--blue)">
-            <div class="placement-title">The Internship Training Centers in Different Placements</div>
-            <ol class="placements">
-              <li>Bangladesh Veterinary Council (BVC), Dhaka</li>
-              <li>Upazilla Livestock Office &amp; Veterinary Hospital</li>
-              <li>Central Veterinary Hospital (CVH), Dhaka</li>
-              <li>Bangladesh National Zoo, Mirpur, Dhaka</li>
-              <li>Teaching &amp; Training Pet Hospital and Research Center (CVASU), Purbachal, Dhaka</li>
-              <li>Military Farm, Savar, Dhaka</li>
-              <li>RV &amp; F Depot, Savar, Dhaka</li>
-              <li>Care and Cure Pet Hospital, Dhanmondi, Dhaka</li>
-              <li>Veterinary Teaching Hospital, SAU, Dhaka</li>
-              <li>Bangladesh Livestock Research Institute (BLRI), Dhaka</li>
-              <li>NIB (National Institute of Biotechnology)</li>
-              <li>Central Disease Investigation Laboratory (CDIL), Dhaka</li>
-              <li>Livestock Research Institute (LRI), Mohakhali, Dhaka</li>
-              <li>Central Cattle Breeding and Dairy Farm (CCBDF), Savar, Dhaka</li>
-              <li>Artificial Insemination Centre, Savar</li>
-              <li>Safari Park, Gazipur</li>
-              <li>Poultry Farm</li>
-              <li>Feed Industry</li>
-              <li>Department Lab. of FASVM</li>
-              <li>Dairy Farm</li>
-            </ol>
-          </div>
-
-          <div class="document-grid">
-            <article class="document-box reveal" style="--accent:var(--cyan)">
-              <div class="doc-label">Academic Document</div>
-              <h4>Full Internship Report</h4>
-              <p>Complete six-month placement report covering the training journey.</p>
-              <div class="actions"><a class="btn" style="--accent:var(--cyan)" href="https://drive.google.com/file/d/1dO_q8FQ6FBvj3HhCBh0YN0JaTvsPXMg8/view?usp=sharing" target="_blank" rel="noopener">View Full Internship Report ↗</a></div>
-            </article>
-            <article class="document-box certificate reveal" style="--accent:var(--violet)">
-              <div class="doc-label">Official Certificate</div>
-              <h4>Internship Certificate</h4>
-              <p>Open the original certificate document directly from Drive.</p>
-              <div class="actions"><a class="btn" style="--accent:var(--violet)" href="https://drive.google.com/file/d/13MoEAMVxO_1vpfgsLbdtef7LLJ0pazuI/view?usp=sharing" target="_blank" rel="noopener">View Certificate ↗</a></div>
-            </article>
-          </div>
-
-          <div class="gallery-group internship-gallery" data-gallery-group>
-  <div class="media-grid compact-gallery" style="--accent:var(--violet)">
-
-    <a class="media-card reveal" data-lightbox href="https://drive.google.com/file/d/1Y6clcTh3VfX-HmftwKdvQKeQMYFHbxRJ/view?usp=sharing" target="_blank" rel="noopener">
-      <img loading="lazy" src="https://drive.google.com/thumbnail?id=1Y6clcTh3VfX-HmftwKdvQKeQMYFHbxRJ&sz=w1800" alt="In front of Livestock Veterinary Hospital">
-      <span>Livestock Veterinary Hospital · Click to enlarge</span>
-    </a>
-
-    <a class="media-card reveal" data-lightbox href="https://drive.google.com/file/d/19qjQvas3JrlsK_Y-ehz9hJezkKXHwvbl/view?usp=sharing" target="_blank" rel="noopener">
-      <img loading="lazy" src="https://drive.google.com/thumbnail?id=19qjQvas3JrlsK_Y-ehz9hJezkKXHwvbl&sz=w1800" alt="Internship fieldwork">
-      <span>Internship fieldwork · Click to enlarge</span>
-    </a>
-
-    <a class="media-card reveal" data-lightbox href="https://drive.google.com/file/d/1gIts3awWyAkfPBusCF2XnzdsNCz4jutk/view?usp=sharing" target="_blank" rel="noopener">
-      <img loading="lazy" src="https://drive.google.com/thumbnail?id=1gIts3awWyAkfPBusCF2XnzdsNCz4jutk&sz=w1800" alt="Internship practical work">
-      <span>Practical training · Click to enlarge</span>
-    </a>
-
-    <a class="media-card gallery-extra" data-lightbox href="https://drive.google.com/file/d/1s7CzVMZGt_60c3M9WcIN5AuQeZsr18JZ/view?usp=sharing" target="_blank" rel="noopener">
-      <img loading="lazy" src="https://drive.google.com/thumbnail?id=1s7CzVMZGt_60c3M9WcIN5AuQeZsr18JZ&sz=w1800" alt="Internship experience">
-      <span>Internship experience · Click to enlarge</span>
-    </a>
-
-    <a class="media-card gallery-extra" data-lightbox href="https://drive.google.com/file/d/1wzUct7GN4MOnpjHWpFM9AeUmFPACIc6T/view?usp=sharing" target="_blank" rel="noopener">
-      <img loading="lazy" src="https://drive.google.com/thumbnail?id=1wzUct7GN4MOnpjHWpFM9AeUmFPACIc6T&sz=w1800" alt="Internship placement work">
-      <span>Placement work · Click to enlarge</span>
-    </a>
-
-  </div>
-  <div class="gallery-more-row">
-    <button class="gallery-more" type="button" data-gallery-toggle>More Internship Photos +</button>
-  </div>
-</div>
-        </div>
-      </section>
+      <section class="card"><div class="card-inner">
+        <div class="kicker"><span class="num">03</span> National Internship</div>
+        <h3>Six-Month Veterinary Internship</h3><div class="org">Sher-e-Bangla Agricultural University</div>
+        <div class="meta"><span class="tag">25 August – 16 February</span><span class="tag">20 Training Placements · Bangladesh + Malaysia</span><span class="tag">Final-semester CGPA 4.00/4.00</span></div>
+        <div class="ww"><div class="ww-box" style="--accent:var(--violet)"><span class="ww-ico"><svg viewBox="0 0 24 24"><path d="M7 2v3M17 2v3M3 9h18M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg></span><div><small>When</small><b>25 August – 16 February</b></div><em class="ww-dur">6 months</em></div><div class="ww-box ww-where" style="--accent:var(--violet)"><span class="ww-ico"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg></span><div><small>Site</small><b>20 placements across Bangladesh + Malaysia</b></div></div></div>
+        <p class="copy">From 25th August to 16th February, I completed a six-month practical training journey across veterinary and animal-science settings, marking the final chapter of my undergraduate life in Animal Science &amp; Veterinary Medicine Faculty.</p>
+        <p class="copy">Successfully completed the internship with a <b style="color:var(--violet)">4.00/4.00 CGPA in the last semester</b>. The experience combined hands-on learning, real-life challenges and professional and personal growth.</p>
+        <div class="placement-box reveal" style="--accent:var(--blue)"><div class="placement-title">20 Internship Training Centers / Placements</div><ol class="placements"><li>Bangladesh Veterinary Council (BVC), Dhaka</li><li>Upazilla Livestock Office &amp; Veterinary Hospital</li><li>Central Veterinary Hospital (CVH), Dhaka</li><li>Bangladesh National Zoo, Mirpur, Dhaka</li><li>Teaching &amp; Training Pet Hospital and Research Center (CVASU), Purbachal, Dhaka</li><li>Military Farm, Savar, Dhaka</li><li>RV &amp; F Depot, Savar, Dhaka</li><li>Care and Cure Pet Hospital, Dhanmondi, Dhaka</li><li>Veterinary Teaching Hospital, SAU, Dhaka</li><li>Bangladesh Livestock Research Institute (BLRI), Dhaka</li><li>National Institute of Biotechnology (NIB)</li><li>Central Disease Investigation Laboratory (CDIL), Dhaka</li><li>Livestock Research Institute (LRI), Mohakhali, Dhaka</li><li>Central Cattle Breeding and Dairy Farm (CCBDF), Savar</li><li>Artificial Insemination Centre, Savar</li><li>Safari Park, Gazipur</li><li>Poultry Farm</li><li>Feed Industry</li><li>Departmental Laboratory of FASVM</li><li>Dairy Farm</li></ol></div>
+        <div class="document-grid"><article class="document-box reveal" style="--accent:var(--cyan)"><div class="doc-label">Academic Document</div><h4>Full Six-Month Internship Report</h4><p>Complete placement report covering the training journey.</p><div class="actions"><a class="proof" style="--accent:var(--cyan)" href="https://drive.google.com/file/d/1dO_q8FQ6FBvj3HhCBh0YN0JaTvsPXMg8/view?usp=sharing" target="_blank" rel="noopener">↗ View Full Internship Report</a></div></article><article class="document-box certificate reveal" style="--accent:var(--violet)"><div class="doc-label">Official Certificate</div><h4>Internship Certificate</h4><p>Open the official certificate document directly from Drive.</p><div class="actions"><a class="proof" style="--accent:var(--violet)" href="https://drive.google.com/file/d/13MoEAMVxO_1vpfgsLbdtef7LLJ0pazuI/view?usp=sharing" target="_blank" rel="noopener">↗ View Certificate</a></div></article></div>
+        <div class="media-grid compact-gallery" style="--accent:var(--violet)"><a class="media-card" data-lightbox style="--accent:var(--violet)" href="https://drive.google.com/file/d/1Y6clcTh3VfX-HmftwKdvQKeQMYFHbxRJ/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1Y6clcTh3VfX-HmftwKdvQKeQMYFHbxRJ" src="https://drive.google.com/thumbnail?id=1Y6clcTh3VfX-HmftwKdvQKeQMYFHbxRJ&amp;sz=w1800" alt="In front of Livestock Veterinary Hospital"><span>In front of Livestock Veterinary Hospital</span></a><a class="media-card" data-lightbox style="--accent:var(--violet)" href="https://drive.google.com/file/d/19qjQvas3JrlsK_Y-ehz9hJezkKXHwvbl/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="19qjQvas3JrlsK_Y-ehz9hJezkKXHwvbl" src="https://drive.google.com/thumbnail?id=19qjQvas3JrlsK_Y-ehz9hJezkKXHwvbl&amp;sz=w1800" alt="Internship fieldwork"><span>Internship fieldwork</span></a><a class="media-card" data-lightbox style="--accent:var(--violet)" href="https://drive.google.com/file/d/1gIts3awWyAkfPBusCF2XnzdsNCz4jutk/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1gIts3awWyAkfPBusCF2XnzdsNCz4jutk" src="https://drive.google.com/thumbnail?id=1gIts3awWyAkfPBusCF2XnzdsNCz4jutk&amp;sz=w1800" alt="Practical training"><span>Practical training</span></a><a class="media-card" data-lightbox style="--accent:var(--violet)" href="https://drive.google.com/file/d/1s7CzVMZGt_60c3M9WcIN5AuQeZsr18JZ/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1s7CzVMZGt_60c3M9WcIN5AuQeZsr18JZ" src="https://drive.google.com/thumbnail?id=1s7CzVMZGt_60c3M9WcIN5AuQeZsr18JZ&amp;sz=w1800" alt="Internship experience"><span>Internship experience</span></a><a class="media-card" data-lightbox style="--accent:var(--violet)" href="https://drive.google.com/file/d/1wzUct7GN4MOnpjHWpFM9AeUmFPACIc6T/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1wzUct7GN4MOnpjHWpFM9AeUmFPACIc6T" src="https://drive.google.com/thumbnail?id=1wzUct7GN4MOnpjHWpFM9AeUmFPACIc6T&amp;sz=w1800" alt="Placement work"><span>Placement work</span></a></div>
+        <p class="gallery-note">The complete placement report and certificate are linked above; every supplied internship photograph is included in the gallery.</p>
+      </div></section>
     </article>
 
-    <!-- DLS -->
-    <article class="timeline-item reveal" style="--accent:var(--mint)">
+    <article class="timeline-item reveal" id="tl-prof-4" style="--accent:var(--mint)">
       <div class="rail"><i class="node"></i><div class="time">June 2025</div></div>
-      <section class="card">
-        <div class="card-inner">
-          <div class="kicker"><span class="num">04</span> Field Veterinary Experience</div>
-          <h3>Field Intern Veterinarian</h3>
-          <div class="org">Department of Livestock Services (DLS) · LDDP Project</div>
-          <div class="meta"><span class="tag">June 2025</span><span class="tag">Dholaikhal Gorur Hat, Dhaka</span><span class="tag">3-day field service</span></div>
-          <p class="copy">Served on the veterinary medical team during pre-Eid cattle-market operations and provided free treatment to nearly 176 animals over three consecutive days (9 AM–6 PM), with medicines supplied by DLS.</p>
-          <ul class="points">
-            <li>Large-animal clinical support</li><li>On-site care and treatment at owners' tents</li><li>Team-based veterinary service</li><li>Clinical communication and emergency response</li>
-          </ul>
-          <div class="simple-gallery" style="--accent:var(--mint)">
-            <a class="media-card" data-lightbox href="https://drive.google.com/file/d/19XenvNoekG76ZRh4e_AWuQ1L5AFfgBmU/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=19XenvNoekG76ZRh4e_AWuQ1L5AFfgBmU&sz=w1400" alt="DLS field internship ID card"><span>Intern ID card · Click to enlarge</span></a>
-            <a class="media-card" data-lightbox href="https://drive.google.com/file/d/1kXkE_igaX-gn5N-ZF4tLVFVKsZL7lX8L/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1kXkE_igaX-gn5N-ZF4tLVFVKsZL7lX8L&sz=w1400" alt="Veterinary field team"><span>Veterinary team · Click to enlarge</span></a>
-            <a class="media-card" data-lightbox href="https://drive.google.com/file/d/1q-uaKia0F8w-8I6zm6rOHb4xPfP464sY/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1q-uaKia0F8w-8I6zm6rOHb4xPfP464sY&sz=w1400" alt="Team with veterinary surgeon"><span>With veterinary surgeon · Click to enlarge</span></a>
-          </div>
-        </div>
-      </section>
+      <section class="card"><div class="card-inner">
+        <div class="kicker"><span class="num">04</span> Field Veterinary Experience</div>
+        <h3>Field Intern Veterinarian</h3><div class="org">Department of Livestock Services (DLS) · LDDP Project · Internship</div>
+        <div class="meta"><span class="tag">June 2025</span><span class="tag">Dholaikhal Gorur Hat, Dhaka South City Corporation</span><span class="tag">On-site</span><span class="tag">3-day field service</span></div>
+        <div class="ww"><div class="ww-box" style="--accent:var(--mint)"><span class="ww-ico"><svg viewBox="0 0 24 24"><path d="M7 2v3M17 2v3M3 9h18M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg></span><div><small>When</small><b>3 consecutive days before Eid</b></div><em class="ww-dur">3 days · 9 AM–6 PM</em></div><div class="ww-box ww-where" style="--accent:var(--mint)"><span class="ww-ico"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg></span><div><small>Site</small><b>Dholaikhal Gorur Hat, Dhaka</b></div></div></div>
+        <p class="copy">I was honored to be part of the Veterinary Medical Team assigned by DLS under the LDDP project during pre-Eid cattle market operations at Dholaikhal Gorur Hat, one of the busiest Qurbani haats in Dhaka.</p>
+        <p class="copy">Over three consecutive days, I provided <b style="color:var(--mint)">free treatment to nearly 176 animals</b>. With DLS supplying medicines, our team ensured complete market coverage, including visits to individual owners’ tents for on-site care.</p>
+        <ul class="points"><li>Large-animal clinical support</li><li>On-site treatment at owners’ tents</li><li>Team-based veterinary service and market coverage</li><li>Clinical communication and emergency response</li></ul>
+        <div class="media-grid compact-gallery" style="--accent:var(--mint)"><a class="media-card" data-lightbox style="--accent:var(--mint)" href="https://drive.google.com/file/d/19XenvNoekG76ZRh4e_AWuQ1L5AFfgBmU/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="19XenvNoekG76ZRh4e_AWuQ1L5AFfgBmU" src="https://drive.google.com/thumbnail?id=19XenvNoekG76ZRh4e_AWuQ1L5AFfgBmU&amp;sz=w1800" alt="DLS Intern ID Card"><span>DLS Intern ID Card</span></a><a class="media-card" data-lightbox style="--accent:var(--mint)" href="https://drive.google.com/file/d/1kXkE_igaX-gn5N-ZF4tLVFVKsZL7lX8L/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1kXkE_igaX-gn5N-ZF4tLVFVKsZL7lX8L" src="https://drive.google.com/thumbnail?id=1kXkE_igaX-gn5N-ZF4tLVFVKsZL7lX8L&amp;sz=w1800" alt="Veterinary Team in Position"><span>Veterinary Team in Position</span></a><a class="media-card" data-lightbox style="--accent:var(--mint)" href="https://drive.google.com/file/d/1q-uaKia0F8w-8I6zm6rOHb4xPfP464sY/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1q-uaKia0F8w-8I6zm6rOHb4xPfP464sY" src="https://drive.google.com/thumbnail?id=1q-uaKia0F8w-8I6zm6rOHb4xPfP464sY&amp;sz=w1800" alt="Team with Veterinary Surgeon"><span>Team with Veterinary Surgeon</span></a><a class="media-card" data-lightbox style="--accent:var(--mint)" href="https://drive.google.com/file/d/1HTJxFbuiy5VBpwTLBBNzAnAGL6laZ_iA/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1HTJxFbuiy5VBpwTLBBNzAnAGL6laZ_iA" src="https://drive.google.com/thumbnail?id=1HTJxFbuiy5VBpwTLBBNzAnAGL6laZ_iA&amp;sz=w1800" alt="Talking with Farmers and Understanding Their Issues"><span>Talking with Farmers and Understanding Their Issues</span></a></div>
+      </div></section>
     </article>
   </div>
 </section>
 
-<!-- =========================================================
-     02 · RESEARCH EXPERIENCE
-     No extra standalone generic Research Assistant card.
-     All three laboratory environments are Research Assistant roles.
-========================================================= -->
+<!-- 02 RESEARCH LAB EXPERIENCE — 3 LABS -->
 <section class="section">
-  <div class="section-title reveal" style="--accent:var(--violet)"><h2>Research Experience</h2></div>
+  <div class="section-title reveal" style="--accent:var(--violet)"><h2><span class="section-number">02</span><span>Research Lab Experience</span><span class="section-count">3 laboratory environments</span></h2></div>
+  <div class="count-strip"><span class="count-chip" style="--accent:var(--pink)"><b>01</b> Histology</span><span class="count-chip" style="--accent:var(--cyan)"><b>02</b> ACTG Dry Lab</span><span class="count-chip" style="--accent:var(--violet)"><b>03</b> Microbiology · MS</span></div>
   <div class="lab-grid">
-    <article class="lab-card reveal" style="--accent:var(--pink)">
-      <div class="lab-visual"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1OWFpsCJWHSTwsNG257-Xp9Iufp7H7SNH&sz=w1400" alt="Histology laboratory work"></div>
-      <div class="lab-body">
-        <div class="lab-role">Research Assistant · 01</div><h3>Histology Laboratory</h3>
-        <div class="lab-super"><span>Research Association</span>Dr. Md. Abdul Masum</div>
-        <div class="lab-period">July 2023 → February 2025</div><div class="lab-status">Completed</div>
-        <ul class="lab-points"><li>Practical histology laboratory exposure</li><li>Tissue processing and sectioning workflow</li><li>Microscopy-oriented sample preparation</li></ul>
-      </div>
-    </article>
-    <article class="lab-card reveal" style="--accent:var(--cyan)">
-      <div class="lab-visual"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1LdiohPBidbNRtrcoJOj259_mZE5XBpWf&sz=w1800" alt="ACTG research activity"></div>
-      <div class="lab-body">
-        <div class="lab-role">Research Assistant · 02</div><h3>ACTG · Dry Lab</h3>
-        <div class="lab-super"><span>Research Association</span>Dr. Delowar Hossain &amp; Dr. Jisan Ahmed</div>
-        <div class="lab-period">June 2025 → Present</div><div class="lab-status">Active</div>
-        <ul class="lab-points"><li>Research data collection and management</li><li>Data revision, quality control and collaborative analysis</li><li>Literature screening, meta-analysis and manuscript development</li><li>Scientific activities across epidemiology, infectious disease and One Health</li></ul>
-      </div>
-    </article>
-    <article class="lab-card reveal" style="--accent:var(--violet)">
-      <div class="lab-visual" aria-label="Microbiology laboratory"><div class="lab-art">⚗</div></div>
-      <div class="lab-body">
-        <div class="lab-role">Research Assistant · 03</div><h3>Microbiology Laboratory</h3>
-        <div class="lab-super"><span>Research Association</span>Dr. Mahfuzul Islam</div>
-        <div class="lab-period">July 2026 → Present</div><div class="lab-status">Active · MS</div>
-        <ul class="lab-points"><li>Current MS-level microbiology research environment</li><li>Laboratory-based research training and practical development</li><li>Microbiology-focused academic and scientific activities</li></ul>
-      </div>
-    </article>
+    <article class="lab-card reveal" style="--accent:var(--pink)"><div class="lab-visual"><img loading="lazy" data-drive-id="1OWFpsCJWHSTwsNG257-Xp9Iufp7H7SNH" src="https://drive.google.com/thumbnail?id=1OWFpsCJWHSTwsNG257-Xp9Iufp7H7SNH&amp;sz=w1400" alt="Histology laboratory work"></div><div class="lab-body"><div class="lab-role">Research Assistant · 01</div><h3>Histology Laboratory</h3><div class="lab-super"><span>Research Association</span>Dr. Md. Abdul Masum</div><div class="lab-period">July 2023 → February 2025</div><div class="lab-status">Completed</div><ul class="lab-points"><li>Practical histology laboratory exposure</li><li>Tissue processing and sectioning workflow</li><li>Microscopy-oriented sample preparation</li></ul></div></article>
+    <article class="lab-card reveal" style="--accent:var(--cyan)"><div class="lab-visual"><img loading="lazy" data-drive-id="1LdiohPBidbNRtrcoJOj259_mZE5XBpWf" src="https://drive.google.com/thumbnail?id=1LdiohPBidbNRtrcoJOj259_mZE5XBpWf&amp;sz=w1800" alt="ACTG research activity"></div><div class="lab-body"><div class="lab-role">Research Assistant · 02</div><h3>ACTG · Dry Lab</h3><div class="lab-super"><span>Research Association</span>Dr. Delowar Hossain &amp; Dr. Jisan Ahmed</div><div class="lab-period">June 2025 → Present</div><div class="lab-status">Active</div><ul class="lab-points"><li>Research data collection and management</li><li>Data revision, quality control and collaborative analysis</li><li>Literature screening, meta-analysis and manuscript development</li><li>Scientific activities across epidemiology, infectious disease and One Health</li></ul></div></article>
+    <article class="lab-card reveal" style="--accent:var(--violet)"><div class="lab-visual"><div class="lab-art">⚗</div></div><div class="lab-body"><div class="lab-role">Research Assistant · 03</div><h3>Microbiology Laboratory</h3><div class="lab-super"><span>Research Association</span>Dr. Mahfuzul Islam</div><div class="lab-period">July 2026 → Present</div><div class="lab-status">Active · MS</div><ul class="lab-points"><li>Current MS-level microbiology research environment</li><li>Laboratory-based research training and practical development</li><li>Microbiology-focused academic and scientific activities</li></ul></div></article>
   </div>
 </section>
 
-<!-- =========================================================
-     03 · TEACHING EXPERIENCE
-========================================================= -->
+<!-- 03 TEACHING -->
 <section class="section">
-
-  <div class="section-title reveal" style="--accent:var(--gold)">
-    <h2>Teaching Experience</h2>
-  </div>
-
-  <div class="role-grid teaching-grid">
-
-    <article class="role-card teaching-card reveal" style="--accent:var(--gold)">
-
-      <div class="role-top">
-        <img
-          class="role-logo"
-          loading="lazy"
-          src="https://drive.google.com/thumbnail?id=1_-6CpwgUTuyJOnA9HU7Z5cnW9yow41Zk&sz=w1400"
-          alt="AAC Coaching Center logo"
-          data-drive-id="1_-6CpwgUTuyJOnA9HU7Z5cnW9yow41Zk"
-        >
-
-        <div>
-          <h3>Biology Teacher &amp; Academic Mentor</h3>
-          <div class="role-org">AAC Coaching Center</div>
-        </div>
-      </div>
-
-      <p class="teaching-intro">
-        I have been involved in Biology teaching and academic mentoring for students from different institutes,
-        focusing on clear concept building, structured explanation and student-centered support. I have also
-        continued private tutoring since 2021, adapting lessons according to students’ academic level and needs.
-      </p>
-
-      <div class="teaching-highlights">
-
-        <div class="teaching-highlight" style="--accent:var(--gold)">
-          <strong>Biology Teaching</strong>
-          <span>Teaching Biology through structured lessons and understandable explanations.</span>
-        </div>
-
-        <div class="teaching-highlight" style="--accent:var(--cyan)">
-          <strong>Concept Building</strong>
-          <span>Breaking complex topics into clear steps to strengthen students’ understanding.</span>
-        </div>
-
-        <div class="teaching-highlight" style="--accent:var(--violet)">
-          <strong>Academic Mentoring</strong>
-          <span>Providing academic guidance, support and personalized explanation for learners.</span>
-        </div>
-
-      </div>
-
-      <span class="role-date">
-        December 2018 – Present · Private tutoring since 2021
-      </span>
-
-    </article>
-
-  </div>
-
+  <div class="section-title reveal" style="--accent:var(--gold)"><h2><span class="section-number">03</span><span>Teaching Experience</span><span class="section-count">1 experience</span></h2></div>
+  <div class="role-grid teaching-grid"><article class="role-card teaching-card reveal" style="--accent:var(--gold)"><div class="role-top"><img class="role-logo" loading="lazy" data-drive-id="1_-6CpwgUTuyJOnA9HU7Z5cnW9yow41Zk" src="https://drive.google.com/thumbnail?id=1_-6CpwgUTuyJOnA9HU7Z5cnW9yow41Zk&amp;sz=w1400" alt="AAC Coaching Center logo"><div><h3>Biology Teacher &amp; Academic Mentor</h3><div class="role-org">AAC Coaching Center</div></div></div><p class="teaching-intro">I have been involved in Biology teaching and academic mentoring for students from different institutes, focusing on clear concept building, structured explanation and student-centered support. I have also continued private tutoring since 2021, adapting lessons according to students’ academic level and needs.</p><div class="teaching-highlights"><div class="teaching-highlight" style="--accent:var(--gold)"><strong>Biology Teaching</strong><span>Teaching Biology through structured lessons and understandable explanations.</span></div><div class="teaching-highlight" style="--accent:var(--cyan)"><strong>Concept Building</strong><span>Breaking complex topics into clear steps to strengthen students’ understanding.</span></div><div class="teaching-highlight" style="--accent:var(--violet)"><strong>Academic Mentoring</strong><span>Providing academic guidance, support and personalized explanation for learners.</span></div></div><span class="role-date">December 2018 – Present · Private tutoring since 2021</span></article></div>
 </section>
 
-<!-- =========================================================
-     04 · LEADERSHIP EXPERIENCE
-========================================================= -->
+<!-- 04 LEADERSHIP — 3 CLUB/ORGANIZATION ENTRIES -->
 <section class="section">
-
-  <div class="section-title reveal" style="--accent:var(--pink)">
-    <h2>Leadership Experience</h2>
-  </div>
-
+  <div class="section-title reveal" style="--accent:var(--pink)"><h2><span class="section-number">04</span><span>Leadership Experience</span><span class="section-count">3 leadership roles</span></h2></div>
+  <p class="section-lead">Club cards use the supplied cover photo where one was provided. Press the evidence drawer to reveal every supplied image, supporting document and official activity link.</p>
   <div class="role-grid leadership-grid">
 
-    <!-- IVSA -->
-    <article class="role-card reveal" style="--accent:var(--cyan)">
-      <div class="role-top">
-        <img
-          class="role-logo"
-          loading="lazy"
-          src="https://drive.google.com/thumbnail?id=1gzl0m2GK3mV9Qau268rZuz1cbUfdi0tO&sz=w1400"
-          alt="IVSA Bangladesh SAU Dhaka official logo"
-          data-drive-id="1gzl0m2GK3mV9Qau268rZuz1cbUfdi0tO"
-        >
-        <div>
-          <h3>President</h3>
-          <div class="role-org">International Veterinary Students’ Association Bangladesh – SAU Dhaka</div>
-        </div>
-      </div>
-      <p class="role-desc">
-        Student leadership, professional development and veterinary academic engagement, including coordination
-        of student activities and professional initiatives.
-      </p>
-      <span class="role-date">2025 – Present</span>
+    <article class="club-card reveal" style="--accent:var(--cyan)">
+      <div class="club-head"><div class="role-logo" style="padding:0;overflow:hidden"><img style="width:100%;height:100%;object-fit:contain" loading="lazy" data-drive-id="1gzl0m2GK3mV9Qau268rZuz1cbUfdi0tO" src="https://drive.google.com/thumbnail?id=1gzl0m2GK3mV9Qau268rZuz1cbUfdi0tO&amp;sz=w1400" alt="IVSA Bangladesh SAU Dhaka official logo"></div><div><div class="club-kicker"><span class="num">01</span> Leadership Role</div><h3 class="club-title">President</h3><div class="club-org">International Veterinary Students’ Association Bangladesh – SAU Dhaka</div></div></div>
+      <div class="cover-stage" style="--accent:var(--cyan)"><a data-lightbox href="https://drive.google.com/file/d/1ejI94LYEdGxT28G3OC_dllHBxnK2ylcu/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1ejI94LYEdGxT28G3OC_dllHBxnK2ylcu" src="https://drive.google.com/thumbnail?id=1ejI94LYEdGxT28G3OC_dllHBxnK2ylcu&amp;sz=w2000" alt="IVSA Bangladesh – SAU Dhaka Committee Cover Photo"><div class="cover-label"><span>IVSA Bangladesh – SAU Dhaka Committee Cover Photo</span><b>Click to enlarge ↗</b></div></a></div>
+      <div class="club-meta"><span class="tag">2025 – Present</span><span class="club-badge">President</span><span class="club-badge">Official Committee</span></div>
+      <details class="evidence"><summary class="club-toggle">Press to view all IVSA photos &amp; evidence <span>+</span></summary><div class="evidence-body"><div class="evidence-head">The source states that the committee evidence identifies you as President. The supplied cover photo, official logo, committee post and IVSA SAU Facebook page are included here.</div><div class="proof-row"><a class="proof" style="--accent:var(--cyan)" href="https://www.facebook.com/share/p/1NU1Fyxd8i/" target="_blank" rel="noopener">↗ Official Committee Post</a><a class="proof" style="--accent:var(--blue)" href="https://www.facebook.com/profile.php?id=61575593760632" target="_blank" rel="noopener">↗ IVSA SAU Facebook Page</a></div><div class="evidence-grid"><a class="media-card" data-lightbox style="--accent:var(--cyan)" href="https://drive.google.com/file/d/1ejI94LYEdGxT28G3OC_dllHBxnK2ylcu/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1ejI94LYEdGxT28G3OC_dllHBxnK2ylcu" src="https://drive.google.com/thumbnail?id=1ejI94LYEdGxT28G3OC_dllHBxnK2ylcu&amp;sz=w1800" alt="IVSA Committee Cover Photo"><span>IVSA Committee Cover Photo</span></a><a class="media-card" data-lightbox style="--accent:var(--cyan)" href="https://drive.google.com/file/d/1gzl0m2GK3mV9Qau268rZuz1cbUfdi0tO/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1gzl0m2GK3mV9Qau268rZuz1cbUfdi0tO" src="https://drive.google.com/thumbnail?id=1gzl0m2GK3mV9Qau268rZuz1cbUfdi0tO&amp;sz=w1400" alt="IVSA Official Logo"><span>IVSA Official Logo</span></a></div></div></details>
     </article>
 
-    <!-- SAURC -->
-    <article class="role-card reveal" style="--accent:var(--orange)">
-      <div class="role-top">
-        <img
-          class="role-logo"
-          loading="lazy"
-          src="https://drive.google.com/thumbnail?id=1L7CXyTfMsIFjfL91_hnQWDYzDJCmwKws&sz=w1400"
-          alt="SAU Animal Rescue Community official logo"
-          data-drive-id="1L7CXyTfMsIFjfL91_hnQWDYzDJCmwKws"
-        >
-        <div>
-          <h3>Founder &amp; President</h3>
-          <div class="role-org">SAU Animal Rescue Community (SAURC)</div>
-        </div>
-      </div>
-      <p class="role-desc">
-        Founded and led a student initiative focused on animal rescue, treatment, welfare activities and
-        responsible animal-care awareness on and around campus.
-      </p>
-      <span class="role-date">November 2024 – Present</span>
+    <article class="club-card reveal" style="--accent:var(--orange)">
+      <div class="club-head"><div class="role-logo" style="padding:0;overflow:hidden"><img style="width:100%;height:100%;object-fit:contain" loading="lazy" data-drive-id="1L7CXyTfMsIFjfL91_hnQWDYzDJCmwKws" src="https://drive.google.com/thumbnail?id=1L7CXyTfMsIFjfL91_hnQWDYzDJCmwKws&amp;sz=w1400" alt="SAU Rescue Community official logo"></div><div><div class="club-kicker"><span class="num">02</span> Leadership Role</div><h3 class="club-title">Founder &amp; President</h3><div class="club-org">SAU Rescue Community (SAURC)</div></div></div>
+      <div class="cover-stage" style="--accent:var(--orange)"><a data-lightbox href="https://drive.google.com/file/d/1EQm24QeB3VEvrZdWm8TGbYf0ICjNfleY/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1EQm24QeB3VEvrZdWm8TGbYf0ICjNfleY" src="https://drive.google.com/thumbnail?id=1EQm24QeB3VEvrZdWm8TGbYf0ICjNfleY&amp;sz=w2000" alt="SAU Rescue Community · Official Cover Photo"><div class="cover-label"><span>SAU Rescue Community · Official Cover Photo</span><b>Click to enlarge ↗</b></div></a></div>
+      <div class="club-meta"><span class="tag">November 2024 – Present</span><span class="tag">Sher-e-Bangla Agricultural University</span><span class="club-badge">Founder</span><span class="club-badge">President</span></div>
+      <details class="evidence"><summary class="club-toggle">Press to view all SAURC photos, documents &amp; evidence <span>+</span></summary><div class="evidence-body"><div class="evidence-head">This drawer contains the supplied SAURC cover, founding-members photo, logo, press clipping and all 13 rescue-mission photos. Policy guidelines and the official committee file are linked as evidence documents.</div><div class="proof-row"><a class="proof" style="--accent:var(--orange)" href="https://drive.google.com/file/d/1SIlZvermRYEjHOual5o298GZDrFKRvWT/view?usp=sharing" target="_blank" rel="noopener">↗ Policy Guidelines</a><a class="proof" style="--accent:var(--pink)" href="https://drive.google.com/file/d/1Jn72m4v-3NoGevRBwdNB-n3_p_pVcph6/view?usp=sharing" target="_blank" rel="noopener">↗ Official Committee</a><a class="proof" style="--accent:var(--gold)" href="https://www.kalerkantho.com/online/campus/2025/08/05/1557915" target="_blank" rel="noopener">↗ Kaler Kantho Feature</a><a class="proof" style="--accent:var(--cyan)" href="https://www.facebook.com/profile.php?id=61570649810309" target="_blank" rel="noopener">↗ SAURC Facebook Page</a><a class="proof" style="--accent:var(--violet)" href="https://www.facebook.com/share/v/19XTTB49jH/" target="_blank" rel="noopener">↗ World Veterinary Day 2025</a><a class="proof" style="--accent:var(--blue)" href="https://www.facebook.com/share/v/14rURAGsoTT/" target="_blank" rel="noopener">↗ Watch Me Talking</a><a class="proof" style="--accent:var(--pink)" href="https://www.facebook.com/share/v/19P4zRtaNM/" target="_blank" rel="noopener">↗ Free Vaccination Campaign</a></div><div class="evidence-grid"><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/1EQm24QeB3VEvrZdWm8TGbYf0ICjNfleY/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1EQm24QeB3VEvrZdWm8TGbYf0ICjNfleY" src="https://drive.google.com/thumbnail?id=1EQm24QeB3VEvrZdWm8TGbYf0ICjNfleY&amp;sz=w1800" alt="SAURC Official Cover Photo"><span>SAURC Official Cover Photo</span></a><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/1eAjQssVQ6ZvBdqqzgD18BDCltNZ-Mik9/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1eAjQssVQ6ZvBdqqzgD18BDCltNZ-Mik9" src="https://drive.google.com/thumbnail?id=1eAjQssVQ6ZvBdqqzgD18BDCltNZ-Mik9&amp;sz=w1800" alt="SAURC Founding Members"><span>SAURC Founding Members</span></a><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/1L7CXyTfMsIFjfL91_hnQWDYzDJCmwKws/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1L7CXyTfMsIFjfL91_hnQWDYzDJCmwKws" src="https://drive.google.com/thumbnail?id=1L7CXyTfMsIFjfL91_hnQWDYzDJCmwKws&amp;sz=w1400" alt="SAURC Club Logo"><span>SAURC Club Logo</span></a><a class="media-card" data-lightbox style="--accent:var(--gold)" href="https://drive.google.com/file/d/1J0yQjbRmMi8YTbRYwpXjmCbnSGbHSIzu/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1J0yQjbRmMi8YTbRYwpXjmCbnSGbHSIzu" src="https://drive.google.com/thumbnail?id=1J0yQjbRmMi8YTbRYwpXjmCbnSGbHSIzu&amp;sz=w1600" alt="Kaler Kantho Feature · Paper Copy"><span>Kaler Kantho Feature · Paper Copy</span></a></div><div class="media-grid compact-gallery" style="--accent:var(--orange)"><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/11X1lnmmumolfApt23P5hKKXMEYzU6aKt/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="11X1lnmmumolfApt23P5hKKXMEYzU6aKt" src="https://drive.google.com/thumbnail?id=11X1lnmmumolfApt23P5hKKXMEYzU6aKt&amp;sz=w1800" alt="SAURC Rescue Mission · Activity 01"><span>SAURC Rescue Mission · Activity 01</span></a><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/13-i8GVclm06a9Qyfs3ZLGMYWyx-Gwnik/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="13-i8GVclm06a9Qyfs3ZLGMYWyx-Gwnik" src="https://drive.google.com/thumbnail?id=13-i8GVclm06a9Qyfs3ZLGMYWyx-Gwnik&amp;sz=w1800" alt="SAURC Rescue Mission · Activity 02"><span>SAURC Rescue Mission · Activity 02</span></a><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/15K7eUd-n7drcGQeLW0a2jbQDVum1bMBL/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="15K7eUd-n7drcGQeLW0a2jbQDVum1bMBL" src="https://drive.google.com/thumbnail?id=15K7eUd-n7drcGQeLW0a2jbQDVum1bMBL&amp;sz=w1800" alt="SAURC Rescue Mission · Activity 03"><span>SAURC Rescue Mission · Activity 03</span></a><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/1CMn4cLn4CeHxVT1gw_F0SSeaCWkkQf6U/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1CMn4cLn4CeHxVT1gw_F0SSeaCWkkQf6U" src="https://drive.google.com/thumbnail?id=1CMn4cLn4CeHxVT1gw_F0SSeaCWkkQf6U&amp;sz=w1800" alt="SAURC Rescue Mission · Activity 04"><span>SAURC Rescue Mission · Activity 04</span></a><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/1GDgYUeoNLaxz9Yj6KQVjAmgab5YLviHT/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1GDgYUeoNLaxz9Yj6KQVjAmgab5YLviHT" src="https://drive.google.com/thumbnail?id=1GDgYUeoNLaxz9Yj6KQVjAmgab5YLviHT&amp;sz=w1800" alt="SAURC Rescue Mission · Activity 05"><span>SAURC Rescue Mission · Activity 05</span></a><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/1Nh1588uNLrm8Io8WtIQYNxtRR-2-wIEb/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1Nh1588uNLrm8Io8WtIQYNxtRR-2-wIEb" src="https://drive.google.com/thumbnail?id=1Nh1588uNLrm8Io8WtIQYNxtRR-2-wIEb&amp;sz=w1800" alt="SAURC Rescue Mission · Activity 06"><span>SAURC Rescue Mission · Activity 06</span></a><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/1SeywzTYBiTQzK3Y58kr2FadHSBHRGHO2/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1SeywzTYBiTQzK3Y58kr2FadHSBHRGHO2" src="https://drive.google.com/thumbnail?id=1SeywzTYBiTQzK3Y58kr2FadHSBHRGHO2&amp;sz=w1800" alt="SAURC Rescue Mission · Activity 07"><span>SAURC Rescue Mission · Activity 07</span></a><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/1YOP0tz-M-EfhtBOPp508drEZYKo5T6Xp/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1YOP0tz-M-EfhtBOPp508drEZYKo5T6Xp" src="https://drive.google.com/thumbnail?id=1YOP0tz-M-EfhtBOPp508drEZYKo5T6Xp&amp;sz=w1800" alt="SAURC Rescue Mission · Activity 08"><span>SAURC Rescue Mission · Activity 08</span></a><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/1lXvWS-4rkoeEX_Brg9J4vxDtvC5bU-F1/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1lXvWS-4rkoeEX_Brg9J4vxDtvC5bU-F1" src="https://drive.google.com/thumbnail?id=1lXvWS-4rkoeEX_Brg9J4vxDtvC5bU-F1&amp;sz=w1800" alt="SAURC Rescue Mission · Activity 09"><span>SAURC Rescue Mission · Activity 09</span></a><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/1mj47SuzLsH80M_Nl7e2bAIKuJcJiFoX4/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1mj47SuzLsH80M_Nl7e2bAIKuJcJiFoX4" src="https://drive.google.com/thumbnail?id=1mj47SuzLsH80M_Nl7e2bAIKuJcJiFoX4&amp;sz=w1800" alt="SAURC Rescue Mission · Activity 10"><span>SAURC Rescue Mission · Activity 10</span></a><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/1oQ1MEBDqd3fb5sN4C_7gybWPNGiUn7oI/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1oQ1MEBDqd3fb5sN4C_7gybWPNGiUn7oI" src="https://drive.google.com/thumbnail?id=1oQ1MEBDqd3fb5sN4C_7gybWPNGiUn7oI&amp;sz=w1800" alt="SAURC Rescue Mission · Activity 11"><span>SAURC Rescue Mission · Activity 11</span></a><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/1rWDY7sm08YDD1RokKNAGLQcTnYEK-wXh/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1rWDY7sm08YDD1RokKNAGLQcTnYEK-wXh" src="https://drive.google.com/thumbnail?id=1rWDY7sm08YDD1RokKNAGLQcTnYEK-wXh&amp;sz=w1800" alt="SAURC Rescue Mission · Activity 12"><span>SAURC Rescue Mission · Activity 12</span></a><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/1tpJ6z_6ZrdtzJskIqZK5iy5_vasyeT3E/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1tpJ6z_6ZrdtzJskIqZK5iy5_vasyeT3E" src="https://drive.google.com/thumbnail?id=1tpJ6z_6ZrdtzJskIqZK5iy5_vasyeT3E&amp;sz=w1800" alt="SAURC Rescue Mission · Activity 13"><span>SAURC Rescue Mission · Activity 13</span></a></div></div></details>
     </article>
 
-    <!-- SVSA -->
-    <article class="role-card reveal" style="--accent:var(--violet)">
-      <div class="role-top">
-        <img
-          class="role-logo"
-          loading="lazy"
-          src="https://drive.google.com/thumbnail?id=1BtpFyJYoRydbK7vSIi5WcfCZkEGvIQhl&sz=w1400"
-          alt="Sirajganj Veterinary Students Association official logo"
-          data-drive-id="1BtpFyJYoRydbK7vSIi5WcfCZkEGvIQhl"
-        >
-        <div>
-          <h3>Public Relations Secretary</h3>
-          <div class="role-org">Sirajganj Veterinary Students’ Association (SVSA)</div>
-        </div>
-      </div>
-      <p class="role-desc">
-        Communication, public relations and student organizational activities, supporting information sharing
-        and organizational coordination.
-      </p>
-      <span class="role-date">2023 – Present</span>
+    <article class="club-card reveal" style="--accent:var(--violet)">
+      <div class="club-head"><div class="role-logo" style="padding:0;overflow:hidden"><img style="width:100%;height:100%;object-fit:contain" loading="lazy" data-drive-id="1BtpFyJYoRydbK7vSIi5WcfCZkEGvIQhl" src="https://drive.google.com/thumbnail?id=1BtpFyJYoRydbK7vSIi5WcfCZkEGvIQhl&amp;sz=w1400" alt="Sirajganj Veterinary Students Association official logo"></div><div><div class="club-kicker"><span class="num">03</span> Leadership Role</div><h3 class="club-title">Public Relations Secretary</h3><div class="club-org">Sirajganj Veterinary Students’ Association (SVSA)</div></div></div>
+      <div class="club-meta"><span class="tag">2023 – Present</span><span class="club-badge">Public Relations</span></div>
+      <details class="evidence"><summary class="club-toggle">Press to view all SVSA photos &amp; role evidence <span>+</span></summary><div class="evidence-body"><div class="evidence-head">The updated source contains the SVSA logo, yearly meeting photo, the image showing your name and role in the committee, and the official committee post.</div><div class="proof-row"><a class="proof" style="--accent:var(--violet)" href="https://www.facebook.com/share/p/19nXJujkS6/" target="_blank" rel="noopener">↗ Official Committee Post</a></div><div class="evidence-grid"><a class="media-card" data-lightbox style="--accent:var(--violet)" href="https://drive.google.com/file/d/1BtpFyJYoRydbK7vSIi5WcfCZkEGvIQhl/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1BtpFyJYoRydbK7vSIi5WcfCZkEGvIQhl" src="https://drive.google.com/thumbnail?id=1BtpFyJYoRydbK7vSIi5WcfCZkEGvIQhl&amp;sz=w1400" alt="SVSA Official Logo"><span>SVSA Official Logo</span></a><a class="media-card" data-lightbox style="--accent:var(--violet)" href="https://drive.google.com/file/d/1CkWv5MsB4KMUkXl6DDreNHMz8TCPE7-0/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1CkWv5MsB4KMUkXl6DDreNHMz8TCPE7-0" src="https://drive.google.com/thumbnail?id=1CkWv5MsB4KMUkXl6DDreNHMz8TCPE7-0&amp;sz=w1800" alt="Yearly Meeting with Veterinarians"><span>Yearly Meeting with Veterinarians</span></a><a class="media-card" data-lightbox style="--accent:var(--violet)" href="https://drive.google.com/file/d/1WZLs7GWH02MnOJt2Ib--kHbDD-foUwzN/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1WZLs7GWH02MnOJt2Ib--kHbDD-foUwzN" src="https://drive.google.com/thumbnail?id=1WZLs7GWH02MnOJt2Ib--kHbDD-foUwzN&amp;sz=w1800" alt="Name in Committee &amp; Role"><span>Name in Committee &amp; Role</span></a></div></div></details>
     </article>
-
-    <!-- Rover Scout -->
-    <article class="role-card reveal" style="--accent:var(--blue)">
-      <div class="role-top">
-        <img
-          class="role-logo"
-          loading="lazy"
-          src="https://drive.google.com/thumbnail?id=1DRtqlcfGmwR7OvGqe_OYR5o5OxrGLWBW&sz=w1400"
-          alt="Rover Scout official logo"
-          data-drive-id="1DRtqlcfGmwR7OvGqe_OYR5o5OxrGLWBW"
-        >
-        <div>
-          <h3>Member</h3>
-          <div class="role-org">Rover Scout · Sher-e-Bangla Agricultural University</div>
-        </div>
-      </div>
-      <p class="role-desc">
-        Student volunteer and extracurricular engagement through university Rover Scout activities,
-        contributing to community-oriented initiatives.
-      </p>
-      <span class="role-date">2020 – Present</span>
-    </article>
-
   </div>
-
 </section>
 
-<!-- =========================================================
-     05 · ANIMAL WELFARE & COMMUNITY INITIATIVE
-     SAURC is separated from leadership as requested.
-========================================================= -->
+<!-- 05 ANIMAL WELFARE — 1 INITIATIVE -->
 <section class="section">
-  <div class="section-title reveal" style="--accent:var(--orange)"><h2>Animal Welfare &amp; Community Initiative</h2></div>
+  <div class="section-title reveal" style="--accent:var(--orange)"><h2><span class="section-number">05</span><span>Animal Welfare &amp; Community Initiative</span><span class="section-count">1 initiative</span></h2></div>
   <div class="initiative-layout">
     <article class="initiative-box reveal" style="--accent:var(--orange)">
-      <div class="kicker"><span class="num">01</span> Animal Welfare Initiative</div>
-      <h3>Founder &amp; President</h3>
-      <div class="org">SAU Rescue Community (SAURC)</div>
-      <div class="meta"><span class="tag">November 2024 – Present</span><span class="tag">Sher-e-Bangla Agricultural University</span></div>
-      <p class="copy">Founded and led a student initiative focused on animal rescue and welfare activities for campus dogs and cats.</p>
-      <ul class="initiative-points">
-        <li>Animal rescue, treatment and rehabilitation support</li>
-        <li>Vaccination and welfare activities</li>
-        <li>Food, shelter and medical assistance</li>
-        <li>Student-volunteer coordination and responsible animal-care awareness</li>
-      </ul>
-      <div class="actions">
-        <a class="btn" style="--accent:var(--orange)" href="https://www.kalerkantho.com/online/campus/2025/08/05/1557915" target="_blank" rel="noopener">Read Kaler Kantho Feature ↗</a>
-        <a class="btn" style="--accent:var(--cyan)" href="https://www.facebook.com/profile.php?id=61570649810309" target="_blank" rel="noopener">SAURC Facebook Page ↗</a>
-        <a class="btn" style="--accent:var(--pink)" href="https://www.facebook.com/share/v/19P4zRtaNM/" target="_blank" rel="noopener">Free Vaccination Campaign ↗</a>
-      </div>
+      <div class="kicker"><span class="num">01</span> Animal Welfare Initiative</div><h3>Founder &amp; President</h3><div class="org">SAU Rescue Community (SAURC)</div>
+      <div class="meta"><span class="tag">November 2024 – Present</span><span class="tag">Associated with Sher-e-Bangla Agricultural University</span><span class="tag">Student-led animal welfare organization</span></div>
+      <p class="copy">SAU Rescue Community is a student-led animal welfare organization dedicated to the care, treatment and well-being of campus dogs and cats. Its mission focuses on medical assistance, vaccinations, food, shelter and responsible animal-care awareness.</p>
+      <ul class="initiative-points"><li>Animal rescue, treatment and rehabilitation support</li><li>Vaccination and welfare activities</li><li>Food, shelter and medical assistance</li><li>Student-volunteer coordination and responsible animal-care awareness</li><li>Collaboration with veterinarians, volunteers and animal lovers</li></ul>
+      <div class="actions"><a class="proof" style="--accent:var(--orange)" href="https://www.kalerkantho.com/online/campus/2025/08/05/1557915" target="_blank" rel="noopener">↗ Read Kaler Kantho Feature</a><a class="proof" style="--accent:var(--cyan)" href="https://www.facebook.com/profile.php?id=61570649810309" target="_blank" rel="noopener">↗ SAURC Facebook Page</a><a class="proof" style="--accent:var(--pink)" href="https://www.facebook.com/share/v/19P4zRtaNM/" target="_blank" rel="noopener">↗ Free Vaccination Campaign</a></div>
+      <details class="evidence"><summary class="club-toggle">Press to open the complete 13-photo rescue mission gallery <span>+</span></summary><div class="evidence-body"><div class="evidence-head">All 13 rescue-mission photos supplied in the updated source are included below. Captions are intentionally generic because the source did not provide individual photo descriptions.</div><div class="media-grid compact-gallery" style="--accent:var(--orange)"><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/11X1lnmmumolfApt23P5hKKXMEYzU6aKt/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="11X1lnmmumolfApt23P5hKKXMEYzU6aKt" src="https://drive.google.com/thumbnail?id=11X1lnmmumolfApt23P5hKKXMEYzU6aKt&amp;sz=w1800" alt="SAURC Rescue Mission · Activity 01"><span>SAURC Rescue Mission · Activity 01</span></a><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/13-i8GVclm06a9Qyfs3ZLGMYWyx-Gwnik/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="13-i8GVclm06a9Qyfs3ZLGMYWyx-Gwnik" src="https://drive.google.com/thumbnail?id=13-i8GVclm06a9Qyfs3ZLGMYWyx-Gwnik&amp;sz=w1800" alt="SAURC Rescue Mission · Activity 02"><span>SAURC Rescue Mission · Activity 02</span></a><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/15K7eUd-n7drcGQeLW0a2jbQDVum1bMBL/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="15K7eUd-n7drcGQeLW0a2jbQDVum1bMBL" src="https://drive.google.com/thumbnail?id=15K7eUd-n7drcGQeLW0a2jbQDVum1bMBL&amp;sz=w1800" alt="SAURC Rescue Mission · Activity 03"><span>SAURC Rescue Mission · Activity 03</span></a><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/1CMn4cLn4CeHxVT1gw_F0SSeaCWkkQf6U/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1CMn4cLn4CeHxVT1gw_F0SSeaCWkkQf6U" src="https://drive.google.com/thumbnail?id=1CMn4cLn4CeHxVT1gw_F0SSeaCWkkQf6U&amp;sz=w1800" alt="SAURC Rescue Mission · Activity 04"><span>SAURC Rescue Mission · Activity 04</span></a><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/1GDgYUeoNLaxz9Yj6KQVjAmgab5YLviHT/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1GDgYUeoNLaxz9Yj6KQVjAmgab5YLviHT" src="https://drive.google.com/thumbnail?id=1GDgYUeoNLaxz9Yj6KQVjAmgab5YLviHT&amp;sz=w1800" alt="SAURC Rescue Mission · Activity 05"><span>SAURC Rescue Mission · Activity 05</span></a><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/1Nh1588uNLrm8Io8WtIQYNxtRR-2-wIEb/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1Nh1588uNLrm8Io8WtIQYNxtRR-2-wIEb" src="https://drive.google.com/thumbnail?id=1Nh1588uNLrm8Io8WtIQYNxtRR-2-wIEb&amp;sz=w1800" alt="SAURC Rescue Mission · Activity 06"><span>SAURC Rescue Mission · Activity 06</span></a><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/1SeywzTYBiTQzK3Y58kr2FadHSBHRGHO2/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1SeywzTYBiTQzK3Y58kr2FadHSBHRGHO2" src="https://drive.google.com/thumbnail?id=1SeywzTYBiTQzK3Y58kr2FadHSBHRGHO2&amp;sz=w1800" alt="SAURC Rescue Mission · Activity 07"><span>SAURC Rescue Mission · Activity 07</span></a><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/1YOP0tz-M-EfhtBOPp508drEZYKo5T6Xp/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1YOP0tz-M-EfhtBOPp508drEZYKo5T6Xp" src="https://drive.google.com/thumbnail?id=1YOP0tz-M-EfhtBOPp508drEZYKo5T6Xp&amp;sz=w1800" alt="SAURC Rescue Mission · Activity 08"><span>SAURC Rescue Mission · Activity 08</span></a><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/1lXvWS-4rkoeEX_Brg9J4vxDtvC5bU-F1/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1lXvWS-4rkoeEX_Brg9J4vxDtvC5bU-F1" src="https://drive.google.com/thumbnail?id=1lXvWS-4rkoeEX_Brg9J4vxDtvC5bU-F1&amp;sz=w1800" alt="SAURC Rescue Mission · Activity 09"><span>SAURC Rescue Mission · Activity 09</span></a><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/1mj47SuzLsH80M_Nl7e2bAIKuJcJiFoX4/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1mj47SuzLsH80M_Nl7e2bAIKuJcJiFoX4" src="https://drive.google.com/thumbnail?id=1mj47SuzLsH80M_Nl7e2bAIKuJcJiFoX4&amp;sz=w1800" alt="SAURC Rescue Mission · Activity 10"><span>SAURC Rescue Mission · Activity 10</span></a><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/1oQ1MEBDqd3fb5sN4C_7gybWPNGiUn7oI/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1oQ1MEBDqd3fb5sN4C_7gybWPNGiUn7oI" src="https://drive.google.com/thumbnail?id=1oQ1MEBDqd3fb5sN4C_7gybWPNGiUn7oI&amp;sz=w1800" alt="SAURC Rescue Mission · Activity 11"><span>SAURC Rescue Mission · Activity 11</span></a><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/1rWDY7sm08YDD1RokKNAGLQcTnYEK-wXh/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1rWDY7sm08YDD1RokKNAGLQcTnYEK-wXh" src="https://drive.google.com/thumbnail?id=1rWDY7sm08YDD1RokKNAGLQcTnYEK-wXh&amp;sz=w1800" alt="SAURC Rescue Mission · Activity 12"><span>SAURC Rescue Mission · Activity 12</span></a><a class="media-card" data-lightbox style="--accent:var(--orange)" href="https://drive.google.com/file/d/1tpJ6z_6ZrdtzJskIqZK5iy5_vasyeT3E/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1tpJ6z_6ZrdtzJskIqZK5iy5_vasyeT3E" src="https://drive.google.com/thumbnail?id=1tpJ6z_6ZrdtzJskIqZK5iy5_vasyeT3E&amp;sz=w1800" alt="SAURC Rescue Mission · Activity 13"><span>SAURC Rescue Mission · Activity 13</span></a></div></div></details>
     </article>
-    <div class="initiative-media reveal" style="--accent:var(--orange)">
-      <a data-lightbox href="https://drive.google.com/file/d/1J0yQjbRmMi8YTbRYwpXjmCbnSGbHSIzu/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1J0yQjbRmMi8YTbRYwpXjmCbnSGbHSIzu&sz=w1400" alt="SAU Rescue Community featured in Kaler Kantho"><div class="photo-caption">SAU Rescue Community featured in Kaler Kantho · Click to enlarge</div></a>
-    </div>
+    <div class="initiative-media reveal" style="--accent:var(--orange)"><a data-lightbox href="https://drive.google.com/file/d/1J0yQjbRmMi8YTbRYwpXjmCbnSGbHSIzu/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1J0yQjbRmMi8YTbRYwpXjmCbnSGbHSIzu" src="https://drive.google.com/thumbnail?id=1J0yQjbRmMi8YTbRYwpXjmCbnSGbHSIzu&amp;sz=w1800" alt="SAU Rescue Community featured in Kaler Kantho"><div class="photo-caption">SAU Rescue Community featured in Kaler Kantho · Click to enlarge</div></a><div class="actions"><a class="proof" style="--accent:var(--violet)" href="https://www.facebook.com/share/v/19XTTB49jH/" target="_blank" rel="noopener">↗ World Veterinary Day 2025</a><a class="proof" style="--accent:var(--blue)" href="https://www.facebook.com/share/v/14rURAGsoTT/" target="_blank" rel="noopener">↗ Watch Me Talking</a></div></div>
   </div>
 </section>
 
-<!-- =========================================================
-     06 · VOLUNTEERING EXPERIENCE
-========================================================= -->
+<!-- 06 VOLUNTEERING — 4 ENTRIES -->
 <section class="section">
-  <div class="section-title reveal" style="--accent:var(--mint)"><h2>Volunteering Experience</h2></div>
+  <div class="section-title reveal" style="--accent:var(--mint)"><h2><span class="section-number">06</span><span>Volunteering Experience</span><span class="section-count">4 volunteer experiences</span></h2></div>
+  <div class="count-strip"><span class="count-chip" style="--accent:var(--gold)"><b>01</b> BVO</span><span class="count-chip" style="--accent:var(--blue)"><b>02</b> Rover Scouts</span><span class="count-chip" style="--accent:var(--cyan)"><b>03</b> Volunteer for Bangladesh</span><span class="count-chip" style="--accent:var(--violet)"><b>04</b> BVA Debate</span></div>
   <div class="timeline">
 
-    <!-- BVO -->
-    <article class="timeline-item reveal" style="--accent:var(--gold)">
-      <div class="rail"><i class="node"></i><div class="time">Oct 2022</div></div>
-      <section class="card"><div class="card-inner">
-        <div class="kicker"><span class="num">01</span> Event Organization</div><h3>Event Organizer</h3><div class="org">Bangladesh Veterinary Olympiad</div>
-        <div class="meta"><span class="tag">October 2022</span><span class="tag">Sher-e-Bangla Agricultural University</span></div>
-        <ul class="points"><li>Supported campus event arrangements</li><li>Guided attendants and helped ensure smooth participation</li></ul>
-        <div class="simple-gallery" style="--accent:var(--gold)"><a class="media-card" data-lightbox href="https://drive.google.com/file/d/1RTkDUbOVRBP22yBpkfDnE2-2H0yaAXm6/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1RTkDUbOVRBP22yBpkfDnE2-2H0yaAXm6&sz=w1400" alt="Bangladesh Veterinary Olympiad volunteers"><span>Volunteer team · Click to enlarge</span></a></div>
-      </div></section>
-    </article>
+    <article class="timeline-item reveal" id="tl-vol-1" style="--accent:var(--gold)"><div class="rail"><i class="node"></i><div class="time">Oct 2022</div></div><section class="card"><div class="card-inner"><div class="kicker"><span class="num">01</span> Event Organization</div><h3>Event Organizer</h3><div class="org">Bangladesh Veterinary Olympiad</div><div class="meta"><span class="tag">October 2022</span><span class="tag">Sher-e-Bangla Agricultural University</span></div><div class="ww"><div class="ww-box" style="--accent:var(--gold)"><span class="ww-ico"><svg viewBox="0 0 24 24"><path d="M7 2v3M17 2v3M3 9h18M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg></span><div><small>When</small><b>October 2022</b></div></div><div class="ww-box ww-where" style="--accent:var(--gold)"><span class="ww-ico"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg></span><div><small>Site</small><b>Sher-e-Bangla Agricultural University</b></div></div></div><p class="copy">Helped arrange the event on the Sher-e-Bangla Agricultural University campus with proper arrangements and assisted attendants with directions and support.</p><div class="media-grid compact-gallery" style="--accent:var(--gold)"><a class="media-card" data-lightbox style="--accent:var(--gold)" href="https://drive.google.com/file/d/1RTkDUbOVRBP22yBpkfDnE2-2H0yaAXm6/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1RTkDUbOVRBP22yBpkfDnE2-2H0yaAXm6" src="https://drive.google.com/thumbnail?id=1RTkDUbOVRBP22yBpkfDnE2-2H0yaAXm6&amp;sz=w1800" alt="Bangladesh Veterinary Olympiad · Volunteer Team"><span>Bangladesh Veterinary Olympiad · Volunteer Team</span></a><a class="media-card" data-lightbox style="--accent:var(--gold)" href="https://drive.google.com/file/d/1TjWgJEaEDkda9GGJq7Aapim20OKs6c5l/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1TjWgJEaEDkda9GGJq7Aapim20OKs6c5l" src="https://drive.google.com/thumbnail?id=1TjWgJEaEDkda9GGJq7Aapim20OKs6c5l&amp;sz=w1800" alt="Bangladesh Veterinary Olympiad · Certificate"><span>Bangladesh Veterinary Olympiad · Certificate</span></a></div><div class="actions"><a class="proof" style="--accent:var(--gold)" href="https://www.linkedin.com/in/ahmed-ishtiak-nirob/details/volunteer-experiences/edit/forms/424590642/" target="_blank" rel="noopener">↗ LinkedIn Volunteer Experience</a></div></div></section></article>
 
-    <!-- INSTITUTE REPRESENTATIVE -->
-    <article class="timeline-item reveal" style="--accent:var(--cyan)">
-      <div class="rail"><i class="node"></i><div class="time">Mar 2025 – Present</div></div>
-      <section class="card"><div class="card-inner">
-        <div class="kicker"><span class="num">02</span> Volunteer Leadership</div><h3>Institute Representative</h3><div class="org">Volunteer for Bangladesh · Dhaka District South</div>
-        <div class="meta"><span class="tag">March 2025 – Present</span><span class="tag">Social Services</span></div>
-        <div class="feature-split">
-          <div><ul class="points"><li>Promoting VBD activities online and offline within campus</li><li>Engaging new volunteers from the institution</li><li>Assisting in events, campaigns and projects</li><li>Attending district meetings and representing the institution</li><li>Collaborating with team leaders and ensuring timely task submission</li></ul></div>
-          <div class="feature-media"><a class="feature-photo" data-lightbox href="https://drive.google.com/file/d/1BYKaqmyaLRe2K4JD3_KlfndRZxc8wbGu/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1BYKaqmyaLRe2K4JD3_KlfndRZxc8wbGu&sz=w1400" alt="Volunteer for Bangladesh Institute Representative ID" data-drive-id="1BYKaqmyaLRe2K4JD3_KlfndRZxc8wbGu"><div class="photo-caption">Institute Representative ID · Click to enlarge</div></a></div>
-        </div>
-      </div></section>
-    </article>
+    <article class="timeline-item reveal" id="tl-vol-2" style="--accent:var(--blue)"><div class="rail"><i class="node"></i><div class="time">Jan 2020 – Present</div></div><section class="card"><div class="card-inner"><div class="role-top"><div class="role-logo" style="padding:0;overflow:hidden"><img style="width:100%;height:100%;object-fit:contain" loading="lazy" data-drive-id="1DRtqlcfGmwR7OvGqe_OYR5o5OxrGLWBW" src="https://drive.google.com/thumbnail?id=1DRtqlcfGmwR7OvGqe_OYR5o5OxrGLWBW&amp;sz=w1400" alt="Agri Rovers club logo"></div><div><div class="kicker"><span class="num">02</span> Community &amp; Humanitarian Service</div><h3>Rover Scout Member</h3><div class="org">Bangladesh Scouts · Agri Rovers</div></div></div><div class="cover-stage" style="--accent:var(--blue)"><a data-lightbox href="https://drive.google.com/file/d/1We7rvvmtkHiPqiK89b7SwK5Bv9-Sn-GO/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1We7rvvmtkHiPqiK89b7SwK5Bv9-Sn-GO" src="https://drive.google.com/thumbnail?id=1We7rvvmtkHiPqiK89b7SwK5Bv9-Sn-GO&amp;sz=w2000" alt="Rover Scout Cover / Profile Photo"><div class="cover-label"><span>Rover Scout Cover / Profile Photo</span><b>Click to enlarge ↗</b></div></a></div><div class="meta"><span class="tag">January 2020 – Present</span><span class="tag">Social Services</span><span class="tag">Leadership &amp; teamwork</span></div><div class="ww"><div class="ww-box" style="--accent:var(--blue)"><span class="ww-ico"><svg viewBox="0 0 24 24"><path d="M7 2v3M17 2v3M3 9h18M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg></span><div><small>When</small><b>January 2020 – Present</b></div><em class="ww-dur">Ongoing</em></div><div class="ww-box ww-where" style="--accent:var(--blue)"><span class="ww-ico"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg></span><div><small>Site</small><b>University and community service settings</b></div></div></div><p class="copy">As a dedicated Rover Scout, I have actively participated in various community service and humanitarian initiatives, demonstrating leadership, teamwork and commitment to social welfare.</p><ul class="points"><li>COVID-19 vaccination campaigns — assisted in managing vaccination records and data entry</li><li>International Mother Language Day — volunteered in organizing and assisting visitors at Shaheed Minar, Dhaka Medical College</li><li>Campus cleanliness initiatives — supported a clean and eco-friendly university environment</li><li>Medical and university exam support — assisted in exam coordination</li><li>Traffic monitoring — helped manage traffic, prevent road blockages and support pedestrian safety</li></ul><details class="evidence"><summary class="club-toggle">Press to view all Rover photos &amp; activity evidence <span>+</span></summary><div class="evidence-body"><div class="evidence-head">The complete supplied Rover activity set is included: cover/profile photo, club logo, vaccination-campaign photo, team photos, Mother Language Day photo, exam-support photo, traffic-monitoring photo and the additional activity file provided without a description.</div><div class="proof-row"><a class="proof" style="--accent:var(--blue)" href="https://www.linkedin.com/in/ahmed-ishtiak-nirob/details/volunteer-experiences/edit/forms/1533896597/" target="_blank" rel="noopener">↗ LinkedIn Volunteer Experience</a></div><div class="evidence-grid"><a class="media-card" data-lightbox style="--accent:var(--blue)" href="https://drive.google.com/file/d/1We7rvvmtkHiPqiK89b7SwK5Bv9-Sn-GO/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1We7rvvmtkHiPqiK89b7SwK5Bv9-Sn-GO" src="https://drive.google.com/thumbnail?id=1We7rvvmtkHiPqiK89b7SwK5Bv9-Sn-GO&amp;sz=w1800" alt="Rover Scout Cover / Profile Photo"><span>Rover Scout Cover / Profile Photo</span></a><a class="media-card" data-lightbox style="--accent:var(--blue)" href="https://drive.google.com/file/d/1DRtqlcfGmwR7OvGqe_OYR5o5OxrGLWBW/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1DRtqlcfGmwR7OvGqe_OYR5o5OxrGLWBW" src="https://drive.google.com/thumbnail?id=1DRtqlcfGmwR7OvGqe_OYR5o5OxrGLWBW&amp;sz=w1400" alt="Agri Rovers Club Logo"><span>Agri Rovers Club Logo</span></a><a class="media-card" data-lightbox style="--accent:var(--blue)" href="https://drive.google.com/file/d/1bHkQA7EYiCWDEDJEQE3Xj5-1NgIZe30Z/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1bHkQA7EYiCWDEDJEQE3Xj5-1NgIZe30Z" src="https://drive.google.com/thumbnail?id=1bHkQA7EYiCWDEDJEQE3Xj5-1NgIZe30Z&amp;sz=w1800" alt="COVID-19 Vaccination Campaign · Data Entry"><span>COVID-19 Vaccination Campaign · Data Entry</span></a><a class="media-card" data-lightbox style="--accent:var(--blue)" href="https://drive.google.com/file/d/1fSPELTuh2wGLdNw1yxIy1YvalqMYDiee/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1fSPELTuh2wGLdNw1yxIy1YvalqMYDiee" src="https://drive.google.com/thumbnail?id=1fSPELTuh2wGLdNw1yxIy1YvalqMYDiee&amp;sz=w1800" alt="Rover Team · Service Activity"><span>Rover Team · Service Activity</span></a><a class="media-card" data-lightbox style="--accent:var(--blue)" href="https://drive.google.com/file/d/1HISSYwZIFrhfGqElziQiFeHJcLhYszTS/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1HISSYwZIFrhfGqElziQiFeHJcLhYszTS" src="https://drive.google.com/thumbnail?id=1HISSYwZIFrhfGqElziQiFeHJcLhYszTS&amp;sz=w1800" alt="Rover Team"><span>Rover Team</span></a><a class="media-card" data-lightbox style="--accent:var(--blue)" href="https://drive.google.com/file/d/1LrVhohV5yoP9uEAloi7S--NE7byqdTJj/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1LrVhohV5yoP9uEAloi7S--NE7byqdTJj" src="https://drive.google.com/thumbnail?id=1LrVhohV5yoP9uEAloi7S--NE7byqdTJj&amp;sz=w1800" alt="International Mother Language Day Volunteer Service"><span>International Mother Language Day Volunteer Service</span></a><a class="media-card" data-lightbox style="--accent:var(--blue)" href="https://drive.google.com/file/d/1tK8wTD37bfKWQhBfSiPoh65AbAdvkvIC/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1tK8wTD37bfKWQhBfSiPoh65AbAdvkvIC" src="https://drive.google.com/thumbnail?id=1tK8wTD37bfKWQhBfSiPoh65AbAdvkvIC&amp;sz=w1800" alt="Medical / University Exam Support"><span>Medical / University Exam Support</span></a><a class="media-card" data-lightbox style="--accent:var(--blue)" href="https://drive.google.com/file/d/1WJH8AK2WtYrKgO-vlr7VwoKMuMBkcEkf/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1WJH8AK2WtYrKgO-vlr7VwoKMuMBkcEkf" src="https://drive.google.com/thumbnail?id=1WJH8AK2WtYrKgO-vlr7VwoKMuMBkcEkf&amp;sz=w1800" alt="Traffic Monitoring Public Service"><span>Traffic Monitoring Public Service</span></a><a class="media-card" data-lightbox style="--accent:var(--blue)" href="https://drive.google.com/file/d/11-_sK9S52PKfvjaS1EzsDoo8rP6X4uo_/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="11-_sK9S52PKfvjaS1EzsDoo8rP6X4uo_" src="https://drive.google.com/thumbnail?id=11-_sK9S52PKfvjaS1EzsDoo8rP6X4uo_&amp;sz=w1800" alt="Additional Rover Activity Evidence"><span>Additional Rover Activity Evidence</span></a></div></div></details></div></section></article>
 
-    <!-- BVA EVENT ORGANIZER -->
-    <article class="timeline-item reveal" style="--accent:var(--violet)">
-      <div class="rail"><i class="node"></i><div class="time">Apr 2025</div></div>
-      <section class="card"><div class="card-inner">
-        <div class="kicker"><span class="num">03</span> Event Organization</div><h3>Event Organizer</h3><div class="org">Bangladesh Veterinary Association</div>
-        <div class="meta"><span class="tag">April 2025</span><span class="tag">International Veterinary School Debate Competition</span></div>
-        <p class="copy">Volunteered as an organizer at the International Veterinary School Debate Competition, hosted by BVA in celebration of World Veterinary Day.</p>
-        <div class="feature-split">
-          <div><ul class="points"><li>Supported event organization and coordination</li><li>Contributed to a veterinary-community academic event</li><li>Helped maintain smooth event participation</li></ul></div>
-          <div class="feature-media"><a class="feature-photo" data-lightbox href="https://drive.google.com/file/d/1oCHSuTEIDnvkiYeN7y6NTmLzTBx_Q8iP/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1oCHSuTEIDnvkiYeN7y6NTmLzTBx_Q8iP&sz=w1400" alt="International Veterinary School Debate organizers" data-drive-id="1oCHSuTEIDnvkiYeN7y6NTmLzTBx_Q8iP"><div class="photo-caption">International Veterinary School Debate · Organizing team · Click to enlarge</div></a></div>
-        </div>
-      </div></section>
-    </article>
+    <article class="timeline-item reveal" id="tl-vol-3" style="--accent:var(--cyan)"><div class="rail"><i class="node"></i><div class="time">Mar 2025 – Present</div></div><section class="card"><div class="card-inner"><div class="kicker"><span class="num">03</span> Volunteer Leadership</div><h3>Institute Representative</h3><div class="org">Volunteer for Bangladesh · Dhaka District South</div><div class="meta"><span class="tag">March 2025 – Present</span><span class="tag">Social Services</span><span class="tag">Sher-e-Bangla Agricultural University</span></div><div class="ww"><div class="ww-box" style="--accent:var(--cyan)"><span class="ww-ico"><svg viewBox="0 0 24 24"><path d="M7 2v3M17 2v3M3 9h18M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg></span><div><small>When</small><b>March 2025 – Present</b></div><em class="ww-dur">Ongoing</em></div><div class="ww-box ww-where" style="--accent:var(--cyan)"><span class="ww-ico"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg></span><div><small>Site</small><b>Sher-e-Bangla Agricultural University</b></div></div></div><div class="feature-split"><div><ul class="points"><li>Promoting VBD activities online and offline within campus</li><li>Engaging new volunteers from the institution</li><li>Assisting in organizing events, campaigns and projects</li><li>Attending district meetings and representing the institution</li><li>Collaborating with team leaders and ensuring timely task submission</li></ul></div><div class="feature-media"><a class="feature-photo" data-lightbox style="--accent:var(--cyan)" href="https://drive.google.com/file/d/1BYKaqmyaLRe2K4JD3_KlfndRZxc8wbGu/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1BYKaqmyaLRe2K4JD3_KlfndRZxc8wbGu" src="https://drive.google.com/thumbnail?id=1BYKaqmyaLRe2K4JD3_KlfndRZxc8wbGu&amp;sz=w1800" alt="Volunteer for Bangladesh Institute Representative ID"><div class="photo-caption">Institute Representative ID · Click to enlarge</div></a></div></div><details class="evidence"><summary class="club-toggle">Press to view VBD appointment evidence <span>+</span></summary><div class="evidence-body"><div class="evidence-head">The supplied material includes the Institute Representative ID and a separate appointment letter.</div><div class="proof-row"><a class="proof" style="--accent:var(--cyan)" href="https://drive.google.com/file/d/1G31I9d3s0rIrcEpwHhmOLNET3-DFq5xW/view?usp=sharing" target="_blank" rel="noopener">↗ Appointment Letter</a><a class="proof" style="--accent:var(--blue)" href="https://www.linkedin.com/in/ahmed-ishtiak-nirob/details/volunteer-experiences/edit/forms/1044683342/" target="_blank" rel="noopener">↗ LinkedIn Volunteer Experience</a></div></div></details></div></section></article>
+
+    <article class="timeline-item reveal" id="tl-vol-4" style="--accent:var(--violet)"><div class="rail"><i class="node"></i><div class="time">Apr 2025</div></div><section class="card"><div class="card-inner"><div class="kicker"><span class="num">04</span> Event Organization</div><h3>Event Organizer · Inter Veterinary School Debate</h3><div class="org">Bangladesh Veterinary Association</div><div class="meta"><span class="tag">April 2025</span><span class="tag">Education</span><span class="tag">Among 16 veterinary institutes</span></div><div class="ww"><div class="ww-box" style="--accent:var(--violet)"><span class="ww-ico"><svg viewBox="0 0 24 24"><path d="M7 2v3M17 2v3M3 9h18M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg></span><div><small>When</small><b>April 2025</b></div></div><div class="ww-box ww-where" style="--accent:var(--violet)"><span class="ww-ico"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg></span><div><small>Site</small><b>International Veterinary School Debate Competition</b></div></div></div><p class="copy">Proud to have volunteered as an organizer at the Inter Veterinary School Debate Competition, hosted by BVA in celebration of World Veterinary Day. The event fostered global collaboration and critical thinking in the veterinary community and involved 16 veterinary institutes.</p><ul class="points"><li>Supported event organization and coordination</li><li>Contributed to a veterinary-community academic event</li><li>Helped maintain smooth event participation</li></ul><div class="media-grid compact-gallery" style="--accent:var(--violet)"><a class="media-card" data-lightbox style="--accent:var(--violet)" href="https://drive.google.com/file/d/1oCHSuTEIDnvkiYeN7y6NTmLzTBx_Q8iP/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1oCHSuTEIDnvkiYeN7y6NTmLzTBx_Q8iP" src="https://drive.google.com/thumbnail?id=1oCHSuTEIDnvkiYeN7y6NTmLzTBx_Q8iP&amp;sz=w1800" alt="Inter Veterinary School Debate · Organizing Team"><span>Inter Veterinary School Debate · Organizing Team</span></a><a class="media-card" data-lightbox style="--accent:var(--violet)" href="https://drive.google.com/file/d/1TjWgJEaEDkda9GGJq7Aapim20OKs6c5l/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1TjWgJEaEDkda9GGJq7Aapim20OKs6c5l" src="https://drive.google.com/thumbnail?id=1TjWgJEaEDkda9GGJq7Aapim20OKs6c5l&amp;sz=w1800" alt="Inter Veterinary School Debate · Certificate"><span>Inter Veterinary School Debate · Certificate</span></a></div><div class="actions"><a class="proof" style="--accent:var(--violet)" href="https://www.linkedin.com/in/ahmed-ishtiak-nirob/details/volunteer-experiences/edit/forms/1634615861/" target="_blank" rel="noopener">↗ LinkedIn Volunteer Experience</a></div></div></section></article>
   </div>
 </section>
 
-<!-- =========================================================
-     07 · PUBLIC SERVICE EXPERIENCE
-========================================================= -->
+<!-- 07 PUBLIC SERVICE — 1 ENTRY -->
 <section class="section">
-  <div class="section-title reveal" style="--accent:var(--blue)"><h2>Public Service Experience</h2></div>
+  <div class="section-title reveal" style="--accent:var(--blue)"><h2><span class="section-number">07</span><span>Public Service Experience</span><span class="section-count">1 experience</span></h2></div>
   <div class="timeline">
-    <article class="timeline-item reveal" style="--accent:var(--mint)">
-      <div class="rail"><i class="node"></i><div class="time">Aug 2024</div></div>
-      <section class="card"><div class="card-inner">
-        <div class="kicker"><span class="num">01</span> Public Service</div><h3>Traffic Controller</h3><div class="org">Bangladesh Scouts · Part-time</div>
-        <div class="meta"><span class="tag">August 2024</span><span class="tag">Dhaka, Bangladesh</span><span class="tag">Hybrid</span></div>
-        <div class="feature-split">
-          <div>
-            <p class="copy">As a Rover Scout, voluntarily supported traffic management during a period when regular enforcement presence was disrupted.</p>
-            <ul class="points"><li>Helped manage traffic flow</li><li>Prevented road blockages</li><li>Supported pedestrian safety</li><li>Assisted commuters through on-ground public service</li></ul>
-          </div>
-          <div class="feature-media"><a class="feature-photo" data-lightbox href="https://drive.google.com/file/d/1WJH8AK2WtYrKgO-vlr7VwoKMuMBkcEkf/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" src="https://drive.google.com/thumbnail?id=1WJH8AK2WtYrKgO-vlr7VwoKMuMBkcEkf&sz=w1400" alt="Monitoring traffic in absence of police in Mohammadpur Area"><div class="photo-caption">Monitoring traffic in absence of police in Mohammadpur Area · Click to enlarge</div></a></div>
-        </div>
-      </div></section>
-    </article>
+    <article class="timeline-item reveal" id="tl-public" style="--accent:var(--mint)"><div class="rail"><i class="node"></i><div class="time">Aug 2024</div></div><section class="card"><div class="card-inner"><div class="kicker"><span class="num">01</span> Public Service</div><h3>Traffic Controller</h3><div class="org">Bangladesh Scouts · Part-time</div><div class="meta"><span class="tag">August 2024</span><span class="tag">Dhaka, Bangladesh</span><span class="tag">Hybrid</span></div><div class="ww"><div class="ww-box" style="--accent:var(--mint)"><span class="ww-ico"><svg viewBox="0 0 24 24"><path d="M7 2v3M17 2v3M3 9h18M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg></span><div><small>When</small><b>August 2024</b></div></div><div class="ww-box ww-where" style="--accent:var(--mint)"><span class="ww-ico"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg></span><div><small>Site</small><b>Near the Prime Minister’s Official Residence in Mohammadpur Area, Dhaka</b></div></div></div><p class="copy">As a Rover Scout, I voluntarily stepped in to help manage traffic flow during a period when regular law-enforcement presence in public spaces was disrupted. The initiative focused on maintaining order, preventing road blockages, supporting pedestrian safety and helping commuters.</p><ul class="points"><li>Helped manage traffic flow</li><li>Prevented road blockages</li><li>Supported pedestrian safety</li><li>Assisted commuters through on-ground public service</li></ul><div class="feature-split"><div></div><div class="feature-media"><a class="feature-photo" data-lightbox style="--accent:var(--mint)" href="https://drive.google.com/file/d/1WJH8AK2WtYrKgO-vlr7VwoKMuMBkcEkf/view?usp=sharing" target="_blank" rel="noopener"><img loading="lazy" data-drive-id="1WJH8AK2WtYrKgO-vlr7VwoKMuMBkcEkf" src="https://drive.google.com/thumbnail?id=1WJH8AK2WtYrKgO-vlr7VwoKMuMBkcEkf&amp;sz=w1800" alt="Traffic monitoring near the Prime Minister’s Official Residence in Mohammadpur"><div class="photo-caption">Traffic monitoring near the Prime Minister’s Official Residence in Mohammadpur · Click to enlarge</div></a></div></div></div></section></article>
   </div>
 </section>
 
@@ -898,9 +540,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offse
 </div>
 
 <script>
-/* ----------------------------------------------------------
-   Scroll reveal
----------------------------------------------------------- */
+/* ==========================================================
+   SCROLL REVEAL
+========================================================== */
 const revealObserver=new IntersectionObserver((entries,observer)=>{
   entries.forEach(entry=>{
     if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}
@@ -908,137 +550,95 @@ const revealObserver=new IntersectionObserver((entries,observer)=>{
 },{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
 
-/* ----------------------------------------------------------
-   Google Drive image fallback
-   Keeps cards visible even when a thumbnail endpoint changes.
----------------------------------------------------------- */
+/* ==========================================================
+   GOOGLE DRIVE IMAGE FALLBACK
+========================================================== */
 document.querySelectorAll('img[data-drive-id]').forEach(img=>{
   img.addEventListener('error',function(){
-    if(this.dataset.fallback==='1')return;
+    if(this.dataset.fallback==='1') return;
     this.dataset.fallback='1';
     this.src='https://drive.google.com/uc?export=view&id='+this.dataset.driveId;
   });
 });
 
-/* ----------------------------------------------------------
-   Lightbox
----------------------------------------------------------- */
+/* ==========================================================
+   LIGHTBOX
+========================================================== */
 const lightbox=document.getElementById('lightbox');
 const lightboxImg=document.getElementById('lightboxImg');
 const lightboxCaption=document.getElementById('lightboxCaption');
 const closeLightbox=()=>{
-  lightbox.classList.remove('open');lightbox.setAttribute('aria-hidden','true');lightboxImg.src='';document.body.style.overflow='';
+  lightbox.classList.remove('open');
+  lightbox.setAttribute('aria-hidden','true');
+  lightboxImg.src='';
+  lightboxCaption.textContent='';
+  document.body.style.overflow='';
 };
 document.querySelectorAll('[data-lightbox]').forEach(link=>{
   link.addEventListener('click',e=>{
     e.preventDefault();
     const source=link.querySelector('img');
-    const src=(source?.currentSrc||source?.src||'').replace(/&sz=w\d+/i,'&sz=w2400');
-    lightboxImg.src=src||link.href;
+    const id=source?.dataset.driveId;
+    lightboxImg.src=id ? 'https://drive.google.com/thumbnail?id='+id+'&sz=w2400' : (source?.src||link.href);
     lightboxImg.alt=source?.alt||'Expanded image preview';
-    const text=link.querySelector('.photo-caption,span');
-    lightboxCaption.textContent=text?.textContent.replace(' · Click to enlarge','')||source?.alt||'';
-    lightbox.classList.add('open');lightbox.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';
+    const caption=link.querySelector('.photo-caption,.cover-label span,span');
+    lightboxCaption.textContent=caption?.textContent.replace(' · Click to enlarge','').trim()||source?.alt||'';
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
   });
 });
 document.querySelector('.lightbox-close').addEventListener('click',closeLightbox);
 lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&lightbox.classList.contains('open'))closeLightbox()});
 
-
-/* ----------------------------------------------------------
-   Gallery More / Show Less
----------------------------------------------------------- */
-document.querySelectorAll('[data-gallery-toggle]').forEach(button=>{
-  button.addEventListener('click',()=>{
-    const group=button.closest('[data-gallery-group]');
-    const expanded=group.classList.toggle('expanded');
-    if(group.classList.contains('upm-gallery')){
-      button.textContent=expanded?'Show Less −':'More UPM Photos +';
-    }else{
-      button.textContent=expanded?'Show Less −':'More Internship Photos +';
-    }
-  });
+/* ==========================================================
+   SCROLL PROGRESS + TIMELINE SPINE
+========================================================== */
+const progress=document.createElement('div');
+progress.className='progress';
+document.body.prepend(progress);
+const timelines=[...document.querySelectorAll('.timeline')].map(t=>{
+  const fill=document.createElement('i');
+  fill.className='spine-fill';
+  t.prepend(fill);
+  return [t,fill];
 });
-
-/* ----------------------------------------------------------
-   Broken thumbnail protection — remove dead tiles rather than
-   leaving an empty gap in the gallery.
----------------------------------------------------------- */
-document.querySelectorAll('.media-card img,.feature-photo img,.initiative-media img').forEach(img=>{
-  img.addEventListener('error',function(){
-    const host=this.closest('.media-card,.feature-photo,.initiative-media');
-    if(!host)return;
-    if(this.dataset.retry==='1'){
-      if(host.classList.contains('media-card')) host.remove();
-      return;
-    }
-    this.dataset.retry='1';
-    const m=this.src.match(/id=([^&]+)/);
-    if(m){
-      this.src='https://drive.google.com/uc?export=view&id='+m[1];
-    }else if(host.classList.contains('media-card')){
-      host.remove();
-    }
-  });
-});
-
-
-/* ----------------------------------------------------------
-   V5: When / Site strips, Journey at a Glance, spine + progress
----------------------------------------------------------- */
-(()=>{
-const ICON={
-  cal:'<svg viewBox="0 0 24 24"><path d="M7 2v3M17 2v3M3 9h18M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>',
-  pin:'<svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg>'
-};
-/* same order as .timeline-item in the page */
-const TL=[
- {g:'Professional',t:'Veterinary Medical Officer',o:'Dhaka North City Corporation',w:'19–28 May 2026',d:'10 days',p:'Tejgaon Colony Bazar Gorur Hat, Dhaka'},
- {g:'Professional',t:'International Veterinary Medicine Intern',o:'Universiti Putra Malaysia',w:'17–30 Jan 2026',d:'14 days',p:'Serdang, Selangor, Malaysia'},
- {g:'Professional',t:'Six-Month Veterinary Internship',o:'Sher-e-Bangla Agricultural University',w:'25 Aug – 16 Feb',d:'6 months',p:'20 placements across Dhaka, Savar, Gazipur and Malaysia'},
- {g:'Professional',t:'Field Intern Veterinarian',o:'DLS · LDDP Project',w:'June 2025',d:'3 days',p:'Dholaikhal Gorur Hat, Dhaka'},
- {g:'Volunteering',t:'Event Organizer',o:'Bangladesh Veterinary Olympiad',w:'Oct 2022',p:'Sher-e-Bangla Agricultural University'},
- {g:'Volunteering',t:'Institute Representative',o:'Volunteer for Bangladesh',w:'Mar 2025 – Present',d:'Ongoing',p:'Dhaka District South'},
- {g:'Volunteering',t:'Event Organizer',o:'Bangladesh Veterinary Association',w:'Apr 2025',p:'BVA event for World Veterinary Day'},
- {g:'Public service',t:'Traffic Controller',o:'Bangladesh Scouts',w:'Aug 2024',p:'Mohammadpur area, Dhaka'}
-];
-const items=[...document.querySelectorAll('.timeline-item')];
-
-items.forEach((it,i)=>{
-  const d=TL[i];if(!d)return;
-  it.id='tl-'+i;
-  const ww=document.createElement('div');ww.className='ww';
-  ww.innerHTML=`<div class="ww-box"><span class="ww-ico">${ICON.cal}</span><div><small>When</small><b>${d.w}</b></div>${d.d?`<em class="ww-dur${d.d==='Ongoing'?' live':''}">${d.d}</em>`:''}</div><div class="ww-box ww-where"><span class="ww-ico">${ICON.pin}</span><div><small>Site</small><b>${d.p}</b></div></div>`;
-  it.querySelector('.meta').after(ww);
-});
-document.querySelectorAll('.timeline-item .meta,.timeline-item .points,.ww').forEach(g=>[...g.children].forEach((c,i)=>c.style.setProperty('--i',i)));
-
-const sec=document.createElement('section');sec.className='section glance reveal';
-sec.innerHTML='<div class="section-title" style="--accent:var(--cyan)"><h2>Journey at a Glance</h2></div><p class="glance-note">Tap a card to jump to its full timeline.</p><div class="glance-grid">'+
-TL.map((d,i)=>`<a class="g-card" href="#tl-${i}" style="--accent:${items[i].style.getPropertyValue('--accent')};--i:${i}"><span class="g-grp">${d.g}</span><b class="g-title">${d.t}</b><span class="g-org">${d.o}</span><span class="g-line">${ICON.cal}${d.w}</span><span class="g-line">${ICON.pin}${d.p}</span></a>`).join('')+'</div>';
-document.querySelector('main').prepend(sec);
-revealObserver.observe(sec);
-sec.querySelectorAll('.g-card').forEach(a=>a.addEventListener('click',e=>{
-  e.preventDefault();
-  const t=document.querySelector(a.getAttribute('href'));
-  t.scrollIntoView({behavior:'smooth',block:'center'});
-  t.classList.remove('flash');void t.offsetWidth;t.classList.add('flash');
-}));
-
-const bar=document.createElement('div');bar.className='progress';document.body.prepend(bar);
-const tls=[...document.querySelectorAll('.timeline')].map(t=>{const f=document.createElement('i');f.className='spine-fill';t.prepend(f);return[t,f]});
-let tick=false;
+let ticking=false;
 const update=()=>{
-  tick=false;
-  const h=document.documentElement;
-  bar.style.transform='scaleX('+Math.min(1,scrollY/((h.scrollHeight-innerHeight)||1))+')';
-  tls.forEach(([t,f])=>{const r=t.getBoundingClientRect();f.style.transform='scaleY('+Math.max(0,Math.min(1,(innerHeight*.65-r.top)/r.height))+')'});
+  ticking=false;
+  const doc=document.documentElement;
+  const denom=(doc.scrollHeight-innerHeight)||1;
+  progress.style.transform='scaleX('+Math.min(1,scrollY/denom)+')';
+  timelines.forEach(([t,fill])=>{
+    const r=t.getBoundingClientRect();
+    const amt=(innerHeight*.65-r.top)/r.height;
+    fill.style.transform='scaleY('+Math.max(0,Math.min(1,amt))+')';
+  });
 };
-addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(update)}},{passive:true});
-addEventListener('resize',update);update();
-})();
+addEventListener('scroll',()=>{
+  if(!ticking){
+    ticking=true;
+    requestAnimationFrame(update);
+  }
+},{passive:true});
+addEventListener('resize',update);
+update();
 
+/* ==========================================================
+   GLANCE NAVIGATION
+========================================================== */
+document.querySelectorAll('.g-card').forEach(card=>{
+  card.addEventListener('click',e=>{
+    e.preventDefault();
+    const target=document.querySelector(card.getAttribute('href'));
+    if(!target)return;
+    target.scrollIntoView({behavior:'smooth',block:'center'});
+    target.classList.remove('flash');
+    void target.offsetWidth;
+    target.classList.add('flash');
+  });
+});
 </script>
 </body>
 </html>
