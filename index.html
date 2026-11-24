@@ -11913,6 +11913,37 @@ html.mp-open,html.mp-open body{overflow:hidden}
 #soundBtn{display:none!important}
 @media (max-width:900px){#themeBtn{display:none!important}}
 
+/* ---------- phones: fit the screen exactly (no sideways scroll, no zoom-out) ---------- */
+html,body{overflow-x:hidden}
+@supports (overflow:clip){html,body{overflow-x:clip}}
+@media (max-width:600px){
+ /* animated view navbar: compact */
+ .site-nav-inner{gap:8px!important;width:100%!important;padding:0 10px!important;box-sizing:border-box}
+ .site-brand{min-width:0!important;flex:1 1 auto!important;overflow:hidden}
+ .site-brand .brand-text{min-width:0;overflow:hidden;text-overflow:ellipsis}
+ .site-brand img,.site-brand .brand-photo{width:36px!important;height:36px!important}
+ .site-brand .brand-text{font-size:13px!important;white-space:nowrap}
+ .site-brand .brand-text small{font-size:10px!important}
+ .site-actions{gap:6px!important;flex:none}
+ .pm-toggle-dark{flex:none;height:30px;padding:0 8px 0 4px;gap:5px;font-size:10.5px;margin-right:0}
+ .pm-toggle-dark .pm-sw{width:24px;height:14px;border-radius:7px}
+ .pm-toggle-dark .pm-sw i{top:2px;left:2px;width:10px;height:10px}
+ .pm-toggle-dark[aria-pressed="true"] .pm-sw i{left:12px}
+ #siteToggle{width:38px!important;height:38px!important}
+ /* Prof Mode navbar: compact switch, name never covered */
+ #pm-root .pm-nav-in{gap:8px;padding:8px 12px}
+ #pm-root .pm-brand{min-width:0;flex:1 1 auto}
+ #pm-root .pm-brand img{width:32px;height:32px}
+ #pm-root .pm-brand span{min-width:0}
+ #pm-root .pm-brand b{font-size:13px;overflow:hidden;text-overflow:ellipsis}
+ #pm-root .pm-brand small{display:block;font-size:10.5px}
+ #pm-root .pm-toggle{flex:none;height:30px;padding:0 8px 0 4px;gap:5px;font-size:11px;margin-left:0}
+ #pm-root .pm-sw{width:24px;height:14px;border-radius:7px}
+ #pm-root .pm-sw i{top:2px;left:2px;width:10px;height:10px}
+ #pm-root .pm-toggle[aria-pressed="true"] .pm-sw i{left:12px}
+ #pm-root .pm-menu{flex:none;width:36px;height:36px;padding:0 9px}
+}
+
 </style>
 <script>document.documentElement.classList.add('pm-on')</script>
 </head>
