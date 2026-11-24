@@ -11909,6 +11909,10 @@ html.mp-open,html.mp-open body{overflow:hidden}
 #mode-pick .mp-note{font-size:12.5px;color:#64748b;margin:16px 0 0}
 @media (max-width:520px){#mode-pick .mp-card{padding:24px 18px 18px}#mode-pick .mp-btns{grid-template-columns:1fr}#mode-pick h1{font-size:21px}}
 
+/* ---------- owner request: no sound button; no light/dark button on phones ---------- */
+#soundBtn{display:none!important}
+@media (max-width:900px){#themeBtn{display:none!important}}
+
 </style>
 <script>document.documentElement.classList.add('pm-on')</script>
 </head>
@@ -19852,7 +19856,7 @@ function fix(){
 /* ---------- sound ---------- */
 (function(){
  var AC=window.AudioContext||window.webkitAudioContext,ctx=null,master=null,nb=null,on=false,last=0;
- try{on=localStorage.getItem('nirob-sound-v8')==='on'}catch(e){}
+ /* sound removed (owner request): always off */
  var btn=document.getElementById('soundBtn');
  function paint(){if(!btn)return;btn.textContent=on?'🔊':'🔇';btn.setAttribute('aria-label',on?'Sound on':'Sound off');btn.title=on?'Sound on':'Sound off'}paint();
  function boot(){if(!AC)return false;if(!ctx){ctx=new AC();master=ctx.createGain();master.gain.value=.85;var c=ctx.createDynamicsCompressor();master.connect(c);c.connect(ctx.destination);
